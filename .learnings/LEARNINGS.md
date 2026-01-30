@@ -283,3 +283,23 @@ Before committing any file, check for:
 - OAuth client IDs/secrets
 - Passwords or credentials
 - Any string that looks like a secret
+
+## LRN-20260130-001: Proactive System Completion
+**Date:** 2026-01-30
+**Category:** self-improvement
+**Trigger:** Finn pointed out I keep hitting Google OAuth issues without fixing them permanently
+
+**The Gap:**
+- Only set up OAuth for hectorcb101@gmail.com
+- Never proactively added wfmckie@gmail.com (Finn's actual email)
+- Keep hitting the same error and asking Finn to re-auth instead of solving it once
+
+**Lesson:**
+When setting up ANY integration, ask: "Is this complete for ALL use cases?" Don't just solve the immediate problem — solve the whole problem. If there are multiple accounts/configs needed, set them ALL up.
+
+**Action:**
+- Set up wfmckie@gmail.com OAuth now
+- Add credential checks for BOTH accounts to HEARTBEAT
+- When building systems, think "what else will this need?" before calling it done
+
+**Status:** Learning captured, implementing fix
