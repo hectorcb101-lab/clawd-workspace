@@ -1,0 +1,9 @@
+Event Processing Log - 2026-01-26T11:04:21.958249
+============================================================
+
+[2026-01-26T11:04:21.958265] Processing row 2: 2026-01-26 9:00 | User signed up | pending
+[2026-01-26T11:04:21.958270] Processing row 3: 2026-01-26 9:15 | User upgraded | pending
+[2026-01-26T11:04:21.958272] Processing row 4: 2026-01-26 9:30 | User churned | pending
+
+============================================================
+Total processed: 3 events

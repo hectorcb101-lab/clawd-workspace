@@ -1,0 +1,5 @@
+.venv/
+.venv/
+config/mcporter.json
+__pycache__/
+*.pyc

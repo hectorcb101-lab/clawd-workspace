@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "skills": {
+    "self-improving-agent": {
+      "version": "1.0.1",
+      "installedAt": 1769354132888
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1769359000848
+    },
+    "perry-coding-agents": {
+      "version": "1.5.0",
+      "installedAt": 1769359527259
+    },
+    "second-brain": {
+      "version": "0.1.0",
+      "installedAt": 1769364160186
+    },
+    "Reddit": {
+      "version": "1.0.0",
+      "installedAt": 1769378782382
+    },
+    "polymarket": {
+      "version": "1.0.0",
+      "installedAt": 1769378855437
+    },
+    "yahoo-finance": {
+      "version": "1.0.0",
+      "installedAt": 1769378882610
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1769385943638
+    }
+  }
+}

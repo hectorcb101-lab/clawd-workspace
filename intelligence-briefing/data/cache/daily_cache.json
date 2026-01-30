@@ -1,0 +1,183 @@
+{
+  "collection_time": "2026-01-25T23:53:27.794818",
+  "sources": {
+    "polymarket": {
+      "status": "success",
+      "timestamp": "2026-01-25T23:53:28.099395",
+      "source": "polymarket",
+      "data": [
+        {
+          "title": "Fed decision in January?",
+          "markets": [
+            {
+              "question": "Fed decreases interest rates by 50+ bps after January 2026 meeting?",
+              "odds": "0.1%"
+            },
+            {
+              "question": "Fed decreases interest rates by 25 bps after January 2026 meeting?",
+              "odds": "0.7%"
+            },
+            {
+              "question": "No change in Fed interest rates after January 2026 meeting?",
+              "odds": "99.1%"
+            },
+            {
+              "question": "Fed increases interest rates by 25+ bps after January 2026 meeting?",
+              "odds": "0.1%"
+            }
+          ],
+          "volume": "493.0M"
+        },
+        {
+          "title": "US strikes Iran by...?",
+          "markets": [
+            {
+              "question": "US strikes Iran by January 31, 2026?",
+              "odds": "17.5%"
+            },
+            {
+              "question": "US strikes Iran by January 14, 2026?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "US strikes Iran by January 15, 2026?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "US strikes Iran by January 18, 2026?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "US strikes Iran by January 17, 2026?",
+              "odds": "0.0%"
+            }
+          ],
+          "volume": "99.0M"
+        },
+        {
+          "title": "Democratic Presidential Nominee 2028",
+          "markets": [
+            {
+              "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+              "odds": "0.9%"
+            },
+            {
+              "question": "Will Gretchen Whitmer win the 2028 Democratic presidential nomination?",
+              "odds": "1.9%"
+            },
+            {
+              "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+              "odds": "0.8%"
+            }
+          ],
+          "volume": "531.4M"
+        },
+        {
+          "title": "2026 NBA Champion",
+          "markets": [
+            {
+              "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+              "odds": "40.5%"
+            },
+            {
+              "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+              "odds": "4.5%"
+            },
+            {
+              "question": "Will the New Orleans Pelicans win the 2026 NBA Finals?",
+              "odds": "0.1%"
+            },
+            {
+              "question": "Will the Toronto Raptors win the 2026 NBA Finals?",
+              "odds": "0.9%"
+            },
+            {
+              "question": "Will the Chicago Bulls win the 2026 NBA Finals?",
+              "odds": "0.4%"
+            }
+          ],
+          "volume": "196.8M"
+        },
+        {
+          "title": "Next Country US Strikes",
+          "markets": [
+            {
+              "question": "Will the US strike Syria next?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "Will the US strike Mexico next?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "Will the US strike Iraq next?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "Will the US strike Nigeria next?",
+              "odds": "0.0%"
+            },
+            {
+              "question": "Will the US strike another country first?",
+              "odds": "0.0%"
+            }
+          ],
+          "volume": "9.7M"
+        }
+      ]
+    },
+    "finance": {
+      "status": "success",
+      "timestamp": "2026-01-25T23:53:36.426126",
+      "source": "yahoo_finance",
+      "data": [
+        {
+          "symbol": "^GSPC",
+          "price": 6915.61,
+          "change_percent": 0.03
+        },
+        {
+          "symbol": "^DJI",
+          "price": 49098.71,
+          "change_percent": -0.58
+        },
+        {
+          "symbol": "^IXIC",
+          "price": 23501.24,
+          "change_percent": 0.28
+        },
+        {
+          "symbol": "^VIX",
+          "price": 16.09,
+          "change_percent": 2.88
+        },
+        {
+          "symbol": "BTC-USD",
+          "price": 86583.7,
+          "change_percent": -2.93
+        },
+        {
+          "symbol": "ETH-USD",
+          "price": 2814.42,
+          "change_percent": -4.6
+        },
+        {
+          "symbol": "GC=F",
+          "price": 5025.9,
+          "change_percent": 0.93
+        },
+        {
+          "symbol": "CL=F",
+          "price": 60.85,
+          "change_percent": -0.36
+        }
+      ]
+    },
+    "sentiment": {
+      "status": "success",
+      "timestamp": "2026-01-25T23:53:37.208094",
+      "source": "sentiment",
+      "data": []
+    }
+  }
+}

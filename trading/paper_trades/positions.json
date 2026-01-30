@@ -1,0 +1,22 @@
+{
+  "positions": [
+    {
+      "trade_id": 1,
+      "event_slug": "russia-and-ukraine-ceasefire",
+      "market_search": "ceasefire march 2026",
+      "notes": "Betting NO on ceasefire by March 31, 2026"
+    },
+    {
+      "trade_id": 2,
+      "event_slug": "will-china-invade-taiwan-in-2025",
+      "market_search": "china taiwan 2026",
+      "notes": "Betting NO on China invasion by end 2026"
+    },
+    {
+      "trade_id": 3,
+      "event_slug": "fed-decision-in-january",
+      "market_search": "no change fed january",
+      "notes": "Betting YES on no change - FOMC Jan 27-28"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "topics": [
+    {
+      "name": "bias-variance tradeoff model generalisation machine learning",
+      "category": "AI-ML",
+      "started": "2026-01-29",
+      "frequency": "weekly",
+      "lastCheck": "2026-01-29",
+      "alerts": true
+    }
+  ],
+  "lastUpdated": "2026-01-29T23:43:25.052362+00:00",
+  "config": {
+    "defaultFrequency": "weekly",
+    "alertOnSignificant": true,
+    "monthlyDigest": true
+  }
+}

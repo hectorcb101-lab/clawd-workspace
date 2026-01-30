@@ -1,0 +1,67 @@
+{
+  "initial_bankroll": 100.0,
+  "current_bankroll": 51.0,
+  "trades": [
+    {
+      "id": 1,
+      "timestamp": "2026-01-26T23:06:00.407437+00:00",
+      "market": "Russia x Ukraine ceasefire by March 31, 2026?",
+      "side": "NO",
+      "entry_price": 0.855,
+      "my_probability": 0.92,
+      "kelly_fraction": 0.25,
+      "position_fraction": 0.15,
+      "position_size": 15.0,
+      "shares": 17.5439,
+      "reasoning": "Conflict ongoing, no signs of imminent peace. 2 months insufficient. Longshot bias at play - retail overestimates peace likelihood.",
+      "confidence": 3,
+      "status": "OPEN",
+      "exit_price": null,
+      "pnl": null,
+      "resolution": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-01-26T23:06:00.407666+00:00",
+      "market": "Will China invade Taiwan by end of 2026?",
+      "side": "NO",
+      "entry_price": 0.865,
+      "my_probability": 0.93,
+      "kelly_fraction": 0.25,
+      "position_fraction": 0.2,
+      "position_size": 17.0,
+      "shares": 19.6532,
+      "reasoning": "No military buildup observed, US deterrence strong, Xi focused on economy. Classic geopolitical longshot overpricing.",
+      "confidence": 4,
+      "status": "OPEN",
+      "exit_price": null,
+      "pnl": null,
+      "resolution": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-01-26T23:06:00.407829+00:00",
+      "market": "No change in Fed interest rates after January 2026 meeting?",
+      "side": "YES",
+      "entry_price": 0.989,
+      "my_probability": 0.995,
+      "kelly_fraction": 0.25,
+      "position_fraction": 0.25,
+      "position_size": 17.0,
+      "shares": 17.1891,
+      "reasoning": "Fed signalled no January cut. Economy stable. Market already priced this in. Small edge but high confidence.",
+      "confidence": 5,
+      "status": "OPEN",
+      "exit_price": null,
+      "pnl": null,
+      "resolution": null
+    }
+  ],
+  "stats": {
+    "total_trades": 3,
+    "wins": 0,
+    "losses": 0,
+    "pending": 3,
+    "total_pnl": 0.0
+  }
+}

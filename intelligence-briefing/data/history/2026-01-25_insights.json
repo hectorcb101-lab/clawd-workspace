@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-01-25T23:53:37.213836",
+  "executive_summary": [
+    "Market fear level: moderate (VIX up 2.9%)"
+  ],
+  "market_explanations": [
+    {
+      "asset": "Cryptocurrency",
+      "movement": "Major selling (BTC/ETH down 2.9%)",
+      "possible_causes": [
+        "Geopolitical uncertainty (Iran tensions)",
+        "Rising fear (VIX up)",
+        "Flight from risk assets while stocks hold"
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "ariadne_opinion": {
+    "main_thesis": "Crypto is bleeding, stocks are ignoring it. This is either: (1) Crypto-specific weakness, or (2) The canary in the coal mine.",
+    "deep_take": "When crypto leads down while equities hold, it's historically been a mixed signal - sometimes isolated to crypto (regulatory fears, exchange issues), sometimes a leading indicator for broader risk-off within days. The key confirmation signals: Watch **small caps (IWM - represents riskier, smaller companies that often move before large caps)** and **credit spreads (the premium investors demand to hold corporate bonds vs safe Treasuries - widens when fear rises)**. If these weaken, crypto was the early warning.",
+    "reasoning": [
+      "VIX (the 'fear gauge' - measures expected market volatility) up 2.9% to 16.1 - fear is rising, even if markets don't show it yet",
+      "Polymarket (prediction market where people bet real money on events) pricing 17.5% chance of US strikes Iran by...? - these odds reflect what informed bettors think will actually happen"
+    ],
+    "contrarian_view": "Crypto divergences don't always predict equity moves. Recent patterns (Dec 2025) showed crypto falling 30% while Nasdaq climbed on earnings. Context matters - is this crypto-specific or macro?",
+    "what_to_watch": [
+      "US strikes Iran by...? (17.5% odds) - if this spikes above 30%, markets will price in higher uncertainty \u2192 expect volatility",
+      "BTC support at $85k (price floor where buyers step in) - breaking below this level often triggers more selling as stop-losses hit"
+    ],
+    "prediction": "**Key price levels:** BTC support at $84-86k (based on whale accumulation data - large holders buying at these prices). Break below $84k suggests deeper selling pressure. Hold above $86k with stocks green = likely isolated crypto weakness.",
+    "confidence": "moderate"
+  },
+  "educational": {
+    "concept": "VIX (Volatility Index)",
+    "explanation": "The VIX measures expected volatility in the S&P 500 over the next 30 days, derived from options prices. Often called the 'fear index' because it spikes when investors expect market turbulence.",
+    "levels": {
+      "<15": "Low fear (complacency)",
+      "15-20": "Normal (moderate concern)",
+      "20-30": "Elevated fear (caution)",
+      ">30": "High fear (panic)"
+    },
+    "current": "16.1",
+    "interpretation": "VIX is at 16.1, up 2.9% today - showing rising market uncertainty"
+  },
+  "patterns_raw": {
+    "significant_moves": [
+      {
+        "symbol": "^VIX",
+        "price": 16.09,
+        "change": 2.88,
+        "direction": "up",
+        "magnitude": "notable"
+      },
+      {
+        "symbol": "BTC-USD",
+        "price": 86583.7,
+        "change": -2.93,
+        "direction": "down",
+        "magnitude": "notable"
+      },
+      {
+        "symbol": "ETH-USD",
+        "price": 2814.42,
+        "change": -4.6,
+        "direction": "down",
+        "magnitude": "notable"
+      }
+    ],
+    "geopolitical_risks": [
+      {
+        "title": "Fed decision in January?",
+        "question": "Fed decreases interest rates by 50+ bps after January 2026 meeting?",
+        "odds": "0.1%",
+        "odds_numeric": 0.1,
+        "risk_level": "low",
+        "volume": "493.0M"
+      },
+      {
+        "title": "US strikes Iran by...?",
+        "question": "US strikes Iran by January 31, 2026?",
+        "odds": "17.5%",
+        "odds_numeric": 17.5,
+        "risk_level": "moderate",
+        "volume": "99.0M"
+      },
+      {
+        "title": "Democratic Presidential Nominee 2028",
+        "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+        "odds": "0.9%",
+        "odds_numeric": 0.9,
+        "risk_level": "low",
+        "volume": "531.4M"
+      }
+    ],
+    "sentiment": {
+      "status": "success",
+      "timestamp": "2026-01-25T23:53:37.208094",
+      "source": "sentiment",
+      "data": []
+    },
+    "market_sentiment": {
+      "vix": {
+        "symbol": "^VIX",
+        "price": 16.09,
+        "change_percent": 2.88
+      },
+      "sp500": {
+        "symbol": "^GSPC",
+        "price": 6915.61,
+        "change_percent": 0.03
+      },
+      "btc": {
+        "symbol": "BTC-USD",
+        "price": 86583.7,
+        "change_percent": -2.93
+      },
+      "assessment": "neutral",
+      "fear_level": "moderate"
+    }
+  }
+}

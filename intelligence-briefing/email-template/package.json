@@ -1,0 +1,26 @@
+{
+  "name": "email-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "render": "tsx render.ts"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-email/components": "^1.0.6",
+    "@react-email/render": "^2.0.4",
+    "react": "^19.2.3",
+    "react-email": "^5.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
+    "puppeteer": "^24.36.0",
+    "tsx": "^4.21.0"
+  }
+}

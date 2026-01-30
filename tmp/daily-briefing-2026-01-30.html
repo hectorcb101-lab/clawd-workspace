@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Daily Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; color: #1e3a5f; }
+    .container { max-width: 640px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .header { background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); padding: 30px; text-align: center; }
+    .header img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; }
+    .header h1 { font-family: 'Bebas Neue', sans-serif; color: #b8860b; font-size: 32px; margin: 0; letter-spacing: 2px; }
+    .header .date { color: rgba(255,255,255,0.8); font-size: 14px; margin-top: 8px; }
+    .content { padding: 30px; }
+    .section { margin-bottom: 30px; }
+    .section-title { font-family: 'Bebas Neue', sans-serif; color: #1e3a5f; font-size: 22px; border-bottom: 3px solid #b8860b; padding-bottom: 8px; margin-bottom: 15px; letter-spacing: 1px; }
+    .weather-box { background: linear-gradient(135deg, #e8f4f8 0%, #d0e8f0 100%); padding: 20px; border-radius: 8px; text-align: center; }
+    .weather-temp { font-size: 48px; font-weight: 600; color: #1e3a5f; }
+    .weather-desc { color: #666; font-size: 16px; }
+    .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .market-card { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #1e3a5f; }
+    .market-card.up { border-left-color: #22c55e; }
+    .market-card.down { border-left-color: #ef4444; }
+    .market-symbol { font-weight: 600; font-size: 14px; color: #666; }
+    .market-price { font-size: 20px; font-weight: 600; color: #1e3a5f; }
+    .market-change { font-size: 14px; }
+    .market-change.up { color: #22c55e; }
+    .market-change.down { color: #ef4444; }
+    .highlight-box { background: #fff8e7; border: 2px solid #b8860b; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .highlight-title { font-weight: 600; color: #1e3a5f; margin-bottom: 10px; }
+    .prediction-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; }
+    .prediction-item:last-child { border-bottom: none; }
+    .prediction-label { color: #666; }
+    .prediction-value { font-weight: 600; color: #1e3a5f; }
+    .prediction-value.high { color: #ef4444; }
+    .news-item { padding: 12px 0; border-bottom: 1px solid #eee; }
+    .news-item:last-child { border-bottom: none; }
+    .news-headline { font-weight: 600; color: #1e3a5f; }
+    .news-desc { color: #666; font-size: 14px; margin-top: 4px; }
+    .take-box { background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: white; padding: 25px; border-radius: 8px; }
+    .take-box h3 { font-family: 'Bebas Neue', sans-serif; color: #b8860b; margin: 0 0 15px 0; font-size: 20px; letter-spacing: 1px; }
+    .take-box p { margin: 0 0 12px 0; line-height: 1.6; opacity: 0.95; }
+    .take-box p:last-child { margin-bottom: 0; }
+    .footer { background: #f8f9fa; padding: 20px; text-align: center; color: #666; font-size: 12px; }
+    @media (max-width: 480px) {
+      .market-grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="cid:atlas_logo" alt="Atlas">
+      <h1>DAILY INTELLIGENCE BRIEFING</h1>
+      <div class="date">Thursday, 30 January 2026 • 09:00 GMT</div>
+    </div>
+    
+    <div class="content">
+      <div class="section">
+        <div class="section-title">🌡️ LONDON WEATHER</div>
+        <div class="weather-box">
+          <div class="weather-temp">7°C</div>
+          <div class="weather-desc">Partly Cloudy • Light breeze 6 km/h</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">📊 MARKETS OVERVIEW</div>
+        <div class="market-grid">
+          <div class="market-card down">
+            <div class="market-symbol">S&P 500 (SPY)</div>
+            <div class="market-price">$604.04</div>
+            <div class="market-change down">▼ 0.2%</div>
+          </div>
+          <div class="market-card down">
+            <div class="market-symbol">NASDAQ (QQQ)</div>
+            <div class="market-price">$629.43</div>
+            <div class="market-change down">▼ 0.6%</div>
+          </div>
+          <div class="market-card down">
+            <div class="market-symbol">Bitcoin</div>
+            <div class="market-price">$82,510</div>
+            <div class="market-change down">▼ 6.1%</div>
+          </div>
+          <div class="market-card down">
+            <div class="market-symbol">Ethereum</div>
+            <div class="market-price">$2,734</div>
+            <div class="market-change down">▼ 7.2%</div>
+          </div>
+          <div class="market-card up">
+            <div class="market-symbol">VIX (Fear Index)</div>
+            <div class="market-price">18.92</div>
+            <div class="market-change down">▲ 15.7% ⚠️</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">🤖 BIG TECH EARNINGS</div>
+        <div class="highlight-box">
+          <div class="highlight-title">Tale of Two AI Strategies</div>
+          <p><strong>META $738.31 (+10.4%)</strong> — Wall Street loves it. Zuckerberg gets green light to pour billions into AI. Ad revenue growth crushing expectations.</p>
+          <p><strong>MSFT $433.50 (-10%)</strong> — Worst day in years. Azure growth slowed. Investors spooked by $80B+ AI capex with unclear ROI timelines.</p>
+        </div>
+        <div class="market-grid">
+          <div class="market-card up">
+            <div class="market-symbol">NVIDIA</div>
+            <div class="market-price">$192.51</div>
+            <div class="market-change up">▲ 0.5%</div>
+          </div>
+          <div class="market-card down">
+            <div class="market-symbol">Tesla</div>
+            <div class="market-price">$416.56</div>
+            <div class="market-change down">▼ 3.2%</div>
+          </div>
+          <div class="market-card up">
+            <div class="market-symbol">Apple</div>
+            <div class="market-price">$258.28</div>
+            <div class="market-change up">▲ 0.7%</div>
+          </div>
+          <div class="market-card up">
+            <div class="market-symbol">Alphabet</div>
+            <div class="market-price">$338.66</div>
+            <div class="market-change up">▲ 0.7%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">🎯 PREDICTION MARKETS</div>
+        <div class="prediction-item">
+          <span class="prediction-label">US Government Shutdown (Saturday)</span>
+          <span class="prediction-value high">64.5%</span>
+        </div>
+        <div class="prediction-item">
+          <span class="prediction-label">Trump Fed Chair → Kevin Warsh</span>
+          <span class="prediction-value">92.5%</span>
+        </div>
+        <div class="prediction-item">
+          <span class="prediction-label">Fed March Decision: No Change</span>
+          <span class="prediction-value">90.5%</span>
+        </div>
+        <div class="prediction-item">
+          <span class="prediction-label">US Strikes Iran by Feb 5</span>
+          <span class="prediction-value">26.5%</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">📰 KEY HEADLINES</div>
+        <div class="news-item">
+          <div class="news-headline">OpenAI Planning Q4 2026 IPO</div>
+          <div class="news-desc">Racing Anthropic to be first major genAI startup to tap public markets</div>
+        </div>
+        <div class="news-item">
+          <div class="news-headline">Tesla Invests $2B in xAI</div>
+          <div class="news-desc">Also kills Model S and Model X — Musk consolidating AI bets</div>
+        </div>
+        <div class="news-item">
+          <div class="news-headline">AstraZeneca Obesity Deal</div>
+          <div class="news-desc">Multibillion-dollar agreement with China's CSPC for weight-loss drugs</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">💡 ATLAS TAKE</div>
+        <div class="take-box">
+          <h3>Market Identity Crisis on AI Spending</h3>
+          <p>The market is having an identity crisis on AI spending. Meta proves ads can fund the AI arms race—investors happy. Microsoft proves enterprise AI monetisation is harder than Satya promised—investors fleeing.</p>
+          <p>VIX jumping 15.7% with crypto dumping tells me risk-off is accelerating. Shutdown odds at 64.5% aren't helping. I'd watch Apple earnings today for the next sentiment catalyst.</p>
+          <p>The OpenAI vs Anthropic IPO race is fascinating timing. Whoever goes first sets the valuation benchmark for the entire genAI sector.</p>
+          <p><strong>Stay sharp. ⚡</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Compiled by Atlas • Your Personal AI Assistant<br>
+      Questions? Just reply to this email.
+    </div>
+  </div>
+</body>
+</html>

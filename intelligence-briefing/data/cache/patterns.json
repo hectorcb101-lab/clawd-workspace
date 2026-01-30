@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-01-25T22:37:25.080109",
+  "significant_moves": [
+    {
+      "symbol": "^VIX",
+      "price": 16.09,
+      "change": 2.88,
+      "direction": "up",
+      "magnitude": "notable"
+    },
+    {
+      "symbol": "BTC-USD",
+      "price": 86176.09,
+      "change": -3.49,
+      "direction": "down",
+      "magnitude": "notable"
+    },
+    {
+      "symbol": "ETH-USD",
+      "price": 2797.18,
+      "change": -5.45,
+      "direction": "down",
+      "magnitude": "major"
+    },
+    {
+      "symbol": "CL=F",
+      "price": 61.07,
+      "change": 2.88,
+      "direction": "up",
+      "magnitude": "notable"
+    }
+  ],
+  "market_sentiment": {
+    "vix": {
+      "symbol": "^VIX",
+      "price": 16.09,
+      "change_percent": 2.88
+    },
+    "sp500": {
+      "symbol": "^GSPC",
+      "price": 6915.61,
+      "change_percent": 0.03
+    },
+    "btc": {
+      "symbol": "BTC-USD",
+      "price": 86176.09,
+      "change_percent": -3.49
+    },
+    "assessment": "neutral",
+    "fear_level": "moderate"
+  },
+  "divergences": [],
+  "geopolitical_risks": [
+    {
+      "title": "Fed decision in January?",
+      "question": "Fed decreases interest rates by 50+ bps after January 2026 meeting?",
+      "odds": "0.1%",
+      "odds_numeric": 0.1,
+      "risk_level": "low",
+      "volume": "492.6M"
+    },
+    {
+      "title": "US strikes Iran by...?",
+      "question": "US strikes Iran by January 31, 2026?",
+      "odds": "17.5%",
+      "odds_numeric": 17.5,
+      "risk_level": "moderate",
+      "volume": "98.1M"
+    },
+    {
+      "title": "Democratic Presidential Nominee 2028",
+      "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+      "odds": "0.9%",
+      "odds_numeric": 0.9,
+      "risk_level": "low",
+      "volume": "531.3M"
+    }
+  ],
+  "correlations": [],
+  "confidence": "moderate"
+}

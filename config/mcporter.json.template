@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "exa": {
+      "baseUrl": "https://mcp.exa.ai/mcp"
+    },
+    "google-workspace": {
+      "command": "uvx workspace-mcp --tool-tier core",
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_CLIENT_ID}",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_CLIENT_SECRET}",
+        "OAUTHLIB_INSECURE_TRANSPORT": "1",
+        "USER_GOOGLE_EMAIL": "hectorcb101@gmail.com"
+      }
+    },
+    "grep": {
+      "command": "uvx"
+    },
+    "nanobanana": {
+      "command": "node /home/ubuntu/.gemini/extensions/nanobanana/mcp-server/dist/index.js",
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+      }
+    }
+  },
+  "imports": [],
+  "_note": "Copy to mcporter.json and replace ${VAR} with actual values from ~/.clawdbot/.env"
+}

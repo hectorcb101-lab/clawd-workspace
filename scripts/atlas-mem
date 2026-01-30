@@ -1,0 +1,17 @@
+#!/bin/bash
+# Atlas Memory Integration CLI
+# Usage: atlas-mem <command> [args...]
+#
+# Commands:
+#   fact-add <category> <subject> <content>
+#   fact-search <query>
+#   fact-list [category]
+#   soul-set <aspect> <content>
+#   soul-get <aspect>
+#   soul-list
+#   msg-search <query>
+#   context <query>
+
+cd /home/ubuntu/clawd/atlas-memory
+source venv/bin/activate
+exec python3 integration.py "$@" --json

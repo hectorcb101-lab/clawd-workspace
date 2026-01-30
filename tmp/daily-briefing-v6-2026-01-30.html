@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Daily Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f172a;
+      --gold: #ca8a04;
+      --gold-light: #fef3c7;
+      --slate: #475569;
+      --slate-light: #f1f5f9;
+      --red: #dc2626;
+      --green: #16a34a;
+    }
+    body { 
+      font-family: 'Source Sans Pro', Georgia, serif; 
+      background: #fafafa; 
+      margin: 0; 
+      padding: 20px; 
+      color: var(--navy); 
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .container { 
+      max-width: 620px; 
+      margin: 0 auto; 
+      background: white; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    
+    /* Header - Editorial Style */
+    .header { 
+      padding: 40px 40px 30px; 
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .header .logo { font-size: 36px; margin-bottom: 8px; }
+    .header h1 { 
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 13px; 
+      letter-spacing: 4px; 
+      text-transform: uppercase;
+      color: var(--slate);
+      margin: 0;
+      font-weight: 500;
+    }
+    .header .edition {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      color: var(--navy);
+      margin: 12px 0 0;
+      font-weight: 700;
+    }
+    .header .date { 
+      font-size: 12px;
+      color: var(--slate);
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+    
+    .content { padding: 0; }
+    
+    /* Section styling */
+    .section { 
+      padding: 28px 40px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section:last-child { border-bottom: none; }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+      margin-left: 15px;
+    }
+    
+    /* Weather - Minimal */
+    .weather {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .weather-location {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .weather-temp {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      margin: 8px 0;
+    }
+    .weather-condition {
+      color: var(--slate);
+      font-size: 15px;
+    }
+    .weather-advice {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 14px;
+      color: var(--navy);
+    }
+    
+    /* Markets - Data Table Style */
+    .markets-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .markets-table th {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--slate);
+      font-weight: 600;
+      text-align: left;
+      padding: 0 0 12px;
+      border-bottom: 2px solid var(--navy);
+    }
+    .markets-table td {
+      padding: 14px 0;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .markets-table tr:last-child td { border-bottom: none; }
+    .market-name {
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .market-ticker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--slate);
+    }
+    .market-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .market-change {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      text-align: right;
+    }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .warn { color: var(--gold); }
+    
+    /* Analysis callout */
+    .analysis {
+      margin-top: 20px;
+      padding: 18px 20px;
+      background: var(--slate-light);
+      border-radius: 4px;
+      font-size: 14px;
+      position: relative;
+    }
+    .analysis::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--gold);
+      border-radius: 3px 0 0 3px;
+    }
+    .analysis-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    
+    /* Tweets - Quote style */
+    .tweet {
+      padding: 16px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .tweet:last-child { border-bottom: none; }
+    .tweet-text {
+      font-style: italic;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .tweet-meta {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    .tweet-author { 
+      font-weight: 600; 
+      color: var(--navy);
+    }
+    .tweet-handle { color: var(--slate); }
+    .tweet-link {
+      color: var(--gold);
+      text-decoration: none;
+      margin-left: 8px;
+    }
+    
+    /* Earnings - Card style */
+    .earnings-item {
+      padding: 18px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .earnings-item:last-child { border-bottom: none; }
+    .earnings-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .earnings-ticker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .earnings-numbers {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+    }
+    .earnings-summary {
+      font-size: 14px;
+      color: var(--slate);
+      margin-bottom: 6px;
+    }
+    .earnings-link {
+      font-size: 12px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    
+    /* Predictions */
+    .prediction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .prediction:last-child { border-bottom: none; }
+    .prediction-label { 
+      font-size: 14px;
+      color: var(--navy);
+    }
+    .prediction-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .prediction-alert {
+      background: #fef2f2;
+      color: var(--red);
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    
+    /* Headlines */
+    .headline {
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .headline:last-child { border-bottom: none; }
+    .headline a {
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .headline a:hover { color: var(--gold); }
+    .headline-source {
+      font-size: 11px;
+      color: var(--slate);
+      margin-top: 3px;
+    }
+    
+    /* Atlas Take */
+    .take {
+      background: var(--navy);
+      color: white;
+      padding: 25px;
+      border-radius: 4px;
+    }
+    .take-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+    .take p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 12px;
+      opacity: 0.92;
+    }
+    .take strong { color: white; }
+    
+    /* Quant box */
+    .quant-box {
+      background: rgba(202,138,4,0.15);
+      padding: 16px;
+      border-radius: 4px;
+      margin-top: 18px;
+    }
+    .quant-title {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .quant-pattern {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    
+    /* Glossary */
+    .glossary {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .glossary-title {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+    .glossary-item {
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 4px;
+    }
+    .glossary-term {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--gold);
+    }
+    
+    /* Footer */
+    .footer {
+      padding: 25px 40px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--slate);
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🏛️</div>
+      <h1>Atlas Intelligence</h1>
+      <div class="edition">Daily Briefing</div>
+      <div class="date">Thursday, 30 January 2026</div>
+    </div>
+    
+    <div class="content">
+      <!-- Weather -->
+      <div class="section">
+        <div class="weather">
+          <div class="weather-location">London</div>
+          <div class="weather-temp">11°</div>
+          <div class="weather-condition">Partly cloudy, feels like 9°</div>
+          <div class="weather-advice">
+            👕 Light layers today &nbsp;·&nbsp; 🌂 Rain arrives after 6pm
+          </div>
+        </div>
+      </div>
+
+      <!-- Markets -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Markets</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <table class="markets-table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Price</th>
+              <th style="text-align:right">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="market-name">S&P 500</div>
+                <div class="market-ticker">SPY</div>
+              </td>
+              <td class="market-price">$604.04</td>
+              <td class="market-change down">▼ 0.2%</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="market-name">Nasdaq 100</div>
+                <div class="market-ticker">QQQ</div>
+              </td>
+              <td class="market-price">$629.43</td>
+              <td class="market-change down">▼ 0.6%</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="market-name">Volatility Index</div>
+                <div class="market-ticker">VIX</div>
+              </td>
+              <td class="market-price">18.92</td>
+              <td class="market-change warn">▲ 15.7%</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="market-name">Bitcoin</div>
+                <div class="market-ticker">BTC</div>
+              </td>
+              <td class="market-price">$82,510</td>
+              <td class="market-change down">▼ 6.1%</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="market-name">Ethereum</div>
+                <div class="market-ticker">ETH</div>
+              </td>
+              <td class="market-price">$2,734</td>
+              <td class="market-change down">▼ 7.2%</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="analysis">
+          <div class="analysis-label">Analysis</div>
+          VIX jumping 15% while equities hold flat signals institutional hedging. Big players are buying protection without selling positions. Crypto, as the highest beta asset class, sells off first when fear rises.
+        </div>
+      </div>
+
+      <!-- X Pulse -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">X Pulse</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="tweet">
+          <div class="tweet-text">"Meta Q4 earnings revealed a 73% capex jump to $115 to $135B for 2026, mainly for AI infrastructure. Zuckerberg calls it key for AGI pursuit."</div>
+          <div class="tweet-meta">
+            <span class="tweet-author">Grok</span>
+            <span class="tweet-handle">@grok</span>
+            <a href="https://x.com/grok/status/2017215085140123884" class="tweet-link">View</a>
+          </div>
+        </div>
+        
+        <div class="tweet">
+          <div class="tweet-text">"Microsoft tumbled 10% in a day and is not recovering premarket. Investors dismayed by cloud computing business not growing enough."</div>
+          <div class="tweet-meta">
+            <span class="tweet-author">Blue Crew Viking</span>
+            <span class="tweet-handle">@BlueCrewViking</span>
+            <a href="https://x.com/BlueCrewViking/status/2017214191594033276" class="tweet-link">View</a>
+          </div>
+        </div>
+        
+        <div class="tweet">
+          <div class="tweet-text">"Bitcoin took another dump yesterday. Is it time to stop denying we are in a bear market?"</div>
+          <div class="tweet-meta">
+            <span class="tweet-author">SteveO</span>
+            <span class="tweet-handle">@CryptoSteveO1</span>
+            <a href="https://x.com/CryptoSteveO1/status/2017215798570254735" class="tweet-link">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earnings -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Big Tech Earnings</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="earnings-item">
+          <div class="earnings-top">
+            <span class="earnings-ticker">META</span>
+            <span class="earnings-numbers">$738.31 <span class="up">+10.4%</span></span>
+          </div>
+          <div class="earnings-summary">$115B to $135B AI capex for 2026. Ad revenue funds the bet. Wall Street approves.</div>
+          <a href="https://www.cnbc.com/2026/01/28/metas-zuckerberg-gets-green-light-from-wall-street-to-invest-in-ai.html" class="earnings-link">Read at CNBC →</a>
+        </div>
+        
+        <div class="earnings-item">
+          <div class="earnings-top">
+            <span class="earnings-ticker">MSFT</span>
+            <span class="earnings-numbers">$433.50 <span class="down">−10%</span></span>
+          </div>
+          <div class="earnings-summary">Azure growth missed. Copilot monetisation unclear. Worst single day drop in years.</div>
+          <a href="https://english.cw.com.tw/article/article.action?id=4593" class="earnings-link">Read at CommonWealth →</a>
+        </div>
+        
+        <div class="earnings-item">
+          <div class="earnings-top">
+            <span class="earnings-ticker">TSLA</span>
+            <span class="earnings-numbers">$416.56 <span class="down">−3.2%</span></span>
+          </div>
+          <div class="earnings-summary">$2B invested in xAI. Model S and X discontinued. Musk consolidating AI bets.</div>
+          <a href="https://fortune.com/2026/01/28/tesla-earnings-2-billion-xai-investment-elon-musk-ends-model-s-model-x-optimus/" class="earnings-link">Read at Fortune →</a>
+        </div>
+      </div>
+
+      <!-- Predictions -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Prediction Markets</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="prediction">
+          <span class="prediction-label">US Government Shutdown (Saturday)</span>
+          <span class="prediction-alert">64.5%</span>
+        </div>
+        
+        <div class="analysis" style="margin-top:12px; margin-bottom:16px;">
+          <div class="analysis-label">If it happens</div>
+          800,000+ workers furloughed, markets likely gap down Monday. Watch Sunday night futures for direction.
+        </div>
+        
+        <div class="prediction">
+          <span class="prediction-label">Fed Chair Nomination: Kevin Warsh</span>
+          <span class="prediction-value">92.5%</span>
+        </div>
+        <div class="prediction">
+          <span class="prediction-label">Fed March Decision: Hold Rates</span>
+          <span class="prediction-value">90.5%</span>
+        </div>
+        <div class="prediction">
+          <span class="prediction-label">US Strikes Iran by 5 Feb</span>
+          <span class="prediction-value">26.5%</span>
+        </div>
+      </div>
+
+      <!-- Headlines -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Headlines</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="headline">
+          <a href="https://www.morningstar.com/news/dow-jones/202601301953/dow-jones-top-company-headlines-at-3-am-et-openai-plans-fourth-quarter-ipo-in-race-to-beat-anthropic-to-market-astrazeneca">OpenAI planning Q4 2026 IPO, racing Anthropic to market</a>
+          <div class="headline-source">Morningstar</div>
+        </div>
+        <div class="headline">
+          <a href="https://fortune.com/2026/01/28/tesla-earnings-2-billion-xai-investment-elon-musk-ends-model-s-model-x-optimus/">Tesla invests $2B in xAI, discontinues Model S and X</a>
+          <div class="headline-source">Fortune</div>
+        </div>
+        <div class="headline">
+          <a href="https://www.youtube.com/watch?v=7vYR7RPgWMo">AI spending delivers mixed results for big tech stocks</a>
+          <div class="headline-source">Bloomberg Video</div>
+        </div>
+      </div>
+
+      <!-- Reading -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Further Reading</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="headline">
+          <a href="https://www.investopedia.com/ai-stocks-pick-up-steam-and-the-nasdaq-tests-records-ahead-of-big-tech-earnings-11894245">AI stocks gain momentum ahead of earnings season</a>
+          <div class="headline-source">Investopedia</div>
+        </div>
+        <div class="headline">
+          <a href="https://www.fool.com/investing/2026/01/30/2-trillion-dollar-artificial-intelligence-ai-stock/">Two trillion dollar AI stocks worth watching</a>
+          <div class="headline-source">Motley Fool</div>
+        </div>
+      </div>
+
+      <!-- Atlas Take -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-label">Atlas Take</span>
+          <span class="section-line"></span>
+        </div>
+        
+        <div class="take">
+          <div class="take-title">The AI Spending Divergence</div>
+          <p>The market is running a live experiment on AI investment strategies. <strong>Meta</strong> proves ad revenue can fund the AI arms race without scaring investors. <strong>Microsoft</strong> proves enterprise AI monetisation is harder than promised.</p>
+          <p>The lesson for 2026: <strong>show revenue, not roadmaps.</strong></p>
+          
+          <div class="quant-box">
+            <div class="quant-title">Quant Pattern</div>
+            <div class="quant-pattern">
+              When VIX rises 15%+ in a single session while SPY stays flat, history shows a 65% probability of a 2%+ move within five trading days. Direction depends on the catalyst: shutdown resolution means up, shutdown happens means down.
+            </div>
+            <div class="glossary">
+              <div class="glossary-title">Key</div>
+              <div class="glossary-item"><span class="glossary-term">VIX</span> Volatility Index. Measures expected market volatility over 30 days. Often called the "fear gauge." Higher VIX means more uncertainty.</div>
+              <div class="glossary-item"><span class="glossary-term">SPY</span> The largest ETF tracking the S&P 500 index. Used as a proxy for the overall US stock market.</div>
+              <div class="glossary-item"><span class="glossary-term">Beta</span> How much an asset moves relative to the market. High beta means bigger swings in both directions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Compiled by Atlas · Reply with questions
+    </div>
+  </div>
+</body>
+</html>

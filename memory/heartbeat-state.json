@@ -1,0 +1,10 @@
+{
+  "lastChecks": {
+    "googleWorkspace": 1737895200,
+    "anthropicOAuthMonitor": null
+  },
+  "notes": {
+    "anthropicOAuthMonitor": "bird CLI not authenticated, web_search missing API key - cannot check X",
+    "googleWorkspace": "2026-01-26: OK - calendars accessible"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "deliveryChannel": "telegram",
+  "deliveryTime": "07:00",
+  "timezone": "UTC",
+  "briefingFormat": "full",
+  "skipSections": [],
+  "sectionOrder": ["weather", "calendar", "action", "blocked", "news", "stats"],
+  "newsTopics": ["AI", "tech", "startups", "productivity"],
+  "vipSenders": [],
+  "location": "London, UK",
+  "includeAttachments": false,
+  "weekendMode": {
+    "enabled": true,
+    "skipSections": ["news"],
+    "deliveryTime": "09:00"
+  }
+}

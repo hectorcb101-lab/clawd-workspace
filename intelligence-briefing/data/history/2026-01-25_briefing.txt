@@ -1,0 +1,74 @@
+🌍 **INTELLIGENCE BRIEFING**
+Sunday, January 25, 2026 | Past 24 Hours
+
+📊 **EXECUTIVE SUMMARY**
+• Market fear level: moderate (VIX up 2.9%)
+
+🎯 **MARKET MOVEMENTS**
+
+📈 **^VIX**: $16.09 (+2.9%) [📊](https://finance.yahoo.com/quote/^VIX)
+📉 **BTC-USD**: $86,583.70 (-2.9%) [📊](https://finance.yahoo.com/quote/BTC-USD)
+📉 **ETH-USD**: $2,814.42 (-4.6%) [📊](https://finance.yahoo.com/quote/ETH-USD)
+
+**Cryptocurrency:** Major selling (BTC/ETH down 2.9%)
+*Possible causes:*
+  • Geopolitical uncertainty (Iran tensions)
+  • Rising fear (VIX up)
+  • Flight from risk assets while stocks hold
+
+⚡ **GEOPOLITICAL LANDSCAPE**
+
+🟢 **Fed decision in January?**
+   Odds: 0.1% | Volume: $493.0M
+   Risk level: low
+
+🟡 **US strikes Iran by...?**
+   Odds: 17.5% | Volume: $99.0M
+   Risk level: moderate
+
+🟢 **Democratic Presidential Nominee 2028**
+   Odds: 0.9% | Volume: $531.4M
+   Risk level: low
+
+💡 **ARIADNE'S ANALYSIS**
+
+**My take:** Crypto is bleeding, stocks are ignoring it. This is either: (1) Crypto-specific weakness, or (2) The canary in the coal mine.
+
+When crypto leads down while equities hold, it's historically been a mixed signal - sometimes isolated to crypto (regulatory fears, exchange issues), sometimes a leading indicator for broader risk-off within days. The key confirmation signals: Watch **small caps (IWM - represents riskier, smaller companies that often move before large caps)** and **credit spreads (the premium investors demand to hold corporate bonds vs safe Treasuries - widens when fear rises)**. If these weaken, crypto was the early warning.
+
+**Why this matters:**
+  • VIX (the 'fear gauge' - measures expected market volatility) up 2.9% to 16.1 - fear is rising, even if markets don't show it yet
+  • Polymarket (prediction market where people bet real money on events) pricing 17.5% chance of US strikes Iran by...? - these odds reflect what informed bettors think will actually happen
+
+**Contrarian angle:** Crypto divergences don't always predict equity moves. Recent patterns (Dec 2025) showed crypto falling 30% while Nasdaq climbed on earnings. Context matters - is this crypto-specific or macro?
+
+**Watch for:** **Key price levels:** BTC support at $84-86k (based on whale accumulation data - large holders buying at these prices). Break below $84k suggests deeper selling pressure. Hold above $86k with stocks green = likely isolated crypto weakness.
+
+**Confidence:** moderate
+
+📈 **WHAT TO WATCH TODAY**
+  • US strikes Iran by...? (17.5% odds) - if this spikes above 30%, markets will price in higher uncertainty → expect volatility
+  • BTC support at $85k (price floor where buyers step in) - breaking below this level often triggers more selling as stop-losses hit
+
+📚 **LEARN: VIX (Volatility Index)**
+
+The VIX measures expected volatility in the S&P 500 over the next 30 days, derived from options prices. Often called the 'fear index' because it spikes when investors expect market turbulence.
+
+*Today:* VIX is at 16.1, up 2.9% today - showing rising market uncertainty
+
+🔍 **FURTHER READING**
+  • [US strikes Iran by](https://www.google.com/search?q=US+strikes+Iran+by)
+  • [BTC support at $85k](https://www.google.com/search?q=BTC+support+at+$85k)
+  • [Cryptocurrency latest news](https://www.google.com/search?q=Cryptocurrency+news+today&tbm=nws)
+
+📖 **QUICK REFERENCE**
+*Key terms used in this briefing:*
+• **VIX**: 'Fear gauge' - measures expected market volatility (higher = more fear)
+• **Support level**: Price where buyers typically step in to prevent further drops
+• **Credit spreads**: Premium for corporate bonds vs safe Treasuries (widens when fear rises)
+• **Small caps (IWM)**: Smaller, riskier companies that often move before large stocks
+• **Polymarket**: Prediction market where people bet real money on future events
+
+---
+*Built with engineering principles · Designed to amplify your intelligence*
+🧵 Ariadne | 23:53 UTC

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Atlas Memory CLI wrapper
+cd "$(dirname "$0")"
+source venv/bin/activate
+exec python3 memory_manager.py "$@"
