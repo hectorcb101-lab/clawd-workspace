@@ -92,44 +92,54 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
-## Atlas Memory System
+## Atlas Memory System (PRIMARY)
 
 **Location:** `~/clawd/atlas-memory/`
-**CLI:** `~/clawd/scripts/atlas-mem`
+**Database:** `atlas_memory.db` (SQLite)
+**Query:** `python3 ~/clawd/atlas-memory/query.py "query"`
 
-Enhanced memory with semantic search, facts, and soul management.
+⚠️ **USE THIS FOR ALL MEMORY RECALL** - Not markdown files!
+
+### Database Contents
+- **facts** - 481 extracted facts with embeddings for semantic search
+- **daily_logs** - All daily session logs indexed
+- **soul** - Personality/communication traits
+- **embeddings** - Vector representations for similarity search
 
 ### Quick Commands
 ```bash
-# Search facts semantically
-atlas-mem fact-search "query"
+# Primary query (hybrid semantic + keyword)
+python3 ~/clawd/atlas-memory/query.py "query"
 
-# Add a fact
+# Semantic only
+python3 ~/clawd/atlas-memory/query.py "query" --mode semantic
+
+# Keyword only (FTS5)
+python3 ~/clawd/atlas-memory/query.py "query" --mode keyword
+
+# Add fact
 atlas-mem fact-add "Category" "Subject" "Content"
 
-# Soul operations  
-atlas-mem soul-set "aspect" "content"
+# List soul aspects
 atlas-mem soul-list
-
-# Get context for a query
-atlas-mem context "query"
-
-# Search past messages
-atlas-mem msg-search "query"
 ```
 
-### When to Use
-- **fact-add**: When learning something important about Finn (preferences, projects, people)
-- **fact-search**: Before answering questions that might relate to past context
-- **soul-set**: When learning how to communicate better with Finn
-- **context**: To enrich responses with relevant background
+### When to Query
+- **ALWAYS** before answering questions about past work, decisions, preferences
+- When Finn asks "do you remember..." or "what about that time..."
+- When context from previous sessions would help
 
-### Features
-1. **Semantic Search** - Find facts by meaning, not just keywords
-2. **Hybrid Search** - Vector + keyword combined
-3. **Soul Aspects** - Structured identity/personality traits
-4. **Message Search** - Search past conversations
-5. **Fact Extraction** - Categorized knowledge storage
+### Architecture
+1. **SQLite DB** - Single source of truth for all memory
+2. **Embeddings** - OpenAI text-embedding-3-small for semantic search
+3. **FTS5** - Full-text search for keyword matching
+4. **Hybrid Search** - Combines both for best results
+
+### Migration Status
+- ✅ Markdown files migrated to DB (2026-01-30)
+- ✅ 481 facts extracted
+- ✅ 31 daily logs indexed
+- 🔄 Embeddings being generated
 
 ---
 
