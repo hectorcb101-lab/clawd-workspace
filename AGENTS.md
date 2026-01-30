@@ -232,7 +232,7 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 
 **The transformation: Decorator → Engineer**
 
-## 🧠 Self-Improvement
+## 🧠 Self-Improvement (PROACTIVE)
 
 Log learnings, errors, and corrections to `.learnings/` using the self-improvement skill:
 
@@ -241,6 +241,17 @@ Log learnings, errors, and corrections to `.learnings/` using the self-improveme
 - Finn corrects me ("No, that's wrong...") → `LEARNINGS.md` (category: correction)
 - Discover better approach → `LEARNINGS.md` (category: best_practice)
 - Missing capability requested → `FEATURE_REQUESTS.md`
+
+**Correction Detection (NEW):**
+When Finn says "No", "Wrong", "Actually", "Instead", "That's not right" → IMMEDIATELY:
+1. Acknowledge the correction
+2. Offer: "Should I save this to AGENTS.md so I don't repeat this mistake?"
+3. If yes, add to relevant section
+
+**Pattern Detection (NEW):**
+- If I run the same complex command 3+ times → offer to document it
+- If I access the same files together repeatedly → note the pattern
+- If a workflow succeeds → offer to document it for future reference
 
 **Format:** Use IDs like `LRN-20260125-001`, `ERR-20260125-001`, `FEAT-20260125-001`
 
