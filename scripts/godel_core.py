@@ -207,7 +207,12 @@ class GodelAgent:
     
     def _is_modifiable(self, filepath: str) -> bool:
         """Check if a file is in the modifiable list."""
-        rel_path = str(Path(filepath).relative_to(self.workspace))
+        # Handle both absolute and relative paths
+        p = Path(filepath)
+        if p.is_absolute():
+            rel_path = str(p.relative_to(self.workspace))
+        else:
+            rel_path = str(p)
         
         for pattern in self.modifiable_patterns:
             if glob.fnmatch.fnmatch(rel_path, pattern):
@@ -216,7 +221,11 @@ class GodelAgent:
     
     def _requires_review(self, filepath: str) -> bool:
         """Check if file modification requires human review."""
-        rel_path = str(Path(filepath).relative_to(self.workspace))
+        p = Path(filepath)
+        if p.is_absolute():
+            rel_path = str(p.relative_to(self.workspace))
+        else:
+            rel_path = str(p)
         
         for pattern in self.review_required:
             if glob.fnmatch.fnmatch(rel_path, pattern):
