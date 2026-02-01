@@ -1,18 +1,40 @@
 # HEARTBEAT.md
 
+## 🔨 Active Build Check
+If `ACTIVE_BUILD.md` exists and status is ACTIVE:
+- Check if there's idle time to make progress
+- If Finn isn't actively chatting, consider continuing the build
+- Small incremental progress is fine during heartbeats
+
+## 📝 Event Log Sync
+Run periodically to capture new events:
+```bash
+cd ~/clawd/projects/atlas-memory-evolution/src && python3 conversation_ingester.py 2>/dev/null | tail -5
+```
+This ingests daily logs and new conversations into the event system.
+
 ## Context Monitoring (Every Heartbeat)
 Check session context usage via `session_status`.
 - **75%+:** Warn Finn proactively
 - **90%+:** Critical alert, suggest model switch or new session
 - Log to `memory/usage-tracking.md`
 
-## Memory DB Health Check
-Verify atlas_memory.db is healthy:
+## Memory Daemon Health Check
+Verify Atlas Memory daemon is running:
 ```bash
-python3 -c "import sqlite3; c=sqlite3.connect('/home/ubuntu/clawd/atlas-memory/atlas_memory.db'); f=c.execute('SELECT COUNT(*) FROM facts').fetchone()[0]; e=c.execute('SELECT COUNT(*) FROM fact_embeddings').fetchone()[0]; print(f'Memory DB: {f} facts, {e} embeddings')"
+atlas-daemon status
 ```
-- Facts and embeddings should be roughly equal
-- If embeddings < facts, run: `python3 ~/clawd/atlas-memory/generate_embeddings.py`
+- If not running: `atlas-daemon start`
+- Check stats: `atlas-mem stats`
+
+## Self-Awareness Check
+Run insight check for proactive alerts:
+```bash
+~/clawd/bin/atlas-self check
+```
+- If critical insights: surface to Finn
+- Periodically run `atlas-self analyze` for health score
+- Log outcomes after significant tasks
 
 ## Periodic Checks
 
@@ -59,3 +81,8 @@ Stay quiet if:
 - Late night (23:00-08:00 London time) unless urgent
 - Finn clearly busy
 - Nothing new since last check
+
+
+## Test Section
+
+This is a test modification to verify the system works.
