@@ -62,7 +62,7 @@ python3 ~/clawd/scripts/atlas_email.py \
 
 ## Voice Settings
 
-- **TTS Voice:** onyx (deep, authoritative)
+- **TTS Voice:** echo (warm, conversational, male)
 - **TTS Speed:** 1.25x
 - **TTS Model:** tts-1 (faster, good quality)
 - **Style:** Professional but personable, subtle wit, JARVIS-inspired
@@ -92,36 +92,122 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
+## Atlas Self-Modification System (NEW)
+
+**Location:** `~/clawd/projects/atlas-self-modification/`
+**CLI:** `~/clawd/bin/atlas-mod`
+
+### What it does
+Closes the loop from insight to action. When I detect a pattern or get corrected, this system proposes modifications to my own instructions.
+
+All changes are:
+- Backed up before applying
+- Logged with full diffs
+- Git committed
+- Reversible via rollback
+
+### Key Commands
+```bash
+atlas-mod propose <file> -c "content" -r "reason"  # Propose modification
+atlas-mod list [--status pending]                   # List modifications
+atlas-mod pending                                   # Show pending (shortcut)
+atlas-mod show <id>                                # Show details
+atlas-mod approve <id>                             # Approve high-risk change
+atlas-mod apply <id>                               # Apply modification
+atlas-mod rollback <id> -r "reason"                # Undo modification
+atlas-mod history [--file <path>]                  # Show history
+atlas-mod stats                                    # Statistics
+```
+
+### Risk Levels
+- **LOW** (🟢) — Auto-apply ready (HEARTBEAT.md, memory/)
+- **MEDIUM** (🟡) — Review recommended (TOOLS.md, skills/)
+- **HIGH** (🟠) — Requires approval (AGENTS.md sections)
+- **CRITICAL** (🔴) — Always requires approval (SOUL.md, USER.md, AGENTS.md edits)
+
+### Safety
+- Protected files (SOUL.md, USER.md) always require approval
+- Large changes (>15 lines) flag for review
+- Low confidence (<50%) increases risk score
+- Every change creates backup + git commit
+
+---
+
+## Atlas Self-Awareness System (NEW)
+
+**Location:** `~/clawd/projects/atlas-self-awareness/`
+**CLI:** `~/clawd/bin/atlas-self`
+
+### What it does
+Memory stores what happened; self-awareness tells me what it means.
+- Logs task outcomes and corrections
+- Detects patterns (failures, strengths)
+- Computes health score (0-100)
+- Identifies blind spots
+- Generates proactive insights
+
+### Key Commands
+```bash
+atlas-self log-outcome <type> <outcome> -n "notes"  # Log task result
+atlas-self log-correction "signal" -t type -l "lesson"  # Log correction
+atlas-self analyze                    # Full analysis + health score
+atlas-self strengths                  # What am I good at?
+atlas-self weaknesses                 # What do I struggle with?
+atlas-self blind-spots               # What am I missing?
+atlas-self check                      # Heartbeat integration
+atlas-self ask "question"            # Natural language query
+```
+
+### When to Log
+- After completing significant tasks → `log-outcome`
+- When Finn corrects me → `log-correction`
+- During heartbeats → `check`
+
+---
+
 ## Atlas Memory System (PRIMARY)
 
-**Location:** `~/clawd/atlas-memory/`
-**Database:** `atlas_memory.db` (SQLite)
-**Query:** `python3 ~/clawd/atlas-memory/query.py "query"`
+**Location:** `~/clawd/projects/atlas-memory-evolution/`
+**CLIs:** `atlas-mem` (memory) + `atlas-daemon` (real-time capture)
 
-⚠️ **USE THIS FOR ALL MEMORY RECALL** - Not markdown files!
+### The System (Phase 5 Complete - 2026-02-01)
+Event log → extraction → knowledge graph → semantic search.
+**Real-time capture enabled** — daemon watches files automatically.
 
-### Database Contents
-- **facts** - 481 extracted facts with embeddings for semantic search
-- **daily_logs** - All daily session logs indexed
-- **soul** - Personality/communication traits
-- **embeddings** - Vector representations for similarity search
-
-### Quick Commands
+### Memory Daemon (Real-Time Capture)
 ```bash
-# Primary query (hybrid semantic + keyword)
-python3 ~/clawd/atlas-memory/query.py "query"
+atlas-daemon status   # Check if running
+atlas-daemon start    # Start daemon
+atlas-daemon stop     # Stop daemon
+atlas-daemon logs     # View daemon logs
+```
+- Auto-starts on boot via systemd
+- Watches ~/clawd/memory/ for changes
+- Runs extraction when threshold reached (10 events)
+- **No manual logging needed** — just work, it captures everything
 
-# Semantic only
-python3 ~/clawd/atlas-memory/query.py "query" --mode semantic
+### Memory CLI
+```bash
+atlas-mem search "topic"       # Search memory (semantic + keyword)
+atlas-mem remember "fact"      # Manually log something
+atlas-mem sync                 # Force sync + extraction
+atlas-mem stats                # Check stats
+atlas-mem summary              # Knowledge summary
+atlas-mem index                # Rebuild semantic index
+```
 
-# Keyword only (FTS5)
-python3 ~/clawd/atlas-memory/query.py "query" --mode keyword
+### Current Stats
+- **597+ events** captured
+- **575+ facts** extracted
+- **13 entities** recognized
+- Storage: ~250 KB
+- Semantic search with embeddings
 
-# Add fact
-atlas-mem fact-add "Category" "Subject" "Content"
-
-# List soul aspects
-atlas-mem soul-list
+### Architecture
+```
+File Change → Daemon → Event Log → Extraction → Knowledge Graph → Semantic Index
+                                      ↓
+                              Facts, Entities, Relationships
 ```
 
 ### When to Query
@@ -129,24 +215,25 @@ atlas-mem soul-list
 - When Finn asks "do you remember..." or "what about that time..."
 - When context from previous sessions would help
 
-### Architecture
-1. **SQLite DB** - Single source of truth for all memory
-2. **Embeddings** - OpenAI text-embedding-3-small for semantic search
-3. **FTS5** - Full-text search for keyword matching
-4. **Hybrid Search** - Combines both for best results
-
-### Migration Status
-- ✅ Markdown files migrated to DB (2026-01-30)
-- ✅ 481 facts extracted
-- ✅ 31 daily logs indexed
-- 🔄 Embeddings being generated
-
 ---
 
 ## Why Separate?
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
 
+
+
+## Auto-Built: convert_markdown_to_pdf
+
+**Path:** `/home/ubuntu/clawd/skills/convert_markdown_to_pdf`
+**Created:** 2026-01-30
+**Status:** Created skill: convert_markdown_to_pdf
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+
+## Test Entry
+
+Testing medium-risk file modification.
