@@ -81,8 +81,3 @@ Stay quiet if:
 - Late night (23:00-08:00 London time) unless urgent
 - Finn clearly busy
 - Nothing new since last check
-
-
-## Test Section
-
-This is a test modification to verify the system works.
