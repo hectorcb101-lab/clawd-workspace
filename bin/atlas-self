@@ -1,0 +1,9 @@
+#!/bin/bash
+# Atlas Self-Awareness System CLI wrapper
+# Usage: atlas-self <command> [args]
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$SCRIPT_DIR/../projects/atlas-self-awareness"
+
+cd "$PROJECT_DIR"
+exec python3 -m src.cli "$@"

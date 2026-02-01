@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      margin: 0 0 5px 0;
+      letter-spacing: 2px;
+    }
+    
+    .header .date {
+      color: #b8860b;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #1e3a5f;
+      border-bottom: 2px solid #b8860b;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    
+    .market-item {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 3px solid #1e3a5f;
+    }
+    
+    .market-item.up { border-left-color: #22c55e; }
+    .market-item.down { border-left-color: #ef4444; }
+    
+    .market-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    .market-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+    
+    .market-change {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .market-change.up { color: #22c55e; }
+    .market-change.down { color: #ef4444; }
+    
+    .prediction-item {
+      background: #faf9f6;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+    
+    .prediction-title {
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-bottom: 8px;
+    }
+    
+    .prediction-odds {
+      font-size: 24px;
+      font-weight: 700;
+      color: #b8860b;
+    }
+    
+    .prediction-volume {
+      font-size: 12px;
+      color: #64748b;
+    }
+    
+    .insight-box {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    
+    .insight-box h3 {
+      color: #b8860b;
+      margin: 0 0 10px 0;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+    
+    .insight-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .insight-box li {
+      margin-bottom: 8px;
+    }
+    
+    .footer {
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+    
+    .emoji { font-size: 16px; }
+    
+    @media (max-width: 480px) {
+      .market-grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 26px; }
+      .content { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏛️ ATLAS DAILY INTELLIGENCE</h1>
+      <div class="date">Sunday, 1 February 2026 • 09:00 GMT</div>
+    </div>
+    
+    <div class="content">
+      <!-- Markets Section -->
+      <div class="section">
+        <div class="section-title">📊 MARKETS AT A GLANCE</div>
+        <div class="market-grid">
+          <div class="market-item down">
+            <div class="market-name">S&P 500</div>
+            <div class="market-value">$691.97</div>
+            <div class="market-change down">-0.30% (day) / -0.11% (week)</div>
+          </div>
+          <div class="market-item down">
+            <div class="market-name">Nasdaq 100</div>
+            <div class="market-value">$621.87</div>
+            <div class="market-change down">-1.20% (day) / -0.57% (week)</div>
+          </div>
+          <div class="market-item up">
+            <div class="market-name">Tesla</div>
+            <div class="market-value">$430.41</div>
+            <div class="market-change up">+3.32%</div>
+          </div>
+          <div class="market-item down">
+            <div class="market-name">NVIDIA</div>
+            <div class="market-value">$191.13</div>
+            <div class="market-change down">-0.72%</div>
+          </div>
+        </div>
+        <p style="margin-top: 15px; font-size: 14px; color: #64748b;">
+          <strong>VIX:</strong> 17.44 (+3.32%) — Elevated but not panicked<br>
+          <strong>Gold:</strong> $4,745 (-10.78%) ⚠️ Unusual drop<br>
+          <strong>Oil:</strong> $65.21 (-0.32%)
+        </p>
+      </div>
+      
+      <!-- Crypto Section -->
+      <div class="section">
+        <div class="section-title">🪙 CRYPTO</div>
+        <div class="market-grid">
+          <div class="market-item down">
+            <div class="market-name">Bitcoin</div>
+            <div class="market-value">$78,498</div>
+            <div class="market-change down">-12% this week | -37.8% from ATH</div>
+          </div>
+          <div class="market-item down">
+            <div class="market-name">Ethereum</div>
+            <div class="market-value">$2,411</div>
+            <div class="market-change down">-1.39% | -51.3% from ATH</div>
+          </div>
+          <div class="market-item down">
+            <div class="market-name">Solana</div>
+            <div class="market-value">$105.44</div>
+            <div class="market-change down">-58.4% from ATH</div>
+          </div>
+          <div class="market-item up">
+            <div class="market-name">XRP</div>
+            <div class="market-value">$1.66</div>
+            <div class="market-change up">+1.06%</div>
+          </div>
+        </div>
+        <p style="margin-top: 10px; font-size: 13px; color: #64748b;">Rough week for BTC — watch $75k support.</p>
+      </div>
+      
+      <!-- Prediction Markets -->
+      <div class="section">
+        <div class="section-title">🔮 PREDICTION MARKETS</div>
+        
+        <div class="prediction-item">
+          <div class="prediction-title">Government Shutdown (Saturday)</div>
+          <div class="prediction-odds">99.9%</div>
+          <div class="prediction-volume">$81M volume — It's happening.</div>
+        </div>
+        
+        <div class="prediction-item">
+          <div class="prediction-title">Fed Holds Rates (March)</div>
+          <div class="prediction-odds">89.5%</div>
+          <div class="prediction-volume">Cut 25bps: 7.5% | Cut 50bps: 1.8%</div>
+        </div>
+        
+        <div class="prediction-item">
+          <div class="prediction-title">Kevin Warsh as Fed Chair</div>
+          <div class="prediction-odds">98.5%</div>
+          <div class="prediction-volume">$360M volume — Basically confirmed.</div>
+        </div>
+        
+        <div class="prediction-item">
+          <div class="prediction-title">US Strikes Iran by Feb 5</div>
+          <div class="prediction-odds">5.5%</div>
+          <div class="prediction-volume">Low near-term risk, markets watching.</div>
+        </div>
+      </div>
+      
+      <!-- Atlas Take -->
+      <div class="insight-box">
+        <h3>🧠 ATLAS TAKE</h3>
+        <p><strong>The Picture:</strong> Markets in holding pattern. The week wasn't dramatic — indices barely moved — but crypto took a proper beating with BTC shedding 12%.</p>
+        <ul>
+          <li><strong>Gold's 11% drop is bizarre.</strong> Either a data glitch or something significant with futures positioning.</li>
+          <li><strong>Shutdown is priced in.</strong> 99.9% certainty means markets have digested it. Don't expect a Monday crash.</li>
+          <li><strong>Kevin Warsh as Fed Chair is done.</strong> He's more hawkish than Powell — expect dampened rate cut expectations.</li>
+          <li><strong>BTC's -12% week</strong> while equities held suggests crypto-specific selling, not macro risk-off.</li>
+        </ul>
+        <p style="margin-top: 15px; margin-bottom: 0;"><strong>Watchlist:</strong> Monday shutdown reaction, tech earnings, Fed Chair announcement.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>🏛️ Atlas Intelligence • Compiled for Finn McKie</p>
+      <p style="font-size: 11px; color: #94a3b8;">Data sources: Yahoo Finance, Polymarket. Not financial advice.</p>
+    </div>
+  </div>
+</body>
+</html>

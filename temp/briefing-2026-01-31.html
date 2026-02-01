@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Intelligence Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #1e3a5f;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
+      padding: 30px;
+      text-align: center;
+    }
+    .header img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+    .header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #b8860b;
+      font-size: 32px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    .header .date {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .content {
+      padding: 30px;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #1e3a5f;
+      font-size: 22px;
+      border-bottom: 2px solid #b8860b;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .metric:last-child {
+      border-bottom: none;
+    }
+    .metric-name {
+      font-weight: 500;
+    }
+    .metric-value {
+      font-weight: 600;
+    }
+    .up { color: #22c55e; }
+    .down { color: #ef4444; }
+    .highlight-box {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .highlight-box h3 {
+      color: #b8860b;
+      margin-top: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+    }
+    .prediction {
+      background: #f8f9fa;
+      padding: 12px 15px;
+      border-radius: 6px;
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .prediction-odds {
+      font-weight: 700;
+      color: #b8860b;
+    }
+    .atlas-take {
+      background: linear-gradient(135deg, #b8860b 0%, #d4a017 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+    .atlas-take h3 {
+      margin-top: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+    }
+    .footer {
+      background: #1e3a5f;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+    .emoji { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      {{ATLAS_LOGO}}
+      <h1>ATLAS INTELLIGENCE BRIEFING</h1>
+      <div class="date">Friday, 31 January 2026 | 09:00 GMT</div>
+    </div>
+    
+    <div class="content">
+      <p>Finn,</p>
+      <p>Here's your morning intelligence briefing. Markets are digesting a brutal week for AI-adjacent stocks, with Microsoft's guidance sparking a $440B wipeout. But there's signal in the noise.</p>
+      
+      <div class="section">
+        <h2 class="section-title">📊 Market Overview</h2>
+        <div class="metric">
+          <span class="metric-name">S&P 500</span>
+          <span class="metric-value down">$6,939.03 (-0.4%)</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">Nasdaq</span>
+          <span class="metric-value down">$23,461.82 (-0.9%)</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">VIX (Fear Index)</span>
+          <span class="metric-value up">17.44 (+3.3%)</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">Bitcoin</span>
+          <span class="metric-value down">$83,054 (-1.3%)</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">Ethereum</span>
+          <span class="metric-value down">$2,641 (-2.3%)</span>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">🎯 Key Movers</h2>
+        <div class="metric">
+          <span class="metric-name">TSLA</span>
+          <span class="metric-value up">$430.41 (+3.3%) — bucking the trend</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">AAPL</span>
+          <span class="metric-value up">$259.48 (+0.5%) — holding steady</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">META</span>
+          <span class="metric-value down">$716.50 (-3.0%) — AI spend concerns</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">MSFT</span>
+          <span class="metric-value down">$430.29 (-0.7%) — epicentre of the selloff</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">NVDA</span>
+          <span class="metric-value down">$191.13 (-0.7%) — sympathy selling</span>
+        </div>
+        <div class="metric">
+          <span class="metric-name">AMZN</span>
+          <span class="metric-value down">$239.30 (-1.0%)</span>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3>🤖 THE BIG STORY: AI Reality Check</h3>
+        <p>Microsoft lost $440 billion in market cap this week — its biggest drop since March 2020. Wall Street is questioning whether $600B in collective AI capex will pay off.</p>
+        <p>A PwC analysis shows <strong>56% of CEOs</strong> report "no benefit" from AI investments. Software stocks are getting hammered as the hype-to-reality gap widens.</p>
+        <p>This isn't "AI is dead" — it's "AI takes longer than a quarter to show ROI." The market priced in perfection; reality delivered "very good but not instant."</p>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">📈 Polymarket Predictions</h2>
+        <div class="prediction">
+          <span>US Government Shutdown Saturday</span>
+          <span class="prediction-odds">99.6% 🚨</span>
+        </div>
+        <div class="prediction">
+          <span>Kevin Warsh as Fed Chair Nominee</span>
+          <span class="prediction-odds">98.2%</span>
+        </div>
+        <div class="prediction">
+          <span>US Strikes Iran by Feb 5</span>
+          <span class="prediction-odds">19.5%</span>
+        </div>
+        <div class="prediction">
+          <span>MicroStrategy Sells BTC by End 2026</span>
+          <span class="prediction-odds">25.5%</span>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">🇬🇧 UK Intelligence</h2>
+        <p><strong>Cybersecurity overtakes AI</strong> as UK's top tech investment priority for 2026, according to KPMG. After years of AI hype with muted results, executives are pivoting to defence — especially following high-profile hacks on major corporations.</p>
+        <p>Industry leaders warn UK's "AI Superpower" rhetoric rings hollow without investment in domestic tech. £10-20B funnelled to US hyperscalers while UK firms get crumbs.</p>
+        <p><strong>Economist Claudia Sahm</strong> (creator of the Sahm Rule) says she "doesn't have a good feeling" about the labour market. The tectonic plates of the economy shifted during the pandemic and haven't settled.</p>
+      </div>
+      
+      <div class="atlas-take">
+        <h3>🏛️ ATLAS TAKE</h3>
+        <p>The AI hype cycle is hitting the trough of disillusionment — exactly where you want to be building while others panic.</p>
+        <p><strong>Here's the signal:</strong> Microsoft's guidance spooked everyone not because AI doesn't work, but because the capex-to-revenue timeline is longer than bulls expected. This is a multiple compression event, not a fundamental breakdown.</p>
+        <p>The winners will be those actually deploying AI for productivity gains (like you with MD-Pilot and your marketing automation work) — not those buying AI stocks hoping for magic. The operators compound while the speculators get shaken out.</p>
+        <p>Government shutdown is priced in. More noise than signal. Markets will shrug it off Monday.</p>
+        <p><strong>Enjoy your Saturday.</strong> Drive safe, have fun with your friend. The markets will still be there Monday.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Atlas Intelligence Briefing | Delivered at 09:00 GMT</p>
+      <p>Generated by Atlas 🏛️ for Finn McKie</p>
+    </div>
+  </div>
+</body>
+</html>

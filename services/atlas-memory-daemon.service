@@ -1,0 +1,16 @@
+[Unit]
+Description=Atlas Memory Daemon - Real-time memory capture
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/clawd
+ExecStart=/usr/bin/python3 /home/ubuntu/clawd/projects/atlas-memory-evolution/src/memory_daemon.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/home/ubuntu/clawd/projects/atlas-memory-evolution/data/daemon.log
+StandardError=append:/home/ubuntu/clawd/projects/atlas-memory-evolution/data/daemon.log
+
+[Install]
+WantedBy=multi-user.target

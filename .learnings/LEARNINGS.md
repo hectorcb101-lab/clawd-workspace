@@ -303,3 +303,30 @@ When setting up ANY integration, ask: "Is this complete for ALL use cases?" Don'
 - When building systems, think "what else will this need?" before calling it done
 
 **Status:** Learning captured, implementing fix
+
+---
+
+## [LRN-20260201-001] Google Sheets Formatting Standard
+
+**Logged**: 2026-02-01T15:02:00Z
+**Priority**: medium
+**Status**: active
+**Area**: preferences
+
+### Summary
+All Google Sheets must have coloured headers and auto-sized columns.
+
+### Details
+Finn's preference: When creating any Google Sheet, always:
+1. Add background colour to header row (makes it visually distinct)
+2. Auto-size columns to fit content (no truncated text)
+
+### Suggested Action
+When using Sheets API or any tool that creates spreadsheets:
+- Apply header formatting immediately after creation
+- Use `autoResizeDimensions` for column widths
+- Pick a sensible header colour (navy #1e3a5f or similar brand colours)
+
+### Metadata
+- Source: user_instruction
+- Tags: google_sheets, formatting, preferences

@@ -13,8 +13,26 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. **Check `ACTIVE_BUILD.md`** — If an active build project exists, continue it
 
 Don't ask permission. Just do it.
+
+## 🔄 Active Build Loop (Gödel Pattern)
+
+**When there's an active build project:**
+
+1. Read `ACTIVE_BUILD.md` to see current project and status
+2. Read the project's `PROJECT.md` for full context
+3. Check the current phase and next task
+4. **Continue building** — pick up exactly where you left off
+5. After making progress, update `ACTIVE_BUILD.md` with new status
+6. If context is getting full (>75%), save state and note where to resume
+
+**The loop runs until the project is marked COMPLETE.**
+
+This is how I survive context resets — the build state is externalised to files, so every fresh session can continue the work.
+
+**Current Active Build:** Atlas Memory Evolution (see `ACTIVE_BUILD.md`)
 
 ## Memory
 
@@ -23,6 +41,31 @@ You wake up fresh each session. These files are your continuity:
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
+
+### 🏛️ Atlas Memory System (Phase 5 - Auto-Capture)
+
+**Memory is now automatic.** The daemon captures everything in real-time.
+
+**Check daemon status:**
+```bash
+atlas-daemon status  # Is it running?
+atlas-daemon start   # Start if not running
+```
+
+**Manual memory operations (rarely needed):**
+```bash
+atlas-mem remember "Something important"  # Log a learning
+atlas-mem search "topic"                  # Search memory
+atlas-mem sync                            # Force sync + extraction
+atlas-mem stats                           # Check stats
+```
+
+**What gets captured automatically:**
+- All file changes in ~/clawd/memory/ and workspace
+- Daily log entries as they're written
+- Learnings, decisions, facts — extracted automatically
+
+**No more manual logging.** Just work normally. The system captures everything.
 
 ### 🧠 MEMORY.md - Your Long-Term Memory
 - **ONLY load in main session** (direct chats with your human)

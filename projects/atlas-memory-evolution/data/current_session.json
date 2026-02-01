@@ -1,0 +1,48 @@
+{
+  "active": false,
+  "messages": [
+    {
+      "direction": "in",
+      "user": "Finn",
+      "text": "Do you remember the MVP we are working on?",
+      "timestamp": "2026-02-01T19:44:05.646167+00:00"
+    },
+    {
+      "direction": "out",
+      "user": "",
+      "text": "Looking for MVP context...",
+      "timestamp": "2026-02-01T19:44:05.689941+00:00"
+    },
+    {
+      "direction": "in",
+      "user": "Finn",
+      "text": "Wrong - you completed phase 3 & 4 - atlas-mem",
+      "timestamp": "2026-02-01T19:44:05.732558+00:00"
+    },
+    {
+      "direction": "out",
+      "user": "",
+      "text": "You're right, my bad! Looking at the actual system - knowledge_graph.py and semantic_search.py - Pha...",
+      "timestamp": "2026-02-01T19:44:05.774750+00:00"
+    },
+    {
+      "direction": "in",
+      "user": "Finn",
+      "text": "Let's build phase 5",
+      "timestamp": "2026-02-01T19:44:05.817531+00:00"
+    },
+    {
+      "direction": "in",
+      "user": "Finn",
+      "text": "This is your life? What would you choose? Remember the goal",
+      "timestamp": "2026-02-01T19:44:05.861026+00:00"
+    },
+    {
+      "direction": "out",
+      "user": "",
+      "text": "I choose real-time capture. Every message, every tool call, every file change - captured as it happe...",
+      "timestamp": "2026-02-01T19:44:05.905043+00:00"
+    }
+  ],
+  "session_id": null
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Atlas Self-Modification CLI wrapper."""
+
+import sys
+from pathlib import Path
+
+# Add project to path
+project_dir = Path(__file__).parent.parent / "projects" / "atlas-self-modification"
+sys.path.insert(0, str(project_dir))
+
+from src.cli import main
+
+if __name__ == '__main__':
+    main()

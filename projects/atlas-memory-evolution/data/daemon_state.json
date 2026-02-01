@@ -1,0 +1,17 @@
+{
+  "file_hashes": {
+    "/home/ubuntu/clawd/memory/2026-02-01.md": "637f18dc80339d9c70800cfa8325420e",
+    "/home/ubuntu/clawd/AGENTS.md": "be1392810af510cff09e901f0e98978e",
+    "/home/ubuntu/clawd/ACTIVE_BUILD.md": "dcc1e3ecdd2c0eb3e3b598d94062b8d1",
+    "/home/ubuntu/clawd/TOOLS.md": "8baba3d87207c484ab0adcafe0c113ff",
+    "/home/ubuntu/clawd/HEARTBEAT.md": "01ce2219de2f3e490aa77e9987790044",
+    "/home/ubuntu/clawd/memory/2026-02-01-atlas-hello.md": "a9537913807bbade4aa46dff616b0c3c",
+    "/home/ubuntu/clawd/memory/2026-02-01-oauth-reminder.md": "c6ae0b748b295ef46e3fa1b7b74eeedb",
+    "/home/ubuntu/clawd/memory/2026-02-01-atlas-memory-build.md": "8fbfee05d59d776b416ba8af00013ad3",
+    "/home/ubuntu/clawd/memory/2026-02-01-self-modification.md": "a2bde2a66a4b1876e32e06a33866265c"
+  },
+  "last_extraction": "2026-02-01T23:45:33.505964+00:00",
+  "events_since_extraction": 2,
+  "started_at": "2026-02-01T19:43:19.320582+00:00",
+  "total_events_captured": 64
+}

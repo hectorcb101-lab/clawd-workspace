@@ -1,0 +1,93 @@
+{
+  "atlas": {
+    "entity_type": "person",
+    "name": "Atlas",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:33:07.461830+00:00"
+  },
+  "finn": {
+    "entity_type": "person",
+    "name": "Finn",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:33:07.461942+00:00"
+  },
+  "event log": {
+    "entity_type": "project",
+    "name": "Event log",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:33:07.462020+00:00"
+  },
+  "memory system": {
+    "entity_type": "project",
+    "name": "memory system",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:17.863903+00:00"
+  },
+  "\"pretty but useless\" things (kanban board with glassmorphism) while other clawdbot users were building real engineering systems (email automa": {
+    "entity_type": "project",
+    "name": "\"pretty but useless\" things (Kanban board with glassmorphism) while other Clawdbot users were building real engineering systems (email automa",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.853843+00:00"
+  },
+  "the kanban board": {
+    "entity_type": "project",
+    "name": "the Kanban board",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854064+00:00"
+  },
+  "polymarket": {
+    "entity_type": "project",
+    "name": "Polymarket",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854247+00:00"
+  },
+  "custom solution: ### approach since clawdhub yahoo-finance skill was incomplete (no scripts)": {
+    "entity_type": "project",
+    "name": "Custom Solution: ### Approach Since ClawdHub yahoo-finance skill was incomplete (no scripts)",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854314+00:00"
+  },
+  "custom integration using yfinance library": {
+    "entity_type": "project",
+    "name": "custom integration using yfinance library",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854314+00:00"
+  },
+  "started: ### vision finn's request: \"make me more intelligent daily": {
+    "entity_type": "project",
+    "name": "Started: ### Vision Finn's request: \"Make me more intelligent daily",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854414+00:00"
+  },
+  "six nations": {
+    "entity_type": "project",
+    "name": "Six Nations",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.854967+00:00"
+  },
+  "anthropic": {
+    "entity_type": "person",
+    "name": "Anthropic",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T18:43:57.856854+00:00"
+  },
+  "validation must include": {
+    "entity_type": "project",
+    "name": "validation must include",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-01-30T20:28:55.494Z"
+  }
+}

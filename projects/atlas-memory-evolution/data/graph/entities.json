@@ -1,0 +1,254 @@
+{
+  "finn": {
+    "id": "finn",
+    "entity_type": "person",
+    "name": "Finn",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816024+00:00",
+    "last_updated": "2026-02-01T19:23:24.816024+00:00"
+  },
+  "atlas": {
+    "id": "atlas",
+    "entity_type": "person",
+    "name": "Atlas",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816043+00:00",
+    "last_updated": "2026-02-01T19:23:24.816043+00:00"
+  },
+  "anthropic": {
+    "id": "anthropic",
+    "entity_type": "person",
+    "name": "Anthropic",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816048+00:00",
+    "last_updated": "2026-02-01T19:23:24.816048+00:00"
+  },
+  "claude": {
+    "id": "claude",
+    "entity_type": "person",
+    "name": "Claude",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816051+00:00",
+    "last_updated": "2026-02-01T19:23:24.816051+00:00"
+  },
+  "msc": {
+    "id": "msc",
+    "entity_type": "project",
+    "name": "Msc",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816054+00:00",
+    "last_updated": "2026-02-01T19:23:24.816054+00:00"
+  },
+  "six nations": {
+    "id": "six nations",
+    "entity_type": "project",
+    "name": "Six Nations",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816056+00:00",
+    "last_updated": "2026-02-01T19:23:24.816056+00:00"
+  },
+  "polymarket": {
+    "id": "polymarket",
+    "entity_type": "project",
+    "name": "Polymarket",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816058+00:00",
+    "last_updated": "2026-02-01T19:23:24.816058+00:00"
+  },
+  "memory system": {
+    "id": "memory system",
+    "entity_type": "project",
+    "name": "Memory System",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816060+00:00",
+    "last_updated": "2026-02-01T19:23:24.816060+00:00"
+  },
+  "clawdbot": {
+    "id": "clawdbot",
+    "entity_type": "project",
+    "name": "Clawdbot",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816062+00:00",
+    "last_updated": "2026-02-01T19:23:24.816062+00:00"
+  },
+  "socialflow": {
+    "id": "socialflow",
+    "entity_type": "project",
+    "name": "Socialflow",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816064+00:00",
+    "last_updated": "2026-02-01T19:23:24.816064+00:00"
+  },
+  "event log": {
+    "id": "event log",
+    "entity_type": "project",
+    "name": "Event Log",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816065+00:00",
+    "last_updated": "2026-02-01T19:23:24.816065+00:00"
+  },
+  "knowledge graph": {
+    "id": "knowledge graph",
+    "entity_type": "project",
+    "name": "Knowledge Graph",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816068+00:00",
+    "last_updated": "2026-02-01T19:23:24.816068+00:00"
+  },
+  "intelligence briefing": {
+    "id": "intelligence briefing",
+    "entity_type": "project",
+    "name": "Intelligence Briefing",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816070+00:00",
+    "last_updated": "2026-02-01T19:23:24.816070+00:00"
+  },
+  "yahoo finance": {
+    "id": "yahoo finance",
+    "entity_type": "project",
+    "name": "Yahoo Finance",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816071+00:00",
+    "last_updated": "2026-02-01T19:23:24.816071+00:00"
+  },
+  "reddit": {
+    "id": "reddit",
+    "entity_type": "project",
+    "name": "Reddit",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816073+00:00",
+    "last_updated": "2026-02-01T19:23:24.816073+00:00"
+  },
+  "kanban": {
+    "id": "kanban",
+    "entity_type": "project",
+    "name": "Kanban",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816075+00:00",
+    "last_updated": "2026-02-01T19:23:24.816075+00:00"
+  },
+  "work schedule": {
+    "id": "work schedule",
+    "entity_type": "concept",
+    "name": "Work Schedule",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816077+00:00",
+    "last_updated": "2026-02-01T19:23:24.816077+00:00"
+  },
+  "learning style": {
+    "id": "learning style",
+    "entity_type": "concept",
+    "name": "Learning Style",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816079+00:00",
+    "last_updated": "2026-02-01T19:23:24.816079+00:00"
+  },
+  "communication": {
+    "id": "communication",
+    "entity_type": "concept",
+    "name": "Communication",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816081+00:00",
+    "last_updated": "2026-02-01T19:23:24.816081+00:00"
+  },
+  "engineering": {
+    "id": "engineering",
+    "entity_type": "concept",
+    "name": "Engineering",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816082+00:00",
+    "last_updated": "2026-02-01T19:23:24.816082+00:00"
+  },
+  "preferences": {
+    "id": "preferences",
+    "entity_type": "concept",
+    "name": "Preferences",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816084+00:00",
+    "last_updated": "2026-02-01T19:23:24.816084+00:00"
+  },
+  "memory": {
+    "id": "memory",
+    "entity_type": "concept",
+    "name": "Memory",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816086+00:00",
+    "last_updated": "2026-02-01T19:23:24.816086+00:00"
+  },
+  "chess": {
+    "id": "chess",
+    "entity_type": "concept",
+    "name": "Chess",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816088+00:00",
+    "last_updated": "2026-02-01T19:23:24.816088+00:00"
+  },
+  "telegram": {
+    "id": "telegram",
+    "entity_type": "tool",
+    "name": "Telegram",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816090+00:00",
+    "last_updated": "2026-02-01T19:23:24.816090+00:00"
+  },
+  "email": {
+    "id": "email",
+    "entity_type": "tool",
+    "name": "Email",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816092+00:00",
+    "last_updated": "2026-02-01T19:23:24.816092+00:00"
+  },
+  "google workspace": {
+    "id": "google workspace",
+    "entity_type": "tool",
+    "name": "Google Workspace",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816094+00:00",
+    "last_updated": "2026-02-01T19:23:24.816094+00:00"
+  },
+  "exa": {
+    "id": "exa",
+    "entity_type": "tool",
+    "name": "Exa",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816096+00:00",
+    "last_updated": "2026-02-01T19:23:24.816096+00:00"
+  },
+  "mcporter": {
+    "id": "mcporter",
+    "entity_type": "tool",
+    "name": "Mcporter",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-01T19:23:24.816098+00:00",
+    "last_updated": "2026-02-01T19:23:24.816098+00:00"
+  }
+}

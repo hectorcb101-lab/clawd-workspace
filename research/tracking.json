@@ -1,18 +1,13 @@
 {
   "topics": [
     {
-      "name": "bias-variance tradeoff model generalisation machine learning",
-      "category": "AI-ML",
-      "started": "2026-01-29",
+      "name": "AI Chips 2025",
+      "category": "Tech",
+      "started": "2026-01-31",
       "frequency": "weekly",
-      "lastCheck": "2026-01-29",
-      "alerts": true
+      "lastCheck": "2026-01-31",
+      "alerts": true,
+      "keywords": ["NVIDIA Blackwell", "AMD MI400", "Rubin", "Groq acquisition", "TSMC"]
     }
-  ],
-  "lastUpdated": "2026-01-29T23:43:25.052362+00:00",
-  "config": {
-    "defaultFrequency": "weekly",
-    "alertOnSignificant": true,
-    "monthlyDigest": true
-  }
+  ]
 }

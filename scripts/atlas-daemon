@@ -1,0 +1,57 @@
+#!/bin/bash
+# Atlas Memory Daemon CLI
+# Usage: atlas-daemon [start|stop|status|restart|logs]
+
+DAEMON_SCRIPT="$HOME/clawd/projects/atlas-memory-evolution/src/memory_daemon.py"
+LOG_FILE="$HOME/clawd/projects/atlas-memory-evolution/data/daemon.log"
+PID_FILE="/tmp/atlas-memory-daemon.pid"
+
+case "${1:-status}" in
+    start)
+        if [ -f "$PID_FILE" ] && kill -0 $(cat "$PID_FILE") 2>/dev/null; then
+            echo "❌ Daemon already running (PID: $(cat $PID_FILE))"
+            exit 1
+        fi
+        echo "🚀 Starting Atlas Memory Daemon..."
+        python3 "$DAEMON_SCRIPT" --daemon
+        sleep 1
+        if [ -f "$PID_FILE" ]; then
+            echo "✅ Started (PID: $(cat $PID_FILE))"
+        else
+            echo "❌ Failed to start"
+            exit 1
+        fi
+        ;;
+    
+    stop)
+        python3 "$DAEMON_SCRIPT" --stop
+        ;;
+    
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+    
+    status)
+        python3 "$DAEMON_SCRIPT" --status
+        ;;
+    
+    logs)
+        if [ -f "$LOG_FILE" ]; then
+            tail -f "$LOG_FILE"
+        else
+            echo "No log file found at $LOG_FILE"
+        fi
+        ;;
+    
+    run)
+        # Run in foreground (for debugging)
+        python3 "$DAEMON_SCRIPT"
+        ;;
+    
+    *)
+        echo "Usage: atlas-daemon [start|stop|status|restart|logs|run]"
+        exit 1
+        ;;
+esac

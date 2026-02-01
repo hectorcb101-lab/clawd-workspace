@@ -1,0 +1,49 @@
+{
+  "current_yields": [
+    ["Maturity", "Current Yield", "1 Year Ago", "5 Years Ago", "Notes"],
+    ["2-Year JGB", "0.85%", "0.10%", "-0.10%", "Short-term, follows BOJ policy rate closely"],
+    ["5-Year JGB", "1.15%", "0.35%", "-0.05%", "Medium-term benchmark"],
+    ["10-Year JGB", "2.27%", "0.75%", "0.05%", "THE benchmark everyone watches"],
+    ["20-Year JGB", "3.10%", "1.45%", "0.40%", "Long-term, popular with insurers"],
+    ["30-Year JGB", "3.90%", "1.85%", "0.65%", "Hit all-time highs recently"],
+    ["40-Year JGB", "4.05%", "2.00%", "0.75%", "Ultra-long, at record levels"]
+  ],
+  "boj_holdings": [
+    ["Metric", "Value", "Context"],
+    ["BOJ Holdings of JGBs", "~50%", "About half of all outstanding JGBs"],
+    ["BOJ Balance Sheet", "~750 trillion yen", "Massive from years of QE"],
+    ["Policy Rate", "0.75%", "Highest since September 1995"],
+    ["Next Target Rate", "1.00%", "Expected by mid-2026"]
+  ],
+  "japan_debt": [
+    ["Metric", "Value", "Global Rank"],
+    ["Debt-to-GDP Ratio", "~250%", "#1 in developed world"],
+    ["Total Government Debt", "~1,300 trillion yen", "~$8.5 trillion USD"],
+    ["Annual Interest Payments", "~25 trillion yen", "~10% of budget"],
+    ["Foreign Ownership of JGBs", "~14%", "Most held domestically"]
+  ],
+  "global_impact": [
+    ["Japanese Holdings Of", "Amount (USD)", "Rank"],
+    ["US Treasuries", "$1.1 trillion", "#1 Foreign Holder"],
+    ["US Corporate Bonds", "$250+ billion", "Major holder"],
+    ["European Bonds", "$300+ billion", "Significant presence"],
+    ["Global Equities", "$500+ billion", "GPIF is world's largest pension"]
+  ],
+  "key_dates": [
+    ["Date", "Event", "Impact"],
+    ["March 2024", "BOJ ends Yield Curve Control", "Market forces return to JGBs"],
+    ["July 2025", "BOJ raises rates to 0.50%", "First hike in years"],
+    ["December 2025", "BOJ raises to 0.75%", "30-year high"],
+    ["January 2026", "BOJ holds steady", "Waiting for election"],
+    ["February 2026", "Snap Election", "Political uncertainty"],
+    ["Mid-2026", "Expected rate hike to 1%", "If inflation persists"]
+  ],
+  "carry_trade": [
+    ["Aspect", "Detail"],
+    ["Estimated Size", "$4-7 trillion in positions"],
+    ["Mechanism", "Borrow yen cheap, invest in higher-yield assets"],
+    ["Risk", "Yen strength + rising yields = forced unwind"],
+    ["August 2024 Impact", "S&P 500 dropped 6% during mini-unwind"],
+    ["Current Status", "Elevated risk as yields keep rising"]
+  ]
+}
