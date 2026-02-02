@@ -43,18 +43,27 @@ Walk in, I'm there. Pull up a 3D model floating between us. Gesture, rotate, ann
 
 ---
 
-## 🎙️ Voice + Visual Interface ✅
-*Built: 2026-02-02*
+## 🎙️ Voice + Visual Interface ✅✅
+*Built: 2026-02-02 (v0.2 Enhanced)*
 
 The bridge between text and the glass dashboard:
 - ✅ Voice conversation, not typing
 - ✅ Visual canvas: show, don't tell
-- ✅ Ambient mode when idle
+- ✅ Ambient mode when idle (time, date, greeting)
 - ✅ Personality in voice (OpenAI TTS, echo)
+- ✅ Thinking orb animation when processing
+- ✅ Particle background with mouse interaction
+- ✅ Quick command buttons
+- ✅ Settings panel (sounds, history, waveform)
+- ✅ Conversation history persistence
+- ✅ Audio waveform visualization
+- ✅ PWA support (installable)
 - ⏳ Wake word: "Atlas" (future)
 - ⏳ Memory recall on display (future)
 
-**V0.1 complete!** Access: `~/clawd/projects/atlas-voice-interface/`
+**V0.2 complete!** This is a proper interface now, not just a prototype.
+
+Access: `~/clawd/projects/atlas-voice-interface/`
 
 ---
 
