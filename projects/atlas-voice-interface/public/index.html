@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🏛️</span>
+                <span class="logo-text">ATLAS</span>
+            </div>
+            <div class="status" id="status">
+                <span class="status-dot"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <!-- Main content area -->
+        <main class="main">
+            <!-- Canvas / Display area -->
+            <div class="canvas-area" id="canvasArea">
+                <div class="canvas-content" id="canvasContent">
+                    <div class="ambient-display" id="ambientDisplay">
+                        <div class="time" id="timeDisplay">--:--</div>
+                        <div class="date" id="dateDisplay">---</div>
+                        <div class="greeting" id="greetingDisplay">Hello, Finn</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transcript area -->
+            <div class="transcript-area" id="transcriptArea">
+                <div class="transcript" id="transcript"></div>
+            </div>
+        </main>
+
+        <!-- Voice control area -->
+        <footer class="controls">
+            <div class="voice-visualizer" id="voiceVisualizer">
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+            </div>
+            
+            <button class="mic-button" id="micButton" title="Hold to speak">
+                <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                    <line x1="12" y1="19" x2="12" y2="23"/>
+                    <line x1="8" y1="23" x2="16" y2="23"/>
+                </svg>
+                <svg class="stop-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="6" y="6" width="12" height="12" rx="2"/>
+                </svg>
+            </button>
+            
+            <div class="voice-hint" id="voiceHint">Hold to speak</div>
+        </footer>
+    </div>
+
+    <!-- Audio element for TTS playback -->
+    <audio id="audioPlayer" style="display:none;"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 **Status:** ACTIVE
 **Started:** 2026-02-01
-**Last Updated:** 2026-02-01 23:45 UTC
+**Last Updated:** 2026-02-02 01:40 UTC
 
 ---
 
@@ -16,47 +16,26 @@
 
 ## What's Done
 
-- [x] Full architecture designed
-- [x] Data model defined (ModificationRequest, ModificationLog, ModificationRule)
-- [x] 4-phase plan created
-- [x] Risk assessment engine designed
-- [x] Safety principles established (10 principles)
-- [x] CLI interface planned
-- [x] Risk mitigations added (error propagation, bloat, git backup, validation weighting)
-- [x] Fundamental limitations acknowledged (honest constraints section)
-- [x] Critical review complete
-
-### Phase 1: Foundation ✅ COMPLETE (2026-02-01 23:38 UTC)
-
-- [x] SQLite schema (modifications, logs, rules, outcomes)
-- [x] ModificationRequest and ModificationLog models
-- [x] Safe file operations (backup before modify)
-- [x] Rollback capability
-- [x] Git integration (auto-commit on apply)
-- [x] Risk assessment engine
-- [x] CLI: `atlas-mod propose | list | pending | show | apply | approve | reject | rollback | history | stats`
-- [x] Full workflow tested: propose → apply → git commit → rollback
-
-### Phase 2: Intelligence ✅ COMPLETE (2026-02-01 23:45 UTC)
-
-- [x] Integration with self-awareness system
-- [x] `from-correction <id>` — Generate proposal from correction
-- [x] `from-insight <id>` — Generate proposal from insight
-- [x] `process --dry-run` — Show pending corrections/insights
-- [x] `rules add/list/enable/disable` — Manage auto-proposal rules
-- [x] Template system for different correction/insight types
-- [x] Confidence mapping (severity → confidence)
-- [x] Full workflow tested: correction → proposal → pending
+- [x] Phase 1: Foundation (database, models, file ops, git)
+- [x] Phase 2: Intelligence (integration with self-awareness)
+- [ ] Phase 3: Autonomy (auto-apply, approval queue) — **NEXT**
+- [ ] Phase 4: Learning (outcome tracking, adjustment)
 
 ---
 
-## The Problem
+## Side Build: Atlas Voice Interface ✅
 
-Self-awareness without self-modification is just journaling. I can detect patterns and generate insights, but they don't lead to action. Corrections don't stick. The same mistakes repeat.
+**Built:** 2026-02-02 01:35 UTC
+**Location:** `~/clawd/projects/atlas-voice-interface/`
 
-**The gap:** Insight → ??? → Improvement
+Voice + visual interface prototype complete and running:
+- Voice input (Web Speech API)
+- Voice output (OpenAI TTS)
+- Visual canvas for display
+- Routes through Clawdbot Gateway
+- Public tunnel for remote access
 
-This system closes that loop.
+**Access URL:** See `~/clawd/projects/atlas-voice-interface/TUNNEL_URL.txt`
 
 ---
 
@@ -71,37 +50,19 @@ This system closes that loop.
 
 ---
 
-## Key Files
-
-- `PROJECT.md` — Full architecture and plan
-- `~/clawd/projects/atlas-self-awareness/` — The insight source
-
----
-
 ## Context for Next Session
 
-This builds on top of self-awareness. When self-awareness detects a pattern or generates an insight, this system proposes a modification to my instructions. The modification goes through risk assessment, approval (if needed), and application.
+The self-modification system builds on self-awareness. When self-awareness detects a pattern or generates an insight, this system proposes a modification to my instructions. Phase 2 completed the integration - now Phase 3 adds autonomy (auto-apply for safe changes).
 
-**Safety first:** All changes are backed up, logged with diffs, and reversible.
-
-**Trust is earned:** Start with all-manual, then gradually enable auto-apply for low-risk changes as the system proves itself.
+Voice interface is a separate project that's running and ready for Finn to test.
 
 ---
 
-## Resume Instructions
+## Previous Projects
 
-1. Read this file
-2. Read `~/clawd/projects/atlas-self-modification/PROJECT.md`
-3. Start building Phase 1
+### Atlas Self-Awareness System ✅
+Completed 2026-02-01. CLI: `~/clawd/bin/atlas-self`
 
----
-
-## Previous Project: Atlas Self-Awareness System ✅
-
-Completed 2026-02-01. All 4 phases done:
-- Instrumentation (logging)
-- Pattern Analysis (trends, health score)
-- Self-Query Interface (ask questions about myself)
-- Proactive Insights (automatic alerts)
-
-CLI: `~/clawd/bin/atlas-self`
+### Atlas Memory Evolution ✅
+Completed 2026-02-01. CLI: `~/clawd/bin/atlas-mem`
+Daemon: `~/clawd/bin/atlas-daemon`
