@@ -1,0 +1,32 @@
+#!/bin/bash
+# Atlas Memory Daemon CLI wrapper
+
+DAEMON_SCRIPT="$HOME/clawd/projects/atlas-memory-evolution/src/memory_daemon.py"
+
+case "${1:-status}" in
+    start)
+        python3 "$DAEMON_SCRIPT" --daemon
+        sleep 1
+        python3 "$DAEMON_SCRIPT" --status
+        ;;
+    stop)
+        python3 "$DAEMON_SCRIPT" --stop
+        ;;
+    status)
+        python3 "$DAEMON_SCRIPT" --status
+        ;;
+    logs)
+        tail -50 "$HOME/clawd/projects/atlas-memory-evolution/data/daemon.log" 2>/dev/null || echo "No logs yet"
+        ;;
+    restart)
+        python3 "$DAEMON_SCRIPT" --stop 2>/dev/null
+        sleep 1
+        python3 "$DAEMON_SCRIPT" --daemon
+        sleep 1
+        python3 "$DAEMON_SCRIPT" --status
+        ;;
+    *)
+        echo "Usage: atlas-daemon {start|stop|status|logs|restart}"
+        exit 1
+        ;;
+esac

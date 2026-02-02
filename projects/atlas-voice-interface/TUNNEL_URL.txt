@@ -1,9 +1,9 @@
 Atlas Voice Interface - Remote Access URL
 ==========================================
 
-🔗 https://trim-navigation-oriental-chicago.trycloudflare.com
+🔗 https://arrested-photos-logan-proud.trycloudflare.com
 
-This URL is temporary (changes when cloudflared restarts).
-Open in Chrome for best voice input support.
+Open in Chrome for best voice recognition support.
 
-Created: 2026-02-02 01:42 UTC
+Updated: 2026-02-02 02:06 UTC
+
