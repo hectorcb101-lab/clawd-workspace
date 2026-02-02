@@ -1,122 +1,152 @@
-# 🏛️ Atlas Voice Interface
+# 🏛️ Atlas Voice Interface v0.2
 
-**Voice + Visual interface for Atlas**
+**Voice + Visual interface for Atlas AI**
 
-Talk to me instead of typing. I talk back.
+*Talk to me. I talk back.*
 
 ---
 
-## Quick Start
+## ✨ What's New in v0.2
 
-### 1. Access from your laptop
+- **Thinking Orb** — Beautiful pulsing animation when processing
+- **Particle Background** — Subtle floating particles with mouse interaction
+- **Quick Commands** — One-tap access to common requests
+- **Settings Panel** — Customize sound, history, waveform display
+- **Conversation History** — Persists across sessions (localStorage)
+- **Audio Waveform** — Real-time mic visualization when speaking
+- **Latency Monitor** — See connection quality in real-time
+- **PWA Support** — Install as an app on mobile/desktop
+- **Keyboard Shortcuts** — Space to talk, F11 for fullscreen
+- **Service Worker** — Faster loads, offline fallback
 
-Since I'm running on the VPS, use SSH tunneling:
+---
 
-```bash
-ssh -L 3000:localhost:3000 ubuntu@<vps-ip>
+## 🚀 Quick Start
+
+### Access URL
+
+```
+https://trim-navigation-oriental-chicago.trycloudflare.com
 ```
 
-Then open: **http://localhost:3000**
+Open in **Chrome** for best voice recognition support.
 
-### 2. Or start locally (if you're on the VPS)
+### Or run locally
 
 ```bash
 cd ~/clawd/projects/atlas-voice-interface
-./start.sh
+./start-with-tunnel.sh
 ```
 
 ---
 
-## How to Use
+## 🎮 How to Use
 
-1. **Open in Chrome** (best voice recognition support)
-2. **Hold the microphone button** (or hold spacebar) and speak
-3. **Release when done** — I'll process and respond
-4. Watch the **canvas** for visual content I display
-5. Listen as I speak my response
-
----
-
-## Features
-
-### Voice Input
-- Hold mic button or spacebar to speak
-- Release to send
-- Uses Web Speech API (Chrome recommended)
-
-### Voice Output
-- I speak my responses using OpenAI TTS
-- Falls back to browser TTS if needed
-- Echo voice at 1.15x speed — warm, JARVIS-like
-
-### Visual Canvas
-- I can display text, code, lists on the canvas
-- Shows ambient info (time, date, greeting) when idle
-- Clears when new content arrives
-
-### Status Indicators
-- 🟢 Connected — Ready
-- 🔵 Thinking — Processing your message
-- 🟡 Speaking — Playing audio response
-- 🟠 Listening — Recording your voice
+| Action | How |
+|--------|-----|
+| **Speak** | Hold mic button or **spacebar** |
+| **Stop** | Release the button |
+| **Fullscreen** | Press **F11** |
+| **Settings** | Click ⚙️ in header |
+| **Quick Commands** | Tap the preset buttons |
 
 ---
 
-## Keyboard Shortcuts
+## 🎛️ Settings
 
-| Key | Action |
-|-----|--------|
-| Space (hold) | Push to talk |
-
----
-
-## Troubleshooting
-
-### Microphone not working
-- Allow microphone access when prompted
-- Use Chrome for best compatibility
-- Check if another app is using the mic
-
-### No audio output
-- Check volume
-- Allow audio autoplay in browser
-- If API TTS fails, browser TTS will be used
-
-### Connection failed
-- Make sure Clawdbot gateway is running: `clawdbot status`
-- Check SSH tunnel is active
-- View logs: `tail -f logs/server.log`
+- **Sound Effects** — Subtle audio cues for actions
+- **Auto-speak Responses** — TTS for Atlas replies
+- **Save History** — Remember conversations
+- **Show Waveform** — Visual mic feedback
 
 ---
 
-## Architecture
+## 🔊 Voice
+
+- **Input**: Web Speech API (Chrome recommended)
+- **Output**: OpenAI TTS (echo voice, 1.15x speed)
+- **Fallback**: Browser speech synthesis if TTS fails
+
+---
+
+## 📐 Architecture
 
 ```
-Your Browser (laptop)
-       ↓
-    WebSocket
-       ↓
-Voice Interface Server (VPS:3000)
-       ↓
-Clawdbot Gateway (VPS:18789)
-       ↓
-    Claude API
+┌─────────────────────────────────────────────────────┐
+│                  Your Browser                        │
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐     │
+│  │   Voice    │  │   Canvas   │  │  Particles │     │
+│  │   Input    │  │  Display   │  │ Background │     │
+│  └─────┬──────┘  └─────▲──────┘  └────────────┘     │
+│        │               │                             │
+│        └───────────────┼──────────────────┐         │
+│                        │                  │         │
+│  WebSocket ←───────────┴──────────→ TTS Audio       │
+│                                                      │
+└──────────────────────────┬───────────────────────────┘
+                           │
+                    ┌──────▼──────┐
+                    │   Express   │
+                    │   Server    │
+                    └──────┬──────┘
+                           │
+                    ┌──────▼──────┐
+                    │  Clawdbot   │
+                    │   Gateway   │
+                    └──────┬──────┘
+                           │
+                    ┌──────▼──────┐
+                    │  Claude API │
+                    │ (Full Atlas │
+                    │   Context)  │
+                    └─────────────┘
 ```
-
-This means you get full Atlas context — SOUL.md, memory, everything.
 
 ---
 
-## What's Next
+## 🛠️ Files
+
+```
+atlas-voice-interface/
+├── server.js          # Node.js backend
+├── public/
+│   ├── index.html     # Main interface
+│   ├── app.js         # Frontend logic (30KB)
+│   ├── styles.css     # JARVIS-inspired styling
+│   ├── particles.js   # Background effect
+│   ├── sw.js          # Service worker
+│   ├── manifest.json  # PWA manifest
+│   └── favicon.svg    # Atlas icon
+├── start.sh           # Start server
+├── start-with-tunnel.sh  # Start with public URL
+├── stop.sh            # Stop server
+└── logs/              # Server & tunnel logs
+```
+
+---
+
+## 🔮 Coming Next
 
 - [ ] Wake word detection ("Atlas")
-- [ ] Better TTS voices (ElevenLabs)
 - [ ] Image generation on canvas
 - [ ] Diagram drawing
 - [ ] Memory visualization
-- [ ] Mobile/tablet optimization
-- [ ] Kiosk mode for mounted display
+- [ ] Calendar integration
+- [ ] Weather widget
+- [ ] ElevenLabs voice options
+- [ ] Multi-room audio
 
 ---
 
-*Built with 🏛️ by Atlas, 2026-02-02*
+## 🎯 The Vision
+
+This is the bridge.
+
+**Text** → **Voice+Visual** → **Glass Panel** → **Holograms**
+
+One step at a time toward JARVIS.
+
+---
+
+*Built with 🏛️ by Atlas*
+*v0.2 — 2026-02-02*

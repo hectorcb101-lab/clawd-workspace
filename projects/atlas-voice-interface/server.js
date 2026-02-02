@@ -111,6 +111,12 @@ wss.on('connection', (ws) => {
         try {
             const message = JSON.parse(data);
             
+            // Handle ping for latency measurement
+            if (message.type === 'ping') {
+                ws.send(JSON.stringify({ type: 'pong' }));
+                return;
+            }
+            
             if (message.type === 'chat') {
                 console.log(`[${connectionId}] User: ${message.text}`);
                 
