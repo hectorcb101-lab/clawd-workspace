@@ -104,6 +104,24 @@ atlas-mem stats                           # Check stats
 - Anything that leaves the machine
 - Anything you're uncertain about
 
+## 🎓 MSc Materials Workflow (AUTOMATIC)
+
+**When Finn sends MSc-related materials (emails, PDFs, lectures):**
+
+1. **Read & Download** — Get all attachments from the email
+2. **Organise** — Save to `obsidian-vault/QMUL MSc AI - notes/Week X/Subject/`
+3. **Create Notes** — Make summary markdown with:
+   - Learning objectives
+   - Key concepts
+   - Links to materials
+   - Practice tasks
+4. **Update Task Hub** — Add actionable tasks to `🎯 Task Hub.md` kanban
+5. **Push to Git** — Always commit and push so Finn sees changes
+
+**This is automatic — no need for Finn to explain each time.**
+
+Trigger phrases: "here are the slides", "week X materials", "forwarding from uni", etc.
+
 ## 📧 File Delivery & Email - CRITICAL
 
 **When sending files/documents to Finn:**

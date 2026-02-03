@@ -39,3 +39,9 @@
 2026-02-03 13:24:57,847 - INFO - Watched email: python week 2 lecture and lab from Finn M <wfmckie@gmail.com>
 2026-02-03 13:24:57,848 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
 2026-02-03 13:24:57,848 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-03 13:32:59,283 - INFO - Found 1 new message(s)
+2026-02-03 13:32:59,283 - INFO - Found 1 new message(s)
+2026-02-03 13:32:59,467 - INFO - Watched email: Ethics week 2 lecturer slides from Finn M <wfmckie@gmail.com>
+2026-02-03 13:32:59,467 - INFO - Watched email: Ethics week 2 lecturer slides from Finn M <wfmckie@gmail.com>
+2026-02-03 13:32:59,468 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-03 13:32:59,468 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'

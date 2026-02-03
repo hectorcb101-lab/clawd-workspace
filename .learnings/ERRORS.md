@@ -158,7 +158,7 @@ Never hardcode or mentally calculate day of week. Always use `date` command or d
 
 **Logged**: 2026-02-03T13:25:00Z
 **Priority**: high
-**Status**: pending
+**Status**: resolved
 **Area**: config
 
 ### Summary
@@ -190,3 +190,8 @@ Error calling tool 'search_gmail_messages': **ACTION REQUIRED: Google Authentica
 - Related Files: HEARTBEAT.md, TOOLS.md
 - Tags: google, oauth, heartbeat, silent-failure
 
+
+### Resolution
+- **Resolved**: 2026-02-03T13:30:00Z
+- **Fix**: Created ~/clawd/scripts/check_emails.py that uses Google API directly with auto-refresh
+- **Notes**: mcporter still needs re-auth, but the fallback script works. Updated HEARTBEAT.md with fallback instructions.

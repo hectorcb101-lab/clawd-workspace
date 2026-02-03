@@ -1,7 +1,7 @@
 {
   "file_hashes": {
     "/home/ubuntu/clawd/memory/2026-02-01.md": "637f18dc80339d9c70800cfa8325420e",
-    "/home/ubuntu/clawd/AGENTS.md": "be1392810af510cff09e901f0e98978e",
+    "/home/ubuntu/clawd/AGENTS.md": "70a2c5abc1495236df3fa56da63b5467",
     "/home/ubuntu/clawd/ACTIVE_BUILD.md": "eaaf22805c8fd2ccd459f890b391dcb9",
     "/home/ubuntu/clawd/TOOLS.md": "f03148b6d6212fcf39c8e2231d92f176",
     "/home/ubuntu/clawd/HEARTBEAT.md": "8bd50005b13b0b20048a5aad531fd4dc",
@@ -25,7 +25,7 @@
     "/home/ubuntu/clawd/memory/2026-02-03-local-llm-research.md": "7219607607032d97e8aafa89109eb63c"
   },
   "last_extraction": "2026-02-03T13:27:31.624741+00:00",
-  "events_since_extraction": 1,
+  "events_since_extraction": 3,
   "started_at": "2026-02-01T19:43:19.320582+00:00",
-  "total_events_captured": 143
+  "total_events_captured": 145
 }

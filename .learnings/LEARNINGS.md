@@ -367,3 +367,35 @@ Finn corrected me: "you suck at checking emails unprompted" — heartbeat email 
 - **Resolved**: 2026-02-03T13:26:00Z
 - **Notes**: Updated HEARTBEAT.md with explicit error surfacing requirement
 
+
+---
+
+## [LRN-20260203-002] best_practice
+
+**Logged**: 2026-02-03T13:40:00Z
+**Priority**: high
+**Status**: promoted
+**Area**: docs
+
+### Summary
+MSc materials workflow: Always update Obsidian notes AND Task Hub when receiving course materials
+
+### Details
+Finn corrected: When he sends MSc-related materials (emails, PDFs, lectures), I should AUTOMATICALLY:
+1. Read/download all attachments
+2. Organise in correct Obsidian folder (Week X/Subject/)
+3. Create summary notes with learning objectives
+4. Update Task Hub kanban with actionable tasks
+5. Push changes to git
+
+This should be a repeating system — no need for Finn to explain each time.
+
+### Suggested Action
+Add to AGENTS.md as standard workflow for MSc materials
+
+### Metadata
+- Source: user_feedback
+- Related Files: AGENTS.md, obsidian-vault/
+- Tags: obsidian, msc, workflow, automation
+- Promoted: AGENTS.md
+
