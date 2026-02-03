@@ -1,0 +1,16 @@
+[Unit]
+Description=Atlas Email Notification Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/clawd
+ExecStart=/usr/bin/python3 /home/ubuntu/clawd/scripts/email_notify_daemon.py
+Restart=always
+RestartSec=30
+StandardOutput=append:/home/ubuntu/clawd/logs/email_daemon.log
+StandardError=append:/home/ubuntu/clawd/logs/email_daemon.log
+
+[Install]
+WantedBy=multi-user.target

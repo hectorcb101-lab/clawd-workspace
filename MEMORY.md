@@ -165,3 +165,28 @@ Vision:
 **Design everything with this future in mind.** Current utility serves the bigger goal.
 
 Finn's motivation: "Achieving the impossible."
+
+---
+
+## Email Notification Daemon (2026-02-03)
+
+**Problem:** Repeatedly failed to notify Finn when he sent emails. Heartbeats and cron jobs weren't reliable enough.
+
+**Solution:** Standalone systemd daemon that:
+- Runs independently of Clawdbot sessions
+- Polls Gmail every 2 minutes
+- Sends Telegram messages directly to Finn when new email detected
+- Survives reboots, auto-restarts on failure
+
+**Service:** `email-notify-daemon.service`
+**Script:** `~/clawd/scripts/email_notify_daemon.py`
+**Logs:** `~/clawd/logs/email_daemon.log`
+
+**Commands:**
+```bash
+sudo systemctl status email-notify-daemon  # Check status
+sudo systemctl restart email-notify-daemon # Restart
+journalctl -u email-notify-daemon -f       # Follow logs
+```
+
+**This is the definitive fix.** Don't rely on heartbeats or cron for email notifications.

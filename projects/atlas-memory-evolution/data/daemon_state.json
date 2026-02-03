@@ -20,13 +20,14 @@
     "/home/ubuntu/clawd/memory/2026-02-02-session-end.md": "7444422ea98efb0ac75107fdef658e34",
     "/home/ubuntu/clawd/memory/2026-02-02-anonymous-llama.md": "03c9b635ab21e7d8d002b9651538c35f",
     "/home/ubuntu/clawd/memory/2026-02-02-prediction-arb.md": "e726ae46793926dc391a105c36bb0385",
-    "/home/ubuntu/clawd/MEMORY.md": "e7db86c73a77ab838d28f52341658f8c",
+    "/home/ubuntu/clawd/MEMORY.md": "82b4c5551a1475c047c6d610d2a7632c",
     "/home/ubuntu/clawd/memory/2026-02-03.md": "745bf6d001c2c58f65b69ac1cfbcbad5",
     "/home/ubuntu/clawd/memory/2026-02-03-local-llm-research.md": "7219607607032d97e8aafa89109eb63c",
-    "/home/ubuntu/clawd/.email_monitor_state.json": "afb94d62e3ad7f3eef274dbf12f5c8a6"
+    "/home/ubuntu/clawd/.email_monitor_state.json": "afb94d62e3ad7f3eef274dbf12f5c8a6",
+    "/home/ubuntu/clawd/.email_daemon_state.json": "9ea790e21db295ed681a955ceacfebb4"
   },
-  "last_extraction": "2026-02-03T13:27:31.624741+00:00",
-  "events_since_extraction": 5,
-  "started_at": "2026-02-01T19:43:19.320582+00:00",
-  "total_events_captured": 147
+  "last_extraction": "2026-02-03T13:47:16.773322+00:00",
+  "events_since_extraction": 0,
+  "started_at": "2026-02-03T12:00:27.391445+00:00",
+  "total_events_captured": 143
 }

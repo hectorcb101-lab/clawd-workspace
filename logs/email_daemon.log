@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/clawd/scripts/email_notify_daemon.py", line 32, in <module>
+    logging.FileHandler(LOG_FILE),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/logging/__init__.py", line 1231, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/logging/__init__.py", line 1263, in _open
+    return open_func(self.baseFilename, self.mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/home/ubuntu/clawd/logs/email_daemon.log'
+2026-02-03 13:46:57,161 - INFO - 📧 Email Notification Daemon starting...
+2026-02-03 13:46:57,161 - INFO - 📧 Email Notification Daemon starting...
+2026-02-03 13:46:57,285 - INFO - Telegram sent: 🏛️ Atlas Email Monitor is now running. I'll alert ...
+2026-02-03 13:46:57,285 - INFO - Telegram sent: 🏛️ Atlas Email Monitor is now running. I'll alert ...
+2026-02-03 13:46:57,287 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:46:57,287 - INFO - file_cache is only supported with oauth2client<4.0.0
