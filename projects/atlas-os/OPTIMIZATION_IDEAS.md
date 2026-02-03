@@ -96,7 +96,7 @@ Starting with high-impact, low-effort items:
 1. ✅ **Auto Quality Scoring** - Score responses, capture good ones ✅ DONE
 2. ✅ **LLM-as-Judge** - Better evaluation ✅ DONE
 3. ✅ **Conversation Ingestion** - Passive training data collection ✅ DONE
-4. ⏳ **Calibration Tracking** - Built into judgment layer
+4. ✅ **Calibration Tracking** - Track predictions vs outcomes ✅ DONE
 5. ⏳ **Tool Effectiveness** - Simple tracking
 
 ### New CLI: atlas-quality

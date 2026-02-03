@@ -26,6 +26,15 @@ from .ingester import (
     get_ingestion_stats,
 )
 
+from .calibration import (
+    CalibrationTracker,
+    Prediction,
+    log_prediction,
+    resolve_prediction,
+    get_calibration_stats,
+    get_tracker,
+)
+
 __all__ = [
     # Scorer
     "ResponseScorer",
@@ -43,4 +52,11 @@ __all__ = [
     "CapturedExample",
     "run_ingestion",
     "get_ingestion_stats",
+    # Calibration
+    "CalibrationTracker",
+    "Prediction",
+    "log_prediction",
+    "resolve_prediction",
+    "get_calibration_stats",
+    "get_tracker",
 ]
