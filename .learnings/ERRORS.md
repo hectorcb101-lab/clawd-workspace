@@ -151,3 +151,42 @@ date +%A  # Returns day name
 Never hardcode or mentally calculate day of week. Always use `date` command or datetime library.
 
 **Status:** Logged, will fix in future briefings
+
+---
+
+## [ERR-20260203-001] google_workspace_oauth_silent_failure
+
+**Logged**: 2026-02-03T13:25:00Z
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+Google Workspace OAuth tokens expired, causing email checks to fail silently during heartbeats for days
+
+### Error
+```
+Error calling tool 'search_gmail_messages': **ACTION REQUIRED: Google Authentication Needed for Google Gmail for 'hectorcb101@gmail.com'**
+```
+
+### Context
+- Heartbeat email checks were failing silently (error not surfaced to user)
+- OAuth tokens for google-workspace MCP server expired
+- Re-auth requires localhost:8000 callback, which needs SSH port forwarding
+- User noticed because proactive email checking wasn't happening
+
+### Root Cause
+1. OAuth tokens have expiration (usually ~1hr for access, ~7 days for refresh if not used)
+2. No alerting mechanism when Google auth fails
+3. HEARTBEAT.md email check was catching/swallowing errors
+
+### Suggested Fix
+1. **Immediate**: Re-authenticate Google Workspace via mcporter
+2. **Long-term**: Add explicit error surfacing in heartbeat checks - if Google auth fails, alert user immediately
+3. **Consider**: Set up token refresh automation or use service account instead of OAuth
+
+### Metadata
+- Reproducible: yes
+- Related Files: HEARTBEAT.md, TOOLS.md
+- Tags: google, oauth, heartbeat, silent-failure
+

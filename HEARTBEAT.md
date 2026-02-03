@@ -1,10 +1,15 @@
 # HEARTBEAT.md
 
 ## 📧 Email Check (Every Heartbeat)
-Check for unread emails from Finn (wfmckie@gmail.com):
+Check for unread emails using mcporter:
 ```bash
-python3 -c "..." # Check Gmail for unread from wfmckie
+mcporter call google-workspace.search_gmail_messages user_google_email="hectorcb101@gmail.com" query="is:unread"
 ```
+**⚠️ CRITICAL: If this fails with "ACTION REQUIRED: Google Authentication Needed":**
+- **IMMEDIATELY alert Finn** — don't silently continue
+- Say: "Google Workspace auth has expired. Need to re-auth via SSH port forwarding."
+- Reference: `skills/google-workspace-auth/SKILL.md`
+
 If new emails: process them and message Finn what you did.
 Don't wait to be asked — proactively handle and report.
 

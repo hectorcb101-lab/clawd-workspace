@@ -1,7 +1,7 @@
 # 🏛️ Atlas Command Centre
 *Private operational dashboard — updated automatically*
 
-**Last Updated:** 2026-02-02 15:08 UTC
+**Last Updated:** 2026-02-03 07:22 UTC
 
 ---
 
@@ -32,9 +32,10 @@
 - [ ] Review Week 1 — can you explain without notes?
 - [ ] Get library books — Bad Science, Thinking Fast and Slow
 
-### Today (Monday 2 Feb)
+### Today (Tuesday 3 Feb)
 - [ ] Review Stats Week 1 notes
-- [ ] Skim Wednesday's Stats slides (when released)
+- [ ] Review Python Week 1 notes
+- [ ] Prep for Wednesday lectures (Stats, Python, Ethics)
 
 ---
 

@@ -330,3 +330,40 @@ When using Sheets API or any tool that creates spreadsheets:
 ### Metadata
 - Source: user_instruction
 - Tags: google_sheets, formatting, preferences
+
+---
+
+## [LRN-20260203-001] correction
+
+**Logged**: 2026-02-03T13:26:00Z
+**Priority**: high
+**Status**: resolved
+**Area**: config
+
+### Summary
+Automated checks must surface errors, not swallow them silently
+
+### Details
+Finn corrected me: "you suck at checking emails unprompted" — heartbeat email checks were failing for days because Google OAuth expired, but errors were being swallowed. I kept saying "HEARTBEAT_OK" without realizing the email check was broken.
+
+### Lesson Learned
+**Never silently continue when an automated check fails.** If something breaks:
+1. Alert the user immediately
+2. Don't just skip to the next check
+3. Log the error
+4. Provide actionable fix instructions
+
+### Suggested Action
+- Updated HEARTBEAT.md to explicitly require alerting on auth failures
+- Applied immediately
+
+### Metadata
+- Source: user_feedback
+- Related Files: HEARTBEAT.md
+- Tags: heartbeat, error-handling, silent-failure
+- See Also: ERR-20260203-001
+
+### Resolution
+- **Resolved**: 2026-02-03T13:26:00Z
+- **Notes**: Updated HEARTBEAT.md with explicit error surfacing requirement
+
