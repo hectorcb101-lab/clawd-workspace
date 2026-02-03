@@ -136,7 +136,7 @@ def main():
             if new_emails:
                 # Send alert for each new email
                 for email in new_emails:
-                    msg = f"📬 <b>New email from you:</b>\n\n<i>{email['subject']}</i>\n\nI'll process this now and update Obsidian."
+                    msg = f"📬 <b>New email from you:</b>\n\n<i>{email['subject']}</i>"
                     send_telegram(msg)
                     logger.info(f"New email: {email['subject']}")
             

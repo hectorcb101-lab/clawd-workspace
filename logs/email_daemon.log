@@ -15,3 +15,19 @@ PermissionError: [Errno 13] Permission denied: '/home/ubuntu/clawd/logs/email_da
 2026-02-03 13:46:57,285 - INFO - Telegram sent: 🏛️ Atlas Email Monitor is now running. I'll alert ...
 2026-02-03 13:46:57,287 - INFO - file_cache is only supported with oauth2client<4.0.0
 2026-02-03 13:46:57,287 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:48:57,520 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:48:57,520 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:50:57,758 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:50:57,758 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-03 13:50:58,273 - INFO - Telegram sent: 📬 <b>New email from you:</b>
+
+<i>Test</i>
+
+I'll pr...
+2026-02-03 13:50:58,273 - INFO - Telegram sent: 📬 <b>New email from you:</b>
+
+<i>Test</i>
+
+I'll pr...
+2026-02-03 13:50:58,274 - INFO - New email: Test
+2026-02-03 13:50:58,274 - INFO - New email: Test
