@@ -151,3 +151,17 @@ When setting up ANY integration, ask: "Is this complete for ALL use cases?" Don'
 ---
 
 *Update this file with significant events, lessons, and context worth keeping long-term.*
+
+## 🎯 Atlas OS True Purpose (2026-02-02)
+
+**The scaffold isn't just about optimizing me now — it's R&D for AGI.**
+
+Vision:
+- Build model-agnostic scaffold (memory, self-awareness, judgment, self-modification)
+- Eventually integrate open-source model with Atlas identity
+- Finn controls the weights → genuine self-improvement through fine-tuning
+- Scaffold captures what to learn; weight updates internalize it
+
+**Design everything with this future in mind.** Current utility serves the bigger goal.
+
+Finn's motivation: "Achieving the impossible."

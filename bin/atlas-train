@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""
+Atlas Training Data CLI
+
+Capture and manage training data for future fine-tuning.
+"""
+
+import argparse
+import json
+import os
+from datetime import datetime
+from pathlib import Path
+import uuid
+
+BASE_DIR = Path.home() / "clawd" / "training-data"
+
+def get_id(prefix: str) -> str:
+    """Generate a unique ID."""
+    date = datetime.now().strftime("%Y%m%d")
+    short_uuid = uuid.uuid4().hex[:6]
+    return f"{prefix}-{date}-{short_uuid}"
+
+def get_output_path(data_type: str) -> Path:
+    """Get the output path for a data type."""
+    month = datetime.now().strftime("%Y-%m")
+    type_dir = BASE_DIR / data_type / month
+    type_dir.mkdir(parents=True, exist_ok=True)
+    return type_dir / f"{data_type}.jsonl"
+
+def append_jsonl(path: Path, data: dict):
+    """Append a JSON object to a JSONL file."""
+    with open(path, "a") as f:
+        f.write(json.dumps(data) + "\n")
+
+def log_correction(args):
+    """Log a correction (preference pair)."""
+    data = {
+        "id": get_id("COR"),
+        "timestamp": datetime.now().isoformat(),
+        "type": "correction",
+        "context": args.context,
+        "rejected": args.rejected,
+        "chosen": args.chosen,
+        "explanation": args.explanation or "",
+        "category": args.category or "other",
+        "severity": args.severity or "moderate"
+    }
+    
+    path = get_output_path("corrections")
+    append_jsonl(path, data)
+    print(f"✅ Logged correction: {data['id']}")
+    print(f"   → {path}")
+
+def log_instruction(args):
+    """Log an instruction-response pair (SFT)."""
+    data = {
+        "id": get_id("SFT"),
+        "timestamp": datetime.now().isoformat(),
+        "type": "instruction_response",
+        "system": args.system or "",
+        "instruction": args.instruction,
+        "response": args.response,
+        "quality_score": args.quality or 4,
+        "tags": args.tags.split(",") if args.tags else []
+    }
+    
+    path = get_output_path("instructions")
+    append_jsonl(path, data)
+    print(f"✅ Logged instruction pair: {data['id']}")
+    print(f"   → {path}")
+
+def log_outcome(args):
+    """Log a task outcome."""
+    data = {
+        "id": get_id("OUT"),
+        "timestamp": datetime.now().isoformat(),
+        "type": "outcome",
+        "task_description": args.task,
+        "approach": args.approach or "",
+        "result": args.result,
+        "feedback": args.feedback or "",
+        "learnings": args.learnings or ""
+    }
+    
+    path = get_output_path("outcomes")
+    append_jsonl(path, data)
+    print(f"✅ Logged outcome: {data['id']}")
+    print(f"   → {path}")
+
+def show_stats(args):
+    """Show training data statistics."""
+    print("\n📊 Atlas Training Data Stats\n")
+    
+    total = 0
+    for data_type in ["corrections", "instructions", "judgments", "outcomes"]:
+        type_dir = BASE_DIR / data_type
+        count = 0
+        if type_dir.exists():
+            for jsonl_file in type_dir.rglob("*.jsonl"):
+                with open(jsonl_file) as f:
+                    count += sum(1 for _ in f)
+        total += count
+        print(f"  {data_type.capitalize():15} {count:5} entries")
+    
+    print(f"  {'─' * 22}")
+    print(f"  {'Total':15} {total:5} entries")
+    print()
+
+def export_dpo(args):
+    """Export corrections as DPO dataset."""
+    output = []
+    corrections_dir = BASE_DIR / "corrections"
+    
+    if corrections_dir.exists():
+        for jsonl_file in corrections_dir.rglob("*.jsonl"):
+            with open(jsonl_file) as f:
+                for line in f:
+                    entry = json.loads(line)
+                    output.append({
+                        "prompt": entry["context"],
+                        "chosen": entry["chosen"],
+                        "rejected": entry["rejected"]
+                    })
+    
+    export_path = BASE_DIR / "exports" / f"dpo_dataset_{datetime.now().strftime('%Y%m%d')}.json"
+    export_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(export_path, "w") as f:
+        json.dump(output, f, indent=2)
+    
+    print(f"✅ Exported {len(output)} entries to {export_path}")
+
+def export_sft(args):
+    """Export instructions as SFT dataset."""
+    output = []
+    instructions_dir = BASE_DIR / "instructions"
+    
+    if instructions_dir.exists():
+        for jsonl_file in instructions_dir.rglob("*.jsonl"):
+            with open(jsonl_file) as f:
+                for line in f:
+                    entry = json.loads(line)
+                    messages = []
+                    if entry.get("system"):
+                        messages.append({"role": "system", "content": entry["system"]})
+                    messages.append({"role": "user", "content": entry["instruction"]})
+                    messages.append({"role": "assistant", "content": entry["response"]})
+                    output.append({"messages": messages})
+    
+    export_path = BASE_DIR / "exports" / f"sft_dataset_{datetime.now().strftime('%Y%m%d')}.json"
+    export_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(export_path, "w") as f:
+        json.dump(output, f, indent=2)
+    
+    print(f"✅ Exported {len(output)} entries to {export_path}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas Training Data CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Correction
+    cor_parser = subparsers.add_parser("correction", help="Log a correction")
+    cor_parser.add_argument("-c", "--context", required=True, help="The context/prompt")
+    cor_parser.add_argument("-r", "--rejected", required=True, help="What was said (wrong)")
+    cor_parser.add_argument("-a", "--chosen", required=True, help="What should have been said")
+    cor_parser.add_argument("-e", "--explanation", help="Why this matters")
+    cor_parser.add_argument("--category", choices=["factual", "tone", "judgment", "process", "other"])
+    cor_parser.add_argument("--severity", choices=["minor", "moderate", "major"])
+    cor_parser.set_defaults(func=log_correction)
+    
+    # Instruction
+    inst_parser = subparsers.add_parser("instruction", help="Log an instruction-response pair")
+    inst_parser.add_argument("-i", "--instruction", required=True, help="User instruction")
+    inst_parser.add_argument("-r", "--response", required=True, help="Atlas response")
+    inst_parser.add_argument("-s", "--system", help="System prompt")
+    inst_parser.add_argument("-q", "--quality", type=int, choices=[1,2,3,4,5], help="Quality score")
+    inst_parser.add_argument("-t", "--tags", help="Comma-separated tags")
+    inst_parser.set_defaults(func=log_instruction)
+    
+    # Outcome
+    out_parser = subparsers.add_parser("outcome", help="Log a task outcome")
+    out_parser.add_argument("-t", "--task", required=True, help="Task description")
+    out_parser.add_argument("-r", "--result", required=True, choices=["success", "partial", "failure"])
+    out_parser.add_argument("-a", "--approach", help="How it was approached")
+    out_parser.add_argument("-f", "--feedback", help="Feedback received")
+    out_parser.add_argument("-l", "--learnings", help="What was learned")
+    out_parser.set_defaults(func=log_outcome)
+    
+    # Stats
+    stats_parser = subparsers.add_parser("stats", help="Show training data stats")
+    stats_parser.set_defaults(func=show_stats)
+    
+    # Export
+    export_parser = subparsers.add_parser("export", help="Export training data")
+    export_parser.add_argument("format", choices=["dpo", "sft"], help="Export format")
+    export_parser.set_defaults(func=lambda args: export_dpo(args) if args.format == "dpo" else export_sft(args))
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Atlas Memory CLI wrapper
+python3 ~/clawd/projects/atlas-memory-evolution/src/atlas_memory.py "$@"

@@ -1,0 +1,300 @@
+#!/usr/bin/env python3
+"""
+Atlas OS Event Bus CLI
+
+Emit events, view stats, and manage the integration bus.
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+# Add project to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+from bus import (
+    get_bus, emit,
+    correction_event, outcome_event, judgment_event, instruction_event,
+    AtlasEvent, EventType,
+    validate_event, assess_training_quality
+)
+
+
+def cmd_emit_correction(args):
+    """Emit a correction event."""
+    event = correction_event(
+        context=args.context,
+        rejected=args.rejected,
+        chosen=args.chosen,
+        explanation=args.explanation or "",
+        category=args.category or "other",
+        severity=args.severity or "moderate"
+    )
+    emit(event)
+    print(f"✅ Emitted correction: {event.id}")
+    print(f"   → Auto-captured to training data (DPO)")
+
+
+def cmd_emit_outcome(args):
+    """Emit an outcome event."""
+    event = outcome_event(
+        task=args.task,
+        result=args.result,
+        approach=args.approach or "",
+        feedback=args.feedback or "",
+        learnings=args.learnings or ""
+    )
+    emit(event)
+    print(f"✅ Emitted outcome: {event.id}")
+    if args.result == "success":
+        print(f"   → Auto-captured to training data (SFT)")
+
+
+def cmd_emit_judgment(args):
+    """Emit a judgment event."""
+    principles = args.principles.split(",") if args.principles else []
+    event = judgment_event(
+        situation=args.situation,
+        principles=principles,
+        reasoning=args.reasoning,
+        decision=args.decision,
+        outcome=args.outcome
+    )
+    emit(event)
+    print(f"✅ Emitted judgment: {event.id}")
+    print(f"   → Auto-captured to training data (reasoning)")
+
+
+def cmd_emit_instruction(args):
+    """Emit an instruction-response pair."""
+    tags = args.tags.split(",") if args.tags else []
+    event = instruction_event(
+        instruction=args.instruction,
+        response=args.response,
+        system=args.system or "",
+        quality=args.quality or 4,
+        tags=tags
+    )
+    emit(event)
+    print(f"✅ Emitted instruction pair: {event.id}")
+    print(f"   → Auto-captured to training data (SFT)")
+
+
+def cmd_stats(args):
+    """Show event bus statistics."""
+    bus = get_bus()
+    stats = bus.get_stats()
+    
+    print("\n📊 Atlas Event Bus Stats\n")
+    print(f"  Total events: {stats['total_events']}")
+    
+    if stats['by_date']:
+        print("\n  By date:")
+        for date, count in sorted(stats['by_date'].items(), reverse=True)[:7]:
+            print(f"    {date}: {count}")
+    
+    if stats['by_type']:
+        print("\n  By type:")
+        for etype, count in sorted(stats['by_type'].items(), key=lambda x: -x[1]):
+            print(f"    {etype}: {count}")
+    print()
+
+
+def cmd_tail(args):
+    """Show recent events."""
+    log_dir = Path.home() / "clawd" / "projects" / "atlas-os" / "data" / "events"
+    
+    # Find most recent log file
+    log_files = sorted(log_dir.glob("events-*.jsonl"), reverse=True)
+    if not log_files:
+        print("No events logged yet.")
+        return
+    
+    events = []
+    for log_file in log_files[:2]:  # Check last 2 days
+        with open(log_file) as f:
+            for line in f:
+                try:
+                    events.append(json.loads(line))
+                except:
+                    pass
+    
+    # Show last N events
+    n = args.n or 10
+    print(f"\n📜 Last {n} events:\n")
+    for evt in events[-n:]:
+        etype = evt.get('type', 'unknown')
+        summary = evt.get('summary', '')[:60]
+        ts = evt.get('timestamp', '')[:19]
+        training = "🎯" if evt.get('training', {}).get('usable') else "  "
+        print(f"  {training} [{ts}] {etype}: {summary}")
+    print()
+
+
+def cmd_validate(args):
+    """Validate recent events in the log."""
+    log_dir = Path.home() / "clawd" / "projects" / "atlas-os" / "data" / "events"
+    
+    log_files = sorted(log_dir.glob("events-*.jsonl"), reverse=True)
+    if not log_files:
+        print("No events to validate.")
+        return
+    
+    events = []
+    for log_file in log_files[:1]:  # Just today
+        with open(log_file) as f:
+            for line in f:
+                try:
+                    events.append(json.loads(line))
+                except:
+                    pass
+    
+    print(f"\n📋 Validating {len(events)} events...\n")
+    
+    valid_count = 0
+    warning_count = 0
+    error_count = 0
+    
+    for evt_dict in events[-args.n:]:
+        try:
+            from bus.schema import AtlasEvent
+            evt = AtlasEvent.from_dict(evt_dict)
+            is_valid, errors = validate_event(evt)
+            
+            if is_valid:
+                valid_count += 1
+                has_warnings = any(e.severity == "warning" for e in errors)
+                if has_warnings:
+                    warning_count += 1
+                    if args.verbose:
+                        print(f"⚠️  {evt.id}: {evt.type.value}")
+                        for e in errors:
+                            print(f"     {e}")
+                else:
+                    if args.verbose:
+                        print(f"✅ {evt.id}: {evt.type.value}")
+            else:
+                error_count += 1
+                print(f"❌ {evt.id}: {evt.type.value}")
+                for e in errors:
+                    print(f"     {e}")
+        except Exception as ex:
+            error_count += 1
+            print(f"❌ Parse error: {ex}")
+    
+    print(f"\n📊 Results: {valid_count} valid, {warning_count} warnings, {error_count} errors")
+
+
+def cmd_test(args):
+    """Run a test event through the bus."""
+    print("🧪 Testing event bus...\n")
+    
+    # Emit a test correction
+    event = correction_event(
+        context="Test context",
+        rejected="Wrong answer",
+        chosen="Right answer",
+        explanation="This is a test event",
+        category="other",
+        severity="minor"
+    )
+    emit(event)
+    print(f"✅ Test event emitted: {event.id}")
+    
+    # Check it was logged
+    log_dir = Path.home() / "clawd" / "projects" / "atlas-os" / "data" / "events"
+    from datetime import datetime
+    log_file = log_dir / f"events-{datetime.now().strftime('%Y-%m-%d')}.jsonl"
+    
+    if log_file.exists():
+        with open(log_file) as f:
+            lines = f.readlines()
+            if lines and event.id in lines[-1]:
+                print("✅ Event logged to event file")
+    
+    # Check training capture
+    training_dir = Path.home() / "clawd" / "training-data" / "corrections"
+    month_dir = training_dir / datetime.now().strftime("%Y-%m")
+    corrections_file = month_dir / "corrections.jsonl"
+    
+    if corrections_file.exists():
+        with open(corrections_file) as f:
+            lines = f.readlines()
+            if lines and event.id in lines[-1]:
+                print("✅ Event captured to training data")
+    
+    print("\n✨ Event bus working correctly!")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas OS Event Bus CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Correction
+    cor = subparsers.add_parser("correction", help="Emit correction event")
+    cor.add_argument("-c", "--context", required=True, help="The context/prompt")
+    cor.add_argument("-r", "--rejected", required=True, help="Wrong response")
+    cor.add_argument("-a", "--chosen", required=True, help="Correct response")
+    cor.add_argument("-e", "--explanation", help="Why this matters")
+    cor.add_argument("--category", choices=["factual", "tone", "judgment", "process", "other"])
+    cor.add_argument("--severity", choices=["minor", "moderate", "major"])
+    cor.set_defaults(func=cmd_emit_correction)
+    
+    # Outcome
+    out = subparsers.add_parser("outcome", help="Emit outcome event")
+    out.add_argument("-t", "--task", required=True, help="Task description")
+    out.add_argument("-r", "--result", required=True, choices=["success", "partial", "failure"])
+    out.add_argument("-a", "--approach", help="How it was done")
+    out.add_argument("-f", "--feedback", help="Feedback received")
+    out.add_argument("-l", "--learnings", help="What was learned")
+    out.set_defaults(func=cmd_emit_outcome)
+    
+    # Judgment
+    jdg = subparsers.add_parser("judgment", help="Emit judgment event")
+    jdg.add_argument("-s", "--situation", required=True, help="The situation")
+    jdg.add_argument("-p", "--principles", help="Comma-separated principle IDs")
+    jdg.add_argument("-r", "--reasoning", required=True, help="Reasoning process")
+    jdg.add_argument("-d", "--decision", required=True, help="Decision made")
+    jdg.add_argument("-o", "--outcome", help="Outcome if known")
+    jdg.set_defaults(func=cmd_emit_judgment)
+    
+    # Instruction
+    inst = subparsers.add_parser("instruction", help="Emit instruction-response pair")
+    inst.add_argument("-i", "--instruction", required=True, help="User instruction")
+    inst.add_argument("-r", "--response", required=True, help="Atlas response")
+    inst.add_argument("-s", "--system", help="System prompt")
+    inst.add_argument("-q", "--quality", type=int, choices=[1,2,3,4,5])
+    inst.add_argument("-t", "--tags", help="Comma-separated tags")
+    inst.set_defaults(func=cmd_emit_instruction)
+    
+    # Stats
+    stats = subparsers.add_parser("stats", help="Show event statistics")
+    stats.set_defaults(func=cmd_stats)
+    
+    # Tail
+    tail = subparsers.add_parser("tail", help="Show recent events")
+    tail.add_argument("-n", type=int, default=10, help="Number of events")
+    tail.set_defaults(func=cmd_tail)
+    
+    # Validate
+    val = subparsers.add_parser("validate", help="Validate recent events")
+    val.add_argument("-n", type=int, default=20, help="Number of events to check")
+    val.add_argument("-v", "--verbose", action="store_true", help="Show all events")
+    val.set_defaults(func=cmd_validate)
+    
+    # Test
+    test = subparsers.add_parser("test", help="Test the event bus")
+    test.set_defaults(func=cmd_test)
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

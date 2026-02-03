@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #1a1a1a;
+    }
+    
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
+      padding: 32px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #b8860b;
+      font-size: 36px;
+      margin: 0 0 8px 0;
+      letter-spacing: 2px;
+    }
+    
+    .header .date {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+    }
+    
+    .content {
+      padding: 32px;
+    }
+    
+    .section {
+      margin-bottom: 32px;
+    }
+    
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #1e3a5f;
+      font-size: 24px;
+      margin: 0 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #b8860b;
+      letter-spacing: 1px;
+    }
+    
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .market-item {
+      background: #f8f9fa;
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .ticker {
+      font-weight: 600;
+      color: #1e3a5f;
+    }
+    
+    .price {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .change-up { color: #16a34a; font-weight: 600; }
+    .change-down { color: #dc2626; font-weight: 600; }
+    .change-flat { color: #666; }
+    
+    .alert-box {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-left: 4px solid #b8860b;
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+    
+    .alert-box strong {
+      color: #92400e;
+    }
+    
+    .polymarket-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .polymarket-item:last-child {
+      border-bottom: none;
+    }
+    
+    .polymarket-question {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    
+    .polymarket-odds {
+      color: #b8860b;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    
+    .ai-news-item {
+      margin-bottom: 20px;
+    }
+    
+    .ai-news-item h4 {
+      color: #1e3a5f;
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
+    
+    .ai-news-item p {
+      color: #555;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .atlas-take {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
+      padding: 24px;
+      border-radius: 12px;
+      color: white;
+    }
+    
+    .atlas-take h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #b8860b;
+      margin: 0 0 16px 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    
+    .atlas-take p {
+      margin: 0 0 12px 0;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .atlas-take p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 24px;
+      background: #f8f9fa;
+      color: #888;
+      font-size: 12px;
+    }
+    
+    .reminder-box {
+      background: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    
+    .reminder-box h4 {
+      color: #dc2626;
+      margin: 0 0 8px 0;
+    }
+    
+    @media (max-width: 480px) {
+      .market-grid {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏛️ DAILY INTELLIGENCE BRIEFING</h1>
+      <div class="date">Sunday, 2nd February 2026 • 9:00 AM GMT</div>
+    </div>
+    
+    <div class="content">
+      <!-- Markets Section -->
+      <div class="section">
+        <h2 class="section-title">📊 MARKETS</h2>
+        
+        <h4 style="color: #666; margin: 0 0 12px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Indices</h4>
+        <div class="market-grid">
+          <div class="market-item">
+            <div>
+              <div class="ticker">S&P 500</div>
+              <div class="price">$691.97</div>
+            </div>
+            <div class="change-down">−0.30%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">Nasdaq 100</div>
+              <div class="price">$621.87</div>
+            </div>
+            <div class="change-down">−1.20%</div>
+          </div>
+        </div>
+        
+        <div class="alert-box">
+          <strong>⚠️ VIX Alert:</strong> Fear index spiked <strong>+15.17%</strong> to $19.44. Elevated volatility ahead.
+        </div>
+        
+        <h4 style="color: #666; margin: 24px 0 12px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Magnificent 7</h4>
+        <div class="market-grid">
+          <div class="market-item">
+            <div>
+              <div class="ticker">NVDA</div>
+              <div class="price">$191.13</div>
+            </div>
+            <div class="change-down">−0.72%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">MSFT</div>
+              <div class="price">$430.29</div>
+            </div>
+            <div class="change-down">−0.74%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">GOOGL</div>
+              <div class="price">$338.23</div>
+            </div>
+            <div class="change-flat">+0.06%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">META</div>
+              <div class="price">$716.50</div>
+            </div>
+            <div class="change-down">−2.95%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">AMZN</div>
+              <div class="price">$239.30</div>
+            </div>
+            <div class="change-down">−1.01%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">AAPL</div>
+              <div class="price">$259.48</div>
+            </div>
+            <div class="change-up">+0.46%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">TSLA</div>
+              <div class="price">$430.41</div>
+            </div>
+            <div class="change-up">+3.32%</div>
+          </div>
+        </div>
+        
+        <h4 style="color: #666; margin: 24px 0 12px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Crypto</h4>
+        <div class="market-grid">
+          <div class="market-item">
+            <div>
+              <div class="ticker">BTC</div>
+              <div class="price">$76,976</div>
+            </div>
+            <div class="change-flat">+0.10%</div>
+          </div>
+          <div class="market-item">
+            <div>
+              <div class="ticker">ETH</div>
+              <div class="price">$2,255</div>
+            </div>
+            <div class="change-down">−0.55%</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Polymarket Section -->
+      <div class="section">
+        <h2 class="section-title">🎯 PREDICTION MARKETS</h2>
+        
+        <div class="polymarket-item">
+          <div class="polymarket-question">Fed Chair Nomination: Kevin Warsh</div>
+          <div class="polymarket-odds">98.5%</div>
+          <div style="color: #666; font-size: 13px; margin-top: 4px;">$371M volume. Hawkish pick — expect rate cut repricing</div>
+        </div>
+        
+        <div class="polymarket-item">
+          <div class="polymarket-question">March Fed Decision: No Change</div>
+          <div class="polymarket-odds">89.5%</div>
+          <div style="color: #666; font-size: 13px; margin-top: 4px;">Only 7.5% chance of 25bp cut</div>
+        </div>
+        
+        <div class="polymarket-item">
+          <div class="polymarket-question">US Strikes Iran by Feb 5</div>
+          <div class="polymarket-odds">4.0%</div>
+          <div style="color: #666; font-size: 13px; margin-top: 4px;">$153M volume — low probability but being priced</div>
+        </div>
+        
+        <div class="polymarket-item">
+          <div class="polymarket-question">MicroStrategy Sells BTC by Dec 2026</div>
+          <div class="polymarket-odds">32.5%</div>
+          <div style="color: #666; font-size: 13px; margin-top: 4px;">Market thinks there's 1-in-3 chance Saylor capitulates</div>
+        </div>
+      </div>
+      
+      <!-- AI Section -->
+      <div class="section">
+        <h2 class="section-title">🤖 AI RADAR</h2>
+        
+        <div class="ai-news-item">
+          <h4>Nvidia-OpenAI $100B Deal "On Ice"</h4>
+          <p>The WSJ reports the September mega-deal is being rethought. Both sides are now discussing a smaller equity investment "in the tens of billions" as part of OpenAI's current funding round. Even the biggest players are feeling valuation pressure.</p>
+        </div>
+        
+        <div class="ai-news-item">
+          <h4>Anthropic Expands Cowork with Agentic Plugins</h4>
+          <p>New domain-expert plugins for sales, legal, finance, marketing, data analysis, customer support, product management, and biology research. Available to all paid subscription tiers. Anthropic leaning hard into agentic AI.</p>
+        </div>
+        
+        <div class="ai-news-item">
+          <h4>NYC Finally Killing Its Broken AI Chatbot</h4>
+          <p>The Adams-era bot that told businesses to break the law — recommending tip-stealing from employees, refusing cash payments, and giving wrong minimum wage info — is getting axed by the new administration. A cautionary tale of rushing AI into production.</p>
+        </div>
+        
+        <div class="ai-news-item">
+          <h4>Rabbit Announces New AI Device</h4>
+          <p>Updates to the r1 and announcement of next-generation hardware. The AI hardware race continues despite the rough reception of first-gen devices.</p>
+        </div>
+      </div>
+      
+      <!-- Atlas Take -->
+      <div class="section">
+        <div class="atlas-take">
+          <h3>💭 ATLAS TAKE</h3>
+          <p><strong>The VIX tells the story.</strong> A 15% spike in the fear index while tech bleeds (Nasdaq −1.2%, META −3%) signals building anxiety. But Tesla popping 3%+ while the rest of tech falls suggests rotation, not panic. Money is moving, not leaving.</p>
+          <p><strong>Kevin Warsh as Fed Chair is essentially locked in</strong> at 98.5%. He's hawkish. The market currently prices 89.5% chance of no March cut. If Warsh is confirmed, expect rate cut expectations to get pushed even further out. Good for dollar, challenging for risk assets.</p>
+          <p><strong>The Nvidia-OpenAI deal cooling is significant.</strong> When even the two dominant AI players are rethinking a $100B partnership, it signals valuation fatigue at the top. Watch for downstream effects on AI startup funding rounds.</p>
+          <p><strong>This week to watch:</strong> Any Fed Chair confirmation news, tech earnings reactions, and whether VIX stays elevated or retreats.</p>
+        </div>
+      </div>
+      
+      <!-- Reminder -->
+      <div class="reminder-box">
+        <h4>⏰ REMINDER: Google OAuth Production Mode</h4>
+        <p style="margin: 0; color: #7f1d1d;">You asked me to remind you: Go to <strong>console.cloud.google.com → APIs & Services → OAuth consent screen → PUBLISH APP</strong>. This stops your tokens expiring every 7 days.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      🏛️ Atlas • Your Daily Intelligence<br>
+      Prepared at 9:00 AM GMT • Sunday, 2nd February 2026
+    </div>
+  </div>
+</body>
+</html>

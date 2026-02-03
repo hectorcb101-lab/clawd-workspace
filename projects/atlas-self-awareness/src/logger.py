@@ -2,10 +2,13 @@
 Atlas Self-Awareness System - Event Logger
 
 Functions for logging outcomes and corrections to the database.
+Integrated with Atlas OS Event Bus for training data capture.
 """
 
 from datetime import datetime
 from typing import Optional, List, Dict, Any
+import sys
+from pathlib import Path
 
 from .database import db_session, init_database, get_stats
 from .models import (
@@ -13,6 +16,33 @@ from .models import (
     CorrectionType, Severity
 )
 from .classifier import classify_task
+
+# Add Atlas OS to path for event bus integration
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+def _emit_to_bus(event_type: str, **kwargs):
+    """Emit event to Atlas OS bus (non-blocking, fail-safe)."""
+    try:
+        from bus.hooks import log_correction as bus_correction, log_outcome as bus_outcome
+        if event_type == "correction":
+            bus_correction(
+                context=kwargs.get("context", kwargs.get("user_signal", "")),
+                wrong=kwargs.get("wrong", ""),
+                right=kwargs.get("right", kwargs.get("lesson", "")),
+                why=kwargs.get("lesson", ""),
+                category=kwargs.get("correction_type", "other"),
+                severity=kwargs.get("severity", "moderate")
+            )
+        elif event_type == "outcome":
+            bus_outcome(
+                task=kwargs.get("task", kwargs.get("notes", "")),
+                result=kwargs.get("outcome", "partial"),
+                how=kwargs.get("context", ""),
+                feedback=kwargs.get("feedback_source", ""),
+                learned=kwargs.get("notes", "")
+            )
+    except Exception:
+        pass  # Don't let bus errors break self-awareness logging
 
 
 def log_outcome(
@@ -77,7 +107,18 @@ def log_outcome(
             event.notes,
             event.context
         ))
-        return cursor.lastrowid
+        row_id = cursor.lastrowid
+    
+    # Emit to Atlas OS Event Bus (for training data capture)
+    _emit_to_bus("outcome",
+        task=f"{task_type}: {notes or context or 'task'}",
+        outcome=outcome,
+        context=context or "",
+        feedback_source=feedback_source,
+        notes=notes or ""
+    )
+    
+    return row_id
 
 
 def log_correction(
@@ -132,7 +173,20 @@ def log_correction(
             event.lesson,
             event.task_type
         ))
-        return cursor.lastrowid
+        row_id = cursor.lastrowid
+    
+    # Emit to Atlas OS Event Bus (for training data capture)
+    _emit_to_bus("correction",
+        user_signal=user_signal,
+        correction_type=correction_type,
+        severity=severity,
+        lesson=lesson or "",
+        context=user_signal,
+        wrong="[original response]",
+        right=lesson or user_signal
+    )
+    
+    return row_id
 
 
 def get_recent_outcomes(limit: int = 10, task_type: Optional[str] = None) -> List[Dict[str, Any]]:

@@ -1,0 +1,968 @@
+{
+  "companies": [
+    {
+      "name": "The Big A Creative",
+      "industry": "Branding/Design",
+      "location": "Fulham",
+      "website": "thebiga.co.uk",
+      "contact_role": "Director",
+      "notes": "Creative brand & design agency",
+      "email": "info@thebiga.co.uk",
+      "contact_name": "Alexander David Woodcock"
+    },
+    {
+      "name": "Putney Design & Print",
+      "industry": "Design/Print",
+      "location": "Putney",
+      "website": "putneydesignandprint.com",
+      "contact_role": "Director",
+      "notes": "Independent creative services studio, 20+ years",
+      "email": "help@putneydesignandprint.com",
+      "phone": "020 8912 0880",
+      "contact_name": "Philip Thorne"
+    },
+    {
+      "name": "Plumb Design",
+      "industry": "Web/Graphic Design",
+      "location": "Putney",
+      "website": "plumb-design.com",
+      "contact_role": "Owner (Tim Plumb)",
+      "notes": "Web and print design, 30+ years",
+      "email": "tim@plumb-design.com",
+      "contact_name": "Tim Plumb",
+      "phone": "07967 108850"
+    },
+    {
+      "name": "Consultants in Design",
+      "industry": "Design Studio",
+      "location": "Putney",
+      "website": "consultantsindesign.co.uk",
+      "contact_role": "Founder/Consultant",
+      "notes": "Branding, print, digital, signage - 24+ years",
+      "phone": "020 8788 1118",
+      "contact_name": "Simon Scott-Taylor"
+    },
+    {
+      "name": "Jo & Co Property Management",
+      "industry": "Property Management",
+      "location": "Hammersmith/Fulham",
+      "website": "joandcoprop.com",
+      "contact_role": "Founder",
+      "notes": "Independent letting agent",
+      "email": "jo@joandcoprop.com",
+      "contact_name": "Jo James"
+    },
+    {
+      "name": "London Accountants",
+      "industry": "Accountancy",
+      "location": "Fulham/Chelsea",
+      "website": "londonaccountants.co",
+      "contact_role": "Director",
+      "notes": "Boutique firm, small businesses & startups",
+      "phone": "+44 20 3137 9791",
+      "contact_name": "Anthony Charles Brassil"
+    },
+    {
+      "name": "KVS & Co Accountants",
+      "industry": "Accountancy",
+      "location": "Fulham",
+      "website": "kvsaccountants.co.uk",
+      "contact_role": "Director",
+      "notes": "Chartered accountants, registered auditors",
+      "email": "info@kvsaccountants.co.uk",
+      "phone": "020 7731 6131",
+      "contact_name": "Sumithra Varatharsasingam"
+    },
+    {
+      "name": "Accountants R Us",
+      "industry": "Accountancy",
+      "location": "Wimbledon/Fulham area",
+      "website": "accountantsrus.net",
+      "contact_role": "Director",
+      "notes": "Est. 2005, partnerships approach",
+      "email": "info@accountantsrus.net",
+      "phone": "020 8944 1818",
+      "contact_name": "Kenaga Vijayakanthan"
+    },
+    {
+      "name": "Warrener Stewart",
+      "industry": "Accountancy",
+      "location": "Fulham",
+      "website": "warrenerstewart.com",
+      "contact_role": "Director",
+      "notes": "Chartered accountants",
+      "email": "info@warrenerstewart.com",
+      "phone": "020 8417 2277",
+      "contact_name": "Gary John Chapman"
+    },
+    {
+      "name": "The Tax Guys",
+      "industry": "Accountancy/Tax",
+      "location": "Fulham",
+      "website": "thetaxguys.co.uk",
+      "contact_role": "Director",
+      "notes": "Award-winning tax advisory",
+      "phone": "0208 875 2530",
+      "contact_name": "Jonathan Amponsah"
+    },
+    {
+      "name": "Carlton Recruitment",
+      "industry": "Recruitment",
+      "location": "Putney",
+      "website": "carlton-recruitment.com",
+      "contact_role": "Director",
+      "notes": "Independent agency, SW London",
+      "email": "connect@carlton-recruitment.com"
+    },
+    {
+      "name": "RFS HR Consultancy",
+      "industry": "Recruitment",
+      "location": "Putney",
+      "website": "rfshrconsultancy.co.uk",
+      "contact_role": "Director",
+      "notes": "Executive search, RPO",
+      "phone": "+44 7386 398052"
+    },
+    {
+      "name": "Lamb Personnel",
+      "industry": "Recruitment",
+      "location": "SW London/Surrey",
+      "website": "lambpersonnel.co.uk",
+      "contact_role": "Director",
+      "notes": "Boutique office support recruitment",
+      "contact_name": "Lamb Personnel",
+      "email": "info@lambpersonnel.co.uk",
+      "phone": "01483 672222"
+    },
+    {
+      "name": "Titan Insurance Services",
+      "industry": "Insurance",
+      "location": "Fulham",
+      "website": "Via insurancebook.co.uk",
+      "contact_role": "Director",
+      "notes": "25 years, 100+ insurers panel",
+      "contact_name": "Basil Tsapralis"
+    },
+    {
+      "name": "BWI Insurance Brokers",
+      "industry": "Insurance",
+      "location": "Putney",
+      "website": "N/A",
+      "contact_role": "Director",
+      "notes": "57 Putney Bridge Road"
+    },
+    {
+      "name": "Physical Culture Gym",
+      "industry": "Fitness",
+      "location": "Putney",
+      "website": "physicalculture.co.uk",
+      "contact_role": "Owner",
+      "notes": "Est. 1928, strength training gym",
+      "email": "info@physicalculture.co.uk",
+      "contact_name": "Chris Quinn"
+    },
+    {
+      "name": "JPT Fitness",
+      "industry": "Fitness/PT",
+      "location": "Fulham/Putney",
+      "website": "trainjpt.com",
+      "contact_role": "Founder",
+      "notes": "Personal training for busy professionals",
+      "contact_name": "James",
+      "email": "info@trainjpt.com"
+    },
+    {
+      "name": "WorkWithNey",
+      "industry": "Corporate Wellness",
+      "location": "Fulham area",
+      "website": "workwithney.com",
+      "contact_role": "Founder",
+      "notes": "Team wellness, flexibility sessions",
+      "contact_name": "Ney"
+    },
+    {
+      "name": "Macnamara IT",
+      "industry": "IT Support",
+      "location": "Hammersmith/Fulham",
+      "website": "macnamara.co.uk",
+      "contact_role": "Director",
+      "notes": "Managed IT for SMEs 20+ staff",
+      "phone": "020 3443 9820",
+      "email": "info@macnamara.co.uk",
+      "contact_name": "Ciaran Kenny"
+    },
+    {
+      "name": "Cortec IT",
+      "industry": "IT Support",
+      "location": "Fulham",
+      "website": "cortecit.co.uk",
+      "contact_role": "Director",
+      "notes": "Since 2003, managed IT",
+      "email": "sales@cortecit.co.uk",
+      "phone": "020 8467 9222",
+      "contact_name": "Brian Joseph Davies"
+    },
+    {
+      "name": "Totality Services",
+      "industry": "IT Support",
+      "location": "Fulham",
+      "website": "totalityservices.co.uk",
+      "contact_role": "Managing Director",
+      "notes": "10 years, SME IT support",
+      "email": "info@totalityservices.co.uk",
+      "contact_name": "Charlie Acfield"
+    },
+    {
+      "name": "PC Mac Gicians",
+      "industry": "IT Support",
+      "location": "Fulham",
+      "website": "pcmacgicians.co.uk",
+      "contact_role": "Director",
+      "notes": "Home & small business IT",
+      "contact_name": "Salik Saeed"
+    },
+    {
+      "name": "Putney Pantry",
+      "industry": "Catering",
+      "location": "Putney",
+      "website": "putneypantry.com",
+      "contact_role": "Founder/Head Chef",
+      "notes": "Private & corporate catering",
+      "contact_name": "Issa Cissokho"
+    },
+    {
+      "name": "The Fulham Study",
+      "industry": "Education/Tutoring",
+      "location": "Fulham",
+      "website": "thefulhamstudy.co.uk",
+      "contact_role": "Founder",
+      "notes": "Tutoring since 2010",
+      "phone": "0207 610 9754",
+      "contact_name": "Carol Cox"
+    },
+    {
+      "name": "Victory Digital",
+      "industry": "Digital Marketing",
+      "location": "Putney",
+      "website": "victory.digital",
+      "contact_role": "Director & SEO Grand Master",
+      "notes": "SEO, PPC, digital marketing",
+      "email": "hello@victory.digital",
+      "contact_name": "Cai Simpson"
+    },
+    {
+      "name": "JJ Solutions",
+      "industry": "Web Design/SEO",
+      "location": "Surrey/Putney",
+      "website": "jj-solutions.com",
+      "contact_role": "Founders",
+      "notes": "20+ years experience",
+      "contact_name": "James & Jason",
+      "phone": "020 3871 8773",
+      "email": "hello@jj-solutions.com"
+    },
+    {
+      "name": "Jodana SEO",
+      "industry": "SEO Agency",
+      "location": "Putney",
+      "website": "jodana.co.uk",
+      "contact_role": "Founder",
+      "notes": "ROI-focused SEO",
+      "contact_name": "Zach"
+    },
+    {
+      "name": "Sharma Media",
+      "industry": "Web Design/SEO",
+      "location": "Putney",
+      "website": "sharmamedia.co.uk",
+      "contact_role": "Director",
+      "notes": "Digital growth partner",
+      "email": "info@sharmamedia.co.uk"
+    },
+    {
+      "name": "Chunky Frog",
+      "industry": "Web Design",
+      "location": "Fulham",
+      "website": "chunkyfrog.co.uk",
+      "contact_role": "Co-Founder",
+      "notes": "Website development",
+      "email": "hello@chunkyfrog.co.uk",
+      "contact_name": "Sam Gilbert"
+    },
+    {
+      "name": "XSquare SEO",
+      "industry": "SEO",
+      "location": "Fulham",
+      "website": "xsquareseo.com",
+      "contact_role": "Founder",
+      "notes": "Local SEO specialists",
+      "email": "info@xsquareseo.com",
+      "contact_name": "Jay Patel"
+    },
+    {
+      "name": "Payte Architects",
+      "industry": "Architecture",
+      "location": "Putney/Fulham",
+      "website": "paytearchitects-london.co.uk",
+      "contact_role": "Founder & Director",
+      "notes": "Interior architects, extensions",
+      "email": "info@paytearchitects-london.co.uk",
+      "contact_name": "Simon Baker"
+    },
+    {
+      "name": "Smith & Butler Design",
+      "industry": "Interior Design",
+      "location": "Fulham area",
+      "website": "smithandbutlerdesign.com",
+      "contact_role": "Founder (Alex)",
+      "notes": "Residential interior design",
+      "contact_name": "Alex"
+    },
+    {
+      "name": "RJV Designs",
+      "industry": "Interior Design",
+      "location": "Fulham/Chelsea",
+      "website": "rjvdesigns.co.uk",
+      "contact_role": "Director/Founder",
+      "notes": "Home design & refurbishment",
+      "email": "info@rjvdesigns.co.uk",
+      "contact_name": "Rowena Vaughan"
+    },
+    {
+      "name": "Stanza Design",
+      "industry": "Architecture/Design",
+      "location": "Putney area",
+      "website": "stanzadesign.co.uk",
+      "contact_role": "Director",
+      "notes": "Residential architecture",
+      "phone": "+44 20 8994 0070"
+    },
+    {
+      "name": "Paula Morrison Interiors",
+      "industry": "Interior Design",
+      "location": "Putney",
+      "website": "paulamorrisoninteriors.com",
+      "contact_role": "Founder (Paula)",
+      "notes": "Residential interior design",
+      "contact_name": "Paula Morrison",
+      "email": "hello@paulamorrisoninteriors.com"
+    },
+    {
+      "name": "Tailored Media",
+      "industry": "Video Production",
+      "location": "London",
+      "website": "tailoredmedia.co.uk",
+      "contact_role": "Producer/Project Manager (Company Lead)",
+      "notes": "15+ years, corporate video",
+      "email": "info@tailoredmedia.co.uk",
+      "contact_name": "Katy Delahay"
+    },
+    {
+      "name": "Small Films",
+      "industry": "Video Production",
+      "location": "London",
+      "website": "smallfilms.com",
+      "contact_role": "Founder & Creative Director",
+      "notes": "Marketing video production",
+      "email": "hello@smallfilms.com",
+      "contact_name": "George Hughes"
+    },
+    {
+      "name": "Oh Brother",
+      "industry": "Video/Photography",
+      "location": "London",
+      "website": "oh-brother.co.uk",
+      "contact_role": "Co-Founders (Brothers)",
+      "notes": "Boutique creative production",
+      "email": "hello@oh-brother.co.uk",
+      "contact_name": "Hax & Tarik"
+    },
+    {
+      "name": "Here Now Films",
+      "industry": "Video Production",
+      "location": "London",
+      "website": "herenow.film",
+      "contact_role": "Founder & MD",
+      "notes": "500+ films, award-winning",
+      "email": "ed@herenow.film",
+      "contact_name": "Ed Smit",
+      "phone": "+44 7412543822"
+    },
+    {
+      "name": "Cherish PR",
+      "industry": "PR Agency",
+      "location": "London",
+      "website": "cherishpr.com",
+      "contact_role": "Founder & MD",
+      "notes": "Boutique digital PR",
+      "email": "hello@cherishpr.com",
+      "contact_name": "Rebecca Oatley"
+    },
+    {
+      "name": "B. Communications Agency",
+      "industry": "PR Agency",
+      "location": "London",
+      "website": "bthecommunicationsagency.com",
+      "contact_role": "Founder & CEO",
+      "notes": "Fashion/beauty/lifestyle PR",
+      "email": "hello@bthecommunicationsagency.com",
+      "contact_name": "Sally-Anne Stevens"
+    },
+    {
+      "name": "S-T-PR",
+      "industry": "PR Agency",
+      "location": "London",
+      "website": "s-t-pr.com",
+      "contact_role": "Founder",
+      "notes": "Boutique fashion/personality PR",
+      "contact_name": "Stephanie Taranu",
+      "email": "info@s-t-pr.com"
+    },
+    {
+      "name": "Brave PR",
+      "industry": "PR Agency",
+      "location": "London",
+      "website": "bravepr.co.uk",
+      "contact_role": "Director",
+      "notes": "Lifestyle PR & influencer marketing",
+      "email": "hello@bravepr.co.uk",
+      "contact_name": "Rachael Newton"
+    },
+    {
+      "name": "Jori White PR",
+      "industry": "PR Agency",
+      "location": "London",
+      "website": "joriwhitepr.co.uk",
+      "contact_role": "Founder",
+      "notes": "Boutique PR agency",
+      "contact_name": "Jori White"
+    },
+    {
+      "name": "FTW Digital",
+      "industry": "Digital Marketing",
+      "location": "London",
+      "website": "forthewindigital.com",
+      "contact_role": "Director",
+      "notes": "Small business marketing agency",
+      "email": "hello@forthewindigital.com"
+    },
+    {
+      "name": "London Mentors",
+      "industry": "Consulting",
+      "location": "London",
+      "website": "londonmentors.co.uk",
+      "contact_role": "Director",
+      "notes": "Boutique management consulting",
+      "email": "info@londonmentors.co.uk"
+    },
+    {
+      "name": "Chiswick Advisory",
+      "industry": "Consulting",
+      "location": "Chiswick/Fulham area",
+      "website": "chiswickadvisory.com",
+      "contact_role": "Director",
+      "notes": "Strategy & advisory"
+    },
+    {
+      "name": "Fairgrove Partners",
+      "industry": "Consulting",
+      "location": "London",
+      "website": "fairgrovepartners.com",
+      "contact_role": "Co-Founding Partner",
+      "notes": "Growth strategy, M&A advisory",
+      "email": "info@fairgrovepartners.com",
+      "contact_name": "Patrick Woodrow"
+    },
+    {
+      "name": "Livedata Limited",
+      "industry": "Tech/Software",
+      "location": "London",
+      "website": "livedata.link",
+      "contact_role": "Director",
+      "notes": "Custom IT, MVP, data migration",
+      "email": "info@livedata.link",
+      "contact_name": "Olena Turbayevska"
+    },
+    {
+      "name": "Urban Intelligence",
+      "industry": "PropTech/SaaS",
+      "location": "London",
+      "website": "urbanintelligence.co.uk",
+      "contact_role": "Founder & CEO",
+      "notes": "Digital local plan software",
+      "email": "info@urbanintelligence.co.uk",
+      "contact_name": "Dan"
+    },
+    {
+      "name": "Fyma AI",
+      "industry": "PropTech/AI",
+      "location": "London",
+      "website": "fyma.ai",
+      "contact_role": "CEO",
+      "notes": "AI-driven property analytics",
+      "email": "info@fyma.ai",
+      "contact_name": "Karen K Burns"
+    },
+    {
+      "name": "Upstream/Nexus",
+      "industry": "Innovation Hub",
+      "location": "Hammersmith/Fulham",
+      "website": "move-upstream.org.uk",
+      "contact_role": "Director",
+      "notes": "H&F innovation partnership",
+      "email": "info@move-upstream.org.uk"
+    },
+    {
+      "name": "Boathouse Putney",
+      "industry": "Hospitality",
+      "location": "Putney",
+      "website": "boathouseputney.co.uk",
+      "contact_role": "Manager",
+      "notes": "Events venue, riverside",
+      "email": "events@boathouseputney.co.uk"
+    },
+    {
+      "name": "The Blue Boat",
+      "industry": "Hospitality",
+      "location": "Fulham",
+      "website": "theblueboat.co.uk",
+      "contact_role": "Manager",
+      "notes": "Conference & events venue",
+      "email": "blueboat@fullers.co.uk",
+      "phone": "0203 092 2090"
+    },
+    {
+      "name": "Kumon Putney",
+      "industry": "Education",
+      "location": "Putney",
+      "website": "kumon.co.uk/putney",
+      "contact_role": "Instructor (Ritsuko)",
+      "notes": "Tutoring franchise",
+      "contact_name": "Ritsuko Ogata",
+      "phone": "020 8942 8373"
+    },
+    {
+      "name": "Kumon Fulham",
+      "industry": "Education",
+      "location": "Fulham",
+      "website": "kumon.co.uk/fulham",
+      "contact_role": "Instructor (Lupita)",
+      "notes": "Tutoring franchise",
+      "contact_name": "Lupita Dudhia",
+      "phone": "07811 288872"
+    },
+    {
+      "name": "H&F Adult Learning",
+      "industry": "Education",
+      "location": "Hammersmith/Fulham",
+      "website": "hfals.ac.uk",
+      "contact_role": "Director",
+      "notes": "Adult learning services"
+    },
+    {
+      "name": "Brand Nu",
+      "industry": "Branding",
+      "location": "London",
+      "website": "brandnu.co.uk",
+      "contact_role": "Founder (Radim)",
+      "notes": "Independent branding studio",
+      "contact_name": "Radim Malinic",
+      "email": "studio@brandnu.co.uk",
+      "phone": "+44 207 193 7572"
+    },
+    {
+      "name": "Peas Talent Agency",
+      "industry": "Creative Recruitment",
+      "location": "London",
+      "website": "peas.london",
+      "contact_role": "Agents",
+      "notes": "Creative talent agency",
+      "contact_name": "Shima Maher"
+    },
+    {
+      "name": "Coversure London East",
+      "industry": "Insurance",
+      "location": "London",
+      "website": "coversure.co.uk/london-east",
+      "contact_role": "Founder/Director",
+      "notes": "Independent insurance broker",
+      "contact_name": "Ali Mimoglu"
+    },
+    {
+      "name": "Kerry London Insurance",
+      "industry": "Insurance",
+      "location": "London",
+      "website": "kerrylondon.co.uk",
+      "contact_role": "Founding Director (pre-1991)",
+      "notes": "Construction & property insurance",
+      "contact_name": "Patrick Joseph Kelliher"
+    },
+    {
+      "name": "Manage My Property",
+      "industry": "Property Management",
+      "location": "Putney",
+      "website": "manage-my-property.co.uk",
+      "contact_role": "Director",
+      "notes": "Letting agents SW15"
+    },
+    {
+      "name": "Mail Boxes Etc",
+      "industry": "Logistics/Fulfilment",
+      "location": "Various/Fulham",
+      "website": "mbe.co.uk",
+      "contact_role": "Owner",
+      "notes": "Ecommerce fulfilment, pack & ship"
+    },
+    {
+      "name": "Space 48",
+      "industry": "Ecommerce Agency",
+      "location": "London",
+      "website": "space48.com",
+      "contact_role": "Director",
+      "notes": "Ecommerce agency for retailers",
+      "email": "hello@space48.com",
+      "contact_name": "Justin Berold Young"
+    },
+    {
+      "name": "Pangea Resourcing",
+      "industry": "Recruitment",
+      "location": "Fulham",
+      "website": "Via Thomson Local",
+      "contact_role": "Director (since 2010)",
+      "notes": "212 New Kings Road",
+      "phone": "020 3142 7800",
+      "contact_name": "Sanjay Ramdhonee"
+    },
+    {
+      "name": "Uncommon Fulham",
+      "industry": "Coworking",
+      "location": "Fulham",
+      "website": "uncommon.co.uk",
+      "contact_role": "CEO",
+      "notes": "Flexible workspace",
+      "contact_name": "Chris Davies"
+    },
+    {
+      "name": "Virtual HQ Fulham",
+      "industry": "Virtual Office",
+      "location": "Fulham",
+      "website": "virtual-headquarters.com",
+      "contact_role": "Director",
+      "notes": "Virtual office services",
+      "contact_name": "Tajesh Umadsinh Jadeja"
+    },
+    {
+      "name": "Pavillion Fulham Green",
+      "industry": "Serviced Office",
+      "location": "Fulham",
+      "website": "workthere.com",
+      "contact_role": "Manager",
+      "notes": "Flexible office space"
+    },
+    {
+      "name": "Find A London Office",
+      "industry": "Office Search",
+      "location": "Fulham area",
+      "website": "findalondonoffice.co.uk",
+      "contact_role": "LLP Designated Member (Founding)",
+      "notes": "Office search service",
+      "contact_name": "Ian Simon Kitchener"
+    },
+    {
+      "name": "Flexify HQ",
+      "industry": "Office Search",
+      "location": "Fulham",
+      "website": "flexifyhq.com",
+      "contact_role": "Director/Founder",
+      "notes": "Workspace finding service",
+      "contact_name": "Matthew James Stott"
+    },
+    {
+      "name": "Laka Insurance",
+      "industry": "Insurtech",
+      "location": "Hammersmith/Fulham",
+      "website": "laka.co.uk",
+      "contact_role": "CEO & Co-Founder",
+      "notes": "Cycling insurance startup",
+      "email": "hello@laka.co.uk",
+      "contact_name": "Tobias Taupitz"
+    },
+    {
+      "name": "CitySwift",
+      "industry": "Transport Tech",
+      "location": "Hammersmith/Fulham",
+      "website": "cityswift.com",
+      "contact_role": "Co-Founder & CEO",
+      "notes": "Public transport data tech",
+      "email": "info@cityswift.com",
+      "contact_name": "Brian O'Rourke"
+    },
+    {
+      "name": "Lenus eHealth",
+      "industry": "Health Tech",
+      "location": "London",
+      "website": "lenus.io",
+      "contact_role": "Director",
+      "notes": "Health/fitness professional platform",
+      "email": "info@lenus.io"
+    },
+    {
+      "name": "Moneybox",
+      "industry": "Fintech",
+      "location": "London",
+      "website": "moneyboxapp.com",
+      "contact_role": "Co-Founder/CEO",
+      "notes": "Savings & investment app",
+      "email": "support@moneyboxapp.com",
+      "contact_name": "Ben Stanway"
+    },
+    {
+      "name": "intelliflo",
+      "industry": "Fintech",
+      "location": "London",
+      "website": "intelliflo.com",
+      "contact_role": "CEO/Co-Founder",
+      "notes": "Financial advice software",
+      "email": "info@intelliflo.com",
+      "contact_name": "Nick Eatock"
+    },
+    {
+      "name": "Shop Front Company",
+      "industry": "Retail Services",
+      "location": "Fulham",
+      "website": "shopfrontcompany.co.uk",
+      "contact_role": "Director",
+      "notes": "Shop front installation"
+    },
+    {
+      "name": "HG Walter",
+      "industry": "Butcher/Food",
+      "location": "Fulham",
+      "website": "hgwalter.com",
+      "contact_role": "Director (Founder)",
+      "notes": "Premium butcher, local institution",
+      "email": "info@hgwalter.com",
+      "contact_name": "Peter Brendan Heanen"
+    },
+    {
+      "name": "Butchers Hook Fulham",
+      "industry": "Hospitality",
+      "location": "Fulham",
+      "website": "Via Instagram",
+      "contact_role": "Manager",
+      "notes": "Family-friendly pub"
+    },
+    {
+      "name": "Audrey Ametis Weddings",
+      "industry": "Wedding Planning",
+      "location": "Putney",
+      "website": "hitched.co.uk listing",
+      "contact_role": "Founder (Audrey)",
+      "notes": "Bespoke wedding planning",
+      "contact_name": "Audrey",
+      "email": "info@audreyametisweddings.com"
+    },
+    {
+      "name": "Sandeman Events",
+      "industry": "Event Planning",
+      "location": "London",
+      "website": "sandemanevents.com",
+      "contact_role": "Founder (Natasha)",
+      "notes": "Weddings, parties, corporate events",
+      "contact_name": "Natasha Sandeman",
+      "email": "info@sandemanevents.com"
+    },
+    {
+      "name": "Venture Photography Fulham",
+      "industry": "Photography",
+      "location": "Fulham",
+      "website": "venturephotography.com",
+      "contact_role": "Style Director (Kirsty)",
+      "notes": "Portrait photography studio",
+      "contact_name": "Kirsty (Style Director)",
+      "email": "fulham@venturephotography.co.uk"
+    },
+    {
+      "name": "RoxPix Photography",
+      "industry": "Photography",
+      "location": "Putney area",
+      "website": "roxpixphotography.com",
+      "contact_role": "Founder",
+      "notes": "Branding & portrait photography",
+      "email": "info@roxpixphotography.com"
+    },
+    {
+      "name": "Prestige Property Photography",
+      "industry": "Photography",
+      "location": "Fulham",
+      "website": "prestigepropertyphotography.co.uk",
+      "contact_role": "Director",
+      "notes": "Property photography",
+      "email": "info@prestigepropertyphotography.co.uk"
+    },
+    {
+      "name": "Fulham Performance",
+      "industry": "Property Marketing",
+      "location": "Fulham",
+      "website": "fulhamperformance.co.uk",
+      "contact_role": "Director",
+      "notes": "Marketing for estate agents",
+      "email": "hello@fulhamperformance.co.uk"
+    },
+    {
+      "name": "Simon Callaghan Photography",
+      "industry": "Photography",
+      "location": "London",
+      "website": "simoncallaghanphotography.com",
+      "contact_role": "Founder (Simon)",
+      "notes": "Commercial & architectural photography",
+      "contact_name": "Simon Callaghan",
+      "email": "info@simoncallaghanphotography.com"
+    },
+    {
+      "name": "Koby Photography",
+      "industry": "Photography",
+      "location": "London",
+      "website": "koby.photography",
+      "contact_role": "Principal Photographer/Owner",
+      "notes": "Commercial lifestyle photography",
+      "contact_name": "Ian Kobylanski"
+    },
+    {
+      "name": "Progressive Dentistry",
+      "industry": "Dental Practice",
+      "location": "Fulham",
+      "website": "progressivedentistry.co.uk",
+      "contact_role": "Principal Dentist/Owner",
+      "notes": "Award-winning private dental practice",
+      "phone": "020 7731 1162",
+      "contact_name": "Dr Nissit Patel"
+    },
+    {
+      "name": "Dental Emporium",
+      "industry": "Dental Practice",
+      "location": "Putney",
+      "website": "dentalemporium.co.uk",
+      "contact_role": "Principal Dentist",
+      "notes": "Private dental practice, innovative treatments",
+      "email": "info@dentalemporium.co.uk",
+      "contact_name": "Dr Francois du Toit"
+    },
+    {
+      "name": "Fulham Dental Clinic",
+      "industry": "Dental Practice",
+      "location": "Fulham",
+      "website": "fulhamdentalclinic.co.uk",
+      "contact_role": "Founder/Principal",
+      "notes": "Laser-guided gum disease specialists",
+      "email": "info@fulhamdentalclinic.co.uk",
+      "contact_name": "Justyna Kamecka"
+    },
+    {
+      "name": "Peterpenny's Hair & Beauty",
+      "industry": "Hair & Beauty Salon",
+      "location": "Putney",
+      "website": "peterpennys.co.uk",
+      "contact_role": "Director",
+      "notes": "Independent salon since 1995",
+      "phone": "020 8780 5512",
+      "email": "peterpennys@hotmail.co.uk",
+      "contact_name": "Peter Kyriacou"
+    },
+    {
+      "name": "Ellie Hair & Beauty",
+      "industry": "Hair & Beauty Salon",
+      "location": "Putney",
+      "website": "ellieuk.co.uk",
+      "contact_role": "Director",
+      "notes": "Bespoke hair and beauty experience",
+      "email": "info@ellieuk.co.uk",
+      "contact_name": "Elhame Krasniqi"
+    },
+    {
+      "name": "bei London",
+      "industry": "Hair Salon",
+      "location": "Fulham/Parsons Green",
+      "website": "beilondon.com",
+      "contact_role": "Director/Co-Founder",
+      "notes": "Eco-friendly Aveda & OWay salon",
+      "email": "info@beilondon.com",
+      "phone": "+44 7717 610 791",
+      "contact_name": "Daniele Bizzotto"
+    },
+    {
+      "name": "Edward James Putney",
+      "industry": "Hair Salon",
+      "location": "Putney",
+      "website": "edwardjameslondon.com",
+      "contact_role": "Director/Founder",
+      "notes": "High street salon, 77 Putney High St",
+      "email": "putney@edwardjameslondon.com",
+      "phone": "0208 789 9639",
+      "contact_name": "Edward Shortall"
+    },
+    {
+      "name": "Artisan Coffee Putney",
+      "industry": "Coffee Shop",
+      "location": "Putney",
+      "website": "artisancoffee.co.uk",
+      "contact_role": "Director",
+      "notes": "Specialty coffee, multiple locations",
+      "email": "putney@artisancoffee.co.uk",
+      "phone": "0771 265 7477",
+      "contact_name": "Dean Tromans"
+    },
+    {
+      "name": "Cleagard Services",
+      "industry": "Commercial Cleaning",
+      "location": "Fulham/Putney area",
+      "website": "cleagard.com",
+      "contact_role": "Director",
+      "notes": "Office & commercial cleaning",
+      "contact_name": "Kizito Mpagi",
+      "email": "support@cleagard.com",
+      "phone": "0208 765 1058"
+    },
+    {
+      "name": "Putney Dental Clinic",
+      "industry": "Dental Practice",
+      "location": "Putney",
+      "website": "putneydentalclinic.co.uk",
+      "contact_name": "",
+      "contact_role": "Practice Manager",
+      "notes": "Private dentist on Putney High Street"
+    },
+    {
+      "name": "Riverside Dental Practice",
+      "industry": "Dental Practice",
+      "location": "Putney",
+      "website": "riversidedentalpracticeputney.co.uk",
+      "contact_role": "Practice Manager",
+      "notes": "NHS & Private dentist, 25+ years trusted"
+    },
+    {
+      "name": "Pearl Dental Clinic",
+      "industry": "Dental Practice",
+      "location": "Near Putney",
+      "website": "pearldentalclinic.co.uk",
+      "contact_role": "Practice Manager",
+      "notes": "Family-friendly dentist near Putney"
+    },
+    {
+      "name": "Ground Coffee Society",
+      "industry": "Coffee Shop",
+      "location": "Putney",
+      "website": "groundcoffeesociety.com",
+      "contact_role": "Owner",
+      "notes": "Trendy caf\u00e9, high-quality coffee"
+    },
+    {
+      "name": "Sia Beauty Putney",
+      "industry": "Hair & Beauty Salon",
+      "location": "Putney",
+      "website": "siabeauty.co.uk/putney",
+      "contact_role": "Manager",
+      "notes": "Putney Exchange Shopping Centre"
+    }
+  ]
+}

@@ -6,7 +6,18 @@ Skills define *how* tools work. This file is for *your* specifics — the stuff 
 
 - **Google Account:** hectorcb101@gmail.com
 - **GitHub Account:** hectorcb101-lab
+- **GitHub (Finn's repos):** fmckie — PAT stored in ~/.clawdbot/.env
 - **Main User:** Finn (wfmckie@gmail.com)
+
+## Obsidian Vault
+
+**Location:** `~/clawd/obsidian-vault/`
+**Repo:** git@github.com:fmckie/Obsidian-Vault.git
+
+**⚠️ ALWAYS push after edits** — Finn won't see changes otherwise.
+```bash
+cd ~/clawd/obsidian-vault && git add -A && git commit -m "message" && git push
+```
 
 ## Search & Research
 
@@ -26,7 +37,7 @@ Skills define *how* tools work. This file is for *your* specifics — the stuff 
 **Always use:** `python3 ~/clawd/scripts/atlas_email.py`
 - Sets sender name as "Atlas" (not just email address)
 - Uses Gmail API directly with proper From header
-- **ALWAYS use the Atlas template** for emails to Finn
+- **ALWAYS use the Atlas template for ALL emails to Finn** (not just morning briefings — consistency matters)
 
 **Template:** `~/clawd/templates/atlas-email-final.html`
 - Logo: `{{ATLAS_LOGO}}` (auto-embedded from `assets/atlas_titan_transparent.png`)
@@ -174,6 +185,59 @@ atlas-self ask "question"            # Natural language query
 
 ---
 
+## Atlas Judgment Layer (NEW)
+
+**Location:** `~/clawd/projects/atlas-os/`
+**CLI:** `~/clawd/bin/atlas-judge`
+**Export:** `~/clawd/JUDGMENT.md`
+
+### What it does
+The Judgment Layer provides meta-cognitive principles for decision-making.
+- Rules say "when X, do Y"
+- Principles say "how to decide what to do"
+- Tracks principle applications and effectiveness
+- Enables calibrated confidence over time
+
+### Key Commands
+```bash
+# Core
+atlas-judge principles list              # List all principles
+atlas-judge principle show <id>          # Show principle details
+atlas-judge consult "situation"          # Get relevant principles
+atlas-judge task "desc" --type X --stakes high  # Get principles for task
+
+# Application tracking
+atlas-judge apply <id> -s "situation" --how "..." -d "decision"  # Log application
+atlas-judge outcome <app_id> -r success|partial|failure          # Log outcome
+
+# Learning (Phase 3)
+atlas-judge learn [--auto-update]        # Run learning cycle
+atlas-judge effectiveness [principle_id] # Show effectiveness scores
+atlas-judge review                       # Show principles needing review
+
+# Calibration
+atlas-judge calibrate -d domain -p "prediction" -c 0.7 -o "outcome" [--correct]
+atlas-judge calibration                  # Analyze calibration
+
+# Maintenance
+atlas-judge sync                         # Sync with self-awareness
+atlas-judge stats                        # Statistics
+atlas-judge export                       # Regenerate JUDGMENT.md
+```
+
+### Seed Principles (10 core)
+- **Decision:** Complexity matching, reversibility, explicit uncertainty
+- **Meta-cognitive:** Evidence requirement, pattern vs reasoning, correction significance
+- **Priority:** Stakeholder hierarchy, quality hierarchy
+- **Escalation:** External action gate, stakes-based autonomy
+
+### When to Use
+- Before making significant decisions → `atlas-judge consult`
+- After applying a principle → `atlas-judge apply`
+- When outcome is known → `atlas-judge outcome`
+
+---
+
 ## Atlas Memory System (PRIMARY)
 
 **Location:** `~/clawd/projects/atlas-memory-evolution/`
@@ -241,3 +305,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+
+## Notion
+
+**Status:** ✅ Connected  
+**Workspace:** Finn's personal workspace  
+**API Key:** ~/.config/notion/api_key
+
+**Main Pages:**
+- MSc AI 2026: `2fb6833e-c12d-80bf-9339-ff27ec4be644`
+- 1st Semester Assignments DB: `2fb6833e-c12d-8167-8910-df1c19219133`
+

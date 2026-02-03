@@ -110,5 +110,40 @@
     "aliases": [],
     "attributes": {},
     "first_seen": "2026-02-01T22:54:14.997763+00:00"
+  },
+  "system": {
+    "entity_type": "person",
+    "name": "System",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-02T12:30:59.668124+00:00"
+  },
+  "obsidian": {
+    "entity_type": "person",
+    "name": "Obsidian",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-02T14:48:13.240708+00:00"
+  },
+  "(paused): **time:** 22:00-23:00 utc started new project with finn: automated arbitrage between polymarket (via jupiter on solana) and a second prediction market": {
+    "entity_type": "project",
+    "name": "(Paused): **Time:** 22:00-23:00 UTC Started new project with Finn: automated arbitrage between Polymarket (via Jupiter on Solana) and a second prediction market",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-02T23:00:54.427546+00:00"
+  },
+  "read": {
+    "entity_type": "person",
+    "name": "Read",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-02T23:04:23.727054+00:00"
+  },
+  "claude": {
+    "entity_type": "person",
+    "name": "Claude",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-02T23:40:58.076474+00:00"
   }
 }

@@ -1,0 +1,51 @@
+#!/bin/bash
+# Gmail Watcher CLI
+
+case "$1" in
+    status)
+        sudo systemctl status gmail-watcher --no-pager
+        echo ""
+        echo "Recent logs:"
+        tail -10 ~/clawd/projects/gmail-webhook/gmail_watcher.log 2>/dev/null
+        ;;
+    start)
+        sudo systemctl start gmail-watcher
+        echo "Gmail Watcher started"
+        ;;
+    stop)
+        sudo systemctl stop gmail-watcher
+        echo "Gmail Watcher stopped"
+        ;;
+    restart)
+        sudo systemctl restart gmail-watcher
+        echo "Gmail Watcher restarted"
+        ;;
+    logs)
+        tail -${2:-50} ~/clawd/projects/gmail-webhook/gmail_watcher.log 2>/dev/null
+        ;;
+    check)
+        python3 ~/clawd/projects/gmail-webhook/gmail_watcher.py --once
+        ;;
+    add)
+        if [ -z "$2" ]; then
+            echo "Usage: gmail-watcher add <email>"
+            exit 1
+        fi
+        # TODO: Add to watched_senders in config
+        echo "Adding $2 to watched senders (manual edit required for now)"
+        ;;
+    *)
+        echo "Gmail Watcher - Real-time email notifications"
+        echo ""
+        echo "Usage: gmail-watcher <command>"
+        echo ""
+        echo "Commands:"
+        echo "  status   - Show service status and recent logs"
+        echo "  start    - Start the watcher daemon"
+        echo "  stop     - Stop the watcher daemon"
+        echo "  restart  - Restart the watcher daemon"
+        echo "  logs [n] - Show last n log lines (default 50)"
+        echo "  check    - Run a single check (for testing)"
+        echo ""
+        ;;
+esac

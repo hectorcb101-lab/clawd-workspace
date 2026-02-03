@@ -1,0 +1,80 @@
+{
+  "processed": {
+    "19c10568711d0071": {
+      "processed_at": "2026-02-02T15:01:08.996987",
+      "task_summary": "Anaconda install guide - added to Obsidian",
+      "notes": null
+    },
+    "19c0f9726b54f19e": {
+      "processed_at": "2026-02-02T15:01:09.774857",
+      "task_summary": "ML resources - Bayesian ML, practice papers, maths resource - all in Obsidian",
+      "notes": null
+    },
+    "19c10500d1b828fa": {
+      "processed_at": "2026-02-02T15:01:10.567064",
+      "task_summary": "Ethics Week 2 readings - added to Obsidian",
+      "notes": null
+    },
+    "19c06c6df8158319": {
+      "processed_at": "2026-02-02T15:01:11.344716",
+      "task_summary": "ML Week 1 PDFs - added to Obsidian",
+      "notes": null
+    },
+    "19c058f318767a20": {
+      "processed_at": "2026-02-02T15:01:12.153965",
+      "task_summary": "Ethics Week 1 PDFs - added to Obsidian",
+      "notes": null
+    },
+    "19c09847c0804ed8": {
+      "processed_at": "2026-02-02T15:01:22.502583",
+      "task_summary": "Python lesson 2 Jupyter notebook - added",
+      "notes": null
+    },
+    "19c051227ea8330a": {
+      "processed_at": "2026-02-02T15:01:37.209650",
+      "task_summary": "Python Week 1 basics - already in Obsidian",
+      "notes": null
+    },
+    "19c0495daabce311": {
+      "processed_at": "2026-02-02T15:01:37.970866",
+      "task_summary": "Stats Week 1 intro - already in Obsidian",
+      "notes": null
+    },
+    "19bfed87": {
+      "processed_at": "2026-02-02T15:05:00",
+      "task_summary": "Morning brief reply - no action",
+      "notes": "old thread"
+    },
+    "19bfc2aa": {
+      "processed_at": "2026-02-02T15:05:00",
+      "task_summary": "Forwarded email - reviewed",
+      "notes": "old thread"
+    },
+    "19c1ed678670a093": {
+      "processed_at": "2026-02-02T15:04:05.007446",
+      "task_summary": "CV saved to Obsidian/Reference/Google DeepMind",
+      "notes": null
+    },
+    "19c1ed52381482cc": {
+      "processed_at": "2026-02-02T15:04:05.793128",
+      "task_summary": "Personal statements (old+new) saved to Obsidian/Reference/Google DeepMind",
+      "notes": null
+    },
+    "19c1eaf58e81aab6": {
+      "processed_at": "2026-02-02T15:04:06.568444",
+      "task_summary": "Full timetable saved to Obsidian/Reference/Schedule",
+      "notes": null
+    },
+    "19c105ae57f0cd73": {
+      "processed_at": "2026-02-02T15:05:52.808737",
+      "task_summary": "Stats resources: Downloaded Naked Statistics, created comprehensive reading guide with chapter-to-week mapping, noted library books needed",
+      "notes": null
+    },
+    "19c1ee1ffed25eec": {
+      "processed_at": "2026-02-02T15:08:12.122883",
+      "task_summary": "Test email - Gmail watcher confirmed working",
+      "notes": null
+    }
+  },
+  "pending": {}
+}

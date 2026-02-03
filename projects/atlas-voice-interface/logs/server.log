@@ -1,9 +1,16 @@
 
-🏛️  Atlas Voice Interface v0.1
+🏛️  Atlas Voice Interface v0.3
    http://localhost:3000
    
    Routing through Clawdbot Gateway: http://127.0.0.1:18789
    
+   Changes in v0.3:
+   - Message queue per connection
+   - Sequential processing (no more race conditions)
+   - Better state management
+   
    Voice + Visual interface ready.
    Open in Chrome for best experience.
 
+[1770035405982] Client connected
+[1770035405982] Client disconnected, code: 1005, reason: none

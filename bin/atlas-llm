@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+"""
+Atlas OS LLM CLI
+
+Test and manage LLM backends.
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+# Add project to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+from llm import (
+    create_adapter, get_default_config, load_config, save_config,
+    Message, GenerateConfig, LLMError
+)
+
+
+def cmd_config(args):
+    """Show or save configuration."""
+    if args.init:
+        config = get_default_config()
+        save_config(config)
+        print(f"✅ Created default config at {Path.home()/'clawd'/'projects'/'atlas-os'/'config'/'llm.json'}")
+        return
+    
+    if args.show:
+        config = load_config()
+        print(json.dumps(config, indent=2))
+
+
+def cmd_list(args):
+    """List available providers and models."""
+    config = load_config()
+    
+    print("\n📋 Configured Providers:\n")
+    for name, cfg in config.get("providers", {}).items():
+        default = "⭐" if name == config.get("default_provider") else "  "
+        print(f"{default} {name}")
+        print(f"      URL: {cfg.get('base_url', 'N/A')}")
+        print(f"      Model: {cfg.get('default_model', 'N/A')}")
+        if "api_key_env" in cfg:
+            import os
+            has_key = "✓" if os.getenv(cfg["api_key_env"]) else "✗"
+            print(f"      API Key ({cfg['api_key_env']}): {has_key}")
+        print()
+
+
+def cmd_test(args):
+    """Test connection to an LLM provider."""
+    try:
+        print(f"🔌 Connecting to {args.provider or 'default'}...")
+        llm = create_adapter(args.provider, args.model)
+        
+        print(f"   Provider: {llm.provider}")
+        print(f"   Model: {llm.model_id}")
+        
+        # Health check
+        print("🏥 Health check...", end=" ")
+        if llm.health_check():
+            print("✅")
+        else:
+            print("❌ Model not available")
+            return
+        
+        # Test generation
+        print("💬 Test generation...", end=" ")
+        result = llm.generate(
+            [Message.user("Say 'Atlas OS is working!' in exactly 5 words.")],
+            GenerateConfig(max_tokens=50, temperature=0.1)
+        )
+        print(f"✅")
+        print(f"   Response: {result.content.strip()}")
+        
+        if result.usage:
+            print(f"   Tokens: {result.usage.get('total_tokens', 'N/A')}")
+        
+        print("\n✨ LLM connection working!")
+        
+    except LLMError as e:
+        print(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+def cmd_generate(args):
+    """Generate text with an LLM."""
+    try:
+        llm = create_adapter(args.provider, args.model)
+        
+        messages = []
+        if args.system:
+            messages.append(Message.system(args.system))
+        messages.append(Message.user(args.prompt))
+        
+        config = GenerateConfig(
+            max_tokens=args.max_tokens,
+            temperature=args.temperature,
+        )
+        
+        if args.stream:
+            for chunk in llm.generate_stream(messages, config):
+                print(chunk.content, end="", flush=True)
+            print()
+        else:
+            result = llm.generate(messages, config)
+            print(result.content)
+            
+            if args.verbose and result.usage:
+                print(f"\n[Tokens: {result.usage}]")
+        
+    except LLMError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+def cmd_embed(args):
+    """Generate embeddings."""
+    try:
+        llm = create_adapter(args.provider, args.model)
+        result = llm.embed(args.text)
+        
+        print(f"Model: {result.model}")
+        print(f"Dimensions: {result.dimensions}")
+        
+        if args.verbose:
+            print(f"Embedding: {result.embedding[:10]}... (truncated)")
+        
+    except LLMError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+def cmd_models(args):
+    """List models available from a provider."""
+    try:
+        llm = create_adapter(args.provider, args.model or "placeholder")
+        
+        if hasattr(llm, 'list_models'):
+            models = llm.list_models()
+            print(f"\n📦 Available models ({llm.provider}):\n")
+            for m in models[:20]:  # Limit to 20
+                name = m.get("name") or m.get("id", "unknown")
+                print(f"  • {name}")
+            if len(models) > 20:
+                print(f"  ... and {len(models) - 20} more")
+        else:
+            print("Model listing not supported for this provider")
+            
+    except LLMError as e:
+        print(f"Error: {e}", file=sys.stderr)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas OS LLM CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Config
+    cfg = subparsers.add_parser("config", help="Show/save configuration")
+    cfg.add_argument("--init", action="store_true", help="Initialize default config")
+    cfg.add_argument("--show", action="store_true", help="Show current config")
+    cfg.set_defaults(func=cmd_config, show=True)
+    
+    # List providers
+    lst = subparsers.add_parser("list", help="List providers")
+    lst.set_defaults(func=cmd_list)
+    
+    # Test
+    test = subparsers.add_parser("test", help="Test LLM connection")
+    test.add_argument("-p", "--provider", help="Provider name")
+    test.add_argument("-m", "--model", help="Model name")
+    test.set_defaults(func=cmd_test)
+    
+    # Generate
+    gen = subparsers.add_parser("generate", help="Generate text")
+    gen.add_argument("prompt", help="Prompt text")
+    gen.add_argument("-p", "--provider", help="Provider name")
+    gen.add_argument("-m", "--model", help="Model name")
+    gen.add_argument("-s", "--system", help="System prompt")
+    gen.add_argument("--max-tokens", type=int, default=1024)
+    gen.add_argument("--temperature", type=float, default=0.7)
+    gen.add_argument("--stream", action="store_true", help="Stream output")
+    gen.add_argument("-v", "--verbose", action="store_true")
+    gen.set_defaults(func=cmd_generate)
+    
+    # Embed
+    emb = subparsers.add_parser("embed", help="Generate embedding")
+    emb.add_argument("text", help="Text to embed")
+    emb.add_argument("-p", "--provider", help="Provider name")
+    emb.add_argument("-m", "--model", help="Model name")
+    emb.add_argument("-v", "--verbose", action="store_true")
+    emb.set_defaults(func=cmd_embed)
+    
+    # Models
+    mod = subparsers.add_parser("models", help="List available models")
+    mod.add_argument("-p", "--provider", help="Provider name")
+    mod.add_argument("-m", "--model", help="Model name (placeholder)")
+    mod.set_defaults(func=cmd_models)
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,16 @@
+[Unit]
+Description=Gmail Watcher Daemon - Real-time email notifications
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/clawd/projects/gmail-webhook
+ExecStart=/usr/bin/python3 /home/ubuntu/clawd/projects/gmail-webhook/gmail_watcher.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ubuntu/clawd/projects/gmail-webhook/gmail_watcher.log
+StandardError=append:/home/ubuntu/clawd/projects/gmail-webhook/gmail_watcher.log
+
+[Install]
+WantedBy=multi-user.target

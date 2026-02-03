@@ -1,0 +1,170 @@
+#!/usr/bin/env python3
+"""
+Atlas OS Fine-Tuning CLI
+
+Prepare and manage fine-tuning runs.
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+# Add project to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+from training import (
+    TrainingRunner, prepare_training, list_training_runs,
+    get_training_stats, export_all, get_preset, estimate_vram, PRESETS
+)
+
+
+def cmd_stats(args):
+    """Show training data statistics."""
+    stats = get_training_stats()
+    
+    print("\n📊 Training Data Statistics\n")
+    print(f"   Corrections (DPO): {stats['corrections']}")
+    print(f"   Instructions (SFT): {stats['instructions']}")
+    print(f"   Reasoning traces: {stats['reasoning']}")
+    print(f"   ────────────────────")
+    print(f"   Total: {stats['total']}")
+    print(f"\n   Exports: {stats['exports_dir']}")
+    print()
+
+
+def cmd_export(args):
+    """Export training data."""
+    print(f"\n📦 Exporting training data...\n")
+    
+    exports = export_all(
+        prefix=args.prefix,
+        min_quality=args.min_quality,
+        since=args.since,
+    )
+    
+    for fmt, stats in exports.items():
+        print(f"   {fmt.upper()}: {stats.entries} entries → {stats.output_path.name}")
+    
+    print(f"\n✅ Exports complete")
+    print()
+
+
+def cmd_prepare(args):
+    """Prepare a training run."""
+    print(f"\n🔧 Preparing training run with preset: {args.preset}\n")
+    
+    run = prepare_training(args.preset)
+    
+    # Generate training script
+    runner = TrainingRunner()
+    script_path = runner.generate_script(run)
+    
+    print(f"\n📁 Run directory: {Path.home()/'clawd'/'projects'/'atlas-os'/'data'/'training-runs'/run.id}")
+    print(f"\nNext steps:")
+    print(f"   1. Review config.json in the run directory")
+    print(f"   2. Copy to GPU machine (RunPod, Lambda, etc.)")
+    print(f"   3. pip install -r requirements.txt")
+    print(f"   4. python train.py")
+    print()
+
+
+def cmd_list(args):
+    """List training runs."""
+    runs = list_training_runs()
+    
+    if not runs:
+        print("\nNo training runs found.\n")
+        print("Create one with: atlas-finetune prepare --preset standard")
+        return
+    
+    print(f"\n📋 Training Runs ({len(runs)})\n")
+    for run in runs[:args.limit]:
+        status_emoji = {
+            "pending": "⏳",
+            "running": "🏃",
+            "completed": "✅",
+            "failed": "❌",
+        }.get(run.get("status", ""), "❓")
+        
+        print(f"   {status_emoji} {run['id']}")
+        if "metrics" in run and "data_stats" in run["metrics"]:
+            stats = run["metrics"]["data_stats"]
+            print(f"      Data: {stats.get('sft_entries', 0)} SFT, {stats.get('dpo_entries', 0)} DPO")
+    print()
+
+
+def cmd_presets(args):
+    """List available training presets."""
+    print("\n🎛️  Training Presets\n")
+    
+    for name, preset in PRESETS.items():
+        vram = estimate_vram(preset)
+        print(f"   {name}")
+        print(f"      Model: {preset.base_model}")
+        print(f"      Epochs: {preset.training.num_epochs}")
+        print(f"      LoRA rank: {preset.lora.r}")
+        print(f"      VRAM: ~{vram['estimated_vram_gb']} GB ({vram['recommended_gpu']})")
+        print()
+
+
+def cmd_show(args):
+    """Show details of a training run."""
+    runner = TrainingRunner()
+    run = runner.get_run(args.run_id)
+    
+    if not run:
+        print(f"Run not found: {args.run_id}")
+        return
+    
+    print(f"\n📋 Training Run: {args.run_id}\n")
+    print(json.dumps(run, indent=2))
+    print()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas OS Fine-Tuning CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Stats
+    stats = subparsers.add_parser("stats", help="Show training data stats")
+    stats.set_defaults(func=cmd_stats)
+    
+    # Export
+    exp = subparsers.add_parser("export", help="Export training data")
+    exp.add_argument("-p", "--prefix", help="Output file prefix")
+    exp.add_argument("-q", "--min-quality", type=int, default=3, help="Minimum quality (1-5)")
+    exp.add_argument("-s", "--since", help="Only data since date (YYYY-MM-DD)")
+    exp.set_defaults(func=cmd_export)
+    
+    # Prepare
+    prep = subparsers.add_parser("prepare", help="Prepare a training run")
+    prep.add_argument("-p", "--preset", default="standard", 
+                      choices=list(PRESETS.keys()), help="Training preset")
+    prep.set_defaults(func=cmd_prepare)
+    
+    # List
+    lst = subparsers.add_parser("list", help="List training runs")
+    lst.add_argument("-l", "--limit", type=int, default=10)
+    lst.set_defaults(func=cmd_list)
+    
+    # Presets
+    presets = subparsers.add_parser("presets", help="List training presets")
+    presets.set_defaults(func=cmd_presets)
+    
+    # Show
+    show = subparsers.add_parser("show", help="Show run details")
+    show.add_argument("run_id", help="Run ID")
+    show.set_defaults(func=cmd_show)
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

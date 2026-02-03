@@ -1,7 +1,12 @@
 /**
- * Atlas Voice Interface - Server
+ * Atlas Voice Interface - Server v0.3
  * 
  * Routes voice/text through Clawdbot Gateway for full Atlas context.
+ * 
+ * v0.3 Changes:
+ * - Added message queue per connection (prevents race conditions)
+ * - Sequential processing of chat messages
+ * - Better error handling and state management
  */
 
 require('dotenv').config();
@@ -97,13 +102,135 @@ async function callGateway(messages, sessionId) {
     return data.choices[0].message.content;
 }
 
-// Conversation history per connection
-const conversations = new Map();
+// Connection state management
+class ConnectionState {
+    constructor(id, ws) {
+        this.id = id;
+        this.ws = ws;
+        this.history = [];
+        this.queue = [];
+        this.processing = false;
+    }
+    
+    addToHistory(role, content) {
+        this.history.push({ role, content });
+        // Keep last 20 messages for context
+        if (this.history.length > 20) {
+            this.history.splice(0, this.history.length - 20);
+        }
+    }
+    
+    async processQueue() {
+        if (this.processing || this.queue.length === 0) return;
+        
+        this.processing = true;
+        
+        while (this.queue.length > 0) {
+            const message = this.queue.shift();
+            
+            // Check if connection is still open
+            if (this.ws.readyState !== 1) { // WebSocket.OPEN = 1
+                console.log(`[${this.id}] Connection closed, clearing queue`);
+                this.queue = [];
+                break;
+            }
+            
+            try {
+                await this.handleChatMessage(message);
+            } catch (err) {
+                console.error(`[${this.id}] Queue processing error:`, err);
+            }
+        }
+        
+        this.processing = false;
+    }
+    
+    async handleChatMessage(text) {
+        console.log(`[${this.id}] Processing: ${text}`);
+        
+        // Add to history
+        this.addToHistory('user', text);
+        
+        // Notify client we're thinking
+        this.send({ type: 'status', status: 'thinking' });
+        
+        try {
+            const assistantMessage = await callGateway(this.history, this.id);
+            this.addToHistory('assistant', assistantMessage);
+            
+            // Parse display commands
+            const parsed = parseDisplayCommands(assistantMessage);
+            
+            console.log(`[${this.id}] Response: ${parsed.text.substring(0, 100)}...`);
+            
+            // Send response
+            this.send({
+                type: 'response',
+                text: parsed.text,
+                displays: parsed.displays
+            });
+        } catch (err) {
+            console.error(`[${this.id}] Gateway error:`, err);
+            this.send({
+                type: 'response',
+                text: "I'm having trouble connecting to my brain right now. Give me a moment.",
+                displays: []
+            });
+        }
+    }
+    
+    async handleTTS(text) {
+        this.send({ type: 'status', status: 'speaking' });
+        
+        try {
+            const audio = await openai.audio.speech.create({
+                model: 'tts-1',
+                voice: 'echo',
+                input: text,
+                speed: 1.15
+            });
+            
+            const buffer = Buffer.from(await audio.arrayBuffer());
+            const base64 = buffer.toString('base64');
+            
+            this.send({
+                type: 'audio',
+                audio: base64,
+                format: 'mp3'
+            });
+        } catch (err) {
+            console.error(`[${this.id}] TTS error:`, err);
+            this.send({ 
+                type: 'tts_fallback',
+                text: text 
+            });
+        }
+    }
+    
+    send(data) {
+        if (this.ws.readyState === 1) { // WebSocket.OPEN
+            this.ws.send(JSON.stringify(data));
+        }
+    }
+    
+    enqueueChat(text) {
+        this.queue.push(text);
+        // Notify client that message is queued if already processing
+        if (this.processing) {
+            this.send({ type: 'queued', position: this.queue.length });
+        }
+        this.processQueue();
+    }
+}
+
+// Active connections
+const connections = new Map();
 
 // Handle WebSocket connections
 wss.on('connection', (ws) => {
     const connectionId = Date.now().toString();
-    conversations.set(connectionId, []);
+    const state = new ConnectionState(connectionId, ws);
+    connections.set(connectionId, state);
     
     console.log(`[${connectionId}] Client connected`);
     
@@ -113,95 +240,38 @@ wss.on('connection', (ws) => {
             
             // Handle ping for latency measurement
             if (message.type === 'ping') {
-                ws.send(JSON.stringify({ type: 'pong' }));
+                state.send({ type: 'pong' });
                 return;
             }
             
             if (message.type === 'chat') {
                 console.log(`[${connectionId}] User: ${message.text}`);
-                
-                // Add to conversation history
-                const history = conversations.get(connectionId);
-                history.push({ role: 'user', content: message.text });
-                
-                // Keep last 20 messages for context
-                if (history.length > 20) {
-                    history.splice(0, history.length - 20);
-                }
-                
-                // Send to Clawdbot Gateway
-                ws.send(JSON.stringify({ type: 'status', status: 'thinking' }));
-                
-                try {
-                    const assistantMessage = await callGateway(history, connectionId);
-                    history.push({ role: 'assistant', content: assistantMessage });
-                    
-                    // Parse display commands
-                    const parsed = parseDisplayCommands(assistantMessage);
-                    
-                    console.log(`[${connectionId}] Atlas: ${parsed.text.substring(0, 100)}...`);
-                    
-                    // Send response
-                    ws.send(JSON.stringify({
-                        type: 'response',
-                        text: parsed.text,
-                        displays: parsed.displays
-                    }));
-                } catch (err) {
-                    console.error('Gateway error:', err);
-                    ws.send(JSON.stringify({
-                        type: 'response',
-                        text: "I'm having trouble connecting to my brain right now. Give me a moment.",
-                        displays: []
-                    }));
-                }
+                state.enqueueChat(message.text);
             }
             
             if (message.type === 'tts') {
-                // Generate TTS audio
-                ws.send(JSON.stringify({ type: 'status', status: 'speaking' }));
-                
-                try {
-                    const audio = await openai.audio.speech.create({
-                        model: 'tts-1',
-                        voice: 'echo',  // Warm, conversational
-                        input: message.text,
-                        speed: 1.15
-                    });
-                    
-                    const buffer = Buffer.from(await audio.arrayBuffer());
-                    const base64 = buffer.toString('base64');
-                    
-                    ws.send(JSON.stringify({
-                        type: 'audio',
-                        audio: base64,
-                        format: 'mp3'
-                    }));
-                } catch (err) {
-                    console.error('TTS error:', err);
-                    // Fall back to browser TTS
-                    ws.send(JSON.stringify({ 
-                        type: 'tts_fallback',
-                        text: message.text 
-                    }));
-                }
+                await state.handleTTS(message.text);
             }
         } catch (err) {
             console.error('Message error:', err);
-            ws.send(JSON.stringify({ type: 'error', message: err.message }));
+            state.send({ type: 'error', message: err.message });
         }
     });
     
-    ws.on('close', () => {
-        console.log(`[${connectionId}] Client disconnected`);
-        conversations.delete(connectionId);
+    ws.on('close', (code, reason) => {
+        console.log(`[${connectionId}] Client disconnected, code: ${code}, reason: ${reason?.toString() || 'none'}`);
+        connections.delete(connectionId);
+    });
+    
+    ws.on('error', (err) => {
+        console.error(`[${connectionId}] WebSocket error:`, err.message);
     });
     
     // Send welcome
-    ws.send(JSON.stringify({
+    state.send({
         type: 'welcome',
         message: 'Connected to Atlas'
-    }));
+    });
 });
 
 // Serve static files
@@ -209,16 +279,27 @@ app.use(express.static('public'));
 
 // Health check
 app.get('/health', (req, res) => {
-    res.json({ status: 'ok', name: 'Atlas Voice Interface', gateway: GATEWAY_URL });
+    res.json({ 
+        status: 'ok', 
+        name: 'Atlas Voice Interface',
+        version: '0.3',
+        gateway: GATEWAY_URL,
+        connections: connections.size
+    });
 });
 
 // Start server
 server.listen(PORT, () => {
     console.log(`
-🏛️  Atlas Voice Interface v0.1
+🏛️  Atlas Voice Interface v0.3
    http://localhost:${PORT}
    
    Routing through Clawdbot Gateway: ${GATEWAY_URL}
+   
+   Changes in v0.3:
+   - Message queue per connection
+   - Sequential processing (no more race conditions)
+   - Better state management
    
    Voice + Visual interface ready.
    Open in Chrome for best experience.

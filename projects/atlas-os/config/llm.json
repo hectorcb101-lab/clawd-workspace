@@ -1,0 +1,27 @@
+{
+  "default_provider": "ollama",
+  "default_model": "llama3.2",
+  "providers": {
+    "ollama": {
+      "base_url": "http://localhost:11434",
+      "default_model": "llama3.2",
+      "embed_model": "nomic-embed-text"
+    },
+    "openai": {
+      "base_url": "https://api.openai.com/v1",
+      "default_model": "gpt-4o-mini",
+      "embed_model": "text-embedding-3-small",
+      "api_key_env": "OPENAI_API_KEY"
+    },
+    "together": {
+      "base_url": "https://api.together.xyz/v1",
+      "default_model": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+      "embed_model": "togethercomputer/m2-bert-80M-8k-retrieval",
+      "api_key_env": "TOGETHER_API_KEY"
+    },
+    "local_vllm": {
+      "base_url": "http://localhost:8000/v1",
+      "default_model": "Qwen/Qwen2.5-7B-Instruct"
+    }
+  }
+}

@@ -1,5 +1,29 @@
 # HEARTBEAT.md
 
+## 📧 Email Check (Every Heartbeat)
+Check for unread emails from Finn (wfmckie@gmail.com):
+```bash
+python3 -c "..." # Check Gmail for unread from wfmckie
+```
+If new emails: process them and message Finn what you did.
+Don't wait to be asked — proactively handle and report.
+
+## 🌅 Morning Briefing (07:00-09:00 London Time)
+If first heartbeat of the day during morning window:
+1. Pull today's tasks from `~/clawd/obsidian-vault/QMUL MSc AI - notes/📌 This Week.md`
+2. Check calendar for today's events
+3. Check for any incomplete tasks from yesterday → ASK if completed
+4. Format as professional Intelligence Briefing
+5. Include: Weather, calendar, tasks, any flagged items
+6. Update `~/clawd/ATLAS_DASHBOARD.md` with current state
+
+## 🏛️ Dashboard Maintenance (Every Heartbeat)
+Update `~/clawd/ATLAS_DASHBOARD.md`:
+- Sync tasks from Obsidian Task Hub
+- Update system health (daemon, memory stats)
+- Track pending follow-ups
+- Note overdue items
+
 ## 🔨 Active Build Check
 If `ACTIVE_BUILD.md` exists and status is ACTIVE:
 - Check if there's idle time to make progress

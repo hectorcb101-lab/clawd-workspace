@@ -1,11 +1,13 @@
 """
 Core service for Atlas Self-Modification System.
 Orchestrates proposals, validation, application, and rollback.
+Integrated with Atlas OS Event Bus for training data capture.
 """
 
 from datetime import datetime, timedelta
 from typing import Optional, List, Tuple
 from pathlib import Path
+import sys
 
 from .models import (
     ModificationRequest, ModificationLog, ModificationRule, ModificationOutcome,
@@ -15,6 +17,30 @@ from .models import (
 from .repository import ModificationRepository, LogRepository, RuleRepository, OutcomeRepository
 from .risk import assess_risk, requires_approval, explain_risk
 from .file_ops import safe_modify, read_file, is_protected, restore_from_content
+
+# Add Atlas OS bus to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+def _emit_mod_to_bus(action: str, mod_id: str, file: str, reason: str, outcome: str = None):
+    """Emit modification event to Atlas OS Event Bus (non-blocking, fail-safe)."""
+    try:
+        from bus import emit, AtlasEvent, EventType, EventSource, TrainingMeta, TrainingFormat
+        event = AtlasEvent(
+            type=EventType.MOD_APPLY if action == "apply" else EventType.MOD_ROLLBACK,
+            source=EventSource.MODIFICATION,
+            summary=f"{action.capitalize()}: {Path(file).name} - {reason[:50]}",
+            data={
+                "modification_id": mod_id,
+                "target_file": file,
+                "action": action,
+                "reason": reason,
+                "outcome": outcome
+            },
+            training=TrainingMeta(usable=False)  # Mod events aren't directly training data
+        )
+        emit(event)
+    except Exception:
+        pass  # Don't let bus errors break modification system
 
 
 # Workspace root
@@ -178,6 +204,9 @@ class ModificationService:
             applied_by=by
         )
         
+        # Emit to Atlas OS Event Bus
+        _emit_mod_to_bus("apply", mod.id, mod.target_file, mod.reason, "success")
+        
         return log
     
     def rollback(self, modification_id: str, reason: str) -> bool:
@@ -212,6 +241,9 @@ class ModificationService:
         
         # Update status
         self.mods.update_status(modification_id, Status.ROLLED_BACK)
+        
+        # Emit to Atlas OS Event Bus
+        _emit_mod_to_bus("rollback", modification_id, log.file_path, reason, "success")
         
         return True
     

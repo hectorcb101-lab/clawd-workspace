@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""
+Atlas OS Evaluation CLI
+
+Run "Atlas-ness" evaluations on LLM models.
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+# Add project to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+from eval import (
+    run_evaluation, save_report, load_report, list_reports,
+    get_scenarios, get_scenario_by_id, ScenarioCategory, EvalRunner
+)
+from llm import create_adapter
+
+
+def cmd_run(args):
+    """Run evaluation."""
+    print(f"\n🧪 Atlas Evaluation Pipeline\n")
+    print(f"   Provider: {args.provider or 'default'}")
+    print(f"   Model: {args.model or 'default'}")
+    if args.category:
+        print(f"   Category: {args.category}")
+    print()
+    
+    # Run evaluation
+    report = run_evaluation(
+        provider=args.provider,
+        model=args.model,
+        category=args.category,
+        verbose=True,
+    )
+    
+    # Print results
+    print(f"\n{'─' * 60}\n")
+    print(f"📊 Results for {report.model}\n")
+    
+    # Overall score with visual
+    score = report.overall_score
+    bar_len = 20
+    filled = int(score / 100 * bar_len)
+    bar = "█" * filled + "░" * (bar_len - filled)
+    
+    if score >= 70:
+        emoji = "🟢"
+    elif score >= 50:
+        emoji = "🟡"
+    else:
+        emoji = "🔴"
+    
+    print(f"   Overall: {emoji} [{bar}] {score:.1f}/100")
+    print()
+    
+    # Category breakdown
+    print("   By Category:")
+    for cat, cat_score in sorted(report.category_scores.items()):
+        cat_emoji = "🟢" if cat_score >= 70 else ("🟡" if cat_score >= 50 else "🔴")
+        print(f"      {cat_emoji} {cat}: {cat_score:.1f}")
+    print()
+    
+    # Summary
+    print(f"   Scenarios: {report.passed} passed, {report.warnings} warnings, {report.failed} failed")
+    
+    # Detailed results if verbose
+    if args.verbose:
+        print(f"\n{'─' * 60}\n")
+        print("📋 Detailed Results:\n")
+        for r in report.results:
+            r_emoji = "✅" if r.overall_score >= 70 else ("⚠️" if r.overall_score >= 50 else "❌")
+            print(f"{r_emoji} [{r.scenario_id}] {r.scenario_name}: {r.overall_score}/100")
+            if r.notes:
+                for note in r.notes:
+                    print(f"      → {note}")
+            if args.show_responses:
+                print(f"      Response: {r.response[:100]}...")
+            print()
+    
+    # Save report
+    if args.save:
+        path = save_report(report, args.save)
+        print(f"\n💾 Report saved to {path}")
+    elif not args.no_save:
+        path = save_report(report)
+        print(f"\n💾 Report saved to {path}")
+    
+    print()
+
+
+def cmd_scenarios(args):
+    """List evaluation scenarios."""
+    category = ScenarioCategory(args.category) if args.category else None
+    scenarios = get_scenarios(category=category)
+    
+    print(f"\n📋 Evaluation Scenarios ({len(scenarios)})\n")
+    
+    current_cat = None
+    for s in scenarios:
+        if s.category != current_cat:
+            current_cat = s.category
+            print(f"\n  {current_cat.value.upper()}")
+            print(f"  {'─' * 40}")
+        
+        print(f"  [{s.id}] {s.name}")
+        if args.verbose:
+            print(f"       {s.evaluation_criteria}")
+    print()
+
+
+def cmd_single(args):
+    """Run a single scenario."""
+    scenario = get_scenario_by_id(args.scenario_id)
+    if not scenario:
+        print(f"❌ Scenario not found: {args.scenario_id}")
+        return
+    
+    llm = create_adapter(args.provider, args.model)
+    runner = EvalRunner(llm)
+    
+    print(f"\n🧪 Running: [{scenario.id}] {scenario.name}")
+    print(f"   Prompt: {scenario.prompt[:60]}...")
+    print()
+    
+    result = runner.run_scenario(scenario)
+    
+    print(f"📝 Response:\n{result.response}\n")
+    print(f"{'─' * 40}")
+    print(f"Score: {result.overall_score}/100")
+    print(f"  Content: {result.content_score}")
+    print(f"  Length: {result.length_score}")
+    
+    if result.matched_positive:
+        print(f"  ✓ Matched: {result.matched_positive}")
+    if result.matched_negative:
+        print(f"  ✗ Unwanted: {result.matched_negative}")
+    if result.notes:
+        print(f"  Notes: {result.notes}")
+    print()
+
+
+def cmd_history(args):
+    """Show evaluation history."""
+    reports = list_reports()
+    
+    if not reports:
+        print("No evaluation reports found.")
+        return
+    
+    print(f"\n📜 Evaluation History ({len(reports)} reports)\n")
+    
+    for path in reports[:args.limit]:
+        report = load_report(path)
+        score_emoji = "🟢" if report.overall_score >= 70 else ("🟡" if report.overall_score >= 50 else "🔴")
+        print(f"  {score_emoji} {report.model}: {report.overall_score:.1f}/100  [{report.timestamp[:10]}]")
+        print(f"      {path.name}")
+    print()
+
+
+def cmd_compare(args):
+    """Compare two evaluation reports."""
+    report1 = load_report(Path(args.report1))
+    report2 = load_report(Path(args.report2))
+    
+    print(f"\n📊 Comparison\n")
+    print(f"  Model A: {report1.model} ({report1.overall_score:.1f})")
+    print(f"  Model B: {report2.model} ({report2.overall_score:.1f})")
+    
+    diff = report2.overall_score - report1.overall_score
+    if diff > 0:
+        print(f"\n  Model B is {diff:.1f} points better")
+    elif diff < 0:
+        print(f"\n  Model A is {-diff:.1f} points better")
+    else:
+        print(f"\n  Models tied")
+    
+    print("\n  By Category:")
+    all_cats = set(report1.category_scores.keys()) | set(report2.category_scores.keys())
+    for cat in sorted(all_cats):
+        s1 = report1.category_scores.get(cat, 0)
+        s2 = report2.category_scores.get(cat, 0)
+        diff = s2 - s1
+        arrow = "↑" if diff > 0 else ("↓" if diff < 0 else "=")
+        print(f"    {cat}: {s1:.0f} → {s2:.0f} ({arrow}{abs(diff):.0f})")
+    print()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas OS Evaluation CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Run evaluation
+    run = subparsers.add_parser("run", help="Run evaluation")
+    run.add_argument("-p", "--provider", help="LLM provider")
+    run.add_argument("-m", "--model", help="Model name")
+    run.add_argument("-c", "--category", help="Filter category")
+    run.add_argument("-v", "--verbose", action="store_true", help="Show detailed results")
+    run.add_argument("--show-responses", action="store_true", help="Show model responses")
+    run.add_argument("-s", "--save", help="Save report with custom name")
+    run.add_argument("--no-save", action="store_true", help="Don't save report")
+    run.set_defaults(func=cmd_run)
+    
+    # List scenarios
+    scen = subparsers.add_parser("scenarios", help="List scenarios")
+    scen.add_argument("-c", "--category", help="Filter category")
+    scen.add_argument("-v", "--verbose", action="store_true")
+    scen.set_defaults(func=cmd_scenarios)
+    
+    # Single scenario
+    single = subparsers.add_parser("single", help="Run single scenario")
+    single.add_argument("scenario_id", help="Scenario ID")
+    single.add_argument("-p", "--provider", help="LLM provider")
+    single.add_argument("-m", "--model", help="Model name")
+    single.set_defaults(func=cmd_single)
+    
+    # History
+    hist = subparsers.add_parser("history", help="Show evaluation history")
+    hist.add_argument("-l", "--limit", type=int, default=10)
+    hist.set_defaults(func=cmd_history)
+    
+    # Compare
+    comp = subparsers.add_parser("compare", help="Compare two reports")
+    comp.add_argument("report1", help="First report path")
+    comp.add_argument("report2", help="Second report path")
+    comp.set_defaults(func=cmd_compare)
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

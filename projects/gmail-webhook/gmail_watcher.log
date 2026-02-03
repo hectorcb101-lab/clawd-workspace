@@ -1,0 +1,25 @@
+2026-02-02 14:58:50,581 - INFO - First run. Setting historyId to 5404
+2026-02-02 14:58:54,955 - INFO - Gmail Watcher starting...
+2026-02-02 14:58:54,955 - INFO - Gmail Watcher starting...
+2026-02-02 14:58:54,956 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-02 14:58:54,956 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-02 14:58:54,956 - INFO - Poll interval: 60s
+2026-02-02 14:58:54,956 - INFO - Poll interval: 60s
+2026-02-02 15:04:56,338 - INFO - Found 1 new message(s)
+2026-02-02 15:04:56,338 - INFO - Found 1 new message(s)
+2026-02-02 15:04:56,538 - INFO - Watched email: test if the new gmail watch system works from Finn M <wfmckie@gmail.com>
+2026-02-02 15:04:56,538 - INFO - Watched email: test if the new gmail watch system works from Finn M <wfmckie@gmail.com>
+2026-02-02 15:04:56,539 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-02 15:04:56,539 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-02 15:12:57,771 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-02 15:12:57,771 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-02 18:30:33,368 - INFO - Found 1 new message(s)
+2026-02-02 18:30:33,368 - INFO - Found 1 new message(s)
+2026-02-02 18:33:34,074 - INFO - Found 1 new message(s)
+2026-02-02 18:33:34,074 - INFO - Found 1 new message(s)
+2026-02-02 20:24:54,088 - INFO - Found 1 new message(s)
+2026-02-02 20:24:54,088 - INFO - Found 1 new message(s)
+2026-02-02 20:30:55,440 - INFO - Found 1 new message(s)
+2026-02-02 20:30:55,440 - INFO - Found 1 new message(s)
+2026-02-02 22:17:15,157 - INFO - Found 1 new message(s)
+2026-02-02 22:17:15,157 - INFO - Found 1 new message(s)

@@ -1,9 +1,14 @@
 Atlas Voice Interface - Remote Access URL
 ==========================================
 
-🔗 https://arrested-photos-logan-proud.trycloudflare.com
+🔗 https://neural-shakespeare-key-arthur.trycloudflare.com
 
 Open in Chrome for best voice recognition support.
 
-Updated: 2026-02-02 02:06 UTC
+Updated: 2026-02-02 12:00 UTC
 
+v0.3 Changes:
+- Fixed race condition bug (no more breaking after second message)
+- Server-side message queue for sequential processing
+- Client-side input blocking while waiting for response
+- Visual feedback when input is disabled

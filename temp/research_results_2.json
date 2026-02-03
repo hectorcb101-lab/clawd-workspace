@@ -1,0 +1,153 @@
+[
+  {
+    "company": "Urban Intelligence",
+    "contact_name": "Daniel Mohamed",
+    "role": "Founder & CEO",
+    "linkedin_url": "https://www.linkedin.com/in/danmohamed/",
+    "source": "Company website + Companies House"
+  },
+  {
+    "company": "Fyma AI",
+    "contact_name": "Karen K Burns",
+    "role": "CEO",
+    "linkedin_url": null,
+    "source": "Company website (fyma.ai/about)"
+  },
+  {
+    "company": "Upstream/Nexus",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "No specific company found - multiple unrelated 'Upstream' companies exist"
+  },
+  {
+    "company": "Boathouse Putney",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "Likely pub owned by larger chain (Young's/Fuller's) - no individual company record found"
+  },
+  {
+    "company": "The Blue Boat",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "Likely pub owned by larger chain (Young's/Fuller's) - no individual company record found"
+  },
+  {
+    "company": "H&F Adult Learning",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "Government/council service - not a private company"
+  },
+  {
+    "company": "Coversure London East",
+    "contact_name": "Ali Mimoglu",
+    "role": "Founder/Director",
+    "linkedin_url": null,
+    "source": "Company website (coversure.co.uk/london-east) - founded 1995"
+  },
+  {
+    "company": "Kerry London Insurance",
+    "contact_name": "Patrick Joseph Kelliher",
+    "role": "Founding Director (pre-1991)",
+    "linkedin_url": "https://www.linkedin.com/company/kerry-london-ltd",
+    "source": "Companies House - company founded 1986",
+    "current_directors": ["Mark Cotton", "Michael Coulbert", "Imogen Coggan", "Dean Calaz", "Carl Gebhard"]
+  },
+  {
+    "company": "Manage My Property",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "US-based platform (managemyproperty.com) - founders not publicly listed"
+  },
+  {
+    "company": "Mail Boxes Etc",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": null,
+    "source": "Franchise business - MBE (UK) Ltd is parent company (03107457)"
+  },
+  {
+    "company": "Space 48",
+    "contact_name": "Justin Berold Young",
+    "role": "Director",
+    "linkedin_url": "https://www.linkedin.com/company/space-48/",
+    "source": "Companies House - Space 48 Limited (13229143)",
+    "other_directors": ["Hannah Louise Eames", "Jonathan Woodall"]
+  },
+  {
+    "company": "Pangea Resourcing",
+    "contact_name": "Sanjay Ramdhonee",
+    "role": "Director (since 2010)",
+    "linkedin_url": null,
+    "source": "Companies House - Pangea Resourcing Limited (07027446)",
+    "other_directors": ["Amarveer Singh Pannu"]
+  },
+  {
+    "company": "Uncommon Fulham",
+    "contact_name": "Chris Davies",
+    "role": "CEO",
+    "linkedin_url": null,
+    "source": "Company website (uncommon.co.uk/about-us)",
+    "notes": "Part of The Uncommon Group - coworking spaces"
+  },
+  {
+    "company": "Virtual HQ Fulham",
+    "contact_name": "Tajesh Umadsinh Jadeja",
+    "role": "Director",
+    "linkedin_url": null,
+    "source": "Companies House - Virtual HQ Limited (15694533) - incorporated April 2024"
+  },
+  {
+    "company": "Pavilion Fulham Green",
+    "contact_name": "Jonathan Michael Hunt",
+    "role": "Director",
+    "linkedin_url": null,
+    "source": "Companies House - Pavilion Fulham Green Limited (13510660)",
+    "other_directors": ["Matthew Cornish Gresham", "Harry Jonathan Hunt"]
+  },
+  {
+    "company": "Find A London Office",
+    "contact_name": "Ian Simon Kitchener",
+    "role": "LLP Designated Member (Founding)",
+    "linkedin_url": null,
+    "source": "Companies House - Find A London Office LLP (OC322917) - incorporated 2006",
+    "other_members": ["Robert Michael Squier Fraser", "Benjamin James Petersen Neale"]
+  },
+  {
+    "company": "Flexify HQ",
+    "contact_name": "Matthew James Stott",
+    "role": "Director/Founder",
+    "linkedin_url": null,
+    "source": "Companies House - The Pollen Group Limited (formerly The Flexify Group) (11981847)"
+  },
+  {
+    "company": "Laka Insurance",
+    "contact_name": "Tobias Alexander Taupitz",
+    "role": "Co-Founder/Director",
+    "linkedin_url": null,
+    "source": "Companies House - Laka Ltd (10575209) - incorporated Jan 2017",
+    "other_founders": ["Benjamin David Allen"],
+    "current_directors": ["Benjamin David Allen", "Matthieu de Chanville", "David Viet Le", "Tobias Alexander Taupitz"]
+  },
+  {
+    "company": "CitySwift",
+    "contact_name": "Brian O'Rourke",
+    "role": "Co-Founder & CEO",
+    "linkedin_url": null,
+    "source": "Company website (cityswift.com/about)",
+    "other_founders": ["Alan Farrelly (Co-Founder & CCO)"],
+    "notes": "Irish company - bus industry tech"
+  },
+  {
+    "company": "Lenus eHealth",
+    "contact_name": null,
+    "role": null,
+    "linkedin_url": "https://www.linkedin.com/company/lenus-ehealth/",
+    "source": "Danish company (lenusehealth.com) - UK presence but no UK-specific directors found",
+    "notes": "Global health coaching platform with London office"
+  }
+]

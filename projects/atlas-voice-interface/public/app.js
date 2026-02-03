@@ -1,5 +1,5 @@
 /**
- * Atlas Voice Interface v0.2 - Enhanced
+ * Atlas Voice Interface v0.3 - Stable
  * 
  * Features:
  * - Voice input/output
@@ -10,6 +10,12 @@
  * - Fullscreen mode
  * - Connection quality monitoring
  * - Persistent conversation history
+ * 
+ * v0.3 Changes:
+ * - Added isProcessing state to prevent race conditions
+ * - Input blocked while waiting for response
+ * - Visual feedback when input is blocked
+ * - Server-side queue support
  */
 
 class AtlasInterface {
@@ -32,6 +38,7 @@ class AtlasInterface {
         this.isConnected = false;
         this.isSpeaking = false;
         this.isThinking = false;
+        this.isProcessing = false;  // NEW: blocks input while waiting for response
         this.audioContext = null;
         this.analyser = null;
         this.mediaStream = null;
@@ -118,15 +125,19 @@ class AtlasInterface {
         
         this.ws.onopen = () => {
             this.isConnected = true;
+            this.isProcessing = false;
             this.setStatus('connected', 'Connected');
+            this.updateInputState();
             console.log('Connected to Atlas');
             this.measureLatency();
         };
         
-        this.ws.onclose = () => {
+        this.ws.onclose = (event) => {
             this.isConnected = false;
+            this.isProcessing = false;
             this.setStatus('disconnected', 'Reconnecting...');
-            console.log('Disconnected from Atlas');
+            this.updateInputState();
+            console.log('Disconnected from Atlas, code:', event.code, 'reason:', event.reason, 'wasClean:', event.wasClean);
             setTimeout(() => this.setupWebSocket(), 3000);
         };
         
@@ -136,8 +147,12 @@ class AtlasInterface {
         };
         
         this.ws.onmessage = (event) => {
-            const data = JSON.parse(event.data);
-            this.handleMessage(data);
+            try {
+                const data = JSON.parse(event.data);
+                this.handleMessage(data);
+            } catch (err) {
+                console.error('Message handling error:', err);
+            }
         };
     }
     
@@ -169,6 +184,11 @@ class AtlasInterface {
                 this.handleResponse(data);
                 break;
                 
+            case 'queued':
+                // Server acknowledged message is queued
+                console.log(`Message queued, position: ${data.position}`);
+                break;
+                
             case 'audio':
                 this.playAudio(data.audio, data.format);
                 break;
@@ -179,8 +199,11 @@ class AtlasInterface {
                 
             case 'error':
                 console.error('Server error:', data.message);
+                this.isProcessing = false;
+                this.isThinking = false;
                 this.setStatus('connected', 'Connected');
                 this.hideThinkingOrb();
+                this.updateInputState();
                 break;
         }
     }
@@ -188,8 +211,10 @@ class AtlasInterface {
     handleStatusUpdate(status) {
         if (status === 'thinking') {
             this.isThinking = true;
+            this.isProcessing = true;
             this.setStatus('thinking', 'Thinking...');
             this.showThinkingOrb();
+            this.updateInputState();
         } else if (status === 'speaking') {
             this.isThinking = false;
             this.isSpeaking = true;
@@ -204,6 +229,36 @@ class AtlasInterface {
             el.textContent = `${this.latency}ms`;
             el.className = this.latency < 100 ? 'latency good' : 
                           this.latency < 300 ? 'latency ok' : 'latency slow';
+        }
+    }
+    
+    // === Input State Management (NEW) ===
+    
+    updateInputState() {
+        const blocked = this.isProcessing || !this.isConnected;
+        
+        // Update mic button
+        if (this.micButton) {
+            this.micButton.classList.toggle('disabled', blocked);
+            this.micButton.disabled = blocked;
+        }
+        
+        // Update quick commands
+        const quickCommands = document.querySelectorAll('.quick-command');
+        quickCommands.forEach(btn => {
+            btn.classList.toggle('disabled', blocked);
+            btn.disabled = blocked;
+        });
+        
+        // Update hint text
+        if (this.voiceHint) {
+            if (!this.isConnected) {
+                this.voiceHint.textContent = 'Connecting...';
+            } else if (this.isProcessing) {
+                this.voiceHint.textContent = 'Wait for response...';
+            } else {
+                this.voiceHint.textContent = 'Hold to speak';
+            }
         }
     }
     
@@ -236,34 +291,49 @@ class AtlasInterface {
     }
     
     handleResponse(data) {
-        this.isThinking = false;
-        this.hideThinkingOrb();
-        
-        // Add to transcript
-        this.addTranscript('atlas', data.text);
-        
-        // Save to history
-        if (this.settings.saveHistory) {
-            this.saveToHistory('atlas', data.text);
-        }
-        
-        // Handle display commands
-        if (data.displays && data.displays.length > 0) {
-            for (const display of data.displays) {
-                this.handleDisplay(display);
+        try {
+            console.log('handleResponse called, isProcessing before:', this.isProcessing);
+            
+            this.isThinking = false;
+            this.isProcessing = false;  // Response received, unlock input
+            this.hideThinkingOrb();
+            this.updateInputState();
+            
+            console.log('State updated, isProcessing after:', this.isProcessing);
+            
+            // Add to transcript
+            this.addTranscript('atlas', data.text);
+            
+            // Save to history
+            if (this.settings.saveHistory) {
+                this.saveToHistory('atlas', data.text);
             }
-        }
-        
-        // Request TTS
-        if (data.text && this.settings.autoSpeak) {
-            this.requestTTS(data.text);
-        }
-        
-        this.setStatus('connected', 'Connected');
-        
-        // Play subtle sound effect
-        if (this.settings.soundEffects) {
-            this.playSound('response');
+            
+            // Handle display commands
+            if (data.displays && data.displays.length > 0) {
+                for (const display of data.displays) {
+                    this.handleDisplay(display);
+                }
+            }
+            
+            // Request TTS
+            if (data.text && this.settings.autoSpeak) {
+                console.log('Requesting TTS...');
+                this.requestTTS(data.text);
+            }
+            
+            this.setStatus('connected', 'Connected');
+            
+            // Play subtle sound effect
+            if (this.settings.soundEffects) {
+                this.playSound('response');
+            }
+            
+            console.log('handleResponse complete');
+        } catch (err) {
+            console.error('handleResponse error:', err);
+            this.isProcessing = false;
+            this.updateInputState();
         }
     }
     
@@ -460,6 +530,11 @@ class AtlasInterface {
                 oscillator.frequency.value = 500;
                 oscillator.type = 'sine';
                 gainNode.gain.value = 0.04;
+                break;
+            case 'blocked':
+                oscillator.frequency.value = 300;
+                oscillator.type = 'sine';
+                gainNode.gain.value = 0.02;
                 break;
         }
         
@@ -685,10 +760,13 @@ class AtlasInterface {
             this.isListening = false;
             this.micButton.classList.remove('listening');
             document.getElementById('voiceVisualizer').classList.remove('active');
-            this.voiceHint.textContent = 'Hold to speak';
             this.stopAudioVisualization();
             
-            if (this.isConnected) {
+            // Update hint based on processing state
+            if (this.isProcessing) {
+                this.voiceHint.textContent = 'Wait for response...';
+            } else if (this.isConnected) {
+                this.voiceHint.textContent = 'Hold to speak';
                 this.setStatus('connected', 'Connected');
             }
         };
@@ -727,7 +805,9 @@ class AtlasInterface {
             } else {
                 this.voiceHint.textContent = 'Try again';
                 setTimeout(() => {
-                    this.voiceHint.textContent = 'Hold to speak';
+                    if (!this.isProcessing) {
+                        this.voiceHint.textContent = 'Hold to speak';
+                    }
                 }, 2000);
             }
         };
@@ -796,6 +876,15 @@ class AtlasInterface {
     }
     
     async startListening() {
+        // Block if already processing
+        if (this.isProcessing) {
+            console.log('Blocked: waiting for response');
+            if (this.settings.soundEffects) {
+                this.playSound('blocked');
+            }
+            return;
+        }
+        
         if (this.recognition && !this.isListening) {
             try {
                 // Get microphone stream for visualization
@@ -827,6 +916,16 @@ class AtlasInterface {
             return;
         }
         
+        // Block if already processing (shouldn't happen with UI guards, but just in case)
+        if (this.isProcessing) {
+            console.log('Message blocked: already processing');
+            return;
+        }
+        
+        // Set processing state BEFORE sending
+        this.isProcessing = true;
+        this.updateInputState();
+        
         this.addTranscript('user', text);
         
         if (this.settings.soundEffects) {
@@ -849,18 +948,30 @@ class AtlasInterface {
     }
     
     playAudio(base64Audio, format) {
-        this.isSpeaking = true;
-        const audioData = `data:audio/${format};base64,${base64Audio}`;
-        this.audioPlayer.src = audioData;
-        this.audioPlayer.play().catch(err => {
-            console.error('Audio playback error:', err);
+        try {
+            console.log('playAudio called, audio length:', base64Audio?.length || 0);
+            this.isSpeaking = true;
+            const audioData = `data:audio/${format};base64,${base64Audio}`;
+            this.audioPlayer.src = audioData;
+            this.audioPlayer.play().catch(err => {
+                console.error('Audio playback error:', err);
+                this.isSpeaking = false;
+            });
+            
+            this.audioPlayer.onended = () => {
+                console.log('Audio playback ended');
+                this.isSpeaking = false;
+                this.setStatus('connected', 'Connected');
+            };
+            
+            this.audioPlayer.onerror = (e) => {
+                console.error('Audio element error:', e);
+                this.isSpeaking = false;
+            };
+        } catch (err) {
+            console.error('playAudio error:', err);
             this.isSpeaking = false;
-        });
-        
-        this.audioPlayer.onended = () => {
-            this.isSpeaking = false;
-            this.setStatus('connected', 'Connected');
-        };
+        }
     }
     
     speakWithBrowserTTS(text) {

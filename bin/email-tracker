@@ -1,0 +1,3 @@
+#!/bin/bash
+# Email Task Tracker CLI
+python3 ~/clawd/projects/gmail-webhook/email_tracker.py "$@"

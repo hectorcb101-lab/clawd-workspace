@@ -456,6 +456,21 @@ body::before {
     transform: translateY(-2px);
 }
 
+.quick-command.disabled,
+.quick-command:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.quick-command.disabled:hover,
+.quick-command:disabled:hover {
+    background: var(--bg-secondary);
+    border-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    transform: none;
+}
+
 .cmd-icon {
     font-size: 1rem;
 }
@@ -533,6 +548,20 @@ body::before {
     color: var(--bg-primary);
     transform: scale(1.1);
     box-shadow: 0 0 40px rgba(245, 158, 11, 0.5);
+}
+
+.mic-button.disabled,
+.mic-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.mic-button.disabled:hover,
+.mic-button:disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .mic-icon,
