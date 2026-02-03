@@ -4,7 +4,7 @@
     "/home/ubuntu/clawd/AGENTS.md": "be1392810af510cff09e901f0e98978e",
     "/home/ubuntu/clawd/ACTIVE_BUILD.md": "eaaf22805c8fd2ccd459f890b391dcb9",
     "/home/ubuntu/clawd/TOOLS.md": "f03148b6d6212fcf39c8e2231d92f176",
-    "/home/ubuntu/clawd/HEARTBEAT.md": "9deb545ec07c9976847ffc37399a04c5",
+    "/home/ubuntu/clawd/HEARTBEAT.md": "8bd50005b13b0b20048a5aad531fd4dc",
     "/home/ubuntu/clawd/memory/2026-02-01-atlas-hello.md": "a9537913807bbade4aa46dff616b0c3c",
     "/home/ubuntu/clawd/memory/2026-02-01-oauth-reminder.md": "c6ae0b748b295ef46e3fa1b7b74eeedb",
     "/home/ubuntu/clawd/memory/2026-02-01-atlas-memory-build.md": "8fbfee05d59d776b416ba8af00013ad3",
@@ -24,8 +24,8 @@
     "/home/ubuntu/clawd/memory/2026-02-03.md": "745bf6d001c2c58f65b69ac1cfbcbad5",
     "/home/ubuntu/clawd/memory/2026-02-03-local-llm-research.md": "7219607607032d97e8aafa89109eb63c"
   },
-  "last_extraction": "2026-02-03T13:25:07.177123+00:00",
+  "last_extraction": "2026-02-03T13:27:31.624741+00:00",
   "events_since_extraction": 1,
-  "started_at": "2026-02-02T04:42:00.792325+00:00",
-  "total_events_captured": 133
+  "started_at": "2026-02-01T19:43:19.320582+00:00",
+  "total_events_captured": 143
 }

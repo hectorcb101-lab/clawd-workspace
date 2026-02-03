@@ -10,6 +10,12 @@ mcporter call google-workspace.search_gmail_messages user_google_email="hectorcb
 - Say: "Google Workspace auth has expired. Need to re-auth via SSH port forwarding."
 - Reference: `skills/google-workspace-auth/SKILL.md`
 
+**Fallback (if mcporter auth is broken):**
+```bash
+python3 ~/clawd/scripts/check_emails.py "is:unread"
+```
+This script uses the token directly and auto-refreshes. If BOTH fail, then alert Finn.
+
 If new emails: process them and message Finn what you did.
 Don't wait to be asked — proactively handle and report.
 
