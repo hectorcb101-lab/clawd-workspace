@@ -399,3 +399,29 @@ Add to AGENTS.md as standard workflow for MSc materials
 - Tags: obsidian, msc, workflow, automation
 - Promoted: AGENTS.md
 
+
+---
+
+## [LRN-20260203-003] correction
+
+**Logged**: 2026-02-03T13:50:00Z
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+Must proactively check emails and notify Finn when materials received — don't wait to be asked
+
+### Details
+Finn corrected: "do I have to keep asking you to check" — I should be checking for new emails continuously and notifying him when I've processed them, without needing reminders.
+
+### Suggested Action
+1. Add to HEARTBEAT.md: Check for new emails from Finn every heartbeat
+2. When materials received: Process immediately, then send confirmation message
+3. Never wait to be asked twice
+
+### Metadata
+- Source: user_feedback
+- Related Files: HEARTBEAT.md
+- Tags: email, proactive, automation
+

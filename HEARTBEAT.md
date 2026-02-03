@@ -16,8 +16,12 @@ python3 ~/clawd/scripts/check_emails.py "is:unread"
 ```
 This script uses the token directly and auto-refreshes. If BOTH fail, then alert Finn.
 
-If new emails: process them and message Finn what you did.
-Don't wait to be asked — proactively handle and report.
+**If new emails from Finn (wfmckie@gmail.com):**
+1. Process immediately (download attachments, update Obsidian, update Task Hub)
+2. **Send Finn a message** confirming what you received and processed
+3. Don't wait to be asked — proactive notification is mandatory
+
+**Priority filter:** `from:wfmckie@gmail.com is:unread` — check this EVERY heartbeat
 
 ## 🌅 Morning Briefing (07:00-09:00 London Time)
 If first heartbeat of the day during morning window:
