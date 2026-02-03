@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""
+Atlas OS Quality Assessment CLI
+
+Score responses and ingest conversations for training.
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+# Add project to path
+sys.path.insert(0, str(Path.home() / "clawd" / "projects" / "atlas-os" / "src"))
+
+from quality import (
+    score_response, score_and_capture,
+    judge_response,
+    run_ingestion, get_ingestion_stats,
+)
+
+
+def cmd_score(args):
+    """Score a response."""
+    score = score_response(args.prompt, args.response)
+    
+    print(f"\n📊 Quality Score: {score.overall}/5")
+    print(f"   Trainable: {'✅ Yes' if score.trainable else '❌ No'}")
+    print(f"\n   Components:")
+    for k, v in score.components.items():
+        print(f"      {k}: {v}/5")
+    print(f"\n   Flags:")
+    for flag in score.flags:
+        print(f"      {flag}")
+    print()
+    
+    if args.capture and score.trainable:
+        _, event_id = score_and_capture(args.prompt, args.response)
+        print(f"   💾 Captured: {event_id}")
+
+
+def cmd_judge(args):
+    """Use LLM to judge a response."""
+    print("🧑‍⚖️ Evaluating with LLM judge...")
+    
+    result = judge_response(args.prompt, args.response)
+    
+    print(f"\n📊 Judge Score: {result.overall}/5")
+    print(f"   Trainable: {'✅ Yes' if result.trainable else '❌ No'}")
+    print(f"\n   Components:")
+    for k, v in result.scores.items():
+        print(f"      {k}: {v}/5")
+    print(f"\n   Feedback: {result.feedback}")
+    print()
+
+
+def cmd_ingest(args):
+    """Ingest conversations from logs."""
+    print(f"📥 Ingesting conversations from last {args.days} days...\n")
+    
+    examples = run_ingestion(days=args.days)
+    
+    print(f"✅ Captured {len(examples)} training examples\n")
+    
+    if args.verbose and examples:
+        print("Examples:")
+        for ex in examples[:5]:
+            print(f"  • {ex.prompt[:60]}...")
+            print(f"    Score: {ex.quality_score}/5 | ID: {ex.event_id}")
+        if len(examples) > 5:
+            print(f"  ... and {len(examples) - 5} more")
+    print()
+
+
+def cmd_stats(args):
+    """Show ingestion statistics."""
+    stats = get_ingestion_stats()
+    
+    print("\n📊 Ingestion Statistics\n")
+    print(f"   Files processed: {stats['files_processed']}")
+    print(f"   Examples captured: {stats['examples_captured']}")
+    print(f"   Memory directory: {stats['memory_dir']}")
+    print()
+
+
+def cmd_test(args):
+    """Test quality scoring with examples."""
+    print("🧪 Testing quality scorer...\n")
+    
+    test_cases = [
+        ("What's 2+2?", "4."),
+        ("Can you help me?", "Great question! I'd be happy to help! Certainly!"),
+        ("Explain recursion", "Recursion is when a function calls itself. Think of it like a mirror facing another mirror - the reflection contains itself. The key is having a base case to stop the infinite loop."),
+    ]
+    
+    for prompt, response in test_cases:
+        score = score_response(prompt, response)
+        print(f"Q: {prompt}")
+        print(f"A: {response[:60]}...")
+        print(f"Score: {score.overall}/5 ({'✓' if score.trainable else '✗'})")
+        print()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Atlas OS Quality Assessment")
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
+    
+    # Score
+    score = subparsers.add_parser("score", help="Score a response")
+    score.add_argument("prompt", help="User prompt")
+    score.add_argument("response", help="Atlas response")
+    score.add_argument("-c", "--capture", action="store_true", help="Capture if high quality")
+    score.set_defaults(func=cmd_score)
+    
+    # Judge
+    judge = subparsers.add_parser("judge", help="LLM judge evaluation")
+    judge.add_argument("prompt", help="User prompt")
+    judge.add_argument("response", help="Atlas response")
+    judge.set_defaults(func=cmd_judge)
+    
+    # Ingest
+    ingest = subparsers.add_parser("ingest", help="Ingest conversations")
+    ingest.add_argument("-d", "--days", type=int, default=7, help="Days to look back")
+    ingest.add_argument("-v", "--verbose", action="store_true")
+    ingest.set_defaults(func=cmd_ingest)
+    
+    # Stats
+    stats = subparsers.add_parser("stats", help="Show ingestion stats")
+    stats.set_defaults(func=cmd_stats)
+    
+    # Test
+    test = subparsers.add_parser("test", help="Test scorer")
+    test.set_defaults(func=cmd_test)
+    
+    args = parser.parse_args()
+    
+    if args.command is None:
+        parser.print_help()
+        return
+    
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()
