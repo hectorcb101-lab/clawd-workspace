@@ -393,3 +393,9 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+
+**Updated 2026-02-04 from correction:**
+Lesson learned: After acting on an email, immediately mark it as read. Don't resurface emails that have already been processed.
+
+Context: Mark emails as read after acting on them - stops resurfacing processed emails
