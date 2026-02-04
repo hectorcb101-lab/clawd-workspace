@@ -400,6 +400,38 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 **Read = Acted On.** An email is only "read" once I've completed the action it requires.
 
+### MSc Materials → Obsidian Upload
+
+When Finn sends MSc lecture materials via email:
+
+```
+1. Download attachments from email
+2. Save to: obsidian-vault/QMUL MSc AI - notes/Week X/<Subject>/
+3. Create summary note (.md) with:
+   - Module name & week
+   - Link to PDF: [[filename.pdf|Lecture Slides]]
+   - Learning objectives (placeholders)
+   - Practice tasks
+4. Git commit & push (so Finn sees it in Obsidian)
+5. Mark email as read
+```
+
+**Folder structure:**
+```
+QMUL MSc AI - notes/
+├── Week 1/
+│   ├── Machine Learning/
+│   ├── Statistics/
+│   ├── Python/
+│   └── Ethics/
+├── Week 2/
+│   ├── Machine Learning/
+│   ├── Statistics/
+│   └── ...
+```
+
+**Always push to git** — Finn won't see changes otherwise.
+
 ### The Rule
 ```
 1. Check unread emails

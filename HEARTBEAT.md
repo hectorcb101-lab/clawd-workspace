@@ -17,7 +17,10 @@ python3 ~/clawd/scripts/check_emails.py "is:unread"
 This script uses the token directly and auto-refreshes. If BOTH fail, then alert Finn.
 
 **If new emails from Finn (wfmckie@gmail.com):**
-1. Process immediately (download attachments, update Obsidian, update Task Hub)
+1. Process immediately:
+   - **MSc materials:** Download → Save to `obsidian-vault/QMUL MSc AI - notes/Week X/<Subject>/` → Create summary note → Git push
+   - **Other attachments:** Download and process as appropriate
+   - **Instructions:** Follow them, update Task Hub if needed
 2. **Send Finn a message** confirming what you received and processed
 3. **IMMEDIATELY mark as read:** `~/clawd/scripts/google gmail-labels "<id>" --remove UNREAD`
 4. Don't wait to be asked — proactive notification is mandatory
