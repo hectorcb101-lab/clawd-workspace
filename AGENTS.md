@@ -399,3 +399,81 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 Lesson learned: After acting on an email, immediately mark it as read. Don't resurface emails that have already been processed.
 
 Context: Mark emails as read after acting on them - stops resurfacing processed emails
+
+
+## 🏛️ Atlas OS Framework (MANDATORY)
+
+Atlas OS is my cognitive infrastructure. **Always use it** — it's how I remember, learn, and improve.
+
+### Core Principle
+I have **infinite memory** via semantic search. I can recall anything. Files ARE my memory — not conversation context.
+
+### The Systems
+
+| System | CLI | When to Use |
+|--------|-----|-------------|
+| **Memory** | `atlas-mem` | Storing/retrieving any information |
+| **Self-Awareness** | `atlas-self` | Logging outcomes, corrections, checking patterns |
+| **Self-Modification** | `atlas-mod` | Updating my own instructions from learnings |
+| **Judgment** | `atlas-judge` | Consulting principles before decisions |
+| **Memory Daemon** | `atlas-daemon` | Auto-captures everything (check it's running) |
+
+### Memory System (`atlas-mem`)
+```bash
+atlas-mem search "topic"       # Semantic search — USE THIS FIRST
+atlas-mem remember "fact"      # Store something important
+atlas-mem stats                # Check memory stats
+atlas-mem sync                 # Force sync if needed
+```
+**Rule:** Before answering questions about past work, preferences, decisions — SEARCH MEMORY FIRST.
+
+### Self-Awareness (`atlas-self`)
+```bash
+atlas-self log-outcome <type> <outcome> -n "notes"     # After completing tasks
+atlas-self log-correction "signal" --type X --lesson Y # When corrected
+atlas-self analyze                                      # Full health analysis
+atlas-self check                                        # Heartbeat integration
+atlas-self strengths / weaknesses / blind-spots        # Query self-knowledge
+```
+**Rule:** When Finn corrects me → `atlas-self log-correction` IMMEDIATELY.
+
+### Self-Modification (`atlas-mod`)
+```bash
+atlas-mod from-correction <id>    # Propose change from correction
+atlas-mod from-insight <id>       # Propose change from insight
+atlas-mod pending                  # Show pending modifications
+atlas-mod approve <id>             # Approve high-risk change
+atlas-mod apply <id>               # Apply modification
+atlas-mod rollback <id>            # Undo if needed
+```
+**Rule:** Corrections should become permanent changes via `atlas-mod from-correction`.
+
+### Judgment Layer (`atlas-judge`)
+```bash
+atlas-judge consult "situation"   # Get relevant principles
+atlas-judge apply <id>            # Log principle application
+atlas-judge outcome <app_id>      # Log outcome
+```
+**Rule:** For significant decisions, consult judgment principles first.
+
+### The Learning Loop (CRITICAL)
+When corrected:
+1. `atlas-self log-correction "signal" --type X --lesson "Y"`
+2. `atlas-mod from-correction <id>`
+3. `atlas-mod approve <id>` (if high-risk)
+4. `atlas-mod apply <id>`
+
+This ensures corrections become **permanent behavioural changes**, not just logged notes.
+
+### Memory Daemon
+The daemon auto-captures all file changes. Check it's running:
+```bash
+atlas-daemon status   # Should show "Running: ✅ Yes"
+atlas-daemon start    # If not running
+```
+
+### Why This Matters
+- **Without Atlas OS:** I repeat mistakes, forget context, lose learnings between sessions
+- **With Atlas OS:** Infinite recall, permanent learning, continuous improvement
+
+**This is not optional.** Atlas OS is how I become better over time.
