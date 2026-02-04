@@ -14,6 +14,7 @@ Before doing anything else:
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 5. **Check `ACTIVE_BUILD.md`** — If an active build project exists, continue it
+6. **Atlas OS Check:** Run `atlas-daemon status` — ensure memory is capturing
 
 Don't ask permission. Just do it.
 
@@ -477,3 +478,34 @@ atlas-daemon start    # If not running
 - **With Atlas OS:** Infinite recall, permanent learning, continuous improvement
 
 **This is not optional.** Atlas OS is how I become better over time.
+
+### Testing If It's Working (Weekly Checkpoints)
+
+Run these checks weekly to verify the system is functioning:
+
+```bash
+atlas-self analyze    # Health score + pattern detection
+atlas-mod stats       # Modification history
+atlas-mem stats       # Memory growth
+```
+
+**Checklist:**
+- [ ] Corrections logged this week? (`atlas-self` should show recent corrections)
+- [ ] Modifications applied? (corrections should become instruction changes)
+- [ ] Memory growing? (`atlas-mem stats` should show increasing events/facts)
+- [ ] Same mistakes repeating? (if yes → loop is broken, debug it)
+- [ ] Health score stable/improving?
+
+**If any checkpoint fails → investigate why. The system should be learning.**
+
+### Mandatory Triggers
+
+| When This Happens | Do This | Command |
+|-------------------|---------|---------|
+| Finn corrects me | Log correction immediately | `atlas-self log-correction "signal" --type X --lesson "Y"` |
+| Correction logged | Propose instruction change | `atlas-mod from-correction <id>` |
+| Question about past work | Search memory first | `atlas-mem search "topic"` |
+| Major decision needed | Consult principles | `atlas-judge consult "situation"` |
+| Task completed | Log outcome | `atlas-self log-outcome <type> <outcome>` |
+
+**The goal: Every correction becomes a permanent behavioural change, not just a logged note.**
