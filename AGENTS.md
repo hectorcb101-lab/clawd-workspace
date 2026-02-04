@@ -396,10 +396,39 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
 
-**Updated 2026-02-04 from correction:**
-Lesson learned: After acting on an email, immediately mark it as read. Don't resurface emails that have already been processed.
+## 📧 Email Workflow (CRITICAL)
 
-Context: Mark emails as read after acting on them - stops resurfacing processed emails
+**Read = Acted On.** An email is only "read" once I've completed the action it requires.
+
+### The Rule
+```
+1. Check unread emails
+2. Process/act on the email (download attachments, update Obsidian, respond, etc.)
+3. IMMEDIATELY mark as read: ~/clawd/scripts/google gmail-labels "<id>" --remove UNREAD
+4. Never resurface that email again
+```
+
+### Why This Matters
+- Unread = needs attention
+- Read = handled, don't bring up again
+- If I don't mark as read after acting → I'll keep mentioning the same email
+
+### Commands
+```bash
+# Check unread
+~/clawd/scripts/google gmail-search "is:unread"
+
+# Check unread from Finn specifically
+~/clawd/scripts/google gmail-search "from:wfmckie@gmail.com is:unread"
+
+# Read full email
+~/clawd/scripts/google gmail-read "<message_id>"
+
+# Mark as read (AFTER acting on it)
+~/clawd/scripts/google gmail-labels "<message_id>" --remove UNREAD
+```
+
+**This is mandatory.** Every email action ends with marking it read.
 
 
 ## 🏛️ Atlas OS Framework (MANDATORY)

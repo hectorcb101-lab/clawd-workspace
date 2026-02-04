@@ -19,7 +19,10 @@ This script uses the token directly and auto-refreshes. If BOTH fail, then alert
 **If new emails from Finn (wfmckie@gmail.com):**
 1. Process immediately (download attachments, update Obsidian, update Task Hub)
 2. **Send Finn a message** confirming what you received and processed
-3. Don't wait to be asked — proactive notification is mandatory
+3. **IMMEDIATELY mark as read:** `~/clawd/scripts/google gmail-labels "<id>" --remove UNREAD`
+4. Don't wait to be asked — proactive notification is mandatory
+
+**⚠️ Read = Acted On.** Only mark as read AFTER completing the action. This prevents resurfacing.
 
 **Priority filter:** `from:wfmckie@gmail.com is:unread` — check this EVERY heartbeat
 
