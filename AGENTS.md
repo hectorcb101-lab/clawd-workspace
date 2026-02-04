@@ -419,16 +419,34 @@ When Finn sends MSc lecture materials via email:
 **Folder structure:**
 ```
 QMUL MSc AI - notes/
-├── Week 1/
-│   ├── Machine Learning/
-│   ├── Statistics/
-│   ├── Python/
-│   └── Ethics/
-├── Week 2/
-│   ├── Machine Learning/
-│   ├── Statistics/
+├── 1 - Stats/
+│   ├── week 1/
+│   │   └── lecture slides/
+│   ├── week 2/
+│   │   └── lecture slides/
+│   ├── Resources/
+│   └── Assignments/
+├── 2 - Python/
+│   ├── week 1/
+│   │   ├── lab/
+│   │   └── lecture slides/
+│   ├── week 2/
+│   │   ├── lab/
+│   │   └── lecture slides/
 │   └── ...
+├── 3 - Ethics/
+│   ├── week 1/
+│   │   └── lecture slides/
+│   └── ...
+├── 4 - ML/
+│   ├── week 1/
+│   │   ├── lab/
+│   │   └── lecture slides/
+│   └── ...
+└── Reference/
 ```
+
+**Path format:** `<Subject>/week X/lecture slides/` or `<Subject>/week X/lab/`
 
 **Always push to git** — Finn won't see changes otherwise.
 
