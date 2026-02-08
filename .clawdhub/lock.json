@@ -32,6 +32,10 @@
     "obsidian": {
       "version": "1.0.0",
       "installedAt": 1769385943638
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1770220369529
     }
   }
 }

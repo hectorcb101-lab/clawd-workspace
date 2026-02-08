@@ -168,6 +168,75 @@ Finn's motivation: "Achieving the impossible."
 
 ---
 
+## IBM AI Racing League — Major Project (2026-02-06+)
+
+**Competition:** IBM AI Racing League, TORCS simulator, Laguna Seca track, F1-style car
+**Timeline:** Submission August 2026 (~6 months)
+**Team size:** 4 people
+**Current best:** 1:47.84 by "The MonDragons" (QMUL team)
+**Discord:** https://discord.gg/G3w8TfF4pG
+
+### Strategy
+- **DreamerV3 > MuZero** for continuous car control (native continuous actions, faster to implement)
+- RL (PPO/SAC/DreamerV3) beats rule-based in every major racing competition
+- Nobody has used RL competitively in this specific TORCS competition yet — huge advantage
+- Hybrid approach: start rule-based (Week 1) → layer RL → iterate
+
+### Finn's Innovation: LLM-Supervised RL Training
+- Use Atlas/OpenClaw to oversee DreamerV3 training automatically
+- LLM analyses telemetry, proposes reward function changes, hyperparameter tweaks
+- Automated loop: train → analyse → modify → retrain
+- Real research direction (RF-Agent NeurIPS 2025, ICLR 2025 papers exist)
+- Potentially publishable if successful
+
+### Key Resources
+- MonDragons' code: https://github.com/Simple-wood/IBM-TORCs
+- TORCS gym wrapper: https://github.com/ugo-nama-kun/gym_torcs
+- Master research doc (Google Docs): ID `1ioQGgDM7971pCF1Vchxv3Tp0RVRDw6zzcI122bM_QzA`
+- Local research: `~/clawd/research/ibm-racing-research-*.md` + `IBM-Racing-Winning-Playbook.md`
+- Obsidian: `Research/IBM-Racing-Winning-Playbook.md`
+
+### Compute
+- QMUL Apocrita HPC: GPU access **NOT permitted** for MSc students (CPU only via supervisor request)
+- Free options: Kaggle (30h/week GPU), Colab, Azure for Students ($100), GitHub Student Pack
+- Estimated cost: £10-30 total for DreamerV3 training
+
+### Next Steps
+1. Set up TORCS + gym_torcs dev environment
+2. Fork MonDragons' repo for study
+3. Prototype DreamerV3 or PPO agent
+4. Finn to ask Discord about open-source/cloning rules
+5. Finn to sign up for GitHub Student Developer Pack
+
+---
+
+## Opus 4.6 Upgrade (2026-02-06)
+
+- Upgraded from Sonnet 4.5 to Claude Opus 4.6
+- Config at `~/.clawdbot/clawdbot.json` (OpenClaw config path)
+- 1M token context, improved agentic coding
+- mcporter needed reinstall after openclaw npm update
+
+---
+
+## Google Docs Workflow (2026-02-06)
+
+**Critical:** Finn accesses docs from iPad — always create Google Docs, NOT raw markdown.
+- Use `skills/google-docs-formatter/SKILL.md` workflow
+- Use `skills/google-lean/SKILL.md` for Google Workspace API calls
+- Format properly with headers, bold, structure before sending
+
+---
+
+## Email Auth Fix Pattern (2026-02-06)
+
+When `atlas_email.py` gets "invalid_grant":
+1. Check mcporter's Google creds: `~/.google_workspace_mcp/credentials/hectorcb101@gmail.com.json`
+2. Copy the working refresh_token to: `~/.workspace-mcp/token_hectorcb101@gmail.com.json`
+3. They use different OAuth client IDs but the refresh token transfer works
+
+---
+
 ## Email Notification Daemon (2026-02-03)
 
 **Problem:** Repeatedly failed to notify Finn when he sent emails. Heartbeats and cron jobs weren't reliable enough.

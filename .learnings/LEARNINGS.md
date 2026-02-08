@@ -425,3 +425,26 @@ Finn corrected: "do I have to keep asking you to check" — I should be checking
 - Related Files: HEARTBEAT.md
 - Tags: email, proactive, automation
 
+
+---
+
+## [LRN-20260203-004] correction
+
+**Logged**: 2026-02-03T13:51:00Z
+**Priority**: high
+**Status**: resolved
+**Area**: config
+
+### Summary
+Email alerts only — don't auto-update Obsidian unless explicitly instructed in the email
+
+### Details
+Finn corrected: "Only update obsidian if explicitly instructed by in email ok?"
+
+The daemon should ONLY alert about new emails. Processing/Obsidian updates happen only when Finn explicitly asks in the email content.
+
+### Metadata
+- Source: user_feedback
+- Related Files: AGENTS.md, email_notify_daemon.py
+- Tags: email, obsidian, workflow
+

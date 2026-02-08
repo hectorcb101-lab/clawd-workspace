@@ -15,9 +15,11 @@ When Finn uses these shortcuts, interpret them as the full meaning.
 |----------|---------|
 | QS | Quick Scan research (~1 min, chat only) |
 | DD | Deep Dive research (~3-5 min, saves to Obsidian) |
-| EX | Exhaustive research (~10-15 min, email + Obsidian + tracking) |
+| /dr | Deep Research via Exa (~3-5 min, multi-source synthesis, saves to Obsidian) |
+| /ex | Exhaustive Research via Exa (~10-15 min, email + Obsidian + full source tracking) |
 | MB | Morning briefing |
 | QC | Quick check (status update) |
+| /team | Decompose task into parallel sub-agents (2-5 agents, auto-orchestrated) |
 
 ## Topics (for research)
 | Shortcut | Meaning |

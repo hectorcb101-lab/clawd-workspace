@@ -1,6 +1,6 @@
 {
   "initial_bankroll": 100.0,
-  "current_bankroll": 51.0,
+  "current_bankroll": 68.19,
   "trades": [
     {
       "id": 1,
@@ -51,10 +51,10 @@
       "shares": 17.1891,
       "reasoning": "Fed signalled no January cut. Economy stable. Market already priced this in. Small edge but high confidence.",
       "confidence": 5,
-      "status": "OPEN",
-      "exit_price": null,
-      "pnl": null,
-      "resolution": null
+      "status": "CLOSED",
+      "exit_price": 1.0,
+      "pnl": 0.19,
+      "resolution": "RESOLVED - Fed held rates, no change. Won."
     }
   ],
   "stats": {

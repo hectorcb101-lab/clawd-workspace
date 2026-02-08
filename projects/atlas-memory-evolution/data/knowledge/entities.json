@@ -145,5 +145,12 @@
     "aliases": [],
     "attributes": {},
     "first_seen": "2026-02-02T23:40:58.076474+00:00"
+  },
+  "- finn entered the ibm ai racing league competition (team of 4": {
+    "entity_type": "project",
+    "name": "- Finn entered the IBM AI Racing League competition (team of 4",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-02-08T23:06:42.057851+00:00"
   }
 }

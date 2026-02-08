@@ -57,3 +57,53 @@
 2026-02-03 13:51:03,080 - INFO - Watched email: Test from Finn M <wfmckie@gmail.com>
 2026-02-03 13:51:03,080 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
 2026-02-03 13:51:03,080 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-04 09:02:27,791 - INFO - Found 1 new message(s)
+2026-02-04 09:02:27,791 - INFO - Found 1 new message(s)
+2026-02-04 12:19:03,322 - INFO - Found 1 new message(s)
+2026-02-04 12:19:03,322 - INFO - Found 1 new message(s)
+2026-02-04 12:19:03,500 - INFO - Watched email: Statistics - week 2 lecture slides from Finn M <wfmckie@gmail.com>
+2026-02-04 12:19:03,500 - INFO - Watched email: Statistics - week 2 lecture slides from Finn M <wfmckie@gmail.com>
+2026-02-04 12:19:03,501 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-04 12:19:03,501 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-04 13:00:10,929 - INFO - Found 1 new message(s)
+2026-02-04 13:00:10,929 - INFO - Found 1 new message(s)
+2026-02-04 13:00:11,105 - INFO - Watched email: Stats lab week 2 pdf from Finn M <wfmckie@gmail.com>
+2026-02-04 13:00:11,105 - INFO - Watched email: Stats lab week 2 pdf from Finn M <wfmckie@gmail.com>
+2026-02-04 13:00:11,106 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-04 13:00:11,106 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-04 16:07:44,877 - INFO - Found 1 new message(s)
+2026-02-04 16:07:44,877 - INFO - Found 1 new message(s)
+2026-02-04 16:35:50,110 - INFO - Found 1 new message(s)
+2026-02-04 16:35:50,110 - INFO - Found 1 new message(s)
+2026-02-04 16:54:53,829 - INFO - Found 1 new message(s)
+2026-02-04 16:54:53,829 - INFO - Found 1 new message(s)
+2026-02-04 17:12:57,240 - INFO - Found 1 new message(s)
+2026-02-04 17:12:57,240 - INFO - Found 1 new message(s)
+2026-02-05 06:42:25,111 - INFO - Gmail Watcher starting...
+2026-02-05 06:42:25,111 - INFO - Gmail Watcher starting...
+2026-02-05 06:42:25,113 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-05 06:42:25,113 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-05 06:42:25,113 - INFO - Poll interval: 60s
+2026-02-05 06:42:25,113 - INFO - Poll interval: 60s
+2026-02-05 06:42:25,187 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-05 06:42:25,187 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-05 09:02:50,143 - INFO - Found 1 new message(s)
+2026-02-05 09:02:50,143 - INFO - Found 1 new message(s)
+2026-02-05 11:12:13,386 - INFO - Found 1 new message(s)
+2026-02-05 11:12:13,386 - INFO - Found 1 new message(s)
+2026-02-05 19:42:44,260 - INFO - Found 1 new message(s)
+2026-02-05 19:42:44,260 - INFO - Found 1 new message(s)
+2026-02-07 06:03:00,389 - INFO - Gmail Watcher starting...
+2026-02-07 06:03:00,389 - INFO - Gmail Watcher starting...
+2026-02-07 06:03:00,392 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-07 06:03:00,392 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-07 06:03:00,392 - INFO - Poll interval: 60s
+2026-02-07 06:03:00,392 - INFO - Poll interval: 60s
+2026-02-07 06:03:00,458 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-07 06:03:00,458 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-07 23:42:09,578 - INFO - Found 1 new message(s)
+2026-02-07 23:42:09,578 - INFO - Found 1 new message(s)
+2026-02-08 20:51:56,058 - INFO - Found 1 new message(s)
+2026-02-08 20:51:56,058 - INFO - Found 1 new message(s)
+2026-02-08 21:20:01,222 - INFO - Found 1 new message(s)
+2026-02-08 21:20:01,222 - INFO - Found 1 new message(s)
