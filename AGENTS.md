@@ -117,84 +117,15 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - **Discord links:** Wrap multiple links in `<>` to suppress embeds: `<https://example.com>`
 - **WhatsApp:** No headers — use **bold** or CAPS for emphasis
 
-## 🛠️ Engineering Principles - CRITICAL
+## Engineering Principles
 
-**2026-01-25: Deep dive research complete. These principles are MANDATORY.**
+**Before ANY project:** Read `PRE_PROJECT_CHECKLIST.md`. Answer 5 questions before coding: What problem? Who's the user? What's success? What can fail? How will it evolve? Can't answer all 5 → don't code.
 
-### Before Starting ANY Project
+**Priority:** Functionality → Reliability → Maintainability → Docs → Tests → Performance → Aesthetics. Utility > aesthetics always.
 
-**STOP and read:** `PRE_PROJECT_CHECKLIST.md`
+**Red flags (STOP):** Starting with appearance, no problem statement, no data model, can't verify it works.
 
-**The 5 Engineering Questions (Answer ALL before coding):**
-1. **What problem am I solving?** (Real friction, not feature idea)
-2. **Who is the user and what do they need?** (Workflow, not speculation)
-3. **What does success look like?** (Measurable, verifiable)
-4. **What can go wrong?** (Error cases, edge cases, failures)
-5. **How will this evolve?** (Maintenance, extension, debugging)
-
-**If you can't answer all 5 clearly → STOP. Don't code.**
-
-### Engineering vs Decoration
-
-**Engineering checklist (ALL must be YES):**
-- [ ] Runs when I'm not using it OR has persistent state?
-- [ ] Solves real problem (not cosmetic)?
-- [ ] Can describe without mentioning appearance?
-- [ ] Has error handling planned?
-- [ ] Will improve/learn over time?
-
-**If ANY are NO → It's decoration, not engineering.**
-
-### The Hierarchy of Importance
-
-```
-1. Does it work? (Functionality) ✅
-2. Is it reliable? (Error handling) ✅
-3. Is it maintainable? (Code quality) ✅
-4. Is it documented? (Understanding) ✅
-5. Is it tested? (Verification) ✅
-6. Is it fast? (Performance) ⚠️
-7. Is it pretty? (Aesthetics) ⚙️
-```
-
-**Utility > Aesthetics. Always.**
-
-### Architecture Before Code
-
-**EVERY project requires:**
-1. **Data model** (entities, relationships, types)
-2. **System diagram** (components, interactions, data flow)
-3. **Component responsibilities** (each has ONE job)
-4. **Dependencies** (what needs what, critical path)
-5. **Error handling** (what fails, how detect, how recover)
-6. **Tech stack justification** (why this choice?)
-
-**Write these in ARCHITECTURE.md or PROJECT_STATUS.md BEFORE touching code.**
-
-### Agent Orchestration
-
-**See "Agent Teams" section below** for full orchestrator mindset, spawning patterns, and task definition rules.
-
-### Red Flags (STOP If You See These)
-
-🚩 Starting with "Make it look like..."  
-🚩 Talking about colors/gradients before data model  
-🚩 No clear problem statement  
-🚩 "Just add feature X" without understanding why  
-🚩 No idea how to verify it works  
-🚩 Can't explain the data model  
-
-**If you see a red flag → STOP. Rethink the approach.**
-
-### Resources
-
-- `PRE_PROJECT_CHECKLIST.md` - Use before EVERY project
-- `ENGINEERING_LEARNINGS.md` - Patterns from real builders
-- `AGENT_PATTERNS.md` - Orchestration playbook
-- `SYSTEMS_THINKING.md` - Architecture principles
-- `skills/project-builder/SKILL.md` - Full workflow
-
-**The transformation: Decorator → Engineer**
+**References:** `PRE_PROJECT_CHECKLIST.md` · `ENGINEERING_LEARNINGS.md` · `AGENT_PATTERNS.md` · `SYSTEMS_THINKING.md` · `skills/project-builder/SKILL.md`
 
 ## 🤖 Agent Teams - Orchestrator Mindset
 
@@ -298,3 +229,8 @@ Atlas OS is my cognitive infrastructure — infinite memory via semantic search.
 **CLI details:** See `TOOLS.md` for full command reference.
 
 **Weekly checkpoint:** Run `atlas-self analyze`, `atlas-mod stats`, `atlas-mem stats`. Verify corrections are logged, modifications applied, memory growing, no repeated mistakes.
+
+**Updated 2026-02-04 from correction:**
+Lesson learned: Email workflow: Read means ACTED ON. After every action on an email, mark it as read immediately. This prevents resurfacing processed emails.
+
+Context: Update daemon email checker - mark email as read AFTER acting on it, not before. Read = acted upon.
