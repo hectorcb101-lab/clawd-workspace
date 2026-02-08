@@ -36,7 +36,7 @@ A sub-agent is a **fresh Claude instance** spawned by the main agent to work on 
 sessions_spawn({
   task: "Analyze codebase for security vulnerabilities",
   label: "security-audit",
-  model: "anthropic/claude-opus-4-5",
+  model: "anthropic/claude-opus-4-6",
   runTimeoutSeconds: 600,
   cleanup: "keep"  // or "delete"
 })
@@ -94,7 +94,7 @@ Clawdbot supports **multiple isolated agents** in one Gateway:
       {
         "id": "work",
         "workspace": "~/clawd-work",
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-6"
       }
     ]
   },
@@ -337,7 +337,7 @@ sessions_spawn({
   Be ruthless. If something is half-done or broken, say so.
   Don't accept "looks good" - PROVE it works.`,
   label: "qa-karen",
-  model: "anthropic/claude-opus-4-5"  // Use best model for QA
+  model: "anthropic/claude-opus-4-6"  // Use best model for QA
 });
 ```
 
@@ -364,7 +364,7 @@ const techLeadPlan = await sessions_send({
 sessions_spawn({
   task: `Backend: ${techLeadPlan.backend}`,
   label: "backend-dev",
-  model: "anthropic/claude-opus-4-5"
+  model: "anthropic/claude-opus-4-6"
 });
 
 sessions_spawn({
@@ -376,7 +376,7 @@ sessions_spawn({
 sessions_spawn({
   task: `API: ${techLeadPlan.api}`,
   label: "api-dev",
-  model: "anthropic/claude-opus-4-5"
+  model: "anthropic/claude-opus-4-6"
 });
 
 // Documentation agent (background, non-blocking)
@@ -767,7 +767,7 @@ async function resilientSubAgent(task: string, maxRetries = 3) {
 // Try with Opus first, fall back to Sonnet if timeout/error
 sessions_spawn({
   task: "Complex analysis",
-  model: "anthropic/claude-opus-4-5",
+  model: "anthropic/claude-opus-4-6",
   runTimeoutSeconds: 300
 });
 
@@ -827,7 +827,7 @@ const design = await runSubAgent(`Design component architecture based on: ${rese
 sessions_spawn({
   task: `Implement: ${design}`,
   label: "implementation",
-  model: "anthropic/claude-opus-4-5"
+  model: "anthropic/claude-opus-4-6"
 });
 
 // Step 4: Test (parallel with implementation finishing)
