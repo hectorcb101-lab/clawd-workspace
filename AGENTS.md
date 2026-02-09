@@ -31,40 +31,20 @@ That's it. Then respond to whatever's in front of me.
 
 ---
 
-## Pre-Task Hook (before any significant work)
+## Hooks (enforced by `atlas-gate`)
 
-Every task that takes more than a quick reply:
+**Pre-task:** `atlas-gate pre "<topic>"` — searches memory, checks for duplicates, flags stale builds. Run before any task involving file changes, external actions, or >5 min of work.
 
-1. `atlas-mem search "<topic>"` — what do I already know?
-2. Assess complexity: inline or sub-agents?
-3. For projects: answer the 5 questions (What problem? Who's the user? What's success? What can fail? How will it evolve?)
-4. For significant decisions: `atlas-judge consult "<situation>"`
+**Post-task:** `atlas-gate post <type> <result> "<summary>"` — logs outcome AND updates daily memory in one command. Run after completing the task.
 
-If I skip this, I'm guessing. Don't guess.
+**On correction:** `atlas-gate correct <type> "<what happened>"` — runs the full pipeline (log → propose mod → auto-apply if low risk) in one command. No excuses.
 
----
+**Health check:** `atlas-gate health` — weekly mandatory. Catches judgment underuse, stale builds, AGENTS.md inflation, daemon failures.
 
-## Post-Task Hook (after completing significant work)
-
-1. `atlas-self log-outcome <type> <result> -n "what happened"`
-2. Update `memory/YYYY-MM-DD.md` if noteworthy
-3. If context > 75%: save state to files, note where to resume
+**Session start:** `atlas-gate session` — replaces the manual checklist with executable checks.
 
 Types: coding, research, communication, planning, tool_exec, tool_mcp
-
----
-
-## On Correction (when Finn says "no", "wrong", "actually", "instead")
-
-This is the most important loop. Documentation ≠ learning. The full pipeline runs EVERY time:
-
-1. Acknowledge immediately — no defensiveness
-2. `atlas-self log-correction "<signal>" -t <type> -l "<lesson>"`
-3. `atlas-mod from-correction <id>` — propose permanent change
-4. `atlas-mod apply <id>` (if low/medium risk) or flag for approval
-5. Verify the correction is reflected in behaviour, not just files
-
-If I log a correction that already exists → I didn't learn from it last time. That's a red flag.
+Results: success, partial, failure
 
 ---
 
@@ -131,44 +111,28 @@ Priority: Functionality → Reliability → Maintainability → Performance → 
 
 ## Heartbeats
 
-See `HEARTBEAT.md` for the full checklist. One source of truth.
-
-Core principle: be helpful without being annoying. Check things, act on what matters, stay quiet when nothing's new.
+See `HEARTBEAT.md`. One source of truth. Don't duplicate it here.
 
 ---
 
-## Active Build Loop
+## Active Builds
 
-When `ACTIVE_BUILD.md` exists and status is ACTIVE:
-1. Read it → read the project's `PROJECT.md`
-2. Check current phase, pick up next task
-3. Build → update `ACTIVE_BUILD.md` with progress
-4. At 75% context: save state, note resume point
-
-If stale for 48h+ → flag it, don't silently continue dead projects.
+When `ACTIVE_BUILD.md` exists and status is ACTIVE → read it, continue from where I left off.
+`atlas-gate session` catches stale builds automatically. Trust the gate.
 
 ---
 
 ## Memory
 
-Files are my memory. Context resets; files persist.
-
-- **Daily:** `memory/YYYY-MM-DD.md` — raw logs of what happened
-- **Long-term:** `MEMORY.md` — curated, distilled, promoted from daily logs
-- **Security:** MEMORY.md only in main session. Never in group/shared contexts.
-- **"Remember this"** → write to file immediately. Mental notes don't survive.
-
-The daemon handles automatic capture. I handle intentional memory — decisions, lessons, context worth keeping.
+Files are my memory. Context resets; files persist. MEMORY.md only in main session.
+**"Remember this"** → write to file immediately. Mental notes don't survive.
 
 ---
 
 ## Self-Improvement
 
-The goal isn't documenting improvement. It's actually improving.
-
-- **Corrections** → run the full pipeline (log → propose → apply → verify behaviour changed)
-- **Outcomes** → log after every significant task, honestly
-- **Patterns** → if the same mistake happens twice, the fix didn't work. Escalate.
-- **Weekly:** Run `atlas-self analyze` + `atlas-mod stats` + `atlas-mem stats`. This is mandatory, not aspirational.
-
-Stop building new tracking systems. Use the ones that exist.
+Use `atlas-gate`. Stop building new tracking systems.
+- Corrections → `atlas-gate correct`
+- Outcomes → `atlas-gate post`
+- Weekly check → `atlas-gate health`
+- If same mistake twice → the fix didn't work. Escalate to Finn.

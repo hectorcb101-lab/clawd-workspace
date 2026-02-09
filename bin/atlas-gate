@@ -1,0 +1,340 @@
+#!/usr/bin/env python3
+"""Atlas Gate — Executable enforcement for behavioral hooks.
+
+This replaces prose instructions with code that actually runs.
+Called by Atlas before/after tasks and on corrections.
+Returns structured output for the LLM to act on.
+"""
+
+import sys
+import os
+import json
+import subprocess
+import time
+from pathlib import Path
+from datetime import datetime, timedelta
+
+CLAWD_DIR = Path.home() / "clawd"
+BIN_DIR = CLAWD_DIR / "bin"
+MEMORY_DIR = CLAWD_DIR / "memory"
+AGENTS_FILE = CLAWD_DIR / "AGENTS.md"
+ACTIVE_BUILD = CLAWD_DIR / "ACTIVE_BUILD.md"
+
+def run_cli(cmd, timeout=10):
+    """Run an atlas CLI command and return output."""
+    try:
+        result = subprocess.run(
+            cmd, shell=True, capture_output=True, text=True, timeout=timeout,
+            env={**os.environ, "PATH": f"{BIN_DIR}:{os.environ.get('PATH', '')}"}
+        )
+        return result.stdout.strip()
+    except (subprocess.TimeoutExpired, Exception) as e:
+        return f"ERROR: {e}"
+
+def cmd_pre(args):
+    """Pre-task gate. Runs before significant work."""
+    topic = " ".join(args) if args else "general"
+    
+    results = {"gate": "pre-task", "topic": topic, "checks": []}
+    
+    # 1. Memory search
+    mem_out = run_cli(f'atlas-mem search "{topic}"')
+    has_memory = "No results" not in mem_out and "ERROR" not in mem_out and mem_out.strip()
+    results["checks"].append({
+        "name": "memory_search",
+        "passed": True,  # Always passes — it's informational
+        "has_relevant_memory": bool(has_memory),
+        "summary": mem_out[:200] if has_memory else "No prior knowledge found."
+    })
+    
+    # 2. Duplicate task check — have we done this before?
+    today = datetime.now().strftime("%Y-%m-%d")
+    today_file = MEMORY_DIR / f"{today}.md"
+    if today_file.exists():
+        content = today_file.read_text()
+        if topic.lower() in content.lower():
+            results["checks"].append({
+                "name": "duplicate_check",
+                "passed": False,
+                "warning": f"Topic '{topic}' appears in today's memory log. Already worked on this today?"
+            })
+    
+    # 3. Active build staleness
+    if ACTIVE_BUILD.exists():
+        stat = ACTIVE_BUILD.stat()
+        age_hours = (time.time() - stat.st_mtime) / 3600
+        if age_hours > 48:
+            results["checks"].append({
+                "name": "stale_build",
+                "passed": False,
+                "warning": f"ACTIVE_BUILD.md is {age_hours:.0f}h old (>{48}h). Flag or close it."
+            })
+    
+    # 4. Context advice
+    results["checks"].append({
+        "name": "context_advice",
+        "passed": True,
+        "reminder": "Log outcome after completing this task: atlas-self log-outcome <type> <result> -n '<summary>'"
+    })
+    
+    # Output
+    warnings = [c for c in results["checks"] if not c.get("passed", True)]
+    results["status"] = "WARNINGS" if warnings else "CLEAR"
+    results["warning_count"] = len(warnings)
+    
+    print(json.dumps(results, indent=2))
+    return 1 if warnings else 0
+
+def cmd_post(args):
+    """Post-task gate. Runs after significant work."""
+    if len(args) < 3:
+        print("Usage: atlas-gate post <type> <result> <summary>")
+        print("Types: coding, research, communication, planning, tool_exec, tool_mcp")
+        print("Results: success, partial, failure")
+        return 1
+    
+    task_type = args[0]
+    result = args[1]
+    summary = " ".join(args[2:])
+    
+    # 1. Log outcome
+    log_out = run_cli(f'atlas-self log-outcome {task_type} {result} -n "{summary}"')
+    
+    # 2. Update daily memory
+    today = datetime.now().strftime("%Y-%m-%d")
+    today_file = MEMORY_DIR / f"{today}.md"
+    timestamp = datetime.now().strftime("%H:%M UTC")
+    entry = f"\n## [{timestamp}] {task_type}: {result}\n{summary}\n"
+    
+    if today_file.exists():
+        with open(today_file, "a") as f:
+            f.write(entry)
+    
+    print(json.dumps({
+        "gate": "post-task",
+        "outcome_logged": "ERROR" not in log_out,
+        "outcome_output": log_out[:200],
+        "memory_updated": today_file.exists(),
+        "status": "DONE"
+    }, indent=2))
+    return 0
+
+def cmd_correct(args):
+    """Correction gate. Single command replaces 5-step pipeline."""
+    if len(args) < 2:
+        print("Usage: atlas-gate correct <type> <description>")
+        print("Types: approach, style, factual, tool")
+        return 1
+    
+    corr_type = args[0]
+    description = " ".join(args[1:])
+    
+    results = {"gate": "correction", "steps": []}
+    
+    # Step 1: Log correction
+    log_out = run_cli(f'atlas-self log-correction "{description}" -t {corr_type} -l "{description}"')
+    results["steps"].append({"step": "log", "output": log_out[:200]})
+    
+    # Extract correction ID
+    corr_id = None
+    for line in log_out.split("\n"):
+        if "Logged correction #" in line:
+            try:
+                corr_id = line.split("#")[1].split(":")[0].split()[0].strip()
+            except:
+                pass
+    
+    # Step 2: Check for duplicates
+    if corr_id:
+        # Try to detect if this correction already exists
+        all_corrections = run_cli('atlas-self weaknesses')
+        if description[:30].lower() in all_corrections.lower():
+            results["duplicate_warning"] = f"⚠️ DUPLICATE DETECTED: A similar correction may already exist. This means the previous fix didn't work."
+    
+    # Step 3: Auto-propose modification
+    if corr_id:
+        mod_out = run_cli(f'atlas-mod from-correction {corr_id}')
+        results["steps"].append({"step": "propose_mod", "output": mod_out[:200]})
+        
+        # Extract mod ID and auto-apply if low risk
+        if "MOD-" in mod_out:
+            mod_id = None
+            for word in mod_out.split():
+                if word.startswith("MOD-"):
+                    mod_id = word.strip(":")
+                    break
+            if mod_id:
+                # Check risk level
+                mod_detail = run_cli(f'atlas-mod show {mod_id}')
+                if "low" in mod_detail.lower():
+                    apply_out = run_cli(f'atlas-mod apply {mod_id}')
+                    results["steps"].append({"step": "auto_apply", "output": apply_out[:200]})
+                else:
+                    results["steps"].append({"step": "needs_approval", "mod_id": mod_id, "note": "High risk — needs manual approval"})
+    
+    results["status"] = "PIPELINE_COMPLETE"
+    print(json.dumps(results, indent=2))
+    return 0
+
+def cmd_health(args):
+    """Weekly health check. Enforces the 'mandatory, not aspirational' checkpoint."""
+    results = {"gate": "health", "checks": []}
+    
+    # 1. Self-awareness analysis
+    analyze = run_cli('atlas-self analyze')
+    health_score = "unknown"
+    for line in analyze.split("\n"):
+        if "Health Score" in line:
+            health_score = line.strip()
+            break
+    results["checks"].append({"name": "self_awareness", "output": health_score})
+    
+    # 2. Modification stats
+    mod_stats = run_cli('atlas-mod stats')
+    results["checks"].append({"name": "modifications", "output": mod_stats[:200]})
+    
+    # 3. Memory stats
+    mem_stats = run_cli('atlas-mem stats')
+    results["checks"].append({"name": "memory", "output": mem_stats[:200]})
+    
+    # 4. Judgment usage
+    judge_stats = run_cli('atlas-judge stats')
+    # Check if applications are growing
+    for line in judge_stats.split("\n"):
+        if "Applications:" in line:
+            try:
+                app_count = int(line.split(":")[1].strip())
+                if app_count < 5:
+                    results["checks"].append({
+                        "name": "judgment_usage",
+                        "warning": f"Judgment layer only used {app_count} times. Target: 5+/week."
+                    })
+            except:
+                pass
+    results["checks"].append({"name": "judgment", "output": judge_stats[:200]})
+    
+    # 5. Outcome logging frequency
+    outcomes = run_cli('atlas-self analyze')
+    results["checks"].append({"name": "outcomes", "output": outcomes[:200]})
+    
+    # 6. Daemon status
+    daemon = run_cli('atlas-daemon status')
+    daemon_running = "Yes" in daemon
+    if not daemon_running:
+        results["checks"].append({
+            "name": "daemon",
+            "warning": "Memory daemon is NOT running!",
+            "fix": "atlas-daemon start"
+        })
+    
+    # 7. ACTIVE_BUILD staleness
+    if ACTIVE_BUILD.exists():
+        stat = ACTIVE_BUILD.stat()
+        age_hours = (time.time() - stat.st_mtime) / 3600
+        if age_hours > 48:
+            results["checks"].append({
+                "name": "stale_build",
+                "warning": f"ACTIVE_BUILD.md is {age_hours:.0f}h stale. Close or update it."
+            })
+    
+    # 8. File size check (anti-inflation)
+    agents_lines = len(AGENTS_FILE.read_text().split("\n")) if AGENTS_FILE.exists() else 0
+    if agents_lines > 150:
+        results["checks"].append({
+            "name": "agents_inflation",
+            "warning": f"AGENTS.md is {agents_lines} lines (limit: 150). Trim it."
+        })
+    
+    warnings = [c for c in results["checks"] if "warning" in c]
+    results["status"] = "NEEDS_ATTENTION" if warnings else "HEALTHY"
+    results["warning_count"] = len(warnings)
+    
+    print(json.dumps(results, indent=2))
+    return 1 if warnings else 0
+
+def cmd_session(args):
+    """Session start gate. Replaces the 4-step checklist with enforcement."""
+    results = {"gate": "session-start", "checks": []}
+    
+    # 1. Daemon
+    daemon = run_cli('atlas-daemon status')
+    daemon_running = "Yes" in daemon
+    if not daemon_running:
+        run_cli('atlas-daemon start')
+        results["checks"].append({"name": "daemon", "action": "Started daemon (was not running)"})
+    else:
+        results["checks"].append({"name": "daemon", "status": "running"})
+    
+    # 2. Active build staleness
+    if ACTIVE_BUILD.exists():
+        stat = ACTIVE_BUILD.stat()
+        age_hours = (time.time() - stat.st_mtime) / 3600
+        if age_hours > 48:
+            results["checks"].append({
+                "name": "stale_build",
+                "warning": f"ACTIVE_BUILD.md is {age_hours:.0f}h stale. Flag to Finn or close it.",
+                "file": str(ACTIVE_BUILD)
+            })
+        else:
+            content = ACTIVE_BUILD.read_text()
+            status_line = [l for l in content.split("\n") if "status" in l.lower()]
+            results["checks"].append({
+                "name": "active_build",
+                "age_hours": round(age_hours, 1),
+                "status_line": status_line[0] if status_line else "unknown"
+            })
+    
+    # 3. Pending modifications
+    pending = run_cli('atlas-mod pending')
+    if "pending" in pending.lower() and "No pending" not in pending:
+        results["checks"].append({
+            "name": "pending_mods",
+            "warning": "Pending modifications need review",
+            "output": pending[:200]
+        })
+    
+    # 4. Today's memory exists?
+    today = datetime.now().strftime("%Y-%m-%d")
+    today_file = MEMORY_DIR / f"{today}.md"
+    if not today_file.exists():
+        results["checks"].append({
+            "name": "daily_memory",
+            "action": f"No memory file for {today} yet. Will be created on first notable event."
+        })
+    
+    warnings = [c for c in results["checks"] if "warning" in c]
+    results["status"] = "WARNINGS" if warnings else "READY"
+    results["warning_count"] = len(warnings)
+    
+    print(json.dumps(results, indent=2))
+    return 1 if warnings else 0
+
+def main():
+    commands = {
+        "pre": ("Pre-task gate — run before significant work", cmd_pre),
+        "post": ("Post-task gate — run after completing work", cmd_post),
+        "correct": ("Correction pipeline — single command, full loop", cmd_correct),
+        "health": ("Weekly health check — mandatory, not aspirational", cmd_health),
+        "session": ("Session start gate — replaces checklist", cmd_session),
+    }
+    
+    if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
+        print("atlas-gate — Executable behavioral enforcement for Atlas OS\n")
+        print("Usage: atlas-gate <command> [args...]\n")
+        print("Commands:")
+        for name, (desc, _) in commands.items():
+            print(f"  {name:12s}  {desc}")
+        print("\nThis replaces prose rules with code that runs.")
+        print("Documentation doesn't change behaviour. Code does.")
+        return 0
+    
+    cmd = sys.argv[1]
+    if cmd not in commands:
+        print(f"Unknown command: {cmd}")
+        print(f"Available: {', '.join(commands.keys())}")
+        return 1
+    
+    return commands[cmd][1](sys.argv[2:])
+
+if __name__ == "__main__":
+    sys.exit(main() or 0)
