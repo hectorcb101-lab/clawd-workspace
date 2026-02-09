@@ -4,3 +4,4 @@ config/mcporter.json
 __pycache__/
 *.pyc
 projects/research-protocol
+projects/atlas-voice-interface/.env
