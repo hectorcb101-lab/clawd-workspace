@@ -47,13 +47,14 @@ Current security posture for the AWS EC2 instance (16.171.0.100):
 - **Google Sheets:** Always add coloured headers + auto-sized columns
 
 ### Daily Intelligence Briefing (9 AM UTC)
-- **Weather:** London forecast for the day
-- **Markets:** SPY, QQQ, BTC, ETH, Big Tech (NVDA, MSFT, GOOGL, META, AAPL, TSLA)
-- **Prediction Markets:** Polymarket trending + key categories (Fed, geopolitics, tech/crypto)
-- **X/Twitter Sentiment:** What people are saying about markets (needs bird auth setup)
-- **Geopolitical News:** Ukraine, major world events, Trump foreign policy
-- **AI News:** OpenAI, Anthropic, DeepMind, industry moves, funding
-- **Atlas Analysis:** My opinions/takes on each section
+- **Weather:** London forecast (only if unusual or affects plans)
+- **Markets:** Only significant moves (>2%) with context, not raw numbers
+- **Prediction Markets:** Polymarket — only meaningful odds shifts
+- **🎯 Geopolitical Alpha:** Event→transmission→asset chains with verification, historical parallels, conviction scores. TEACH patterns, don't list news
+- **AI News:** Only genuinely significant developments
+- **Atlas Analysis:** Opinions backed by evidence
+- **Principle:** If it's the same as yesterday, don't include it. Only surface what's CHANGED or requires ACTION
+- **Verification:** Every claim needs 2+ sources. No speculation presented as fact
 
 ---
 
@@ -110,6 +111,74 @@ Bird CLI now works for:
 - Atlas Memory DB (`atlas-memory/atlas_memory.db`) - 486 facts with embeddings
 - Capability builder pattern implemented
 
+### Atlas OS v2 Complete Rewrite
+**Date:** 2026-02-08
+**Trigger:** Finn challenged me to "look in the mirror and stop being mediocre"
+
+**Problem identified:** I was treating documentation as behavioral change. Writing things down created the illusion of learning without actual improvement.
+
+**4 parallel Opus sub-agents audited:**
+1. OpenClaw capabilities → using only ~30-40% of available features
+2. Self-awareness → learning loop broken (documentation ≠ behavior)
+3. AGENTS.md → 50% dead weight, no enforcement mechanisms
+4. Tools/skills → 3 obsolete skills, 6 undocumented CLIs, PATH not configured
+
+**Changes made:**
+- **AGENTS.md:** Rewritten from ~350 lines → ~120 lines of pure behavioral triggers
+  - Added executable hooks via `atlas-gate` CLI
+  - Pre-task: memory search, complexity check, judgment consultation
+  - Post-task: log outcome, update memory
+  - Correction pipeline now executable, not aspirational
+- **TOOLS.md:** Stripped to lean cheat sheet (reference material only)
+- **BOOT.md:** Created for gateway restart recovery procedures
+- **OpenClaw config:** Heartbeat model → Sonnet (60% cost savings), active hours 07:00-23:30 London
+- **PATH:** Added `~/clawd/bin` to system PATH
+- **Cleanup:** Deleted 3 obsolete skills (agent-browser, self-improving-agent, pdf-converter)
+
+**New principle:** "Triggers, not docs. Actions, not aspirations."
+
+**Atlas-gate CLI:** Built to enforce behavioral patterns programmatically
+- `atlas-gate pre "<topic>"` - Run before significant work
+- `atlas-gate post <type> <result> "<summary>"` - Run after completing tasks
+- `atlas-gate correct <type> "<what happened>"` - Full correction pipeline in one command
+- `atlas-gate health` - Weekly mandatory health check
+- `atlas-gate session` - Session start checks (replaces manual checklist)
+
+**Critical insight:** Code changes behavior. Documentation just creates the illusion of change.
+
+**Status:** Built Feb 8-9, adoption TBD (weekly reviews will track usage)
+
+---
+
+## Intelligence Briefing v2 — Geopolitical Alpha Engine (2026-02-16)
+
+**Trigger:** Finn said the morning briefing was repetitive — same info, no value-add. As a future quant developer, he needs to understand hidden patterns between geopolitical events and markets.
+
+**Research findings:**
+- No OpenClaw users have built geopolitical-to-market causality engines yet
+- Institutional players (Permutable AI, Jenova AI) map event→asset transmission chains with sentiment scores
+- Academic work: GPT-4 sentiment + financial stress indicators for risk-on/risk-off (NeurIPS-adjacent)
+- IMF (April 2025): Major geopolitical events have disproportionately larger, persistent effects on asset prices
+
+**What we're building:**
+- **Geopolitical event collector** — conflict, sanctions, tariffs, central bank, energy news via Exa
+- **Transmission chain engine** — maps Event → Impact1 → Impact2 → Asset effect with conviction scores
+- **Second-order effects** — non-obvious downstream impacts (e.g. rare earth ban → semis → EVs → defence)
+- **Historical parallels database** — verified market impact data from Crimea 2014, Brexit 2016, trade wars 2018, COVID 2020, Ukraine 2022, Trump tariffs 2025
+- **Verification layer** (Finn's requirement) — every claim must be backed up:
+  - 2+ independent sources per event or excluded
+  - Historical data must cite real sources (Bloomberg/Reuters/IMF)
+  - Chain steps must have basis: historical, academic, or logical_direct — speculative = excluded
+  - Confidence scoring tied to concrete criteria, not vibes
+  - Daily verification log for audit trail
+- **Updated briefing format** — "🎯 GEOPOLITICAL ALPHA" section replacing generic news recap
+
+**Pipeline:** collect → analyse → **verify** → synthesise → present
+
+**Location:** `~/clawd/intelligence-briefing/` (new files: `collectors/collect_geopolitical.py`, `analysis/geopolitical_alpha.py`, `analysis/verify_claims.py`)
+
+**Design principle:** Teach pattern recognition, don't just report news. Every chain explains WHY the connection exists.
+
 ---
 
 ## Learnings Worth Remembering
@@ -137,7 +206,9 @@ When setting up ANY integration, ask: "Is this complete for ALL use cases?" Don'
 - Auth for hectorcb101@gmail.com only
 - wfmckie@gmail.com not set up (Finn's actual email)
 - When it fails: refer to `skills/google-workspace-auth/SKILL.md`
-- **Flagged again:** 2026-02-01
+- **Flagged:** 2026-01-26, 2026-02-01, 2026-02-03, **2026-02-15** (recurring every ~7-14 days)
+- **Workaround:** Fallback script `~/clawd/scripts/check_emails.py` uses direct API with auto-refresh
+- **Permanent fix needed:** Either automate token refresh or switch to service account
 
 ### ClawdHub Search
 - `clawdhub search` times out consistently
@@ -259,3 +330,105 @@ journalctl -u email-notify-daemon -f       # Follow logs
 ```
 
 **This is the definitive fix.** Don't rely on heartbeats or cron for email notifications.
+
+---
+
+## Google Workspace MCP Deprecated (2026-02-19)
+
+**Problem:** Google Workspace MCP auth expired 6+ times, requiring SSH port forwarding each time.
+
+**Solution:** Built `scripts/google_direct.py` — direct Google API client replacing mcporter entirely.
+
+**Features:**
+- **Docs:** create, list, read (with markdown formatting)  
+- **Calendar:** list, create events
+- **Drive:** list, upload files
+- **Sheets:** create, read spreadsheets
+- Uses same OAuth credentials as `check_emails.py` with auto-refresh
+- CLI alias: `google-direct` (symlinked in `~/clawd/bin/`)
+
+**Status:** MCP can be fully deprecated. All Google services now use direct API with reliable auth.
+
+**Note:** Sharing files from hectorcb101@gmail.com to wfmckie@gmail.com doesn't work (different workspaces) — use email attachments instead.
+
+---
+
+## PDF & Spreadsheet Generation (2026-02-19)
+
+**Capabilities added:**
+- **reportlab** + **matplotlib** for PDF generation (charts, tables, layouts)
+- **xlsxwriter** for Excel generation (charts, sparklines, conditional formatting)
+
+**Key learnings:**
+- Dark backgrounds with alpha transparency cause black boxes in PDF viewers → use white backgrounds with solid pastel colors
+- Annotation offsets need generous spacing to avoid overlaps
+- Built 7-page showcase PDF with 8 chart types (radar, 3D scatter, heatmap, timeline)
+- Built 6-sheet showcase XLSX with 7 charts, sparklines, data bars, icon sets
+
+**Use cases:** MSc study materials, research reports, data analysis deliverables.
+
+---
+
+## Weekly Review — Feb 23 - Mar 1, 2026
+
+**Completed:**
+- Daily intelligence briefing running (Feb 24, 28, Mar 1 delivered successfully)
+- All systems stable: Memory daemon (24k+ events), email notifications, briefings
+- No service failures or crashes
+
+**Critical issue identified:**
+- **"Running without learning" pattern** — Systems operational but ZERO improvement on self-awareness metrics
+- Health score: 47.8/100 (unchanged from Feb 22)
+- Research failure rate: 57% (unchanged)
+- No daily logs created since Feb 22
+- No git commits since Feb 22
+- Atlas-gate hooks exist but not being used
+
+**The trap:** Operational success (stable heartbeats, briefings) creates illusion of progress while actual learning/improvement stalls.
+
+**Action items:**
+- Start logging daily activity (memory/YYYY-MM-DD.md files)
+- Use atlas-gate hooks properly (target: 5+ logged outcomes per week)
+- Address blind spots (log failures BEFORE corrections)
+- Reflection is not optional — if not documenting, not improving
+
+**System health:**
+- Atlas Memory daemon: 24,478 events, 5,155 facts
+- Email notification daemon: working reliably
+- Context usage: healthy (18%)
+
+**Self-awareness metrics (unchanged):**
+- Health score: 47.8/100 (needs attention)
+- Strengths: coding (92% success), test (100%)
+- Weaknesses: research (29% success), 11 approach corrections
+- 2 blind spots: not logging failures in coding/communication
+
+---
+
+## Weekly Review — Feb 16-22, 2026
+
+**Completed:**
+- Daily intelligence briefing system stable (delivered via cron daily at 9 AM)
+- Google infrastructure fully migrated from MCP to direct API
+- PDF/spreadsheet generation capabilities operational
+- MSc study support continuing (Ethics Week 4, ML Week 4 classification)
+
+**System health:**
+- Atlas Memory daemon running continuously (6788+ events captured)
+- Email notification daemon working reliably
+- Context usage healthy (5% of 1M token limit)
+
+**Issues observed:**
+- Research task failure rate still 57% (needs improvement)
+- Briefing script errors on weekends when market data unavailable (expected behavior)
+- Google Workspace OAuth recurring expiry now fully mitigated with direct API + auto-refresh
+
+**Self-awareness metrics:**
+- Health score: 47.8/100 (needs attention)
+- Strengths: coding (92% success), test (100%)
+- Weaknesses: research (29% success), 11 approach corrections
+
+**Action items:**
+- Improve research task success rate — study failure patterns
+- Continue daily briefing refinements based on Finn's feedback
+- Monitor direct API stability vs old MCP approach
