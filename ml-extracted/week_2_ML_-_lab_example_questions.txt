@@ -1,0 +1,277 @@
+P RINCIPLES OF M ACHINE L EARNING
+R EGRESSION
+A CADEMIC YEAR 2024/2025
+Q UEEN M ARY U NIVERSITY OF L ONDON
+
+1
+
+E XERCISES
+A data scientist without computing power is akin to a surgeon without a scalpel. The following
+exercises involve numerical calculations and you might be able to do some of them by hand.
+It is very useful to do a few of them by hand (provided that they are not very long) to make
+sure that we know what is going on. However our focus is on data science concepts rather than
+calculations and anyway, why would you want to do it by hand when computers can do it for
+you? Get familiar with a computing environment (for instance Matlab, Python, R) and start
+using it! After all, any future data science project you will be working on will involve many
+data points and calculations, and most likely you will not be able to cope with them by hand.
+
+E XERCISE ♯1. Consider the following simple dataset, where ID denotes the sample identifier
+and x and y are two attributes:
+ID
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+x
+2
+3
+1
+1
+0
+5
+4
+6
+5
+3
+
+y
+1
+2
+2
+1
+1
+3
+3
+7
+6
+5
+
+In this exercise we will use this dataset to test the following five linear models:
+• f1 (x) = 2x + 1
+• f2 (x) = x
+• f3 (x) = 2x − 1
+• f4 (x) = x − 0.5
+• f5 (x) = x + 0.5
+Which candidate model would you choose if you use the MSE to quantify their quality? Which
+one would you choose if you use the MAE? Note that MSE and MAE could, but in general will
+not, produce the same solution.
+
+E XERCISE ♯2. In this exercise, we will evaluate the MSE surface of a generic linear model
+y = w0 + w1 x. The MSE surface represents the dependence of the MSE on the values of the
+model’s parameters, in this case w0 and w1 . We will simplify this study by fixing one parameter and calculating the MSE for different values of the other parameter. Consider the dataset
+{(xi , yi ), 1 ≤ i ≤ 10} presented in the previous exercise.
+• Assuming w0 = 0, calculate the MSE of 9 linear models where w1 =0, 1/5, 1/4, 1/3, 1/2,
+1, 2, 3, 4, 5. Plot the MSE values vs w1 and identify the value of w1 that minimises the
+MSE.
+• Assuming w1 = 1, calculate the MSE of 9 linear models where w0 = -4, -3, -2, -1, 0, 1, 2, 3,
+4, 5. Plot the MSE values vs w0 and identify the value of w0 that minimises the MSE.
+2
+
+• Can you guess the shape of the MSE surface as a function of both w0 and w1 by looking
+at the MSE curves previously obtained? Sketch the MSE surface.
+• Obtain the exact solution for w0 and w1 that minimises the MSE on the dataset. Compare
+the exact solution with the values obtained by exploring the MSE surface.
+• Plot the MSE surface corresponding to all the pairs w1 and w0 , where w1 =0, 1/5, 1/4,
+1/3, 1/2, 1, 2, 3, 4, 5 and w0 = -4, -3, -2, -1, 0, 1, 2, 3, 4, 5. Identify the MSE of the exact
+solution on the MSE surface.
+
+E XERCISE ♯3. Consider the following simple datasets:
+Table 2
+
+Table 1
+ID
+1
+2
+
+x
+1
+2
+
+ID
+1
+2
+3
+
+y
+1
+2
+
+x
+1
+2
+3
+
+Table 3
+y
+1
+2
+3
+
+ID
+1
+2
+3
+4
+5
+6
+
+x
+1
+2
+2
+2
+2
+2
+
+y
+1
+2
+2.2
+1.9
+2.3
+2
+
+Table 4
+ID
+1
+2
+3
+4
+5
+6
+
+x
+1
+1
+1
+2
+2
+2
+
+y
+1
+0.8
+1.2
+1.9
+2.3
+2
+
+Table 5
+ID
+1
+2
+3
+4
+5
+6
+
+x
+1
+1
+1
+1
+1
+2
+
+y
+1
+0.8
+1.2
+1.1
+0.7
+2
+
+Let us formulate a regression problem for each dataset, taking x as the predictor and y as the
+label.
+• Plot each dataset and suggest a linear solution based on visual inspection alone (note that
+implicitly you will be using a notion of quality!).
+• Using the notation developed for multiple linear regression problems, create the matrix
+X and vector y for each dataset.
+• Obtain the coefficients of the regression model y = w0 + w1 x by using the least squares
+solution w = (X T X)−1 X T y and plot the resulting linear models.
+• Write down the matrices X T X, (X T X)−1 and (X T X)−1 X T . How can you quantify the
+dependence of each coefficient on the individual samples in the dataset? How would you
+interpret the strength of such dependence for each dataset?
+
+E XERCISE ♯4. Consider the following simple dataset:
+ID
+1
+2
+3
+4
+5
+6
+7
+8
+
+x
+1
+2
+3
+5
+7
+8
+2.5
+8
+
+y
+2.2
+3.5
+3.9
+2.9
+5
+6.2
+3
+4.8
+
+Let us consider a regression problem for this dataset, taking x as the predictor and y as the
+response. We will use this dataset to train different polynomial models and then will calculate
+the train MSE.
+3
+
+• Write down the mathematical expressions for a linear solution, a quadratic solution and
+a cubic solution, and identify their coefficients (i.e. the models’ parameters).
+• Using the notation developed for multiple linear regression problems, create the matrices
+X and vectors y corresponding to each one of the models.
+• Obtain the coefficients for each model by using the solution w = (X T X)−1 X T y and plot
+the resulting models.
+• Calculate the train MSE of each solution and compare them. Which one would you say is
+the best model?
+• What would you expect the train MSE to be for a polynomial model of order 8 or higher?
+• Obtain the coefficients of a polynomial model of order 8, plot it and calculate its train
+MSE.
+
+E XERCISE ♯5. The file AnimalsHRvsBM.csv contains the body mass and resting heart rate
+of several animals, as recorded by Noujaim et al. in their 2004 article From Mouse to Whale: A
+Universal Scaling Relation for the PR Interval of the Electrocardiogram of Mammals published in the
+scientific journal Circulation. Let us consider a regression problem aiming at predicting the
+heart rate of an animal based on its weight.
+• Plot all the samples in the dataset, analyse its distribution and suggest a model that fits
+it. Can you see outliers? What type of model would you use (linear, quadratic...)?
+• Note that the values of the body mass attribute span several orders of magnitude, from
+tens to millions of grams. Create a new dataset that contains the logarithm of the body
+mass and the resting heart rate of the animals in the original dataset. Plot the new dataset
+as a point cloud and suggest a regression model by visually inspecting the point cloud.
+• Fit a linear model, a quadratic model and a cubic model to the new dataset. Plot the
+solutions and analyse them.
+• Create a new dataset that contains the logarithm of the body mass and the logarithm of
+the resting heart rate as recorded in the original dataset. Plot this new dataset as a point
+cloud and suggest a regression solution by visually inspecting it.
+• Fit a linear model to this last dataset and use this model to obtain a new model that fits
+the original dataset. Note that this is called exponential regression!
+
+E XERCISE ♯6. Consider a regression scenario where we are interested in predicting several
+labels. Using vector notation, we represent the response as y to signify that the output consists
+of several quantities. Given a dataset {xi , y i }, how would you create a regression model that
+predicts y from x?
+
+4
+
+

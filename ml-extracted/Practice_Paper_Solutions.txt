@@ -1,0 +1,258 @@
+Question 1
+a) In this question we explore regression in a problem involving two attributes x and y,
+where x is the predictor feature and y is the response. The dataset that we will use
+for training contains four samples and is shown in Table 1.
+x
+
+y
+
+2
+
+1 + 0.1×D1
+
+4
+
+5 + 0.1×D2
+
+1
+
+2 + 0.1×D3
+
+3
+
+2 + 0.1×D4
+Table 1
+
+In Table 1, D1, D2, D3 and D4 represent the last four digits of your student ID (D1 being
+the last, D2 the second last, etc). Before continuing, calculate the numerical value of
+the predictor y for each sample (for instance, if D1 = 1, then 1 + 0.1×D1 = 1.1).
+The coefficients " of the Minimum Mean Square Error (MMSE) solution of a simple
+linear model can be obtained as
+
+! = ($! $)"# $! &
+where $ is the design matrix and % is the response vector.
+(i) Obtain the MMSE coefficients of the simple linear model y = w0 + w1x. You
+can use the following intermediate result:
+(' ! ')"# = *
+
+1.5 −0.5
+1
+−0.5 0.2
+
+Answer (solved for D1=0, D2=0, D3=0, D4=0):
+1
+1 2
+1111
+5
+10
+0
+' = 21 45, ' ! = *
+1, % = 6 7, ' ! % = * 1, " = * 1
+1 1
+2413
+2
+30
+1
+1 3
+2
+(ii) Calculate the training Mean Square Error (MSE) of the MMSE solution that
+you have obtained (Use the coefficients w0 = 0 and w1 = 1 if you did not obtain
+the MMSE solution).
+#
+
+&
+Answer: 89: = $ ∑$
+# (<% − =(>% )) , errors: 1, -1, -1, 1, squares: 1, 1, 1, 1 leads to
+MSE=4/4=1
+
+Page 3
+b) Consider the cubic model y = w0 + w1x + w2x2 + w3x3 for the dataset in Table1.
+(i) What would you expect the training MSE of this model to be?
+Answer: The training MSE would be zero as we can always find a polynomial
+of order 3 that goes through 4 points.
+(ii) Assuming that the true model is y = x + n, where n is zero-mean Gaussian
+noise, identify the main sources of error in the prediction of this cubic model
+during deployment.
+Answer: The main sources of error would be the variance of the random
+component n, the model bias, i.e. the difference between the true pattern (line)
+and the predicted pattern (cubic model), and the model variance due to
+sampling.
+
+Page 4
+Question 2
+a) In this question we explore classification in a problem involving two predictor features
+xA and xB, and two classes, namely  (positive class) and × (negative class). The
+dataset that will be used in this question is shown in Figure 1.
+
+3
+2
+
+xB
+
+1
+0
+-1
+-2
+-3
+
+-8
+
+-7
+
+-6
+
+-5
+
+-4
+
+-3
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+xA
+
+Figure 1
+Consider a family of linear classifiers defined by "! ? = 0, where " = [A' , A( , A) ]!
+and ? = [1, >( , >) ]! . A sample ?* such that "! ?* > 0 will be labelled as , otherwise
+it will be labelled as ×. Given the linear classifier defined by the coefficients A) = 0,
+A( = 1 and A' = 0.25 × E, where E is the last digit of your student ID:
+(i) Obtain identify the classifier’s decision regions.
+Answer (for D = 8): The resulting boundary is xA=-2 hence the half-plane
+XA>-2 corresponds to the  class, and XA<-2 to the × class.
+(ii) Obtain the classifier’s confusion matrix for the dataset shown in Figure 1 and
+identify its sensitivity and specificity.
+
+Page 5
+Answer:
+
+Actual
+
+Predicted
+
+o
+
+X
+
+o
+
+5
+
+2
+
+X
+
+1
+
+7
+
+Sensitivity = 5/(5+1)=5/6
+Specificity = 7/(7+2) = 7/9
+b) Assume that we want to build a Bayes classifier that uses as predictor feature xA.
+(i) Obtain the priors for each class, namely P() and P(×), and the means of the
+distributions P(xA | ) and P(xA | ×).
+Answer: The probability of each class is P()=6/15 (2) and P(×)=9/15. The
+mean of class  is -3 and the mean of class × is 2.
+
+(ii) Describe the corresponding Bayes classifier.
+
+Answer: The classifier will compute P(xA|) P() and P(xA|×) P(×) and will
+assign the label corresponding to the class with the highest probability.
+
+(iii) If the standard deviations of P(xA | ) and P(xA | ×) are equal, how would a
+sample such that xA = -0.5 be classified?
+Answer: This sample is halfway between the means of both classes. Since the
+variances are equal P(xA|)= P(xA|×), it will assign the label of the class with
+the highest probability, i.e to ×.
+
+Page 6
+Question 3
+a) This question concerns model optimisation in machine learning. The k-means
+algorithm is said to converge to local minima, rather than to the global minimum.
+(i) Use the notion of error function to explain the concepts of local minimum and
+global minimum.
+Answer: The error function associates an error value to each candidate
+model. A local minimum refers to any model which provides the lowest error
+within a vicinity, whereas a global minimum is the model with the lowest error
+amongst all the candidate models.
+(ii) Explain what is meant by the statement the k-means algorithm converges to
+a local minimum.
+Answer: The k-means algorithm defines an iterative process where the
+solution is updated to models with lower cost. Convergence to a local
+minimum implies that the model provided by k-means will be the a local
+minimum close to the initial model, not necessarily the global minimum.
+(iii) Considering the risk of converging to a local minimum, design a strategy that
+can improve the solution provided by the k-means algorithm.
+Answer: Since the k-means algorithm always converges to the best solution
+close to the initial point, a method to improve its performance would consist of
+restarting from different random initial points the algorithm and selecting the
+best solution.
+b) The validation-set approach allows one to evaluate the performance of different
+models during model selection.
+(i) After applying a validation-set approach, the validation errors of two models f1
+and f2 are found to be respectively E1 = 10 and E2 = 12. How would you use
+this result to inform your selection?
+Answer: In principle the first model shows a better deployment performance,
+however this difference could be due by chance, so it would be necessary to
+evaluate the significance of this difference.
+(ii) Due to the low number of samples in the available dataset, it is suggested that
+the whole dataset should be used for training models f1 and f2 and both models
+should be compared based on their training errors. What is your view on this
+suggestion?
+Answer: Training errors should never be used for assessing the performance
+of a model. Training errors do not evaluate the ability of a model to generalise,
+hence it is not a valid metric.
+
+Page 7
+
+Question 4
+a) This question concerns neural networks.
+(i) Which layers offer greater flexibility, fully-connected layers or convolutional
+layers?
+Answer: In fully connected layers all the input features are associated to all
+perceptrons and have different weights. Convolutional layers can be seen as
+a specific case of fully connected layers, where the weights defined by a filter
+are shared by all the perceptrons. Hence fully-connected layers are more
+flexible.
+(ii) Why are convolutional networks suitable for time series and image data?
+Answer: Time series and image data define topological relations between
+input features and can exhibit the property of equivariance to translation,
+which is captured by the convolution operation.
+(iii) The number of feature maps in convolutional architectures usually increase
+as we move closer to the output layer. What is the idea behind this design?
+Answer: Convolutional architectures define a processing pipeline where raw
+features are processed producing new features or concepts along the way. By
+having many feature maps at the end, we expect to produce complex concepts
+useful for the task at hand.
+b) Consider a dataset consisting of grayscale images of size 100 x 100 pixels and a
+binary label. A deep neural network combining convolutional, pooling and fullyconnected layers is chosen for building a classifier for this dataset.
+(i) The first hidden layer is a convolutional one and consists of two 100 x 100
+feature maps. Each map is obtained by applying a different filter of dimensions
+3 x 3. How many parameters need to be trained in the first layer?
+Answer: The number of parameters in a convolutional layer correspond to the
+parameters of each filter. Since there are 2 filters and each one consists of 9
+(3x3 kernel) + 1 (bias) parameters, the total is 2x(9+1)=20.
+(ii) The second layer is a 2x2 max-pooling layer. How many feature maps does
+this layer have and what are their dimensions?
+Answer: The number of feature maps is the same as in the previous layer, 2.
+2x2 pooling provides 1 value per 2x2 region hence the dimensions are 50x50.
+(iii) The third hidden layer is also convolutional and consists of 8 feature maps
+defined by filters of dimensions 3 x 3 x D. What is the value of D?
+Answer: D is the number of feature maps in the previous layer, i.e 2.
+
+

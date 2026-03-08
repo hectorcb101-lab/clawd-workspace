@@ -1,0 +1,640 @@
+School of Electronic Engineering and Computer Science
+Queen Mary University of London
+
+ECS7020P Principles of Machine Learning
+Introduction
+Jesús Requena Carrión
+
+29 Jan 2026
+
+From mouse to whale
+
+600
+
+Heart rate [bpm]
+
+500
+
+400
+
+300
+
+200
+
+100
+
+0
+
+10 g
+
+100 g
+
+1 kg
+
+10 kg
+
+100 kg
+
+1t
+
+10 t
+
+Body mass
+
+2/40
+
+From mouse to whale, through rabbit
+
+600
+
+Heart rate [bpm]
+
+500
+
+A rabbit’s resting
+heart beats at
+
+400
+
+(a) ≤ 100 bpm
+
+300
+
+(b) ≥ 300 bpm
+(c) ≥ 100 bpm and
+≤ 300 bpm
+
+200
+
+100
+
+0
+10 g
+
+100 g
+
+1 kg
+
+10 kg
+
+100 kg
+
+1t
+
+10 t
+
+Body mass
+
+Go to www.menti.com and use the code supplied
+
+3/40
+
+Agenda
+
+What is machine learning?
+
+The value of knowledge
+
+The machine learning taxonomy
+
+About Principles of Machine Learning
+
+4/40
+
+Machine learning a.k.a. statistical learning
+
+Machine or statistical learning is usually defined as
+The ability to acquire knowledge, by extracting patterns from raw data.
+(Goodfellow, Bengio, Courville)
+A set of tools for modeling and understanding complex datasets.
+(James, Witten, Hastie, Tibshirani)
+
+5/40
+
+What is data?
+Data is the materialisation of an observation or a measurement.
+Datasets are data formatted as collections of items described by a
+set of pre-defined attributes.
+
+Animal (ID)
+Wild mouse
+Rabbit
+Humpback whale
+...
+
+Body mass [g]
+22
+2.5×103
+30×106
+...
+
+Heart rate [bpm]
+480
+250
+30
+...
+
+In machine learning, our data is always represented as a dataset.
+Note: Unfortunately, authors use different words for the same concept.
+Item, sample, example, instance and point have the same meaning, and
+so do feature, variable and attribute. You should get used to all of them.
+
+6/40
+
+What is knowledge?
+
+Knowledge can be represented as a
+Proposition (statement, law)
+Smaller animals have a faster heartrate.
+Narrative (description, story)
+The size of an animal seems to be related to its heart rate. Large
+animals tend to have a slow heart rate. For instance, the humpback
+whale...
+Model (mathematical or computer)
+r = 235 × m−1/4 , where r is the heart rate and m is the body mass.
+In machine learning, we will use models to represent knowledge.
+
+7/40
+
+Knowledge as a model
+
+Models describe relationships between attributes.
+Mathematical and computer models are equivalent:
+Mathematical models can be implemented as computer programs.
+Every computer model has a corresponding mathematical expression.
+The mathematical expression y = x + 3x2 is equivalent to the following
+line of code (in Python):
+y = x + 3*x**2
+
+8/40
+
+Machine learning is a branch of [data] science...
+
+Science is not about sophisticated instrumentation, maths or theories: it
+is about evaluating our knowledge.
+Which of the two following proposition would you describe as scientific
+Proposition 1: The earth is flat
+Proposition 2: The earth is roughly spherical
+Neither proposition is scientific nor unscientific: they can be true or false.
+It is the way we evaluate them that can be scientific or unscientific.
+
+9/40
+
+Pseudoscience
+
+Dowsers claim that using a divining rod or a
+pendulum they can locate ground water and
+that current scientific theories are unable to
+explain it.
+Watch James Randi exposes dowsing:
+www.youtube.com/watch?v=cqoYrSd94kA
+
+Randi: My concern is not how they do it,
+but if they do it.
+
+10/40
+
+Our notion of machine learning
+If there is no data, there is no machine learning. This doesn’t mean that
+machine learning is all about data. Many machine learning experts
+use a dataset-first framework: we start with a dataset, then [formulate
+a problem and finally] produce a model.
+In ECS7020P we use a deployment-first (problem-first) perspective:
+we start with a problem, then secure a dataset, finally produce a model.
+Accordingly, we define machine learning as:
+A set of tools together with a methodology...
+for solving scientific, engineering and business problems...
+using data.
+
+11/40
+
+What about AI?
+Definitions of AI include creating machines that
+act like humans
+act rationally
+
+think like humans
+think rationally
+
+Warning: When media, companies and even universities talk about AI,
+they can refer to anything involving computers, including machine
+learning or a spreadsheet. Be critical!
+Some AI solutions use machine learning, some others do not. Also,
+machine learning can be used to solve non-AI problems.
+This module is about machine learning, not AI.
+
+12/40
+
+Agenda
+
+What is machine learning?
+
+The value of knowledge
+
+The machine learning taxonomy
+
+About Principles of Machine Learning
+
+13/40
+
+The two stages of Machine Learning
+Models can be built, sold and deployed to deliver value. During the life
+of a model, we can distinguish two basic stages:
+1. Learning stage: The model is built.
+2. Deployment stage: The model is used.
+Prior
+knowledge
+
+Learning
+
+Dataset
+Model
+
+Deployment
+
+Prediction
+Action
+Insight
+
+14/40
+
+Deployment: eCommerce
+
+15/40
+
+Machine learning basic methodology
+
+In machine learning we are interested in finding models that work during
+deployment. Hence, in addition to building a model, we need to check it
+works.
+Basic machine learning methodologies include two separate tasks:
+Training: A model is created using a dataset. We say that we fit a
+model to a dataset.
+Testing: The performance of the model during deployment is
+assessed using new, unseen data.
+Without rigorous methodologies, models are very likely to be of little use.
+
+16/40
+
+Agenda
+
+What is machine learning?
+
+The value of knowledge
+
+The machine learning taxonomy
+
+About Principles of Machine Learning
+
+17/40
+
+Problem formulation
+
+What types of problems can we formulate in machine learning?
+
+Machine
+Learning
+
+Supervised
+
+Unsupervised
+
+18/40
+
+Supervised learning: Heart rate in the zoo
+Can I guess the heart rate of an animal whose body mass I know, by
+looking at the heart rate and body mass of other animals?
+600
+
+Heart rate [bpm]
+
+500
+
+400
+
+300
+
+200
+
+100
+
+0
+10 g
+
+100 g
+
+1 kg
+
+10 kg
+
+100 kg
+
+1t
+
+10 t
+
+Body mass
+
+19/40
+
+Supervised learning
+
+In supervised learning, we are given a new item (rabbit) such that the
+value of one of its attributes is unknown to us (rabbit’s heartbeat).
+Our goal is to estimate (guess) the missing value based on what we
+know (body mass).
+The challenge is then to build a suitable model using a collection of
+known items (weight and heart rate of other animals).
+
+20/40
+
+Supervised learning
+
+Models in supervised learning map one attribute x, known as the
+predictor, to another attribute y, which we call the label and are built
+using a dataset of labelled examples.
+
+x
+
+Model
+
+y
+
+21/40
+
+Supervised learning: Classification and regression
+Supervised learning is further divided into two categories depending on
+the type of label:
+Classification: The label is a discrete variable.
+In a spam detector, 0 could mean email is spam, 1 it isn’t
+Regression: The label is a continuous variable.
+The heart rate of an animal is a continuous label
+Supervised
+learning
+
+Classification
+
+Regression
+
+22/40
+
+Unsupervised learning: Heart rate in the galactic zoo
+
+23/40
+
+Unsupervised learning: Heart rate in the galactic zoo
+What can you conclude from this distribution of data points?
+
+600
+
+Heart rate [bpm]
+
+500
+
+400
+
+300
+
+200
+
+100
+
+0
+10 g
+
+100 g
+
+1 kg
+
+10 kg
+
+100 kg
+
+1t
+
+10 t
+
+Body mass
+
+24/40
+
+Unsupervised learning
+
+In unsupervised learning, we set out to find the underlying structure of
+our dataset. Understanding this structure can help us solve other
+problems.
+Applications of unsupervised learning include:
+Customer segmentation.
+Social community detection.
+Recommendation systems.
+Evolutionary analysis.
+
+25/40
+
+Unsupervised learning
+Unsupervised learning methods can be grouped into two families.
+Structure discovery produces descriptions of our datasets consisting of
+a discrete set of elements:
+Clustering: Produces group of samples.
+Basis discovery: Finds directions of interest.
+Density estimation techniques provide probability models.
+Unsupervised
+learning
+
+Structure
+Discovery
+
+Density
+Estimation
+
+26/40
+
+Machine Learning taxonomy
+
+Machine
+Learning
+
+Supervised
+
+Classification
+
+Regression
+
+Unsupervised
+
+Density
+Estimation
+
+Structure
+Discovery
+
+27/40
+
+Agenda
+
+What is machine learning?
+
+The value of knowledge
+
+The machine learning taxonomy
+
+About Principles of Machine Learning
+
+28/40
+
+Learning goals
+
+1. Understand the principles of ML, its scope and applications.
+2. Be able to use the ML taxonomy to formulate meaningful questions
+and identify suitable techniques to answer them.
+3. Discuss the relative merits of different ML techniques.
+4. Be able to apply the methodology needed to build and evaluate ML
+solutions.
+5. Be able to independently learn and confidently apply new ML
+techniques.
+6. Critically analyse reports on ML applications and advances.
+7. Understand model deployment and its main challenges.
+8. Understand the professional dimension of machine learning.
+
+29/40
+
+Module contents
+
+Week 1: Introduction
+
+Week 7: Reading week
+
+Week 2: Regression
+
+Week 8: Neural networks & deep learning
+
+Week 3: Methodology I
+
+Week 9: Structure analysis
+
+Week 4: Classification I
+
+Week 10: Density estimation
+
+Week 5: Classification II
+
+Week 11: Intro to deployment
+
+Week 6: Methodology II
+
+Week 12: Final revision
+
+30/40
+
+Study outline
+
+This module consists of 150 study hours (lectures, labs, assessment
+preparation, study time, etc). Its duration is 12 weeks (weeks 7 and 12
+are revision weeks):
+Lectures (2h/week).
+Labs (2h/week).
+Check QM+ for more details.
+
+31/40
+
+Communication and feedback
+
+During our lectures and lab sessions.
+Forum on QM+: Primary means, questions might have been
+answered already and answers might be useful to others.
+Email: Please make sure its subject is formatted as follows:
+”[ECS7020P/ECS664U] <DESCRIPTIVE SUBJECT HERE>”
+Face to face: On campus or remotely (via MS teams).
+
+32/40
+
+Assessment and labs
+
+ECS7020P is assessed as follows:
+Final exam: 60 %
+CW: 40 %
+CW activities use Python (Google Colab environment) and consist of:
+Lab-based quizzes (20 %). Weeks 1-6.
+Mini-project (20 %). We will create a dataset (weeks 3-6) and build
+a machine learning solution (weeks 8-11).
+Check QM+ for deadlines. Note that deadlines cannot be extended: it
+is your responsibility to organise your work so that you can meet them.
+
+33/40
+
+The MLEnd Datasets
+
+https://mlenddatasets.github.io/
+(also in Kaggle)
+MLEnd Spoken Numerals Dataset (20/21)
+MLEnd Hums and Whistles Dataset (21/22)
+MLEnd London Sounds Dataset (22/23)
+MLEnd Yummy Dataset (23/24)
+MLEnd Deception Dataset (24/25)
+
+34/40
+
+Learning resources
+
+In the Module Content tab on QM+ you will find:
+Lecture slides
+Exercises and solutions
+Lab Jupyter notebooks and other material
+Lecture recordings
+And in the Learning Resources tab you will find:
+A list of recommended textbooks and links to electronic versions.
+Individual chapters of a textbook we are writing for you.
+
+35/40
+
+The strange case of the flatworm
+
+600
+
+The heart rate of a
+flatworm weighting
+less than 10 g
+
+Heart rate [bpm]
+
+500
+
+400
+
+(a) Can’t be guessed
+from this dataset
+
+300
+
+200
+
+(b) Is ≥ 300 bpm
+(c) None of the
+above
+
+100
+
+0
+10 g
+
+100 g
+
+1 kg
+
+10 kg
+
+100 kg
+
+1t
+
+10 t
+
+Body mass
+
+36/40
+
+Know thy domain!
+
+37/40
+
+

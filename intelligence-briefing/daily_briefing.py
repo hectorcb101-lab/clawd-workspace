@@ -14,7 +14,9 @@ from pathlib import Path
 sys.path.append('/home/ubuntu/clawd/intelligence-briefing')
 
 from collectors.collect_data import collect_all_data
+from collectors.collect_geopolitical_simple import collect_geopolitical_events
 from analysis.patterns import find_patterns
+from analysis.geopolitical_alpha import analyze_geopolitical_alpha
 from synthesis.generate_insights import synthesize_insights
 from presentation.format_briefing import format_briefing, save_briefing
 
@@ -130,31 +132,41 @@ def main():
     
     try:
         # Step 1: Collect Data
-        print("\n[1/6] 📊 Collecting data from sources...")
+        print("\n[1/7] 📊 Collecting market data from sources...")
         data = collect_all_data()
-        print("✅ Data collection complete")
+        print("✅ Market data collection complete")
+        
+        # Step 1b: Collect Geopolitical Events
+        print("\n[1b/7] 🌍 Collecting geopolitical events...")
+        geo_events = collect_geopolitical_events()
+        print(f"✅ Collected {len(geo_events.get('events', []))} geopolitical events")
         
         # Step 2: Find Patterns
-        print("\n[2/6] 🧠 Analyzing patterns...")
+        print("\n[2/7] 🧠 Analyzing market patterns...")
         patterns = find_patterns(data)
         print(f"✅ Found {len(patterns['significant_moves'])} significant moves")
         
+        # Step 2b: Analyze Geopolitical Alpha
+        print("\n[2b/7] 🎯 Analyzing geopolitical alpha (transmission chains)...")
+        geo_alpha = analyze_geopolitical_alpha(geo_events)
+        print(f"✅ Generated {len(geo_alpha.get('chains', []))} transmission chains")
+        
         # Step 3: Generate Insights
-        print("\n[3/6] 💡 Synthesizing insights...")
-        insights = synthesize_insights(patterns)
+        print("\n[3/7] 💡 Synthesizing insights...")
+        insights = synthesize_insights(patterns, geo_alpha)
         print("✅ Insights generated")
         
         # Step 4: Format Telegram Briefing
-        print("\n[4/6] 📝 Formatting Telegram briefing...")
+        print("\n[4/7] 📝 Formatting Telegram briefing...")
         briefing_text = format_briefing(insights)
         print("✅ Telegram briefing formatted")
         
         # Step 5: Generate Email HTML
-        print("\n[5/6] 📧 Generating email HTML...")
+        print("\n[5/7] 📧 Generating email HTML...")
         email_html = generate_email_html(insights)
         
         # Step 6: Send to both channels
-        print("\n[6/6] 📤 Sending briefings...")
+        print("\n[6/7] 📤 Sending briefings...")
         
         telegram_success = send_to_telegram(briefing_text)
         email_success = False

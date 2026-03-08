@@ -200,7 +200,76 @@ def create_educational_content(patterns):
     
     return education
 
-def synthesize_insights(patterns):
+def generate_geopolitical_alpha(geo_patterns):
+    """Generate geopolitical alpha insights from transmission chains."""
+    if not geo_patterns or geo_patterns.get('status') != 'success':
+        return None
+    
+    chains = geo_patterns.get('chains', [])
+    if not chains:
+        return None
+    
+    # Pick top 3 most significant chains
+    top_chains = chains[:3]
+    
+    formatted_chains = []
+    
+    for chain in top_chains:
+        # Determine conviction emoji
+        conviction_score = chain.get('conviction_score', 50)
+        if conviction_score >= 70:
+            conviction_emoji = '🟢'
+            conviction_label = 'HIGH'
+        elif conviction_score >= 40:
+            conviction_emoji = '🟡'
+            conviction_label = 'MEDIUM'
+        else:
+            conviction_emoji = '🔴'
+            conviction_label = 'LOW'
+        
+        # Build watch list - specific things to monitor
+        watch_items = []
+        
+        # Extract key asset levels to watch
+        for asset in chain['affected_assets'][:3]:
+            if asset['conviction'] in ['high', 'medium']:
+                direction = asset['direction']
+                if direction == 'up':
+                    watch_items.append(f"{asset['asset']} breaking upward")
+                elif direction == 'down':
+                    watch_items.append(f"{asset['asset']} support levels")
+                else:
+                    watch_items.append(f"{asset['asset']} volatility")
+        
+        # Add second-order effects as watch items
+        for second_order in chain['second_order'][:2]:
+            watch_items.append(second_order)
+        
+        formatted_chain = {
+            'headline': chain['event'][:120],
+            'date': chain.get('event_date', ''),
+            'chain_summary': f"{chain['event_category'].replace('_', ' ').title()} → " + 
+                           f"{chain['affected_assets'][0]['asset']} {chain['affected_assets'][0]['direction']}" if chain['affected_assets'] else "Multiple impacts",
+            'transmission_path': chain['transmission_path'],
+            'top_assets': chain['affected_assets'][:4],
+            'watch': watch_items[:3],
+            'historical_parallel': chain['historical_parallel'],
+            'teaching_note': chain['teaching_note'],
+            'conviction_score': conviction_score,
+            'conviction_emoji': conviction_emoji,
+            'conviction_label': conviction_label,
+            'countries': chain.get('countries', []),
+            'source_url': chain.get('source_url', '')
+        }
+        
+        formatted_chains.append(formatted_chain)
+    
+    return {
+        'chains': formatted_chains,
+        'summary': f"Analyzed {len(chains)} geopolitical events, identified {len(formatted_chains)} high-impact transmission chains"
+    }
+
+def synthesize_insights(patterns, geo_alpha=None):
     """Main synthesis function - turn patterns into insights."""
     insights = {
         'timestamp': datetime.utcnow().isoformat(),
@@ -208,6 +277,7 @@ def synthesize_insights(patterns):
         'market_explanations': explain_market_movements(patterns),
         'atlas_opinion': form_opinion(patterns, explain_market_movements(patterns)),
         'educational': create_educational_content(patterns),
+        'geopolitical_alpha': generate_geopolitical_alpha(geo_alpha) if geo_alpha else None,
         'patterns_raw': {
             'significant_moves': patterns['significant_moves'],
             'geopolitical_risks': patterns['geopolitical_risks'][:3],

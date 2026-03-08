@@ -1,0 +1,686 @@
+School of Electronic Engineering and Computer Science
+Queen Mary University of London
+
+ECS7020P Principles of Machine Learning
+A bit of notation and basic maths
+Dr Jesús Requena Carrión
+
+25 Sept 2023
+
+Agenda
+
+The dataset
+
+Linear algebra
+
+Linear functions
+
+Basic probability and statistics
+
+2/33
+
+The dataset
+
+Datasets are collections of items described by a set of attributes.
+Animal (ID)
+Wild mouse
+Rabbit
+Humpback whale
+...
+
+Body mass [g]
+22
+2.5×103
+30×106
+...
+
+Heart rate [bpm]
+480
+250
+30
+...
+
+3/33
+
+Types of attributes
+
+The basic types of attributes are:
+Continuous (real numbers: temperature, voltage)
+• Equality, ordering and distance are defined
+Categorical (discrete, nominal: name, nationality)
+• Equality is defined, ordering and distance are not
+Ordinal (categories with ordering: low/medium/high)
+• Ordering and equality are defined, distance is not
+
+4/33
+
+The dataset as a table
+Datasets can be represented as tables, where rows correspond to items
+and columns to attributes .
+The first 5 instances of a dataset recording the age and salary of a group
+of people are shown below in a table form:
+S1
+S2
+S3
+S4
+S5
+...
+
+Age
+18
+37
+66
+25
+gri
+...
+
+Salary
+12000
+68000
+80000
+45000
+30000
+...
+
+The values S1 , S2 ... are not attributes, but identifiers.
+
+5/33
+
+The dataset as a matrix
+
+Datasets consisting of numerical attributes can also be represented in
+matrix form, for instance:
+⎛18
+⎜37
+⎜
+⎜66
+S=⎜
+⎜25
+⎜
+⎜26
+⎜
+⎝⋮
+
+12000⎞
+68000⎟
+⎟
+80000⎟
+⎟
+45000⎟
+⎟
+30000⎟
+⎟
+⋮ ⎠
+
+This is a useful and compact notation that will make it easier for us to
+formulate problems and represent computations.
+
+6/33
+
+The dataset as a point cloud
+
+Salary
+
+Datasets can be represented sets of points in a space (known as the
+feature or attribute space), where each axis corresponds to one
+attribute. The values of the attributes are used as coordinates.
+
+20
+
+30
+
+40
+
+50
+
+60
+
+70
+
+Age [years]
+
+7/33
+
+The dataset as a point cloud
+
+Salary
+
+Categorical values can be represented by different symbols in a point
+cloud, instead of a value in an axis.
+
+20
+
+30
+
+40
+50
+Age [years]
+
+60
+
+70
+
+8/33
+
+From basket to table
+In market basket analysis, raw items consist of a list of products, for
+instance:
+S1 = {The Beatles, The Who, Cream}
+S2
+
+= {Muse, Franz Ferdinand}
+
+S3
+
+= {The Who, Franz Ferdinand}
+
+...
+Such datasets can be represented as a table, where each product
+corresponds to a binary attribute:
+The Beatles The Who Cream Muse Franz Ferdinand
+S1 1
+1
+1
+0
+0
+S2 0
+0
+0
+1
+1
+S3 0
+1
+0
+0
+1
+... ...
+...
+
+9/33
+
+Datasets with grid support
+Digital signals and images are collections of values on a temporal and
+spatial grid respectively. Value can be treated as separate attributes.
+A collection of images consisting of 28×28 pixels
+can be represented as a table with 784 columns,
+where each column represents one pixel.
+S1
+
+S2
+
+S3
+
+S1
+S2
+S3
+...
+
+x1
+0
+0
+0
+...
+
+x2
+0.1
+0.1
+0.7
+...
+
+x3
+0
+0
+0.6
+
+...
+...
+...
+...
+
+x784
+0
+0
+0.1
+
+It is however more useful to represent each
+individual image as a 28×28 array, where each
+entry corresponds to a pixel value.
+
+10/33
+
+Agenda
+
+The dataset
+
+Linear algebra
+
+Linear functions
+
+Basic probability and statistics
+
+11/33
+
+Scalars
+
+A scalar is value consisting of one numerical quantity. Scalars are usually
+represented by a letter of the alphabet in italics, for instance a.
+When dealing with several scalars, we can use different symbols (a, b,
+c), or use one symbol with a subscript (also known as index) whose
+value identifies each scalar (a1 , a2 , a3 ).
+Using subscript notation, large collections of scalars can be represented,
+for instance a0 , a1 , . . . , a99 or equivalently ai , where 0 ≤ i ≤ 99.
+
+12/33
+
+Sum and product notation
+The sum and product notations provide a compact way of expressing
+operations involving many scalars.
+The sum notation uses the symbol Σ (meaning ”sum”):
+N
+
+∑ ai = a1 + a2 + a3 + ⋅ ⋅ ⋅ + aN
+
+i=1
+
+It reads as the sum of all the scalars ai starting from i = 1 through i = N .
+If the subscripts are known, we can write ∑i ai or simply ∑ ai .
+The product notation uses the symbol Π (meaning ”product”):
+N
+
+∏ ai = a1 × a2 × a3 × ⋅ ⋅ ⋅ × aN
+i=1
+
+and sometimes will be written as ∏i ai or ∏ ai .
+
+13/33
+
+Linear combination
+
+Given N scalars ai , a linear combination is the sum
+N
+
+∑ bi ai = b1 × a1 + b2 × a1 + b3 × a3 + ⋅ ⋅ ⋅ + bN × aN
+
+i=1
+
+where the N scalars bi are the weights of the linear combination.
+
+14/33
+
+Vectors
+In some situations, we are interested in values that are represented by an
+ordered arrangement of scalars, for instance the coordinates of a point
+or a digital picture consisting of an array of pixels.
+Vectors are 1D arrays of scalars arranged in order. Typically vectors
+are represented in bold typeface and its elements are written in italic
+typeface with a subscript. By using brackets, a vector consisting of N
+elements is represented as a column:
+⎡ a1 ⎤
+⎢ ⎥
+⎢a ⎥
+⎢ ⎥
+a=⎢ 2⎥
+⎢ ⋮ ⎥
+⎢ ⎥
+⎢aN ⎥
+⎣ ⎦
+
+15/33
+
+Matrices
+A matrix is a 2D array of scalars. Matrices are usually represented as an
+uppercase variable in bold typeface and its elements are written in italic
+typeface with two subscripts instead of one, for instance:
+⎡ a1,1
+⎢
+⎢a
+⎢
+A = ⎢ 2,1
+⎢ ⋮
+⎢
+⎢aN,1
+⎣
+
+a1,2
+a2,2
+⋮
+aN,2
+
+...
+⋱
+...
+
+a1,M ⎤⎥
+a2,M ⎥⎥
+⎥
+⋮ ⎥⎥
+aN,M ⎥⎦
+
+Matrix A is said to have N rows (height) and M columns (width) or to
+be an N × M matrix, where N × M is known as the shape of the matrix.
+Individual elements of the matrix are denoted by ai,j , where i is the row
+number and j the column number.
+
+16/33
+
+Some special matrices
+A vector can be seen as an N × 1 matrix, i.e. a matrix consisting of
+just one column
+A square matrix has the same number of rows and columns, i.e. its
+an N × N matrix. Its diagonal consists of the elements where both
+subscripts are identical, i.e. a1,1 , a2,2 , . . .
+A diagonal matrix is a square matrix such that all its entries (except
+the diagonal) are zero. Diagonal entries can be nonzero or zero
+The identity matrix I is the diagonal matrix with 1’s on the
+diagonal and 0’s elsewhere:
+⎡1
+⎢
+⎢
+I3×3 = ⎢0
+⎢
+⎢0
+⎣
+
+0
+1
+0
+
+0⎤⎥
+⎥
+0⎥
+⎥
+1⎥⎦
+
+17/33
+
+Transpose
+
+The transpose AT of a matrix A is a matrix created by interchanging
+rows and columns, reading the rows from left to right and the columns
+from top to bottom.
+⎡1
+⎢
+⎢
+For instance, if A = ⎢5
+⎢
+⎢0
+⎣
+
+4⎤⎥
+1
+⎥
+6⎥, then AT = [
+⎥
+4
+3⎥⎦
+
+5
+6
+
+0
+]
+3
+
+Note that the transpose of an N × M matrix is an M × N matrix and
+hence the transpose of a N × 1 vector is a single-row 1 × M matrix.
+
+18/33
+
+Matrix addition and multiplication by scalar
+
+We can add two matrices A and B as long as they have the same
+shape, by adding element-wise, for instance:
+⎡1 4⎤ ⎡ 2
+0 ⎤⎥ ⎡⎢3 4⎤⎥
+⎢
+⎥ ⎢
+⎢
+⎥ ⎢
+⎥ ⎢
+⎥
+⎢5 6⎥ + ⎢−1 2 ⎥ = ⎢4 8⎥
+⎢
+⎥ ⎢
+⎥ ⎢
+⎥
+⎢0 3⎥ ⎢ 0 −2⎥ ⎢0 1⎥
+⎣
+⎦ ⎣
+⎦ ⎣
+⎦
+By using the mathematical notation that we have developed, the
+elements ci,j of the matrix C = A + B are defined as ci,j = ai,j + bi,j .
+Similarly, if b is a scalar, the elements ci,j of the matrix C = b × A are
+defined as ci,j = b × ai,j .
+
+19/33
+
+Matrix multiplication
+The product of matrices represent linear transformations. The product
+C = AB exists if the number of columns of A is the same as the number
+of rows of B. The entries of C are defined as the linear combination:
+ci,j = ∑ ai,k bk,j
+k
+
+Visually:
+B=
+⎛ a1,1
+⎜a
+A = ⎜ 2,1
+⎜ ⋮
+⎝aN,1
+
+a1,2
+a2,2
+⋮
+aN,2
+
+⋯
+⋯
+⋮
+⋯
+
+a1,P ⎞
+a2,p ⎟
+⎟
+⎟
+aN,P ⎠
+
+⎛ b1,1 b1,2 ⋯ b1,M ⎞
+⎜ b2,1 b2,2 ⋯ b2,M ⎟
+⎜
+⎟
+⎜ ⋮
+⎟
+⋮
+⋮
+⎝bP,1 bP,2 ⋯ bP,M ⎠
+⎛ c1,1 c1,2 ⋯ c1,M ⎞
+⎜ c2,1 c2,2 ⋯ c2,M ⎟
+⎜
+⎟ = AB
+⎜ ⋮
+⎟
+⋮
+⋮
+⎝cN,1 cN,2 ⋯ cN,M ⎠
+
+For instance, c1,2 = ∑K a1,K bK,2 = a1,1 b1,2 + a1,2 b2,2 + ⋅ ⋅ ⋅ + a1,P bP,2 . If A
+is N × P and B is P × M , C = AB is N × M .
+
+20/33
+
+Matrix inversion
+
+The inverse A−1 of a square matrix A is a matrix such that there
+product is the identity matrix I:
+A−1 A = AA−1 = I
+Not all the matrices have an inverse.
+
+21/33
+
+Agenda
+
+The dataset
+
+Linear algebra
+
+Linear functions
+
+Basic probability and statistics
+
+22/33
+
+The notion of function
+
+Given two sets of objects, called domain and codomain, a function is a
+rule that associates (or maps) each element in the domain to exactly one
+element in the codomain.
+The notation
+y = f (x)
+reads function f maps x to y. The scalar x is known as the independent
+variable and y as the dependent variable.
+Functions can be represented graphically as for example, curves in a 2D
+space or surfaces in a 3D space, and in turn, functions can be used to
+describe curves and surfaces.
+
+23/33
+
+The straight line
+
+The simplest function that maps one scalar value x to another scalar
+value y is the rule represented by the linear operation
+y = w0 + w1 x
+which corresponds to a straight line with slope w1 and intercept point w0 .
+
+24/33
+
+Planes and hyperplanes
+
+Plane surfaces in 3D spaces map two scalar values x1 and x2 to one
+scalar value y and are represented by the linear combination
+y = w0 + w1 x1 + w2 x2
+The notions of straight line and plane can be readily extended to any
+number of independent variables:
+y = w0 + w1 x1 + ⋅ ⋅ ⋅ + wn xn
+The corresponding geometrical object is known as a hyperplane.
+
+25/33
+
+Straight lines, planes and hyperplanes in vector notation
+Straight lines, planes and hyperplanes are defined by a linear equation,
+i.e. the dependent variable is a linear combination of the dependent
+variables.
+Using vector notation, straight lines, planes and hyperplanes can be
+defined by the same equation:
+y = wT x = w0 + w1 x1 + ⋅ ⋅ ⋅ + wP xP
+where w = [w0 , w1 , . . . , wP ]T is the weight vector, x = [1, x1 , . . . , xP ]T is
+a vector containing all the independent variables and P is the number of
+independent variables.
+
+26/33
+
+Straight lines, planes and hyperplanes in vector notation
+If we now define xP +1 = y, then
+xP +1
+
+= xT w
+
+0
+
+= xT w − xP +1
+
+0
+
+= x′ w ′
+
+T
+
+where w′ = [w0 , w1 , . . . , wP , −1]T and x′ = [1, x1 , . . . , xP , xP +1 ]T .
+Therefore, straight lines, planes and hyperplanes will sometimes be
+defined by the equation
+xT w = 0
+This equation should be read as follows: every point x such that
+xT w = 0 belongs to the hyperplane defined by the weights w.
+
+27/33
+
+Agenda
+
+The dataset
+
+Linear algebra
+
+Linear functions
+
+Basic probability and statistics
+
+28/33
+
+Random variables
+
+A random variable is a variable that can take on different values
+randomly.
+An experiment is the act of producing such value, which we call
+outcome. Example: rolling a die or tossing a coin.
+Random variables can be discrete (e.g. a die) or continuous (e.g.
+tomorrow’s temperature).
+An event is a set of values that a random variable can take. For
+instance, the values {1, 4, 5} constitute an event in the case of the
+die, heads is an elementary event in the case of the coin.
+
+29/33
+
+Probability
+A probability P (x) allows to quantify how likely a random variable is to
+take on the values in an event x:
+P (x) = 1 indicates that it is certain that the random variable will
+take on one of the values in x.
+P (x) = 0 indicates that it is impossible.
+Given two random variables, the joint probability P (x, y) describes how
+likely the first random variable is to take on a value in x and the second
+random variable is to take on a values in y.
+Finally, a conditional probability P (x∣y) is the probability that the first
+variable takes on a value in x given that we know that the second has
+taken on a value in y.
+
+30/33
+
+Bayes’Theorem
+
+Bayes’Theorem gives us a simple way to calculate a conditional
+probability P (x∣y) from a probability P (y∣x):
+P (x∣y) =
+
+P (y∣x)P (x)
+P (y)
+
+In the context of Bayes’Theorem, we will call P (x) and P (y) priors, and
+P (x∣y) and P (y∣x) and posteriors.
+
+31/33
+
+Probability distributions
+
+In general, the probability that a continuous random variable takes
+on a specific value is 0. Continuous random variables are best
+described by probability distributions, which quantify the density
+of probability, rather than the probability itself.
+The probability of an event can be calculated by integrating the
+distribution (i.e. obtaining its area or volume).
+
+32/33
+
+Gaussian distribution
+An example of probability distribution is the Gaussian or normal
+distribution, which is defined as
+N (x; µ, σ) = √
+
+(x−µ)2
+1
+e− 2σ2
+2πσ
+
+33/33
+
+

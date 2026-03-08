@@ -1,0 +1,139 @@
+P RINCIPLES OF M ACHINE L EARNING
+C LASSIFICATION II
+A CADEMIC YEAR 2022/2023
+Q UEEN M ARY U NIVERSITY OF L ONDON
+
+1
+
+E XERCISES
+
+E XERCISE ]1. Consider the following dataset, where x will be used as a predictor and y as
+a label:
+x
+-2
+-1
+0
+1
+2
+1
+2
+3
+4
+5
+
+y
+A
+A
+A
+A
+A
+B
+B
+B
+B
+B
+
+We will assume that the value of the predictor of x is distributed following a Gaussian distribution for both classes A and B. In other words, the class densities are Gaussian.
+• Estimate the parameters of the Gaussian class densities.
+• Build a Bayes classifier for the previous dataset.
+• Build a new Bayes classifier with the same likelihoods but different priors, namely PA =
+0.1 and PB = 0.9.
+
+E XERCISE ]2. Figure 1 shows a dataset consisting of samples belonging to three classes •, •
+and • in a predictor space with features xA and xB .
+10
+9
+8
+7
+
+xB
+
+6
+5
+4
+3
+2
+1
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+xA
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Figure 1
+Assuming Gaussian class densities and that xA and xB are independent (naive assumption),
+define a Bayes classifier and sketch its boundaries.
+2
+
+E XERCISE ]3. Figure 2 shows a dataset consisting of samples belonging to classes • and •
+in a predictor space with features xA and xB .
+10
+9
+8
+7
+
+xB
+
+6
+5
+4
+3
+2
+1
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+xA
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Figure 2
+Given the dataset shown in Figure 2, obtain the confusion matrix of the classifiers defined by
+the boundaries xB = 0.5, xB = 1.5, xB = 3.5, xB = 5.5, xB = 7.5 and xB = 9.5. Assume
+that samples above each boundary as classified as •, and below as •. Use the resulting rates to
+sketch the ROC curve of the family of classifiers xB = c, where c is the calibration parameter.
+
+E XERCISE ]4. Repeat the previous exercise for the family of classifiers defined by xB =
+xA + c, where c is the calibration parameter. Obtain the confusion matrix for the boundaries
+defined by the values c = −8.5, −4.5, −1.5, 1.5, 4.5, 8.5 and compare the estimated ROC curve
+with the ROC curve obtained in the previous exercise. Which family of classifiers represent
+better the distribution of data?
+
+3
+
+

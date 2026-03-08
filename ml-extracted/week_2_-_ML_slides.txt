@@ -1,0 +1,778 @@
+School of Electronic Engineering and Computer Science
+Queen Mary University of London
+
+ECS7020P Principles of Machine Learning
+Supervised learning: Regression
+Jesús Requena Carrión
+
+6 Feb 2026
+
+How far is the equator from the north pole?
+
+”By using this method, a sort of equilibrium
+is established between the errors which
+prevents the extremes from prevailing [...]
+[getting us closer to the] truth.”
+Adrien-Marie Legendre, 1805
+
+2/54
+
+Embrace the error!
+
+3/54
+
+Agenda
+
+Recap
+Formulation of regression problems
+Basic regression models
+Flexibility, interpretability and generalisation
+Summary
+
+4/54
+
+Machine learning
+
+There are two main ways of thinking about ML:
+Data-first view: ML is a set of tools for extracting knowledge from
+data.
+Deployment-first (our) view: ML is a set of tools together with a
+methodology for solving problems using data.
+In ML, data is organised as a dataset (a collection of items described by
+a set of attributes) and knowledge is represented as a model.
+Machine learning distinguishes between different types of problems,
+techniques and models, which can be arranged into a taxonomy.
+
+5/54
+
+Machine learning taxonomy
+
+Machine
+Learning
+
+Supervised
+
+Regression
+
+Classification
+
+Unsupervised
+
+Structure
+Analysis
+
+Density
+Estimation
+
+6/54
+
+Agenda
+
+Recap
+Formulation of regression problems
+Basic regression models
+Flexibility, interpretability and generalisation
+Summary
+
+7/54
+
+Problem formulation
+Regression is a supervised problem: Our goal is to predict the value
+of one attribute (label) using the remaining attributes (predictors).
+The label is a continuous variable.
+Our job is then to find the best model that assigns a unique label
+to a given set of predictors.
+We use datasets consisting of labelled samples to build models.
+
+Predictors
+
+Model?
+
+Label
+
+8/54
+
+Examples of regression problems
+The following are examples of problems that can be formulated as a
+regression problem:
+1. Predict the energy consumption of a household, given the location
+of the house, household size, income, intensity of occupation.
+2. Predict future values of a company stock, given past stock prices.
+3. Predict distance driven by a vehicle given its speed and journey
+duration.
+4. Predict demand given past demand and currency exchange rate.
+5. Predict tomorrow’s temperature given today’s temperature and
+pressure.
+6. Predict the probability to develop a specific heart condition given
+BMI, alcohol consumption, diet, number of daily steps.
+Identify labels and predictors. Do we need machine learning to solve
+them?
+Go to www.menti.com
+
+9/54
+
+Mathematical notation
+
+xi
+
+f (⋅)
+
+ŷi
+
+Population:
+x is the predictor attribute
+y is the label attribute
+Dataset:
+N is the number of samples, i identifies each sample
+xi is the predictor of sample i
+yi is the actual label of sample i
+(xi , yi ) is sample i, {(xi , yi ) ∶ 1 ≤ i ≤ N } is the entire dataset
+Model:
+f (⋅) denotes the model
+ŷi = f (xi ) is the predicted label for sample i
+ei = yi − ŷi is the prediction error for sample i
+
+10/54
+
+Visualising our mathematical notation
+
+11/54
+
+Candidate solutions
+Which line is the best mapping of age to salary?
+
+12/54
+
+What is a good model?
+In order for us to find the best model we need a notion of model
+quality.
+The squared error e2i = (yi − ŷi )2 is a common quantity used in
+regression to encapsulate the notion of single prediction quality.
+Based on the squared error, we can define dataset quality metrics. Two
+quality metrics based on the squared error are the sum of squared errors
+(SSE) and the mean squared error (MSE). which are computed as:
+N
+
+ESSE
+
+= e21 + e22 + ⋅ ⋅ ⋅ + e2N = ∑ e2i
+i=1
+
+EM SE
+
+=
+
+N
+
+1
+2
+∑e
+N i=1 i
+
+13/54
+
+MSE: Example
+
+14/54
+
+A zero-error model?
+Given a dataset, is it possible to find a model such that ŷi = yi for every
+instance i in the dataset, i.e. a model whose error is zero, EM SE = 0?
+(a) Never, there will always be a
+non-zero error
+(b) It is never guaranteed, but
+might be possible for some
+datasets
+(c) Always, there will always be a
+model complex enough that
+achieves this
+
+15/54
+
+The nature of the error
+When considering a regression problem we need to be aware that:
+The chosen predictors might not include all the factors that
+determine the label.
+The chosen model might not be able to represent the true
+relationship between response and predictor (the pattern).
+Random mechanisms (noise) might be present.
+Mathematically, we represent this discrepancy as
+y
+
+= ŷ + e
+= f (x) + e
+
+There will always be some discrepancy (error e) between the true label y
+and our model prediction f (x). Embrace the error!
+
+16/54
+
+Regression as an optimisation problem (take 1)
+
+Given a dataset {(xi , yi ) ∶ 1 ≤ i ≤ N }, every candidate model f has its
+own EM SE . Our goal is to find the model with the lowest EM SE :
+fbest (x) = arg min
+f
+
+1 N
+2
+∑ (yi − f (xi ))
+N i=1
+
+The question is, how do we find such model? Finding such a model is an
+optimisation problem.
+Why take 1? Note that we are defining regression as finding the model
+that minimises EM SE on the dataset, without considering what happens
+once deployed. We’ll revise this definition.
+
+17/54
+
+Agenda
+
+Recap
+Formulation of regression problems
+Basic regression models
+Flexibility, interpretability and generalisation
+Summary
+
+18/54
+
+Our regression learner
+
+Knowledge
+Learner
+Data
+Model
+
+New
+predictors
+
+Deployment
+
+Predictions
+
+Dataset: Labelled samples (predictors and true label).
+Model: Predicts a label based on the predictors.
+
+19/54
+
+Simple regression
+Simple regression considers one predictor x and one label y.
+
+20/54
+
+Simple linear regression
+
+In simple linear regression, models are defined by the mathematical
+expression
+f (x) = w0 + w1 x
+Hence, the predicted label ŷi can be expressed as
+ŷi = f (xi ) = w0 + w1 xi
+A linear model has therefore two parameters w0 (intercept) and w1
+(gradient), which need to be tuned to achieve the highest quality.
+In machine learning, we use a dataset to tune the parameters. We say
+that we train the model or fit the model to the training dataset.
+
+21/54
+
+Linear solution: Example
+
+22/54
+
+Beyond linearity
+Sketch the model that you would choose for the Salary Vs Age dataset
+and try to find a suitable mathematical expression.
+
+23/54
+
+Simple polynomial regression
+
+The general form of a polynomial regression model is:
+f (xi ) = w0 + w1 xi + w2 x2i + ⋅ ⋅ ⋅ + wD xD
+i
+where D is the degree of the polynomial.
+Polynomial regression defines a family of families of models. For each
+value of D, we have a different family: D = 1 corresponds to the linear
+family, D = 2 to the quadratic, D = 3 to the cubic, and so on.
+We call D a hyperparamenter. What it means is that setting its value
+results in a different family, with a different collection of parameters.
+
+24/54
+
+Quadratic solution
+
+25/54
+
+Cubic solution
+
+26/54
+
+5-power solution
+
+27/54
+
+Multiple regression
+In multiple regression there are two or more predictors. Given item i,
+we will denote each individual predictor as xi,1 , xi,2 , ... and xi,K , where
+K is the number of predictors.
+
+28/54
+
+Multiple regression: Linear model
+
+Use vector notation to represent a multiple linear regression model where
+the predictors are age and height and the label is salary.
+
+29/54
+
+Multiple regression: Vector notation
+Let K denote the number of predictors. We will represent the k-th
+predictor of item i as xi,k .
+Using vector notation, the predictors of item i can be packed together
+into a vector represented in bold font:
+xi = [1, xi,1 , xi,2 , . . . , xi,K ]T ,
+where the constant 1 is prepended for convenience.
+Using vector notation, multiple regression can then be expressed as
+ŷi = f (xi )
+Good news: the notation developed for simple regression can be easily
+translated to the multivariate scenario, no extra efforts required!
+
+30/54
+
+Multiple linear regression: Formulation
+
+Linear models in multiple regression are simply the sum of a constant (or
+intercept) and each predictor multiplied by its own coefficient.
+Multiple linear regression models can be expressed as:
+f (xi ) = wT xi = w0 + w1 xi,1 + ⋅ ⋅ ⋅ + wK xi,K
+where w = [w0 , w1 , . . . , wK ]T is the model’s parameter vector.
+Note that we can use the same vector notation for simple linear
+regression models, by defining w = [w0 , w1 ]T and xi = [1, xi ]T .
+
+31/54
+
+Multiple linear regression: Solution visualisation
+Multiple linear regression models are planes (or hyperplanes).
+
+32/54
+
+Multiple regression: More notation
+In multiple linear regression, the training dataset can be represented by
+the design matrix X:
+
+X
+
+⎡1
+⎢
+⎢1
+⎢
+= ⎢
+⎢⋮
+⎢
+⎢1
+⎣
+
+x1,1
+x2,1
+⋮
+xN,1
+
+x1,2
+x2,2
+⋮
+xN,2
+
+...
+...
+⋱
+...
+
+x1,K ⎤⎥
+x2,K ⎥⎥
+⎥
+⋮ ⎥⎥
+xN,K ⎥⎦
+
+together with the label vector y:
+
+y
+
+⎡ y1 ⎤
+⎢ ⎥
+⎢y ⎥
+⎢ ⎥
+= ⎢ 2⎥
+⎢ ⋮ ⎥
+⎢ ⎥
+⎢yN ⎥
+⎣ ⎦
+
+33/54
+
+Multiple regression: More notation
+Given a linear model defined by coefficients
+
+w
+
+⎡ w0 ⎤
+⎢ ⎥
+⎢w ⎥
+⎢ ⎥
+= ⎢ 1⎥
+⎢ ⋮ ⎥
+⎢ ⎥
+⎢wK ⎥
+⎣ ⎦
+
+we can calculate the label vector ŷ as
+
+ŷ
+
+⎡ ŷ1 ⎤
+⎡1
+⎢ ⎥
+⎢
+⎢ ŷ ⎥
+⎢1
+⎢ 2⎥
+⎢
+= ⎢ ⎥ = Xw = ⎢
+⎢ ⋮ ⎥
+⎢⋮
+⎢ ⎥
+⎢
+⎢ŷN ⎥
+⎢1
+⎣ ⎦
+⎣
+
+x1,1
+x2,1
+⋮
+xN,1
+
+x1,2
+x2,2
+⋮
+xN,2
+
+...
+...
+⋱
+...
+
+x1,K ⎤⎥ ⎡⎢ w0 ⎤⎥
+x2,K ⎥⎥ ⎢⎢ w1 ⎥⎥
+⎥⎢ ⎥
+⋮ ⎥⎥ ⎢⎢ ⋮ ⎥⎥
+xN,K ⎥⎦ ⎢⎣wK ⎥⎦
+
+and error vector e as
+e = y − ŷ
+
+34/54
+
+Multiple linear regression: Example
+Consider a dataset consisting of 4 samples described by three attributes:
+S1
+S2
+S3
+S4
+
+Age [Years]
+18
+37
+66
+25
+
+Height [cm]
+175
+180
+158
+168
+
+Salary [GBP]
+12000
+68000
+80000
+45000
+
+1. Use vector notation to represent the linear regression model.
+2. Obtain the design matrix X and response vector y.
+
+35/54
+
+The least squares solution
+It can be shown that the linear model that minimises the metric EM SE
+on a training dataset defined by a design matrix X and a label vector y,
+has the parameter vector:
+wbest = (XT X)
+
+−1
+
+XT y
+
+This is an exact or analytical solution and is known as the least
+squares solution. It is valid for simple and multiple linear regression.
+This solution can also be used for polynomial models, by treating the
+powers of the predictor as predictors themselves.
+Note that the inverse matrix (XT X)
+are linearly independent.
+
+−1
+
+exists when all the columns in X
+
+36/54
+
+Other models for regression
+
+Linear and polynomial models are not the only options available. Other
+families of models that can be used include:
+Exponential
+Sinusoids
+Radial basis functions
+Splines
+And many more!
+The mathematical formulation is identical and only the expression for
+f (⋅) changes.
+
+37/54
+
+Other quality metrics
+In addition to the MSE, we can consider other quality metrics:
+Root mean squared error. Measures the sample standard deviation
+of the prediction error.
+√
+1
+ERM SE =
+∑ e2i
+N
+Mean absolute error. Measures the average of the absolute
+prediction error.
+1
+EM AE =
+∑ ∣ei ∣
+N
+R-squared. Measures the proportion of the variance in the response
+that is predictable from the predictors.
+ER = 1 −
+
+1
+∑ e2i
+, where ȳ =
+∑ yi
+2
+N
+∑(yi − ȳ)
+
+38/54
+
+Agenda
+
+Recap
+Formulation of regression problems
+Basic regression models
+Flexibility, interpretability and generalisation
+Summary
+
+39/54
+
+Flexibility
+
+Models allow us to generate multiple shapes by tuning their parameters.
+We talk about the degrees of freedom or the complexity of a model to
+describe its ability to generate different shapes, i.e. its flexibility.
+The degrees of freedom of a model are in general related to the number
+of parameters of the model:
+A linear model y = w0 + w1 x has two parameters and is inflexible, as
+it can only generate straight lines.
+A cubic model y = w0 + w1 x + w2 x2 + w3 x3 has 4 parameters and is
+more flexible than a linear one.
+The flexibility of a model is related to its interpretability and accuracy
+and there is a trade-off between the two.
+
+40/54
+
+Interpretability
+Model interpretability is crucial for us, as humans, to understand in a
+qualitative manner how a predictor is mapped to a label. Inflexible
+models produce solutions that are usually simpler and easier to interpret.
+
+According to this linear model, the
+older you get, the more money you
+make
+
+According to this polynomial model,
+our salary remains the same as
+teenagers, then increases between
+our 20s and 50s, then...
+
+41/54
+
+Quality on the training dataset
+The quality of a model on a training dataset is also related to its
+flexibility. During training, the error produced by flexible models is in
+general lower.
+
+The training error of the best linear
+model is EM SE = 0.0983
+
+The training error of the best
+polynomial model is EM SE = 0.0379
+
+42/54
+
+Generalisation
+We have considered the training MSE, i.e. the quality of regression
+models on the training dataset.
+Priors
+Learner
+Data
+Model
+
+New data
+
+Deployment
+
+Prediction/Action
+
+Will our model work well during deployment, when presented with new
+data? Generalisation is the ability of our model to successfully translate
+what we was learnt during the learning stage to deployment.
+
+43/54
+
+Generalisation
+In this figure, the red curve represents the training MSE of different
+models of increasing complexity, whereas the blue curve represents the
+deployment MSE for the same models. What’s happening?
+
+Mean Squared Error
+
+Deployment
+Training
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Flexibility
+
+44/54
+
+Underfitting and overfitting
+
+By comparing the performance of models during training and
+deployment, we can observe three different behaviours:
+Underfitting: Large training and deployment errors are produced.
+The model is unable to capture the underlying pattern. Rigid
+models lead to underfitting.
+Overfitting: Small errors are produced during training, large errors
+during deployment. The model is memorising irrelevant details.
+Too complex models and not enough data lead to overfitting.
+Just right: Low training and deployment errors. The model is
+capable of reproducing the underlying pattern and ignores
+irrelevant details.
+
+45/54
+
+Underfitting and overfitting
+
+46/54
+
+Underfitting
+
+47/54
+
+Overfitting
+
+48/54
+
+Just right
+
+49/54
+
+Underfitting and overfitting
+Remember this: Generalisation can only be assessed by comparing
+training and deployment performance, not by just looking at how each
+model fits the training data.
+
+Mean Squared Error
+
+Deployment
+Training
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Flexibility
+
+50/54
+
+Agenda
+
+Recap
+Formulation of regression problems
+Basic regression models
+Flexibility, interpretability and generalisation
+Summary
+
+51/54
+
+Regression: Basic methodology
+
+Regression is a family of problems in machine learning, where we set
+out to find a model that predicts a continuous label.
+To build a model we use:
+• A training dataset,
+• a tunable model,
+• a quality metric and
+• an optimisation procedure.
+The final quality of a model has to be assessed during deployment.
+
+52/54
+
+Model generalisation
+
+Models have different degrees of flexibility. Complex models are
+flexible, simple models are rigid.
+A model generalises well when it can deal successfully with samples
+that it hasn’t been exposed to during training.
+Three terms describe the ability of models to generalise:
+• Underfitting: unable to describe the underlying pattern
+• Overfitting: memorisation of irrelevant details
+• Just right: reflects underlying pattern and ignores irrelevant
+details
+
+53/54
+
+Final historical note
+
+Wondering where the term regression comes from?
+In the 19th century, Galton noticed that children of tall people tend to be
+taller than average – but not as tall as their parents. Galton called this
+reversion and later regression towards mediocrity.
+This observation is nowadays called regression to the mean. You can read
+more about this curious fallacy in Kanehman’s Thinking, Fast and Slow.
+
+54/54
+
+

@@ -1,0 +1,690 @@
+P RINCIPLES OF M ACHINE L EARNING
+C LASSIFICATION II
+A CADEMIC YEAR 2022/2023
+Q UEEN M ARY U NIVERSITY OF L ONDON
+
+1
+
+S OLUTIONS
+E XERCISE ]1 (S OL ): Let’s start plotting the dataset (we will use symbol X for class A and O
+for class B):
+
+Both class overlap. In fact two samples have the same predictor and different labels.
+• A Gaussian distribution has two parameters, namely the mean µ and standard deviation
+σ. The estimator for the mean is:
+1 X
+µ̂ =
+xi ,
+N i
+The estimator for the variance can be obtained as the square root of the estimator of the
+variance σ 2 . There are two estimators for the variance, one biased and another unbiased:
+1
+σˆ2 =
+N
+
+X
+
+2
+
+(xi − µ̂)
+
+(biased)
+
+or σˆ2 =
+
+i
+
+1 X
+2
+(xi − µ̂) (unbiased)
+N −1 i
+
+Using the estimator of the mean and the square root of the unbiased estimator of the
+variance we get for each class:
+µA
+
+=
+
+σA
+
+=
+
+µB
+
+=
+
+σB
+
+(−2 − 1 + 0 + 1 + 2)/5 = 0
+p
+((−2 − 0)2 + (−1 − 0)2 + (0 − 0)2 + (1 − 0)2 + (2 − 0)2 ) /4 = 1.58
+
+(1 + 2 + 3 + 4 + 5)/5 = 3
+p
+=
+((1 − 3)2 + (2 − 3)2 + (3 − 3)2 + (4 − 3)2 + (5 − 3)2 ) /4 = 1.58
+
+Note that both classes have the same standard deviation. If we plot them, we get:
+
+-3
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+2
+
+3
+
+4
+
+5
+
+6
+
+• Given a sample xi , the Bayes classifier compares the posterior probabilities P (A|xi ) and
+P (B|xi ) to classify it:
+P (A|xi )
+>1
+P (B|xi )
+P (A|xi )
+<1
+P (B|xi )
+
+→
+
+ŷi = A
+
+→
+
+ŷi = B
+
+Using Bayes rule, we can express the posterior probabilities in terms of the priors P (A)
+and P (B) and the class densities p(x|A) and p(x|B). The class densities are Gaussian
+and have the same standard deviation (as in linear discriminant analysis) and the priors
+are P (A) = 0.5 and P (B) = 0.5. The classifier is then:
+P (A)P (xi |A)
+0.5P (xi |A)
+P (xi |A)
+P (A|xi )
+=
+=
+=
+>1
+P (B|xi )
+P (B)P (xi |B)
+0.5P (xi |B)
+P (xi |B)
+P (A)P (xi |A)
+0.5P (xi |A)
+P (xi |A)
+P (A|xi )
+=
+=
+=
+<1
+P (B|xi )
+P (B)P (xi |B)
+0.5P (xi |B)
+P (xi |B)
+
+→ ŷi = A
+→ ŷi = B
+
+• If the priors are P (A) = 0.1 and P (B) = 0.9 instead and the class densities (also known
+as likelihoods) are the same, we get:
+0.1P (xi |A)
+P (xi |A)
+=
+>1
+0.9P (xi |B)
+9P (xi |B)
+0.1P (xi |A)
+P (xi |A)
+=
+<1
+0.9P (xi |B)
+9P (xi |B)
+
+P (xi |A)
+P (xi |A)
+=
+>9 →
+P (xi |B)
+P (xi |B)
+P (xi |A)
+P (xi |A)
+=
+<9 →
+P (xi |B)
+P (xi |B)
+
+or
+or
+
+ŷi = A
+ŷi = B
+
+E XERCISE ]2 (S OL ): A Gaussian distribution in a 2D predictor space has two parameters,
+namely the mean µ and covariance matrix Σ:
+ 
+
+
+µA
+ΣAA ΣAB
+µ=
+Σ=
+µB
+ΣBA ΣBB
+If predictors xA and xB are independent, the covariance matrix is diagonal:
+
+
+ΣAA
+0
+Σ=
+0
+ΣBB
+and its diagonal entries are actually the variances of the marginal class densities:
+ 2
+
+σ
+0
+Σ= A
+2
+0 σB
+Then, for each class we simply need to estimate the parameters of the marginal class densities.
+In total, there are 6 class densities (3 classes × 2 predictors). Note that in this problem the
+subindices A and B identify each predictor, whereas in the previous problem they were
+used to identify each class instead. The means are
+ 
+2
+µ• =
+8
+ 
+7
+µ• =
+5
+ 
+3
+µ• =
+3
+3
+
+And the covariance matrices:
+Σ•
+Σ•
+Σ•
+
+
+
+1 0
+=
+0 1
+
+
+1.1 0
+=
+0 8.9
+
+
+0.5 0
+=
+0 0.5
+
+After obtaining the mean and covariance matrix for each class densities, it is convenient to
+check that the results make sense. The means should correspond to the centre of each class,
+the variances should describe the spread of samples around their centres.
+10
+9
+8
+7
+
+xB
+
+6
+5
+4
+3
+2
+1
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+xA
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Figure 1
+The boundaries of the classifier consist of the points where two or more posterior probabilities
+are equal. The posterior probabilities can be expressed in terms of the priors and the class
+densities. Note that in this exercise the priors are P (•) = 5/20=1/4, P (•) = 5/20=1/4 and P (•)
+= 10/20=1/2.
+E XERCISE ]3 (S OL ): The dataset consists of 53 samples in a 2D predictor space. There are 30 •
+samples and 23 • samples. In this exercise we are asked to consider several classifiers defined
+by the boundaries xB = 0.5, xB = 1.5, xB = 3.5, xB = 5.5, xB = 7.5 and xB = 9.5. We are
+assuming that samples above each boundary are classified as •, and below as •. A confusion
+matrix shows the number of correctly and incorrectly classified samples as follows:
+Actual class
+•
+•
+• • samples labeled • • samples labeled •
+Predicted class
+• • samples labeled • • samples labeled •
+We have 6 boundaries, i.e. 6 different classifiers, hence we need to produce a different
+confusion matrix for each. For each classifier, we need to plot the boundary, count the number
+of samples correctly and incorrectly classified for each class, and fill in the entries in the
+confusion matrix.
+Actual
+Actual
+Actual
+xB = 0.5
+•
+•
+xB = 1.5
+•
+•
+xB = 3.5
+•
+•
+• 0
+0
+• 5
+2
+• 15 5
+Predicted
+Predicted
+Predicted
+• 23 30
+• 18 28
+• 8 25
+
+4
+
+xB = 5.5
+Predicted
+
+•
+•
+
+Actual
+•
+•
+20 14
+3 16
+
+xB = 7.5
+•
+•
+
+Predicted
+
+Actual
+•
+•
+21 24
+2
+6
+
+xB = 9.5
+Predicted
+
+•
+•
+
+Actual
+•
+•
+23 30
+0
+0
+
+We will assume • is the positive class and • the negative class. The sensitivity is calculated as:
+Sensitivity =
+
+# • samples correctly classified
+# • samples
+
+Specificity =
+
+# • samples correctly classified
+# • samples
+
+and the specificity as
+
+For each classifier, we have the following values of sensitivity and specificity:
+xB = 0.5
+0
+=0
+23
+30
+=1
+30
+
+Sensitivity =
+Specificity
+
+=
+
+xB = 1.5
+Sensitivity =
+Specificity
+
+=
+
+5
+23
+28
+30
+
+xB = 3.5
+Sensitivity =
+Specificity
+
+=
+
+15
+23
+25
+30
+
+xB = 5.5
+Sensitivity =
+Specificity
+
+=
+
+20
+23
+16
+30
+
+xB = 7.5
+Sensitivity =
+Specificity
+
+=
+
+21
+23
+6
+30
+
+xB = 9.5
+Sensitivity =
+Specificity
+
+=
+
+23
+=1
+23
+0
+=0
+30
+
+Plotting we sensitivity against the 1-specificity we obtain the the ROC curve.
+
+5
+
+1
+0.9
+0.8
+0.7
+
+sensitivity
+
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+1 - specificity
+
+E XERCISE ]4 (S OL ): The boundaries defined by xB = xA + c are straight lines with slope 1
+and intercept c. Different values of c define a different boundary and a different classifier.
+Let’s assume that samples above each boundary are classified as •, and below as •.
+For each classifier (there are 6) we need to plot the boundary, count the number of samples
+correctly and incorrectly classified for each class, and fill in their confusion matrices.
+
+The confusion matrices are:
+
+•
+•
+
+Actual
+•
+•
+0
+0
+23 30
+
+•
+•
+
+Actual
+•
+•
+20 18
+3 12
+
+c = −8.5
+Predicted
+
+c = 1.5
+Predicted
+
+•
+•
+
+Actual
+•
+•
+8
+1
+15 29
+
+•
+•
+
+Actual
+•
+•
+22 27
+1
+3
+
+c = −4.5
+Predicted
+
+c = 4.5
+Predicted
+
+6
+
+•
+•
+
+Actual
+•
+•
+16 6
+7 24
+
+•
+•
+
+Actual
+•
+•
+23 30
+0
+0
+
+c = −1.5
+Predicted
+
+c = 8.5
+Predicted
+
+The sensitivity and specificity and specificity values are:
+c = −8.5
+0
+=0
+23
+30
+=1
+30
+
+Sensitivity =
+Specificity
+
+=
+
+c = −4.5
+8
+23
+29
+30
+
+Sensitivity =
+Specificity
+
+=
+
+c = −1.5
+16
+23
+24
+30
+
+Sensitivity =
+Specificity
+
+=
+
+c = 1.5
+20
+23
+12
+30
+
+Sensitivity =
+Specificity
+
+=
+
+c = 4.5
+22
+23
+3
+30
+
+Sensitivity =
+Specificity
+
+=
+
+c = 8.5
+Sensitivity =
+Specificity
+
+=
+
+23
+=1
+23
+0
+=0
+30
+
+Plotting we sensitivity against the 1-specificity we obtain the the ROC curve. The red curve
+corresponds to the family xB = xA + c, the blue to xB = c. The family of classifiers
+xB = xA + c is slightly better than xB = c.
+1
+0.9
+0.8
+0.7
+
+sensitivity
+
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+1 - specificity
+
+7
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+

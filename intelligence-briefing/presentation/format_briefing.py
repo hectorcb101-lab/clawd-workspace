@@ -50,14 +50,78 @@ def format_briefing(insights):
             briefing += f"  • {cause}\n"
         briefing += "\n"
     
-    # Geopolitical Developments
-    briefing += "⚡ **GEOPOLITICAL LANDSCAPE**\n\n"
-    risks = insights['patterns_raw']['geopolitical_risks']
-    for risk in risks[:3]:
-        emoji = "🔴" if risk['risk_level'] in ['elevated', 'likely'] else "🟡" if risk['risk_level'] == 'moderate' else "🟢"
-        briefing += f"{emoji} **{risk['title']}**\n"
-        briefing += f"   Odds: {risk['odds']} | Volume: ${risk['volume']}\n"
-        briefing += f"   Risk level: {risk['risk_level']}\n\n"
+    # Geopolitical Alpha - New Enhanced Section
+    if insights.get('geopolitical_alpha') and insights['geopolitical_alpha'].get('chains'):
+        briefing += "🎯 **GEOPOLITICAL ALPHA**\n\n"
+        
+        geo_alpha = insights['geopolitical_alpha']
+        chains = geo_alpha['chains']
+        
+        for i, chain in enumerate(chains, 1):
+            # Include event date if available
+            event_date = chain.get('date', chain.get('event_date', ''))
+            if event_date:
+                try:
+                    from dateutil import parser as dateparser
+                    dt = dateparser.parse(event_date)
+                    date_str = dt.strftime('%d %b %Y')
+                except:
+                    date_str = str(event_date)[:10]
+                briefing += f"**{i}. {chain['headline']}** ({date_str})\n"
+            else:
+                briefing += f"**{i}. {chain['headline']}**\n"
+            
+            # Transmission chain summary
+            briefing += f"   Chain: {chain['chain_summary']}\n\n"
+            
+            # Top affected assets
+            briefing += "   Affected Assets:\n"
+            for asset in chain['top_assets'][:3]:
+                direction_emoji = "↗️" if asset['direction'] == 'up' else "↘️" if asset['direction'] == 'down' else "↔️"
+                conv_emoji_map = {'high': '🟢', 'medium': '🟡', 'low': '🔴'}
+                conv_emoji = conv_emoji_map.get(asset['conviction'], '⚪')
+                briefing += f"   {direction_emoji} {asset['asset']} ({asset['direction']}) {conv_emoji}\n"
+            
+            briefing += "\n"
+            
+            # What to watch
+            if chain.get('watch'):
+                briefing += "   Watch:\n"
+                for watch_item in chain['watch']:
+                    briefing += f"   • {watch_item}\n"
+                briefing += "\n"
+            
+            # Historical echo
+            historical = chain['historical_parallel']
+            briefing += f"   Historical echo: **{historical['event']}** ({historical['date'][:4]})\n"
+            briefing += f"   What happened: {historical['lesson'][:150]}...\n\n"
+            
+            # Conviction
+            briefing += f"   Conviction: {chain['conviction_emoji']} **{chain['conviction_label']}** ({chain['conviction_score']:.0f}/100)\n\n"
+            
+            # Teaching note (why this matters)
+            briefing += f"   *Why this connection exists:* {chain['teaching_note'][:200]}...\n\n"
+            
+            # Source attribution
+            source_url = chain.get('source_url', '')
+            if source_url:
+                try:
+                    from urllib.parse import urlparse
+                    domain = urlparse(source_url).netloc.replace('www.', '')
+                except:
+                    domain = source_url[:40]
+                briefing += f"   📰 Source: [{domain}]({source_url})\n\n"
+        
+        briefing += "\n"
+    else:
+        # Fallback to old geopolitical section if no alpha data
+        briefing += "⚡ **GEOPOLITICAL LANDSCAPE**\n\n"
+        risks = insights['patterns_raw']['geopolitical_risks']
+        for risk in risks[:3]:
+            emoji = "🔴" if risk['risk_level'] in ['elevated', 'likely'] else "🟡" if risk['risk_level'] == 'moderate' else "🟢"
+            briefing += f"{emoji} **{risk['title']}**\n"
+            briefing += f"   Odds: {risk['odds']} | Volume: ${risk['volume']}\n"
+            briefing += f"   Risk level: {risk['risk_level']}\n\n"
     
     # Market Sentiment
     if 'sentiment' in insights.get('patterns_raw', {}):

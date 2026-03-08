@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-02-14T07:10:54.381726",
+  "executive_summary": [
+    "ETH-USD up 6.0% - major move",
+    "Market fear level: elevated (VIX down 1.1%)",
+    "Geopolitical: Who will Trump nominate as Fed Chair? at 95.5% (likely risk)"
+  ],
+  "market_explanations": [
+    {
+      "asset": "Cryptocurrency",
+      "movement": "Major selling (BTC/ETH down 3.8%)",
+      "possible_causes": [
+        "Flight from risk assets while stocks hold"
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "atlas_opinion": {
+    "main_thesis": "Crypto is bleeding, stocks are ignoring it. This is either: (1) Crypto-specific weakness, or (2) The canary in the coal mine.",
+    "deep_take": "When crypto leads down while equities hold, it's historically been a mixed signal - sometimes isolated to crypto (regulatory fears, exchange issues), sometimes a leading indicator for broader risk-off within days. The key confirmation signals: Watch **small caps (IWM - represents riskier, smaller companies that often move before large caps)** and **credit spreads (the premium investors demand to hold corporate bonds vs safe Treasuries - widens when fear rises)**. If these weaken, crypto was the early warning.",
+    "reasoning": [
+      "Polymarket (prediction market where people bet real money on events) pricing 95.5% chance of Who will Trump nominate as Fed Chair? - these odds reflect what informed bettors think will actually happen"
+    ],
+    "contrarian_view": "Crypto divergences don't always predict equity moves. Recent patterns (Dec 2025) showed crypto falling 30% while Nasdaq climbed on earnings. Context matters - is this crypto-specific or macro?",
+    "what_to_watch": [
+      "Who will Trump nominate as Fed Chair? (95.5% odds) - if this spikes above 30%, markets will price in higher uncertainty \u2192 expect volatility",
+      "VIX breaking above 20 (from current 16) would confirm fear is spreading \u2192 stocks typically pull back when VIX crosses this level",
+      "BTC support at $85k (price floor where buyers step in) - breaking below this level often triggers more selling as stop-losses hit"
+    ],
+    "prediction": "**Key price levels:** BTC support at $84-86k (based on whale accumulation data - large holders buying at these prices). Break below $84k suggests deeper selling pressure. Hold above $86k with stocks green = likely isolated crypto weakness.",
+    "confidence": "moderate"
+  },
+  "educational": {
+    "concept": "Prediction Markets (Polymarket)",
+    "explanation": "Markets where people bet real money on future events. The odds reflect collective intelligence - what many informed people think will happen. Often more accurate than polls or expert predictions.",
+    "how_to_read": "If Who will Trump nominate as Fed Chair? shows 95.5%, that means the market thinks there's a 95.5% chance of this happening. Volume shows confidence: $475.1M is real money on the line.",
+    "why_it_matters": "These odds can be leading indicators for markets. If geopolitical risk odds spike, expect volatility.",
+    "current_signal": "Who will Trump nominate as Fed Chair? at 95.5% risk level"
+  },
+  "patterns_raw": {
+    "significant_moves": [
+      {
+        "symbol": "BTC-USD",
+        "price": 68890.86,
+        "change": 3.8,
+        "direction": "up",
+        "magnitude": "notable"
+      },
+      {
+        "symbol": "ETH-USD",
+        "price": 2053.18,
+        "change": 5.97,
+        "direction": "up",
+        "magnitude": "major"
+      }
+    ],
+    "geopolitical_risks": [
+      {
+        "title": "Who will Trump nominate as Fed Chair?",
+        "question": "Will Trump nominate Kevin Warsh as the next Fed chair?",
+        "odds": "95.5%",
+        "odds_numeric": 95.5,
+        "risk_level": "likely",
+        "volume": "475.1M"
+      },
+      {
+        "title": "Democratic Presidential Nominee 2028",
+        "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+        "odds": "1.2%",
+        "odds_numeric": 1.2,
+        "risk_level": "low",
+        "volume": "657.0M"
+      },
+      {
+        "title": "Government shutdown on Saturday?",
+        "question": "Government shutdown on Saturday?",
+        "odds": "2.2%",
+        "odds_numeric": 2.2,
+        "risk_level": "low",
+        "volume": "10.1M"
+      }
+    ],
+    "sentiment": {
+      "status": "success",
+      "timestamp": "2026-02-14T07:10:54.375594",
+      "source": "sentiment",
+      "data": []
+    },
+    "market_sentiment": {
+      "vix": {
+        "symbol": "^VIX",
+        "price": 20.6,
+        "change_percent": -1.06
+      },
+      "sp500": {
+        "symbol": "^GSPC",
+        "price": 6836.17,
+        "change_percent": 0.05
+      },
+      "btc": {
+        "symbol": "BTC-USD",
+        "price": 68890.86,
+        "change_percent": 3.8
+      },
+      "assessment": "cautious",
+      "fear_level": "elevated"
+    }
+  }
+}

@@ -45,6 +45,24 @@ Update `~/clawd/ATLAS_DASHBOARD.md`:
 - Track pending follow-ups
 - Note overdue items
 
+## 📝 Daily Log (Once Per Day)
+Check if today's daily log exists. If not, create it:
+```bash
+DATE=$(date +%Y-%m-%d)
+LOG_FILE=~/clawd/memory/${DATE}.md
+if [ ! -f "$LOG_FILE" ]; then
+  # Create daily log template
+  echo "⚠️ No daily log for today. Creating ${DATE}.md"
+fi
+```
+**Daily log should include:**
+- Key activities completed
+- Learnings or corrections
+- Outcomes from significant tasks
+- Brief reflection on what went well/poorly
+
+**If yesterday's log is missing:** Flag it as a gap in documentation.
+
 ## 🔨 Active Build Check
 If `ACTIVE_BUILD.md` exists and status is ACTIVE:
 - Check if there's idle time to make progress

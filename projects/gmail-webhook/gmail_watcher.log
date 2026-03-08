@@ -107,3 +107,199 @@
 2026-02-08 20:51:56,058 - INFO - Found 1 new message(s)
 2026-02-08 21:20:01,222 - INFO - Found 1 new message(s)
 2026-02-08 21:20:01,222 - INFO - Found 1 new message(s)
+2026-02-18 06:53:19,137 - INFO - Gmail Watcher starting...
+2026-02-18 06:53:19,137 - INFO - Gmail Watcher starting...
+2026-02-18 06:53:19,139 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-18 06:53:19,139 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-18 06:53:19,139 - INFO - Poll interval: 60s
+2026-02-18 06:53:19,139 - INFO - Poll interval: 60s
+2026-02-18 06:53:19,198 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-18 06:53:19,198 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-18 09:06:43,339 - INFO - Found 1 new message(s)
+2026-02-18 09:06:43,339 - INFO - Found 1 new message(s)
+2026-02-18 11:11:05,787 - INFO - Found 1 new message(s)
+2026-02-18 11:11:05,787 - INFO - Found 1 new message(s)
+2026-02-18 11:11:05,963 - INFO - Watched email: Week 4 stats from Finn M <wfmckie@gmail.com>
+2026-02-18 11:11:05,963 - INFO - Watched email: Week 4 stats from Finn M <wfmckie@gmail.com>
+2026-02-18 11:11:05,964 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-18 11:11:05,964 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-18 11:20:07,546 - INFO - Found 1 new message(s)
+2026-02-18 11:20:07,546 - INFO - Found 1 new message(s)
+2026-02-18 11:20:07,714 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-18 11:20:07,714 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-18 11:20:07,714 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-18 11:20:07,714 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-18 11:26:08,789 - INFO - Found 1 new message(s)
+2026-02-18 11:26:08,789 - INFO - Found 1 new message(s)
+2026-02-18 11:39:11,337 - INFO - Found 1 new message(s)
+2026-02-18 11:39:11,337 - INFO - Found 1 new message(s)
+2026-02-18 15:06:48,304 - ERROR - Error in check cycle: The read operation timed out
+2026-02-18 15:06:48,304 - ERROR - Error in check cycle: The read operation timed out
+2026-02-18 15:07:48,323 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:07:48,323 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:08:48,325 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:08:48,325 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:09:48,327 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:09:48,327 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:10:48,330 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:10:48,330 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:11:48,332 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:11:48,332 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:12:48,333 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:12:48,333 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:13:48,336 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:13:48,336 - ERROR - Error in check cycle: Unable to find the server at gmail.googleapis.com
+2026-02-18 15:45:14,198 - INFO - Gmail Watcher starting...
+2026-02-18 15:45:14,198 - INFO - Gmail Watcher starting...
+2026-02-18 15:45:14,209 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-18 15:45:14,209 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-18 15:45:14,210 - INFO - Poll interval: 60s
+2026-02-18 15:45:14,210 - INFO - Poll interval: 60s
+2026-02-18 15:45:14,305 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-18 15:45:14,305 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-18 17:13:32,371 - INFO - Found 1 new message(s)
+2026-02-18 17:13:32,371 - INFO - Found 1 new message(s)
+2026-02-18 17:52:39,529 - INFO - Found 1 new message(s)
+2026-02-18 17:52:39,529 - INFO - Found 1 new message(s)
+2026-02-19 08:40:17,991 - INFO - Found 1 new message(s)
+2026-02-19 08:40:17,991 - INFO - Found 1 new message(s)
+2026-02-19 08:49:19,744 - INFO - Found 1 new message(s)
+2026-02-19 08:49:19,744 - INFO - Found 1 new message(s)
+2026-02-19 08:59:21,761 - INFO - Found 1 new message(s)
+2026-02-19 08:59:21,761 - INFO - Found 1 new message(s)
+2026-02-19 09:05:23,027 - INFO - Found 1 new message(s)
+2026-02-19 09:05:23,027 - INFO - Found 1 new message(s)
+2026-02-19 21:35:37,180 - INFO - Found 1 new message(s)
+2026-02-19 21:35:37,180 - INFO - Found 1 new message(s)
+2026-02-19 22:32:47,493 - INFO - Found 1 new message(s)
+2026-02-19 22:32:47,493 - INFO - Found 1 new message(s)
+2026-02-19 22:42:49,436 - INFO - Found 1 new message(s)
+2026-02-19 22:42:49,436 - INFO - Found 1 new message(s)
+2026-02-19 22:45:50,146 - INFO - Found 1 new message(s)
+2026-02-19 22:45:50,146 - INFO - Found 1 new message(s)
+2026-02-19 23:19:56,363 - INFO - Found 1 new message(s)
+2026-02-19 23:19:56,363 - INFO - Found 1 new message(s)
+2026-02-19 23:23:57,250 - INFO - Found 2 new message(s)
+2026-02-19 23:23:57,250 - INFO - Found 2 new message(s)
+2026-02-19 23:25:57,954 - INFO - Found 2 new message(s)
+2026-02-19 23:25:57,954 - INFO - Found 2 new message(s)
+2026-02-20 09:03:41,100 - INFO - Found 1 new message(s)
+2026-02-20 09:03:41,100 - INFO - Found 1 new message(s)
+2026-02-20 09:52:50,185 - INFO - Found 1 new message(s)
+2026-02-20 09:52:50,185 - INFO - Found 1 new message(s)
+2026-02-20 09:55:51,033 - INFO - Found 1 new message(s)
+2026-02-20 09:55:51,033 - INFO - Found 1 new message(s)
+2026-02-20 10:12:54,345 - INFO - Found 1 new message(s)
+2026-02-20 10:12:54,345 - INFO - Found 1 new message(s)
+2026-02-20 10:37:59,053 - INFO - Found 1 new message(s)
+2026-02-20 10:37:59,053 - INFO - Found 1 new message(s)
+2026-02-20 10:38:59,399 - INFO - Found 1 new message(s)
+2026-02-20 10:38:59,399 - INFO - Found 1 new message(s)
+2026-02-21 09:05:02,160 - INFO - Found 1 new message(s)
+2026-02-21 09:05:02,160 - INFO - Found 1 new message(s)
+2026-02-21 15:26:10,197 - INFO - Found 1 new message(s)
+2026-02-21 15:26:10,197 - INFO - Found 1 new message(s)
+2026-02-22 09:05:19,325 - INFO - Found 1 new message(s)
+2026-02-22 09:05:19,325 - INFO - Found 1 new message(s)
+2026-02-23 09:05:16,419 - INFO - Found 1 new message(s)
+2026-02-23 09:05:16,419 - INFO - Found 1 new message(s)
+2026-02-23 15:09:21,751 - INFO - Found 1 new message(s)
+2026-02-23 15:09:21,751 - INFO - Found 1 new message(s)
+2026-02-23 15:21:24,055 - INFO - Found 1 new message(s)
+2026-02-23 15:21:24,055 - INFO - Found 1 new message(s)
+2026-02-23 15:44:28,277 - INFO - Found 1 new message(s)
+2026-02-23 15:44:28,277 - INFO - Found 1 new message(s)
+2026-02-24 09:02:35,074 - INFO - Found 1 new message(s)
+2026-02-24 09:02:35,074 - INFO - Found 1 new message(s)
+2026-02-24 14:42:36,323 - INFO - Found 1 new message(s)
+2026-02-24 14:42:36,323 - INFO - Found 1 new message(s)
+2026-02-24 14:42:36,498 - INFO - Watched email: assignment - Python from Finn M <wfmckie@gmail.com>
+2026-02-24 14:42:36,498 - INFO - Watched email: assignment - Python from Finn M <wfmckie@gmail.com>
+2026-02-24 14:42:36,499 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-24 14:42:36,499 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 09:05:01,197 - INFO - Found 1 new message(s)
+2026-02-25 09:05:01,197 - INFO - Found 1 new message(s)
+2026-02-25 11:13:24,918 - INFO - Found 1 new message(s)
+2026-02-25 11:13:24,918 - INFO - Found 1 new message(s)
+2026-02-25 11:13:25,096 - INFO - Watched email: 1d3d4cc250493cfbce24494221ad90383f198bd4 from Finn M <wfmckie@gmail.com>
+2026-02-25 11:13:25,096 - INFO - Watched email: 1d3d4cc250493cfbce24494221ad90383f198bd4 from Finn M <wfmckie@gmail.com>
+2026-02-25 11:13:25,097 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:13:25,097 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:29:28,015 - INFO - Found 1 new message(s)
+2026-02-25 11:29:28,015 - INFO - Found 1 new message(s)
+2026-02-25 11:29:28,199 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-25 11:29:28,199 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-25 11:29:28,200 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:29:28,200 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:33:28,920 - INFO - Found 2 new message(s)
+2026-02-25 11:33:28,920 - INFO - Found 2 new message(s)
+2026-02-25 11:33:29,108 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-25 11:33:29,108 - INFO - Watched email: ECS7040P_Probability (Final) from Finn M <wfmckie@gmail.com>
+2026-02-25 11:33:29,287 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:33:29,287 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-02-25 11:37:30,004 - INFO - Found 1 new message(s)
+2026-02-25 11:37:30,004 - INFO - Found 1 new message(s)
+2026-02-25 11:46:31,831 - INFO - Found 1 new message(s)
+2026-02-25 11:46:31,831 - INFO - Found 1 new message(s)
+2026-02-25 11:53:33,276 - INFO - Found 1 new message(s)
+2026-02-25 11:53:33,276 - INFO - Found 1 new message(s)
+2026-02-26 09:03:24,542 - INFO - Found 1 new message(s)
+2026-02-26 09:03:24,542 - INFO - Found 1 new message(s)
+2026-02-27 06:47:40,793 - INFO - Gmail Watcher starting...
+2026-02-27 06:47:40,793 - INFO - Gmail Watcher starting...
+2026-02-27 06:47:40,794 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-27 06:47:40,794 - INFO - Watching for emails from: ['wfmckie@gmail.com']
+2026-02-27 06:47:40,794 - INFO - Poll interval: 60s
+2026-02-27 06:47:40,794 - INFO - Poll interval: 60s
+2026-02-27 06:47:40,854 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-27 06:47:40,854 - INFO - Refreshing credentials due to a 401 response. Attempt 1/2.
+2026-02-27 09:04:06,601 - INFO - Found 1 new message(s)
+2026-02-27 09:04:06,601 - INFO - Found 1 new message(s)
+2026-02-28 09:03:33,177 - INFO - Found 1 new message(s)
+2026-02-28 09:03:33,177 - INFO - Found 1 new message(s)
+2026-03-01 02:28:42,040 - ERROR - Error in check cycle: The read operation timed out
+2026-03-01 02:28:42,040 - ERROR - Error in check cycle: The read operation timed out
+2026-03-01 08:02:41,645 - INFO - Found 1 new message(s)
+2026-03-01 08:02:41,645 - INFO - Found 1 new message(s)
+2026-03-01 09:06:53,244 - INFO - Found 1 new message(s)
+2026-03-01 09:06:53,244 - INFO - Found 1 new message(s)
+2026-03-02 09:03:09,599 - INFO - Found 1 new message(s)
+2026-03-02 09:03:09,599 - INFO - Found 1 new message(s)
+2026-03-03 09:02:31,818 - INFO - Found 1 new message(s)
+2026-03-03 09:02:31,818 - INFO - Found 1 new message(s)
+2026-03-03 09:03:32,174 - INFO - Found 1 new message(s)
+2026-03-03 09:03:32,174 - INFO - Found 1 new message(s)
+2026-03-03 15:02:39,215 - INFO - Found 1 new message(s)
+2026-03-03 15:02:39,215 - INFO - Found 1 new message(s)
+2026-03-04 09:04:57,639 - INFO - Found 1 new message(s)
+2026-03-04 09:04:57,639 - INFO - Found 1 new message(s)
+2026-03-04 11:43:26,756 - INFO - Found 1 new message(s)
+2026-03-04 11:43:26,756 - INFO - Found 1 new message(s)
+2026-03-04 11:43:26,956 - INFO - Watched email: 44f7487554ce1415d3dcdfadf68405b7429d0915 from Finn M <wfmckie@gmail.com>
+2026-03-04 11:43:26,956 - INFO - Watched email: 44f7487554ce1415d3dcdfadf68405b7429d0915 from Finn M <wfmckie@gmail.com>
+2026-03-04 11:43:26,957 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-03-04 11:43:26,957 - ERROR - Failed to send notification: [Errno 2] No such file or directory: 'clawdbot'
+2026-03-05 09:05:19,947 - INFO - Found 1 new message(s)
+2026-03-05 09:05:19,947 - INFO - Found 1 new message(s)
+2026-03-05 14:00:14,242 - INFO - Found 1 new message(s)
+2026-03-05 14:00:14,242 - INFO - Found 1 new message(s)
+2026-03-05 14:20:18,253 - INFO - Found 1 new message(s)
+2026-03-05 14:20:18,253 - INFO - Found 1 new message(s)
+2026-03-05 20:50:29,425 - INFO - Found 1 new message(s)
+2026-03-05 20:50:29,425 - INFO - Found 1 new message(s)
+2026-03-05 21:10:33,282 - INFO - Found 1 new message(s)
+2026-03-05 21:10:33,282 - INFO - Found 1 new message(s)
+2026-03-05 21:21:35,422 - INFO - Found 1 new message(s)
+2026-03-05 21:21:35,422 - INFO - Found 1 new message(s)
+2026-03-05 22:50:51,742 - INFO - Found 1 new message(s)
+2026-03-05 22:50:51,742 - INFO - Found 1 new message(s)
+2026-03-06 07:02:22,110 - INFO - Found 1 new message(s)
+2026-03-06 07:02:22,110 - INFO - Found 1 new message(s)
+2026-03-06 09:05:45,005 - INFO - Found 1 new message(s)
+2026-03-06 09:05:45,005 - INFO - Found 1 new message(s)
+2026-03-07 07:04:43,977 - INFO - Found 1 new message(s)
+2026-03-07 07:04:43,977 - INFO - Found 1 new message(s)
+2026-03-07 09:06:05,825 - INFO - Found 1 new message(s)
+2026-03-07 09:06:05,825 - INFO - Found 1 new message(s)
+2026-03-08 09:05:22,425 - INFO - Found 1 new message(s)
+2026-03-08 09:05:22,425 - INFO - Found 1 new message(s)

@@ -1,0 +1,576 @@
+School of Electronic Engineering and Computer Science
+Queen Mary University of London
+
+ECS7020P Principles of Machine Learning
+Methodology I
+Dr Jesús Requena Carrión
+
+12 Feb 2026
+
+Ventris’ decisive check
+
+”... and a decisive check, preferably with
+the aid of virgin material, to ensure that
+the apparent results are not due to fantasy,
+coincidence or circular reasoning”
+
+2/48
+
+Don’t fool yourself!
+
+3/48
+
+What’s different about machine learning?
+
+Machine learning aims at building solutions that work well on samples
+coming from a target population.
+Many other areas have similar goals, so what’s different?
+In machine learning, we lack a description of the target population.
+All we can do is extract samples from the population (known as
+sampling the population).
+A collection of samples extracted from a population forms a dataset. A
+dataset provides an empirical description of our target population. In
+other words, they are population surrogates.
+
+4/48
+
+Sampling a population
+We need to ensure that datasets are representative and provide a
+complete picture of the target population by:
+Extracting samples randomly and independently.
+Ensuring they come from the target population (identically
+distributed).
+Having a sufficiently large number of samples.
+Independent and identically distributed datasets are known as IID.
+
+Population
+
+Sampling
+Dataset
+
+5/48
+
+Agenda
+
+Testing a model to evaluate its deployment quality
+Optimisation and the error surface
+Training a model
+Validating our models
+Summary and other validation approaches
+
+6/48
+
+Deployment quality
+Machine learning models can be built, sold and deployed.
+
+Piors
+Learner
+Data
+Model
+
+New data
+
+Deployment
+
+Prediction/Action
+
+Take 2 definition: The best model is the one with the highest
+deployment quality, i.e. the best on the target population.
+
+7/48
+
+Deployment quality
+
+Every machine learning project needs to include a strategy to evaluate
+the quality of a model during deployment.
+In machine learning, a quality evaluation strategy includes:
+1. A quality metric used to quantify the quality.
+2. How data will be used to assess the quality of a model.
+The quality evaluation strategy has to be designed before creating a
+model to avoid falling into our own data-traps, such as confirmation bias.
+By changing it retrospectively you are moving the goalposts.
+
+8/48
+
+Assessing the deployment quality
+If we could use all the data that models can be shown (population), we
+would be able to quantify their true deployment quality.
+Instead we use a subset of data, the test dataset, to compute the test
+quality as an estimation of the true deployment quality.
+
+Population
+
+Sampling
+
+Test
+dataset
+
+Test quality
+
+True quality
+
+9/48
+
+Random nature of the test quality
+Test datasets are extracted randomly. Hence, the test quality is itself
+random, as different datasets will in general produce different values.
+
+Test
+dataset 1
+
+Test
+dataset 2
+
+Population
+
+True quality
+
+Test quality 1
+
+Test
+dataset 3
+
+Test quality 2
+
+Test quality 3
+
+10/48
+
+Comparing models
+Models built by different teams can be compared based on their test
+qualities.
+Caution should be used, as the test quality is a random quantity, hence
+some models might appear to be superior by chance!
+
+Test quality model 1
+
+Population
+
+Test
+dataset
+
+Test quality model 2
+
+Test quality model 3
+
+11/48
+
+The Infinite Monkey Theorem
+
+12/48
+
+Agenda
+
+Testing a model to evaluate its deployment quality
+Optimisation and the error surface
+Training a model
+Validating our models
+Summary and other validation approaches
+
+13/48
+
+Optimisation theory
+
+Assume that we have:
+A collection of candidate models, e.g. all the models resulting from
+tuning the linear model f (x) = w0 + w1 x.
+A quality metric, e.g. a notion of error.
+A perfect description of the target population.
+Optimisation allows us to identify among all the candidate models the
+one that achieves the highest quality on the target population, i.e. the
+optimal model.
+
+14/48
+
+The error surface
+The error surface (a.k.a. error, objective, loss or cost function) denoted
+by E(w) maps each candidate model w to its error. We will assume
+that we can obtain it using the ideal description of our target population.
+
+15/48
+
+The error surface
+
+Error
+
+Error surfaces can also be represented as colour-coded and contour maps,
+where a colour scheme encodes the error values.
+
+16/48
+
+The error surface and the optimal model
+The optimal model can be identified as the one with the lowest error.
+
+17/48
+
+The error surface and the optimal model
+The gradient (slope) of the error surface, ∇E(w), is zero at the optimal
+model. Hence we can look for it by identifying where ∇E(w) = 0.
+
+18/48
+
+The error surface and the optimal model
+What if do not have enough computation power to obtain the error or the
+gradient of every candidate model, how can we find the optimal model?
+
+Ask yourself: can you climb up/down a mountain in total darkness?
+
+19/48
+
+Gradient descent
+
+Gradient descent is a numerical optimisation method where we update
+iteratively our model using the gradient of the error surface.
+The gradient provides the direction along which the error increases the
+most. Using the gradient, we can create the following update rule:
+wnew = wold − ∇E(wold )
+where  is known as the learning rate or step size.
+With every iteration we adjust the parameters w of our model. This is
+why this process is also known as parameter tuning.
+
+20/48
+
+Error
+
+Gradient descent
+
+21/48
+
+The step size
+
+The step size  controls how much we change the parameters w of our
+model in each iteration of gradient descent:
+Small values of  result in slow convergence to the optimal model.
+Large values of  risk overshooting the optimal model.
+
+22/48
+
+Error
+
+Small steps
+
+23/48
+
+Error
+
+Large steps
+
+24/48
+
+Starting and stopping
+
+For gradient descent to start, we need an initial model. The choice of the
+initial model can be crucial. The initial parameters w are usually chosen
+randomly (but within a sensible range of values).
+In general, gradient descent will not reach the optimal model, hence it is
+necessary to design a stopping strategy. Common choices include:
+Number of iterations.
+Processing time.
+Error value.
+Relative change of the error value.
+
+25/48
+
+Local and global solutions
+So far we have considered convex error surfaces. Error surfaces can
+however be complex and have
+Local optima (model with the lowest error within a region).
+Global optima (model with the lowest error among all the models).
+
+26/48
+
+Local and global optimal solutions
+Gradient descent can get stuck in local optima. To avoid them, we can
+repeat the procedure from several initial models and select the best.
+
+27/48
+
+Agenda
+
+Testing a model to evaluate its deployment quality
+Optimisation and the error surface
+Training a model
+Validating our models
+Summary and other validation approaches
+
+28/48
+
+Where is my error surface?
+
+In machine learning we have:
+A family of candidate models (e.g. linear models).
+A quality metric (e.g. the error).
+Data extracted from the population (i.e. not a perfect description).
+If we had an ideal description of the target population we could calculate
+the error surface and its gradient to find the optimal model.
+In machine learning, our starting point is that we do not have a perfect
+description of the population and we only have datasets extracted from it.
+
+29/48
+
+The training dataset
+We use a subset of samples, known as the training dataset, to
+reconstruct the true error surface needed during optimisation. We will
+call this new surface the empirical error surface.
+
+Population
+
+Sampling
+
+Training
+dataset
+
+30/48
+
+The empirical error surface
+The empirical and true error surfaces are in general different. Hence, their
+optimal models might differ, i.e. the best model for the training dataset
+might not be the best for the population.
+
+31/48
+
+Error
+
+The empirical error surface
+
+32/48
+
+Least squares: minimising the error on a training dataset
+Least squares defines an empirical error surface whose gradient can
+be obtained exactly. A linear model applied to a training dataset can be
+expressed as
+ŷ = Xw
+where X is the design matrix, ŷ is the predicted label vector and w is the
+coefficients vector. The MSE on the training dataset can be written as
+EM SE (w)
+
+1
+T
+(y − ŷ) (y − ŷ)
+N
+1
+T
+(y − Xw) (y − Xw)
+N
+
+=
+=
+
+where y is the true label. The resulting gradient of the MSE is
+∇EM SE (w) =
+−1
+
+and it is zero for wopt = (XT X)
+
+−2 T
+X (y − Xw)
+N
+
+XT y.
+
+33/48
+
+Exhaustive approaches
+In general, we will not have analytical solutions. We can reconstruct the
+empirical error surface by evaluating each model on training data. This is
+called brute-force or exhaustive search. Simple, but often impractical.
+
+34/48
+
+Data-driven gradient descent
+Gradient descent can be implemented by estimating the gradient of the
+empirical error surface. During each iteration, a subset (batch) of the
+training dataset is used to compute this gradient.
+Batch
+1
+
+Population
+
+Training
+dataset
+
+Gradient 1
+
+Batch
+2
+
+Batch
+3
+
+Gradient 2
+
+Gradient 3
+
+The batch size determines how close the estimated gradient is to the true
+gradient of the empirical error surface.
+
+35/48
+
+Cost, quality and fooling ourselves
+
+Our goal is always to produce a model that achieves the highest quality
+during deployment.
+We usually call our notion of quality during training cost or objective
+function, to distinguish it from the target quality metric. They can be
+different.
+Never use the same data for testing and training a model. The test
+dataset needs to remain inaccessible to avoid using it (inadvertently or
+not) during training.
+
+36/48
+
+Agenda
+
+Testing a model to evaluate its deployment quality
+Optimisation and the error surface
+Training a model
+Validating our models
+Summary and other validation approaches
+
+37/48
+
+Why do we need validation?
+
+Machine learning uses datasets for different purposes, for instance to
+assess the deployment quality of a final model (test dataset) or to tune
+a model (training dataset).
+Often, we need to explore different options before training a final model.
+For example, consider polynomial regression. The polynomial degree D is
+a hyperparameter, as for each value of D a different family of models is
+obtained. How can we select the right value of a D?
+
+38/48
+
+Why do we need validation?
+Validation methods allow us to use data for assessing and selecting
+different families of models. The same data used for validation can then
+be used to train a final model.
+
+Population
+
+Dataset
+
+Validation involves one or more training and quality estimation rounds
+per model family followed by quality averaging.
+
+39/48
+
+Validation set approach
+The validation set approach is the simplest method. It randomly splits the
+available dataset into a training and a validation (or hold-out) dataset.
+Dataset
+Train
+
+Validation
+
+Models are then fitted with the training part and the validation part is
+used to estimate its quality.
+Other popular validation approaches include Leave-One-Out and
+K-Fold cross-validation.
+
+40/48
+
+Agenda
+
+Testing a model to evaluate its deployment quality
+Optimisation and the error surface
+Training a model
+Validating our models
+Summary and other validation approaches
+
+41/48
+
+Machine learning methodology: Basic tasks
+
+In machine learning we can identify the following tasks:
+Test: This is the most important task. It allows us to estimate the
+deployment quality of a model.
+Training: Used to find the best values for the parameters of a
+model, i.e. to tune a model.
+Validation: Necessary to compare different modelling options and
+select the best one, the one that will be trained.
+
+42/48
+
+The role of data
+
+In machine learning we do not have an ideal description of the target
+population, all we can do is extract data.
+Test, training and validation tasks all involve data.
+Hence we talk about test dataset, as the data used for testing a
+model, training dataset, as the data used for training a model, etc.
+Think about the tasks first, then create the datasets that you need.
+So you’ve read about splitting a dataset? Splitting datasets is not an
+ML task. What we need is to create the right dataset for each task.
+This might involve splitting an existing dataset, but not necessarily.
+
+43/48
+
+Using data correctly
+
+Datasets need to be representative of the target population and its
+samples need to have been extracted independently.
+Any test strategy has to be designed before training. Avoid looking
+at the test dataset during training and test a final model only once.
+Any quality estimation that is obtained from a dataset is a random
+quantity: use with caution.
+The quality of a final model depends on the type of model, the
+optimisation strategy and the representativity of the training data.
+
+44/48
+
+Leave-one-out cross-validation (LOOCV)
+This method also splits the available dataset into training and validation
+sets. However, the validation set contains only one sample.
+
+...
+
+Multiple splits are considered and the final quality is calculated as the
+average of the individual qualities (for N samples, we produce N splits
+and obtain N different qualities).
+
+45/48
+
+k-fold cross-validation
+In this approach the available dataset is divided into k groups (also
+known as folds) of approximately equal size:
+We carry k rounds of training followed by validation, each one
+using a different fold for validation and the remaining for training.
+The final estimation of the quality is the average of the qualities
+from each round.
+
+LOOCV is a special case of k-fold cross-validation, where k = N .
+
+46/48
+
+Validation approaches: Comparison
+
+The validation set approach involves one training round. Models
+are however trained with fewer samples and the final quality is highly
+variable due to random splitting.
+LOOCV requires as many training rounds as samples there are in
+the dataset, however in every round almost all the samples are used
+for training. It always provides the same quality estimation.
+k-fold is the most popular approach. It involves fewer training
+rounds than LOOVC. Compared to the validation set approach, the
+quality estimation is less variable and more samples are used for
+training.
+
+47/48
+
+Disappointed you didn’t decipher Linear B?
+
+Don’t worry, we still have a
+few undeciphered scripts:
+Proto-Elamite
+Indus
+Meroitic
+Linear A
+Rongorongo
+Zapotec
+Voiynichese
+The Voynich Manuscript, 15th century
+
+48/48
+
+

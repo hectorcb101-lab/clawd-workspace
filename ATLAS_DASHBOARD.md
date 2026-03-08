@@ -1,61 +1,38 @@
-# 🏛️ Atlas Command Centre
-*Private operational dashboard — updated automatically*
+# ATLAS DASHBOARD
 
-**Last Updated:** 2026-02-03 07:22 UTC
+**Last Updated:** 2026-03-08 07:01 GMT (Sunday)
 
----
+## System Health
 
-## 📊 System Health
+✅ **Atlas Memory Daemon:** Running (PID 762, 16,854 events captured)
+✅ **Email Monitoring:** Active (using direct API via check_emails.py)
+✅ **Morning Briefing:** Delivered successfully at 07:01 GMT (Telegram only - email send failed)
+✅ **Context Usage:** 0% (fresh session) - healthy
 
-| Component | Status | Last Check |
-|-----------|--------|------------|
-| Memory Daemon | ✅ Running (PID 245587) | 2026-02-02 |
-| Gmail Watcher | ✅ Running | 2026-02-02 |
-| Event Count | 703 processed | 2026-02-02 |
-| Facts Extracted | 619 | 2026-02-02 |
-| Obsidian Sync | ✅ Pushed | 2026-02-02 15:08 |
+## Active Tasks
 
----
+**URGENT — Quiz Prep Reminders Sent:**
+- ML Lab Quizzes (20%): Friday 13 March (5 days away)
+- Stats Quiz (30%): Week 8 (w/c 16 March)
+- Action: Reminded Finn of both, flagged ML as urgent priority
+- Offer: Create ML revision plan to match Stats plan structure
 
-## 📬 Email Status
+## Unread Emails (6 total)
 
-**Pending Tasks:** 0  
-**Processed Today:** 12  
-**Watcher:** Active, polling every 60s
+None from Finn. Others:
+- Fulcrank welcome email (Feb 21)
+- Mail delivery failures (3 bounced emails from Feb)
+- Google account notifications (2)
 
----
+## Today's Briefing Highlights (March 8)
 
-## 🎯 Finn's Active Tasks
+- **Markets:** VIX up 24.2% to $29.49 (major fear spike), oil up 12.2%
+- **Geopolitical Alpha:** Fed maintains rates at 3.5-3.75%, OPEC+ extends production cuts, ECB signals potential rate cuts
+- **Atlas Take:** Quiet tape with rising fear. VIX spike shows uncertainty building. Calm before storm or grinding consolidation - volume will tell.
 
-### This Week's Top 3 (Week of 2-8 Feb)
-- [ ] Ethics readings done before Wednesday 4pm
-- [ ] Review Week 1 — can you explain without notes?
-- [ ] Get library books — Bad Science, Thinking Fast and Slow
+## Notes
 
-### Today (Tuesday 3 Feb)
-- [ ] Review Stats Week 1 notes
-- [ ] Review Python Week 1 notes
-- [ ] Prep for Wednesday lectures (Stats, Python, Ethics)
-
----
-
-## 📅 Upcoming Schedule
-
-| Date | Event | Notes |
-|------|-------|-------|
-| Wed 4 Feb | Stats 11:00, Python 14:00, Ethics 16:00 | Lecture day |
-| Thu 5 Feb | Stats Lab 09:00, Python Lab 11:00, ML 14:00 | Labs + ML |
-| Fri 6 Feb | ML Lab | Lab day |
-
----
-
-## 🧠 Intelligence Notes
-
-- MSc Week 2 starting
-- Stats reading guide created with chapter mappings
-- All email tasks completed
-- Gmail watcher + email tracker operational
-
----
-
-*This dashboard is for Atlas's eyes only. Updated during heartbeats and before briefings.*
+- Google Workspace MCP auth expired again (recurring issue) - using fallback check_emails.py successfully
+- Briefing script delivery still failing (clawdbot command + MCP deprecation), delivered manually via message tool + atlas_email.py
+- No active builds
+- Next weekly review: Monday March 10th

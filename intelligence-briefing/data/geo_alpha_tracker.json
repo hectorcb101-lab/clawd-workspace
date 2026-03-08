@@ -1,0 +1,182 @@
+{
+  "last_updated": "2026-02-16T10:24:00Z",
+  "active_chains": [
+    {
+      "id": "iran-squeeze-2026-02",
+      "title": "The Iran Squeeze — India Realignment",
+      "started": "2026-02-16",
+      "status": "active",
+      "conviction": "HIGH",
+      "key_facts": {
+        "event": "25% secondary tariffs on Iran buyers (effective 7 Feb). 30-day nuclear ultimatum. Dual carrier strike group in Persian Gulf.",
+        "india_pivot": "India committed to stop buying Russian oil. $500bn US purchase commitment over 5 years. Reciprocal tariff reduced to 18%.",
+        "oil": "Brent ~$70, up 14% YTD on geopolitical premium",
+        "venezuela": "US issued Reliance licence for direct Venezuelan crude purchase",
+        "russia_impact": "GDP 0.6%, losing Indian oil customer, central bank cut to 15.5%"
+      },
+      "predictions": [
+        {
+          "prediction": "If Iran talks fail by early March, oil tests $80+",
+          "status": "pending",
+          "deadline": "2026-03-10"
+        },
+        {
+          "prediction": "If deal reached, sharp reversal — geopolitical premium unwinds 8-12% in days",
+          "status": "pending",
+          "deadline": "2026-03-10"
+        },
+        {
+          "prediction": "Watch for India's first major US weapons purchase announcement as confirmation of realignment",
+          "status": "pending",
+          "deadline": "2026-06-01"
+        }
+      ],
+      "watch_items": [
+        "Iran response to 30-day ultimatum (~early March deadline)",
+        "Oman-mediated US-Iran talks outcome",
+        "India defence procurement announcements",
+        "OPEC+ April output decision"
+      ],
+      "historical_parallels_cited": ["Trump JCPOA withdrawal 2018 (oil $65→$85)", "1980s Tanker Wars"],
+      "sources": ["Reuters", "Harbinger Strategies", "Kpler", "IEA Feb report", "White House EO", "India-US joint statement"]
+    },
+    {
+      "id": "europe-rearm-2026-02",
+      "title": "European Rearmament Acceleration + UK-EU Pivot",
+      "started": "2026-02-16",
+      "status": "active",
+      "conviction": "HIGH",
+      "key_facts": {
+        "munich": "MSC Feb 13-15. Rubio: 'The Old World is Gone'. Theme: 'Under Destruction'.",
+        "germany": "Military warns compressed timelines for conflict readiness",
+        "france": "Launched Orion 26 exercise (high-intensity warfare simulation)",
+        "uk": "£545M hypersonic weapons commitment. Starmer pivoting toward EU single market. Prepared to deploy peacekeepers to Ukraine if ceasefire.",
+        "eu": "Buy European procurement push debated at Brussels summit"
+      },
+      "predictions": [
+        {
+          "prediction": "European defence remains strongest secular trade — BAE, Rheinmetall, Leonardo, Thales, Saab multi-year tailwinds",
+          "status": "pending",
+          "deadline": "2026-08-16"
+        },
+        {
+          "prediction": "Second-order plays less priced in: specialty chemicals, cybersecurity, construction/engineering",
+          "status": "pending",
+          "deadline": "2026-08-16"
+        },
+        {
+          "prediction": "EU defence procurement reform proposals expected Q2 2026",
+          "status": "pending",
+          "deadline": "2026-06-30"
+        },
+        {
+          "prediction": "Starmer EU pivot = structural GBP strengthening if concrete policy follows. FTSE 250 outperforms FTSE 100.",
+          "status": "pending",
+          "deadline": "2026-06-30"
+        }
+      ],
+      "watch_items": [
+        "EU procurement reform proposals (Q2 2026)",
+        "German debt brake modification for defence",
+        "UK-EU defence cooperation agreement specifics",
+        "Concrete Starmer single market proposals vs rhetoric"
+      ],
+      "historical_parallels_cited": ["Post-Ukraine 2022: Rheinmetall +250%, BAE +60%"],
+      "sources": ["MSC proceedings", "WSJ", "Guardian", "Mackinder Forum", "ISW", "UK MoD"]
+    },
+    {
+      "id": "geneva-talks-2026-02",
+      "title": "Russia-Ukraine Peace Talks + War Economy Deterioration",
+      "started": "2026-02-16",
+      "status": "active",
+      "conviction": "MEDIUM",
+      "key_facts": {
+        "talks": "US-brokered trilateral Geneva talks Feb 17-18. 20-point plan. Sticking points: Donbas free economic zone, energy infrastructure strike moratorium.",
+        "russia_economy": "GDP 0.6%, rate cut to 15.5%, 1.245M casualties, advance rate 15-70m/day (slowest in a century)",
+        "ukraine": "Active defence posture, PURL initiative raised $4.5bn, localised advances in Hulyaipole direction",
+        "trump_pressure": "Publicly told Zelenskyy to 'get moving'"
+      },
+      "predictions": [
+        {
+          "prediction": "Geneva produces framework/agreement to continue — not a ceasefire. Modest rally (Euro gas -3-5%, European equities +1-2%) then drift back.",
+          "status": "pending",
+          "deadline": "2026-02-20"
+        },
+        {
+          "prediction": "European energy reconfiguration is permanent regardless of peace outcome",
+          "status": "pending",
+          "deadline": "2026-12-31"
+        },
+        {
+          "prediction": "Russia's negotiating position weakens over time as India oil exit + low growth + high casualties compound",
+          "status": "pending",
+          "deadline": "2026-06-01"
+        }
+      ],
+      "watch_items": [
+        "Geneva outcomes Feb 17-18 — energy infrastructure moratorium = serious, vague framework = posturing",
+        "European gas price reaction",
+        "Any concrete territory concession language",
+        "Trump follow-up statements"
+      ],
+      "historical_parallels_cited": ["Minsk 2014-15 (equities +5-8% then retraced)", "Korean War armistice talks 1951-53"],
+      "sources": ["ISW (Feb 11, 13)", "Ronin's SITREP", "Reuters", "Bank of Russia", "Mackinder Forum"]
+    },
+    {
+      "id": "warsh-fed-cascade-2026-02",
+      "title": "Warsh Fed Chair — Cross-Asset Cascade",
+      "started": "2026-02-16",
+      "status": "active",
+      "conviction": "HIGH",
+      "key_facts": {
+        "appointment": "Kevin Warsh named next Fed Chair (replacing Powell in May). Known hawk.",
+        "market_reaction": "Gold -4%, silver -5%, oil -4%, copper -4%. CME margin hike triggered liquidation cascade.",
+        "context": "Gold/silver had rallied 30%/71% to records in January — parabolic and overextended.",
+        "rates": "US inflation sticky at 2.4%. BoE held 3.75% (5-4 split). ECB held. Synchronised hawkish shift globally.",
+        "boe_detail": "4 members voted for cut — March cut probability jumped to ~50%"
+      },
+      "predictions": [
+        {
+          "prediction": "Commodity unwind has further to go. Gold to test $2,400-2,500 (from ~$2,900 highs).",
+          "status": "pending",
+          "deadline": "2026-05-01"
+        },
+        {
+          "prediction": "Equities outperform commodities next quarter. Banks cleanest play on Warsh regime.",
+          "status": "pending",
+          "deadline": "2026-05-16"
+        },
+        {
+          "prediction": "If CPI stays sticky, Warsh more hawkish than expected — cascade continues.",
+          "status": "pending",
+          "deadline": "2026-04-01"
+        }
+      ],
+      "watch_items": [
+        "Next US CPI print",
+        "Gold price trajectory — parabolic breaks overshoot downside",
+        "BoE March decision (19 March) — cut now ~50% probability",
+        "Warsh confirmation hearings and policy signals"
+      ],
+      "historical_parallels_cited": ["Volcker 1979 — hawkish appointment, immediate commodity pain, equity-positive 18-24mo"],
+      "sources": ["Reuters (2)", "CME Group", "Fed records", "BoE Feb minutes", "ECB Feb decision"]
+    }
+  ],
+  "retired_chains": [],
+  "global_context": {
+    "us_inflation": "2.4% (sticky)",
+    "fed_rate": "current rate TBD — Powell still chair until May",
+    "boe_rate": "3.75% (held Feb 5, next 19 March, cut ~50% probability)",
+    "ecb_rate": "2.00% deposit (held Feb 5)",
+    "russia_cbr_rate": "15.50% (cut from 16.00%)",
+    "brent_oil": "~$70 (+14% YTD)",
+    "gold": "correcting from ~$2,900 January highs",
+    "key_dates": [
+      "2026-02-17: Geneva Russia-Ukraine talks begin",
+      "2026-02-18: Geneva talks day 2",
+      "2026-03-10: ~Iran ultimatum deadline",
+      "2026-03-19: BoE rate decision",
+      "2026-Q2: EU procurement reform proposals expected"
+    ]
+  }
+}

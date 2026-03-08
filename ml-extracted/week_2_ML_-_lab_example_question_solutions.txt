@@ -1,0 +1,1114 @@
+P RINCIPLES OF M ACHINE L EARNING
+R EGRESSION
+A CADEMIC YEAR 2024/2025
+Q UEEN M ARY U NIVERSITY OF L ONDON
+
+1
+
+S OLUTIONS
+E XERCISE ♯1 (S OL ): Using the following definitions:
+ŷi
+
+=
+
+f (xi )
+
+ei
+
+=
+
+yi − ŷi
+
+we can obtain for the absolute |e| and squared errors e2 of the predictions made by f1 (x):
+ID
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+x
+2
+3
+1
+1
+0
+5
+4
+6
+5
+3
+
+y
+1
+2
+2
+1
+1
+3
+3
+7
+6
+5
+
+ŷ = f1 (x)
+5
+7
+3
+3
+1
+11
+9
+13
+11
+7
+
+e2
+16
+25
+1
+4
+0
+64
+36
+36
+25
+4
+
+|e|
+4
+5
+1
+2
+0
+8
+6
+6
+5
+2
+
+e
+-4
+-5
+-1
+-2
+0
+-8
+-6
+-6
+-5
+-2
+
+The resulting MAE and MSE values are:
+EM AE
+
+=
+
+EM SE
+
+=
+
+1 X
+1
+|ei | =
+(4 + 5 + 1 + 2 + 0 + 8 + 6 + 6 + 5 + 2) = 3.9
+N
+10
+N
+1 X 2
+1
+ei =
+(16 + 25 + 1 + 4 + 0 + 64 + 36 + 36 + 25 + 4) = 21.1
+N i=1
+10
+
+Carrying out the same steps for the remaining 4 models, we obtain the following MAE and
+MSE values:
+Model
+f1
+f2
+f3
+f4
+f5
+
+MAE
+3.9
+1.1
+2.5
+1.2
+1.1
+
+MSE
+21.1
+1.5
+9.5
+1.85
+1.65
+
+If we use the MAE as our quality metric, we could choose either f2 or f5 , as they have the
+lowest MAE value. If we use the MSE, we would choose f2 . For illustrative purposes, the
+following figure plots each model and the dataset used for testing them:
+10
+y
+f1
+f2
+f3
+f4
+f5
+
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+-1
+-1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+2
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+E XERCISE ♯2 (S OL ): For w0 = 0 and w1 =0, 1/5, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, plotting the MSE
+value against w1 results in:
+200
+
+180
+
+160
+
+140
+
+120
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Hence w1 = 1 minimises the MSE (MSE = 1.5). For w0 = 1 and w0 = -4, -3, -2, -1, 0, 1, 2, 3, 4, 5,
+we obtain:
+30
+
+25
+
+20
+
+15
+
+10
+
+5
+
+0
+-4
+
+-3
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+The lowest MSE value is achieved for w0 = 0 (MSE = 1.5). Based on the MSE values along w0
+and w1 , we would sketch a convex MSE surface, whose lowest point is close to the point
+w0 = 1, w1 = 1. Using the normal equations, the least square solution is w0 = 0.43, w1 = 0.89
+(MSE = 1.45).
+The MSE surface computed on the grid defined by the points w1 =0, 1/5, 1/4, 1/3, 1/2, 1, 2, 3,
+4, 5 and w0 = -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 is:
+
+3
+
+E XERCISE ♯3 (S OL ): The following figures show each dataset together with the least squares
+linear solution:
+Table 2
+4
+
+3.5
+
+3.5
+
+3
+
+3
+
+2.5
+
+2.5
+
+2
+
+2
+
+y
+
+y
+
+Table 1
+4
+
+1.5
+
+1.5
+
+1
+
+1
+
+0.5
+
+0.5
+
+0
+
+0
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+0
+
+0.5
+
+1
+
+1.5
+
+x
+
+2.5
+
+3
+
+3.5
+
+4
+
+2.5
+
+3
+
+3.5
+
+4
+
+x
+
+Table 3
+
+Table 4
+
+4
+
+4
+
+3.5
+
+3.5
+
+3
+
+3
+
+2.5
+
+2.5
+
+2
+
+2
+
+y
+
+y
+
+2
+
+1.5
+
+1.5
+
+1
+
+1
+
+0.5
+
+0.5
+
+0
+
+0
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+0
+
+x
+
+0.5
+
+1
+
+1.5
+
+2
+
+x
+
+Table 5
+4
+
+3.5
+
+3
+
+y
+
+2.5
+
+2
+
+1.5
+
+1
+
+0.5
+
+0
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+x
+
+We will show how to obtain the least squares solution for the dataset shown in Table 5. The
+design matrix X and label vector y are:
+
+
+ 
+1 1
+1
+1 1
+0.8
+
+
+ 
+
+
+
+
+1 1
+1.2
+6 7
+1.8 −1.4
+T
+T
+−1
+
+
+
+
+X=
+y= 
+X X=
+(X X) =
+
+7 9
+−1.4 1.2
+1 1
+1.1
+1 1
+0.7
+1 2
+2
+
+
+
+
+0.4
+0.4
+0.4
+0.4
+0.4 −1
+−0.08
+T
+T
+T
+T
+−1
+−1
+(X X) X =
+w = (X X) X y =
+−0.2 −0.2 −0.2 −0.2 −0.2 1
+1.04
+The coefficients vector w is the result of multiplying the matrix (X T X)−1 X T and the label
+vector y. The entries of (X T X)−1 X T can be used to quantify the strength of the dependence
+of each coefficient on one individual sample.
+The least square solutions are: w = [0, 1]T (Table 1), w = [0, 1]T (Table 2), w = [−0.08, 1.08]T
+(Table 3), w = [−0.06, 1.06]T (Table 4), w = [−0.08, 1.04]T (Table 5)
+4
+
+E XERCISE ♯4 (S OL ): The mathematical expressions of a linear, quadratic and cubic model are
+y = w0 + w1 x, y = w0 + w1 x + w2 x2 and y = w0 + w1 x + w2 x2 + w3 x3 , respectively. The
+corresponding design matrices X L (linear), X Q (quadratic) and X C (cubic) are
+ 
+
+
+
+
+
+
+2.2
+1 1
+1
+1
+1 1
+1
+1 1
+3.5
+
+1 2
+
+1 2
+1 2 
+4
+8
+4
+ 
+
+
+
+
+
+
+3.9
+1 3
+1 3
+1 3 
+9
+27 
+9 
+ 
+
+
+
+
+
+
+2.9
+
+1 5
+
+1 5
+1 5 
+25
+125
+25
+
+
+
+
+
+
+
+y=
+XC = 
+XC = 
+XL = 
+5
+
+
+
+1
+7
+49
+343
+1
+7
+49
+1
+7
+ 
+
+
+
+
+
+
+6.2
+1 8
+1 8
+1 8 
+64
+512 
+64 
+
+ 
+
+
+
+
+
+3
+1 2.5 6.25 15.625
+1 2.5 6.25
+1 2.5
+4.8
+1 8
+64
+512
+1 8
+64
+1 8
+Using the normal equations, the least squares solutions are wL = [2.12, 0.40]T ,
+wQ = [2.72, 0.03, 0.04]T and wC = [0.84, 1.95, −0.47, 0.04]T .
+Plotting the resulting models we obtain:
+Quadratic model
+
+Cubic model
+10
+
+9
+
+9
+
+8
+
+8
+
+8
+
+7
+
+7
+
+7
+
+6
+
+6
+
+6
+
+5
+
+5
+
+5
+
+y
+
+10
+
+9
+
+y
+
+y
+
+Linear model
+10
+
+4
+
+4
+
+4
+
+3
+
+3
+
+3
+
+2
+
+2
+
+2
+
+1
+
+1
+
+0
+
+1
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+x
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+x
+
+6
+
+7
+
+8
+
+9
+
+10
+
+x
+
+Their MSE values are MSEL = 0.42, MSEQ = 0.40 and MSEC = 0.28 respectively. The cubic model
+achieves the lowest MSE value. Comparing models based on their training MSE error is a
+mistake: we need to use a separate dataset to evaluate the future deployment performance.
+We are not given a separate dataset, hence we cannot say that one of the models is better than
+the rest.
+When the number of coefficients of a polynomial model is equal or greater than the number of
+samples, in principle we could find a solution that achieves perfect predictions on the training
+dataset. Our models are however likely to be memorising irrelevant details at the expense of
+deteriorating their generalisation ability.
+This dataset consists of 8 samples and in principle there exists a polynomial of degree 7 or
+higher that predicts perfectly all the labels in the training dataset (MSE = 0). However, notice
+that samples 6 and 8 share the same predictor but have different labels. No model can return 2
+different labels for the same predictor. As a result of this, the matrix X T X is singular and not
+invertible. Any numerical result produced in this scenario is likely to be useless. The MSE of
+the least square polynomial of order 6 is MSE6 =0.12, and of order 7 is MSE7 =71.70.
+Degree 6
+
+Degree 7
+
+10
+
+9
+
+9
+
+8
+
+8
+
+7
+
+7
+
+6
+
+6
+
+5
+
+5
+
+y
+
+y
+
+10
+
+4
+
+4
+
+3
+
+3
+
+2
+
+2
+
+1
+
+1
+
+0
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+0
+
+x
+
+1
+
+2
+
+3
+
+4
+
+5
+
+x
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+E XERCISE ♯5 (S OL ):
+Plotting the dataset as it is given to us, it is hard to see any meaningful structure, as most of
+the samples appear concentrated within a narrow range of body mass values:
+800
+
+700
+
+600
+
+500
+
+400
+
+300
+
+200
+
+100
+
+0
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+10 7
+
+Removing samples with large body mass values would not help much, as the problem is that
+the body mass values span several orders of magnitude. It makes more sense to transform the
+dataset using a logarithmic scale. To do this, we simply need to calculate the logarithm base 10
+of each body mass. For instance, the body mass of a meerkat is BM = 5000 g, taking logarithms
+we obtain log10 (BM) = 3.7. Instead of using the body mass as our predictor, we can use the
+logarithm base 10 of the BM.
+Fitting a linear, quadratic and cubic model to this transformed dataset, we get the solutions
+plotted in the following figure:
+1000
+
+800
+
+600
+
+400
+
+200
+
+0
+
+-200
+
+-400
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+6
+
+7
+
+8
+
+9
+
+10
+
+This visualisation shows how well each model fits the (training) dataset. We could also obtain
+their training MSE values. However, remember that the training MSE value should not be
+used to compare models: we need to challenge each model with unseen data. Interestingly,
+even though we do not have a separate dataset to test the three models, we can use domain
+knowledge to evaluate them. Note that the linear and cubic models predict negative heart
+rates, which makes no sense. The quadratic model predicts an increase in heart rate as the
+body mass increases, which is questionable too. Therefore, in addition to data-driven test
+tasks, we can consider other approaches which use what we know about the problem at hand.
+If we apply a logarithmic transformation to both the body mass and heart rate, we would
+observe that the transform samples seem to lie on a straight line. Let’s fit a linear model to this
+transformed dataset (the coefficients of this model are w0 = 2.96 and w1 = −0.2):
+3
+
+2.5
+
+2
+
+1.5
+
+1
+
+0.5
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+7
+
+8
+
+9
+
+10
+
+And then transform the heart rate back to its original scale:
+1000
+
+900
+
+800
+
+700
+
+600
+
+500
+
+400
+
+300
+
+200
+
+100
+
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+The resulting model is a so-called exponential model.
+
+7
+
+6
+
+E XERCISE ♯6 (S OL ): A regression model that predicts several labels can be seen as several
+ordinary regression models operating in parallel. Let K denote the number of labels and
+w1 , w2 , . . . wK be the coefficients for each one of the individual regression models. Using
+matrix notation, we can define a matrix W = [w1 , w2 , . . . , wK ] containing the coefficients of
+all the individual models. Then, we can predict y as y = W T x.
+
+8
+
+

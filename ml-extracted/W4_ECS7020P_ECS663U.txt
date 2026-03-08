@@ -1,0 +1,663 @@
+School of Electronic Engineering and Computer Science
+Queen Mary University of London
+
+ECS7020P/ECS663U
+Principles of Machine Learning
+Supervised learning: Classification I
+Dr Jesús Requena Carrión
+
+13 Oct 2025
+
+Flexibility, complexity and overfitting
+
+In any machine learning project we assume that our samples follow a
+pattern and any deviation from this pattern is considered to be noise.
+Our models need to be flexible enough to capture the complexity of
+the underlying pattern, but no too flexible, as we might end up
+memorising irrelevant noise details in our data.
+A rigorous methodology is crucial to avoid falling into common traps,
+such as overfitting.
+So someone has collected our dataset? Great! Let’s go ahead, put our
+methodology to work and build a fantastic model. Great?
+
+2/48
+
+The 1936 Literary Digest Poll
+
+Alfred Landon
+Republican Party
+
+Franklin D. Roosevelt
+Democratic Party
+
+The Literary Digest conducted one of the largest polls ever.
+Predicted Landon would get 57 % of the vote, Roosevelt 43 %.
+Landon ended up getting 38 % of the votes and Roosevelt 62 %.
+What happened?
+
+3/48
+
+Know your data!
+
+4/48
+
+Agenda
+
+Formulating classification problems
+Linear classifiers
+Logistic model
+Nearest neighbours
+Summary
+
+5/48
+
+Machine Learning taxonomy
+
+Machine
+Learning
+
+Supervised
+
+Regression
+
+Classification
+
+Unsupervised
+
+Density
+Estimation
+
+Structure
+Analysis
+
+6/48
+
+Classification: Problem formulation
+
+In classification (also known as decision or detection) problems:
+We want to build a model that produces a label when shown a set
+of predictors.
+The label is discrete and each of its values is known as a class.
+This is not machine learning yet. Can you tell why?
+
+7/48
+
+Classification: Problem formulation
+
+In a machine learning classification problem:
+We build a model ŷ = f (x) using a dataset {(xi , yi ) ∶ 1 ≤ i ≤ N }.
+We have a notion of model quality.
+The pair (xi , yi ) can be read as ”sample i belongs to class yi ”, or
+”the label of sample i is yi ”.
+
+xi
+
+f (⋅)
+
+ŷi
+
+8/48
+
+A binary classification problem
+
+Sentiment analysis seeks to identify human opinions implied by a
+fragment of text. Multiple opinions can be considered, but in its simplest
+form two are defined, namely positive and negative.
+The Large Movie Review Dataset was created to build models that
+recognise polar sentiments in fragments of text:
+It contains 2500 samples for training and 2500 samples for testing
+Each instance consists of a fragment of text used as a predictor
+and a binary label (0 being negative opinion, 1 positive opinion).
+Downloadable from ai.stanford.edu/∼amaas/data/sentiment/
+
+9/48
+
+A multiclass classification problem
+Recognising digits in images containing handwritten representations is a
+classic multiclass classification problem. The predictor is an array of
+values (image) and there are 10 classes, namely 0, 1, 2, . . . 9.
+In machine learning we use datasets of labelled images, i.e. pairs of
+images (predictors) and numerical values (label), to build such models.
+The MNIST dataset is a collection
+of handwritten digits:
+60,000 images for training,
+10,000 for testing
+Images are black and white,
+28×28 pixels
+Downloadable from
+yann.lecun.com/exdb/mnist
+
+10/48
+
+The dataset in the attribute space
+Labels can be represented by numerical values on a vertical axis. Be
+careful: the usual notions of ordering and distance do not apply to
+categorical variables.
+One predictor, two classes
+
+Two predictors, three classes
+
+11/48
+
+The dataset in the predictor space
+A more convenient representation consists of using different symbols
+for each label in the predictor space.
+One predictor, two classes
+
+Two predictors, three classes
+
+12/48
+
+What does a classifier look like?
+Using the training dataset below, how would you classify an individual
+who is 50 years old whose salary is 60K?
+
+Go to menti.com
+
+13/48
+
+What does a classifier look like?
+
+Regression models can be represented as curves/surfaces/hypersurfaces
+in the attribute space.
+In classification problems we use the notion of decision regions in the
+predictor space.
+A decision region is made up of points that are associated to the
+same label.
+Regions can be defined by identifying their boundaries.
+A solution model in classification is a partition of the predictor
+space into decision regions separated by decision boundaries.
+
+14/48
+
+What does a classifier look like?
+In machine learning we use data to build models: When we build
+classifiers, we use data to define their decision regions.
+
+15/48
+
+Agenda
+
+Formulating classification problems
+Linear classifiers
+Logistic model
+Nearest neighbours
+Summary
+
+16/48
+
+The simplest boundary
+Let’s consider a binary classification problem. The simplest boundary is:
+A single point (known as threshold) in 1D predictor spaces.
+A straight line in 2D predictor spaces.
+A plane surface in 3D predictor spaces.
+These are linear boundaries.
+
+1 predictor
+
+2 predictors
+
+3 predictors
+
+17/48
+
+Definition of linear classifiers
+
+Linear classifiers use linear boundaries between decision regions:
+Linear boundaries are defined by the linear equation wT x = 0.
+T
+
+The extended vector x = [1, x1 , x2 ...] contains the predictors and
+w is the coefficients vector.
+To classify a sample we simply identify the side of the boundary
+where it lies.
+
+18/48
+
+Definition of linear classifiers
+If we know the coefficients vector w of a linear boundary, classifying a
+sample is very simple:
+Build the extended vector xi .
+Compute wT xi .
+Classify using the following facts:
+• If wT xi > 0, we are on one side of the boundary.
+• If wT xi < 0, we are on the other!
+• If wT xi = 0... where are we?
+Now that we know how to use linear classifiers during deployment, let’s
+consider the problem of building the best one given a dataset. To
+answer this question, we need to define our quality metric first.
+
+19/48
+
+A basic quality metric
+The only operation that we can perform with categorical variables is
+comparison, i.e. we can assess whether yi = ŷi is either true or false.
+By comparing predictions and true labels, we can identify in a dataset:
+The correctly classified samples (true predictions) in each class.
+The incorrectly classified samples (false predictions) in each class.
+Two common and equivalent notions of quality are the empirical
+accuracy Â and error (or misclassification) rate Ê = 1 − Â, defined as:
+Â =
+
+#true predictions
+#samples
+
+,
+
+Ê =
+
+#false predictions
+#samples
+
+The true accuracy A and error rate E are defined analogously on the
+target population.
+
+20/48
+
+The best linear classifier: Separable case
+In linearly separable datasets, we can find a linear classifier that achieves
+the maximum accuracy (Â = 1, Ê = 0).
+
+21/48
+
+The best linear classifier: Non separable case
+In non linearly-separable datasets, the accuracy of a linear classifier is
+Â < 1 (Ê > 0). The best one will achieve the highest accuracy.
+
+22/48
+
+Finding the best linear classifier
+
+We have introduced the linear classifier and presented two quality metrics
+(accuracy and error rate). If we are given a linear classifier w, we can use
+a dataset to calculate its quality.
+The question we want to answer now is, how can we use data to find
+the best linear classifier?
+
+23/48
+
+Agenda
+
+Formulating classification problems
+Linear classifiers
+Logistic model
+Nearest neighbours
+Summary
+
+24/48
+
+Best, but risky, linear solutions
+Which one of the three boundaries below would you choose?
+
+Go to menti.com
+
+25/48
+
+Keep that boundary away from me!
+As we get closer to the decision boundary, life gets harder for a classifier:
+it is noise territory and we should beware of jumpy samples.
+The further we are from the boundary, the higher our certainty that we
+are classifying samples correctly.
+
+26/48
+
+How far is my sample from the boundary?
+Given a linear boundary w and a sample xi , the quantity di = wT xi can
+be interpreted as the distance from the sample to the boundary.
+
+27/48
+
+Quantifying our uncertainty: The logistic model
+The logistic function p(d) is defined as
+p(d) =
+
+ed
+1
+=
+d
+1+e
+1 + e−d
+
+p(d)
+
+1
+
+0
+d
+
+Note that
+p(0) = 0.5.
+As d → ∞, p(d) → 1.
+As d → −∞, p(d) → 0.
+
+28/48
+
+Quantifying our uncertainty: The logistic model
+
+If we set d = wT xi in the logistic function, we get:
+T
+
+ew xi
+p(w xi ) =
+1 + ewT xi
+T
+
+For a fixed w, we will simply denote it as p(xi ) to simplify the notation:
+When wT x → ∞, the logistic function p(xi ) → 1
+When wT x → −∞, the logistic function p(xi ) → 0
+We will use the logistic function to quantify the notion of certainty in
+classifiers. This certainty is a quantity between 0 and 1.
+
+29/48
+
+Quantifying our uncertainty: The logistic model
+Consider a linear classifier w that labels samples such that wT xi > 0 as o
+and samples such that wT xi < 0 as o.
+Notice that:
+If wT xi = 0 (xi is on the boundary), p(xi ) = 0.5.
+If wT xi > 0 (xi is in the o region),
+p(xi ) → 1 as we move away from the boundary.
+If wT xi < 0 (xi is in the o region),
+p(xi ) → 0 as we move away from the boundary.
+Here is the crucial point, so use all your neurons:
+p(xi ) is the classifier’s certainty that yi = o true.
+1 − p(xi ) is the classifier’s certainty that yi = o true.
+
+30/48
+
+The logistic classifier
+We can obtain the classifier’s certainty that xi belongs to either o or o.
+Can we calculate the certainty for a labelled dataset {(xi , yi )}?
+The answer is yes, by multiplying the individual certainties:
+L = ∏ (1 − p(xi )) ∏ p(xi )
+yi =o
+
+yi =o
+
+L is known as the likelihood function and defines a quality metric.
+Taking logarithms, we obtain the log-likelihood:
+l = ∑ log [1 − p(xi )] + ∑ log [p(xi )]
+yi =o
+
+yi =o
+
+The linear classifier that maximises L or l is known as the Logistic
+Regression classifier. It can be found using gradient descent.
+
+31/48
+
+Agenda
+
+Formulating classification problems
+Linear classifiers
+Logistic model
+Nearest neighbours
+Summary
+
+32/48
+
+Parametric and non-parametric approaches
+
+Linear classifiers belong to the family of parametric approaches: a shape
+is assumed (in this case linear) and our dataset is used to find the best
+boundary amongst all the boundaries with the preselected shape.
+Non-parametric approaches offer a more flexible alternative, as they do
+not assume any type of boundary. In this section, we will study a popular
+non-parametric approach, namely k Nearest Neighbours (kNN).
+
+33/48
+
+Nearest Neighbours
+
+In nearest neighbours (NN), new samples are assigned the label of the
+closest (most similar) training sample. Therefore:
+Boundaries are not defined explicitly (although they exist and can be
+obtained).
+The whole training dataset needs to be memorised. That’s why
+sometimes we say NN is an instance-based method.
+
+34/48
+
+Boundaries in Nearest Neighbours classifiers
+
+35/48
+
+k Nearest Neighbours
+
+Boundaries in nearest neighbours classifiers can be too complex and hard
+to interpret. Can we smooth them?
+K nearest neighbours (kNN) is a simple extension of nearest neighbours
+that proceeds as follows. Given a new sample x:
+We calculate the distance to all the training samples xi .
+Extract the K closest samples (neighbours).
+Obtain the number of neighbours that belong to each class.
+Assign the label of the most popular class among the neighbours.
+
+36/48
+
+Boundaries in kNN classifiers k = 1
+
+37/48
+
+Boundaries in kNN classifiers k = 3
+
+38/48
+
+Boundaries in kNN classifiers k = 15
+
+39/48
+
+k Nearest Neighbours
+
+Note that:
+There is always an implicit boundary, although it is not used to
+classify new samples.
+As K increases, the boundary becomes less complex. We move away
+from overfitting (small K) to underfitting (large K) classifiers.
+In binary problems, the value of K is usually an odd number. The
+idea is to prevent situations where half of the nearest neighbours of
+a sample belong to each class.
+kNN can be easily implemented in multi-class scenarios.
+
+40/48
+
+Agenda
+
+Formulating classification problems
+Linear classifiers
+Logistic model
+Nearest neighbours
+Summary
+
+41/48
+
+Machine learning classifiers
+
+Classifiers are partitions of the predictor space into decision regions
+separated by boundaries.
+Each decision region is associated with one label.
+In machine learning, classifiers are built using a dataset (otherwise
+it’s not machine learning!).
+
+42/48
+
+Flexibility and complexity in classifiers
+
+The notions of flexibility, complexity, interpretability, overfitting and
+underfitting also apply to classifiers.
+Linear boundaries are simple and rigid; kNN produces boundaries
+whose complexity depends on the value of K.
+Logistic regression is a strategy to train linear classifiers. It’s called
+regression because indirectly we solve a regression problem or the
+classifier’s certainty.
+Weirdly, kNN does not involve training as it uses all the samples
+each time a new sample is to be classified.
+
+43/48
+
+Hey, hold on a second, what’s going on?
+
+In machine learning we use a quality metric to define what we mean
+by the best model.
+We have presented two quality metrics: accuracy and error rate.
+However, neither the logistic regression nor kNN classifiers use the
+notion of accuracy.
+What’s going on?
+
+44/48
+
+Example I
+3
+
+Let’s define di = wT xi
+
+2
+
+We can rewrite the
+logistic function as
+
+1
+
+p(di ) =
+
+0
+-1
+-2
+-3
+-3
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+edi
+1 + edi
+
+For instance p(0) = 0.5,
+p(1) ≈ 0.73, p(2) ≈ 0.88,
+p(−1) ≈ 0.27 and
+p(−2) ≈ 0.12
+
+Assume this linear classifier labels samples on the right half-plane as △
+and samples on the left half-plane as 2.
+Then p(△) ≈ 0.88, 1 − p(2) ≈ 0.88 and L = p(△) (1 − p(2)) ≈ 0.77.
+
+45/48
+
+Example II
+
+3
+
+The global certainty of each
+classifier (i.e. boundary) is:
+
+2
+1
+0
+
+L = p(△) (1 − p(2)) ≈ 0.70
+
+-1
+
+L = p(△) (1 − p(2)) ≈ 0.77
+L = p(△) (1 − p(2)) ≈ 0.70
+
+-2
+-3
+-3
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+46/48
+
+Example III
+
+3
+
+The global certainty of each
+classifier (i.e. boundary) is:
+
+2
+1
+0
+
+L ≈ 0.49
+
+-1
+
+L ≈ 0.60
+
+-2
+-3
+-3
+
+L ≈ 0.49
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+47/48
+
+Example IV
+
+3
+
+The global certainty of each
+classifier (i.e. boundary) is:
+
+2
+1
+0
+
+L ≈ 0.20
+
+-1
+
+L ≈ 0.47
+
+-2
+-3
+-3
+
+L ≈ 0.57
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+48/48
+
+

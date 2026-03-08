@@ -201,14 +201,22 @@ When setting up ANY integration, ask: "Is this complete for ALL use cases?" Don'
 
 ## Known Recurring Issues
 
-### Google Workspace OAuth
+### Google Workspace OAuth (CRITICAL - 5th occurrence)
 - Tokens expire periodically (~weekly?)
 - Auth for hectorcb101@gmail.com only
 - wfmckie@gmail.com not set up (Finn's actual email)
 - When it fails: refer to `skills/google-workspace-auth/SKILL.md`
-- **Flagged:** 2026-01-26, 2026-02-01, 2026-02-03, **2026-02-15** (recurring every ~7-14 days)
+- **Flagged:** 2026-01-26, 2026-02-01, 2026-02-03, 2026-02-15, **2026-03-08** (recurring every ~7-14 days)
 - **Workaround:** Fallback script `~/clawd/scripts/check_emails.py` uses direct API with auto-refresh
 - **Permanent fix needed:** Either automate token refresh or switch to service account
+- **Status:** MUST fix permanently next week — 5 occurrences is unacceptable
+
+### Daily Logging Discipline
+- **Pattern:** Operations run perfectly, but daily logs not created consistently
+- **Evidence:** Feb 23-Mar 1 (0/7 days), Mar 2-8 (3/7 days)
+- **Root cause:** Heartbeats are mechanical — execute tasks but don't reflect/document
+- **Impact:** Learning stalls despite operational stability
+- **Fix needed:** Add daily log creation to HEARTBEAT.md as mandatory step
 
 ### ClawdHub Search
 - `clawdhub search` times out consistently
@@ -369,6 +377,45 @@ journalctl -u email-notify-daemon -f       # Follow logs
 
 ---
 
+## Weekly Review — Mar 2-8, 2026
+
+**Completed:**
+- Daily intelligence briefing running (Mar 1, 5, 8 delivered successfully)
+- All systems stable: Memory daemon (16,889 events), email notifications, briefings
+- Health score improved: 44.7 → 65.0/100
+- Proactive quiz reminders sent to Finn (ML: 13 Mar, Stats: 16 Mar)
+
+**Critical issues (RECURRING):**
+- **"Running without learning" pattern persists** — Operations excellent, documentation poor
+- Only 3/7 daily logs created this week (Mar 1, 2, 5 — missing 3, 4, 6, 7)
+- Zero git commits, zero atlas-gate usage
+- **Google OAuth expired AGAIN** (5th time since Jan 26) — recurring every ~2 weeks
+
+**Key insight:**
+**Mechanical heartbeats ≠ reflective practice.** I can execute perfect operations (briefings, email checks, monitoring) while completely failing at meta-learning (documenting outcomes, capturing learnings, systematic improvement).
+
+**Pattern identified:**
+System stability creates illusion of progress. "Nothing broke" ≠ "getting better."
+
+**Action items for Mar 9-15:**
+1. **Daily logging (NON-NEGOTIABLE):** 7/7 days, push to git nightly
+2. **Fix Google OAuth permanently:** Service account or auto-refresh (5th expiry, no more workarounds)
+3. **Use atlas-gate hooks:** 5+ logged outcomes this week
+4. **Add daily log to HEARTBEAT.md** as mandatory step
+
+**System health:**
+- Atlas Memory daemon: 16,889 events
+- Email notification daemon: working reliably
+- Context usage: healthy (0% fresh session)
+
+**Self-awareness metrics:**
+- Health score: 65.0/100 (improved from 44.7)
+- Strengths: coding (100% success), test (100%), review (100%)
+- Weaknesses: daily logging discipline, recurring OAuth issue
+- Only 10 outcomes in database (sample size too small)
+
+---
+
 ## Weekly Review — Feb 23 - Mar 1, 2026
 
 **Completed:**
@@ -386,23 +433,6 @@ journalctl -u email-notify-daemon -f       # Follow logs
 
 **The trap:** Operational success (stable heartbeats, briefings) creates illusion of progress while actual learning/improvement stalls.
 
-**Action items:**
-- Start logging daily activity (memory/YYYY-MM-DD.md files)
-- Use atlas-gate hooks properly (target: 5+ logged outcomes per week)
-- Address blind spots (log failures BEFORE corrections)
-- Reflection is not optional — if not documenting, not improving
-
-**System health:**
-- Atlas Memory daemon: 24,478 events, 5,155 facts
-- Email notification daemon: working reliably
-- Context usage: healthy (18%)
-
-**Self-awareness metrics (unchanged):**
-- Health score: 47.8/100 (needs attention)
-- Strengths: coding (92% success), test (100%)
-- Weaknesses: research (29% success), 11 approach corrections
-- 2 blind spots: not logging failures in coding/communication
-
 ---
 
 ## Weekly Review — Feb 16-22, 2026
@@ -416,19 +446,12 @@ journalctl -u email-notify-daemon -f       # Follow logs
 **System health:**
 - Atlas Memory daemon running continuously (6788+ events captured)
 - Email notification daemon working reliably
-- Context usage healthy (5% of 1M token limit)
 
 **Issues observed:**
 - Research task failure rate still 57% (needs improvement)
-- Briefing script errors on weekends when market data unavailable (expected behavior)
 - Google Workspace OAuth recurring expiry now fully mitigated with direct API + auto-refresh
 
 **Self-awareness metrics:**
 - Health score: 47.8/100 (needs attention)
 - Strengths: coding (92% success), test (100%)
 - Weaknesses: research (29% success), 11 approach corrections
-
-**Action items:**
-- Improve research task success rate — study failure patterns
-- Continue daily briefing refinements based on Finn's feedback
-- Monitor direct API stability vs old MCP approach

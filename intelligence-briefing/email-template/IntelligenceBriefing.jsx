@@ -16,6 +16,7 @@ export const IntelligenceBriefing = ({
   executiveSummary = [],
   marketMovements = [],
   geopoliticalRisks = [],
+  geopoliticalAlphaChains = [],
   atlasAnalysis = {},
   whatToWatch = [],
   educational = {},
@@ -98,6 +99,82 @@ export const IntelligenceBriefing = ({
               );
             })}
           </Section>
+
+          {/* Geopolitical Alpha Chains */}
+          {geopoliticalAlphaChains.length > 0 && (
+            <>
+              <Hr style={divider} />
+              <Section style={section}>
+                <Heading style={sectionTitle}>🎯 GEOPOLITICAL ALPHA</Heading>
+                <Text style={alphaIntro}>Live transmission chains from events to assets</Text>
+                {geopoliticalAlphaChains.map((chain, idx) => (
+                  <div key={idx} style={alphaChainBox}>
+                    {/* Headline with date */}
+                    <Text style={alphaHeadline}>
+                      <strong>{chain.headline}</strong>
+                      {chain.date && <span style={alphaDate}> ({chain.date})</span>}
+                    </Text>
+                    
+                    {/* Source */}
+                    {chain.sourceUrl && (
+                      <Text style={alphaSource}>
+                        📰 <Link href={chain.sourceUrl} style={alphaSourceLink}>{chain.sourceDomain}</Link>
+                      </Text>
+                    )}
+                    
+                    {/* Chain summary */}
+                    <Text style={alphaChainSummary}>{chain.chainSummary}</Text>
+                    
+                    {/* Top assets */}
+                    {chain.topAssets.length > 0 && (
+                      <>
+                        <Text style={alphaAssetsLabel}>Transmission:</Text>
+                        {chain.topAssets.map((asset, assetIdx) => {
+                          const arrow = asset.direction === 'up' ? '📈' : asset.direction === 'down' ? '📉' : '➡️';
+                          const convictionDots = asset.conviction === 'high' ? '●●●' 
+                                                : asset.conviction === 'medium' ? '●●○' 
+                                                : '●○○';
+                          return (
+                            <Text key={assetIdx} style={alphaAssetItem}>
+                              {arrow} <strong>{asset.asset}</strong> {asset.direction} 
+                              <span style={alphaConviction}> {convictionDots}</span>
+                              {asset.magnitude && <span style={alphaMagnitude}> ({asset.magnitude} mag.)</span>}
+                            </Text>
+                          );
+                        })}
+                      </>
+                    )}
+                    
+                    {/* Historical parallel */}
+                    {chain.historicalParallel && (
+                      <div style={alphaHistoricalBox}>
+                        <Text style={alphaHistoricalLabel}>📜 Historical Echo:</Text>
+                        <Text style={alphaHistoricalText}>
+                          <strong>{chain.historicalParallel.event}</strong> ({chain.historicalParallel.date})
+                        </Text>
+                        {chain.historicalParallel.lesson && (
+                          <Text style={alphaHistoricalLesson}>{chain.historicalParallel.lesson}</Text>
+                        )}
+                      </div>
+                    )}
+                    
+                    {/* Teaching note */}
+                    {chain.teachingNote && (
+                      <div style={alphaTeachingBox}>
+                        <Text style={alphaTeachingLabel}>💡 Why this connection exists:</Text>
+                        <Text style={alphaTeachingText}>{chain.teachingNote}</Text>
+                      </div>
+                    )}
+                    
+                    {/* Conviction */}
+                    <Text style={alphaConvictionFooter}>
+                      Conviction: {chain.convictionEmoji} <strong>{chain.convictionLabel}</strong>
+                    </Text>
+                  </div>
+                ))}
+              </Section>
+            </>
+          )}
 
           <Hr style={divider} />
 
@@ -465,6 +542,141 @@ const glossaryItem = {
   lineHeight: '1.6',
   color: '#333333',
   margin: '4px 0',
+};
+
+// Geopolitical Alpha styles
+const alphaIntro = {
+  fontSize: '12px',
+  fontStyle: 'italic',
+  color: '#666666',
+  margin: '0 0 16px 0',
+};
+
+const alphaChainBox = {
+  backgroundColor: '#f8fafc',
+  border: '2px solid #1e40af',
+  borderRadius: '8px',
+  padding: '16px',
+  marginBottom: '16px',
+};
+
+const alphaHeadline = {
+  fontSize: '15px',
+  color: '#0f172a',
+  margin: '0 0 8px 0',
+  lineHeight: '1.4',
+};
+
+const alphaDate = {
+  fontSize: '13px',
+  color: '#64748b',
+  fontWeight: 'normal',
+};
+
+const alphaSource = {
+  fontSize: '12px',
+  color: '#475569',
+  margin: '0 0 12px 0',
+};
+
+const alphaSourceLink = {
+  color: '#3b82f6',
+  textDecoration: 'none',
+  fontWeight: '500',
+};
+
+const alphaChainSummary = {
+  fontSize: '14px',
+  fontWeight: '600',
+  color: '#1e40af',
+  backgroundColor: '#eff6ff',
+  padding: '8px 12px',
+  borderRadius: '6px',
+  margin: '0 0 12px 0',
+};
+
+const alphaAssetsLabel = {
+  fontSize: '12px',
+  fontWeight: '600',
+  color: '#475569',
+  margin: '12px 0 6px 0',
+  textTransform: 'uppercase',
+  letterSpacing: '0.5px',
+};
+
+const alphaAssetItem = {
+  fontSize: '13px',
+  color: '#334155',
+  margin: '4px 0',
+  paddingLeft: '8px',
+};
+
+const alphaConviction = {
+  fontSize: '11px',
+  color: '#94a3b8',
+};
+
+const alphaMagnitude = {
+  fontSize: '11px',
+  color: '#64748b',
+  fontStyle: 'italic',
+};
+
+const alphaHistoricalBox = {
+  backgroundColor: '#fefce8',
+  border: '1px solid #fde047',
+  borderRadius: '6px',
+  padding: '12px',
+  margin: '12px 0',
+};
+
+const alphaHistoricalLabel = {
+  fontSize: '12px',
+  fontWeight: '600',
+  color: '#713f12',
+  margin: '0 0 6px 0',
+};
+
+const alphaHistoricalText = {
+  fontSize: '13px',
+  color: '#854d0e',
+  margin: '0 0 6px 0',
+};
+
+const alphaHistoricalLesson = {
+  fontSize: '12px',
+  color: '#a16207',
+  fontStyle: 'italic',
+  margin: '0',
+};
+
+const alphaTeachingBox = {
+  backgroundColor: '#f0fdf4',
+  border: '1px solid #86efac',
+  borderRadius: '6px',
+  padding: '12px',
+  margin: '12px 0',
+};
+
+const alphaTeachingLabel = {
+  fontSize: '12px',
+  fontWeight: '600',
+  color: '#15803d',
+  margin: '0 0 6px 0',
+};
+
+const alphaTeachingText = {
+  fontSize: '12px',
+  color: '#166534',
+  lineHeight: '1.5',
+  margin: '0',
+};
+
+const alphaConvictionFooter = {
+  fontSize: '12px',
+  color: '#475569',
+  margin: '12px 0 0 0',
+  textAlign: 'right',
 };
 
 export default IntelligenceBriefing;

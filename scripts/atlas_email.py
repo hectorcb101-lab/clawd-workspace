@@ -10,6 +10,8 @@ import os
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -100,12 +102,27 @@ def build_templated_body(content: str, greeting: str = "Finn,", footer: str = "S
 </body>
 </html>'''
 
-def send_email(to: str, subject: str, body: str, html: bool = True):
-    """Send email with Atlas as sender name."""
+def send_email(to: str, subject: str, body: str, html: bool = True, attachments: list = None):
+    """Send email with Atlas as sender name. Supports file attachments."""
     creds = get_credentials()
     service = build('gmail', 'v1', credentials=creds)
     
-    if html:
+    if attachments:
+        message = MIMEMultipart('mixed')
+        if html:
+            message.attach(MIMEText(body, 'html'))
+        else:
+            message.attach(MIMEText(body, 'plain'))
+        
+        for filepath in attachments:
+            filename = os.path.basename(filepath)
+            with open(filepath, 'rb') as f:
+                part = MIMEBase('application', 'octet-stream')
+                part.set_payload(f.read())
+            encoders.encode_base64(part)
+            part.add_header('Content-Disposition', f'attachment; filename="{filename}"')
+            message.attach(part)
+    elif html:
         message = MIMEMultipart('alternative')
         message.attach(MIMEText(body, 'html'))
     else:
@@ -125,10 +142,10 @@ def send_email(to: str, subject: str, body: str, html: bool = True):
     print(f"Email sent! Message ID: {result['id']}")
     return result
 
-def send_templated_email(to: str, subject: str, content: str, greeting: str = "Finn,", footer: str = "Sent by Atlas"):
+def send_templated_email(to: str, subject: str, content: str, greeting: str = "Finn,", footer: str = "Sent by Atlas", attachments: list = None):
     """Convenience function to send a templated Atlas email."""
     body = build_templated_body(content, greeting, footer)
-    return send_email(to, subject, body)
+    return send_email(to, subject, body, attachments=attachments)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Send email as Atlas')
@@ -139,13 +156,14 @@ if __name__ == "__main__":
     parser.add_argument('--greeting', default='Finn,', help='Greeting line')
     parser.add_argument('--footer', default='Sent by Atlas', help='Footer text')
     parser.add_argument('--plain', action='store_true', help='Send as plain text')
+    parser.add_argument('--attachment', action='append', dest='attachments', help='File to attach (can be used multiple times)')
     
     args = parser.parse_args()
     
     if args.content:
-        send_templated_email(args.to, args.subject, args.content, args.greeting, args.footer)
+        send_templated_email(args.to, args.subject, args.content, args.greeting, args.footer, attachments=args.attachments)
     elif args.body:
-        send_email(args.to, args.subject, args.body, html=not args.plain)
+        send_email(args.to, args.subject, args.body, html=not args.plain, attachments=args.attachments)
     else:
         print("Error: Either --body or --content is required")
         exit(1)

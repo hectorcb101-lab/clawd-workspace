@@ -101,6 +101,10 @@ def correlate_polymarket_markets(polymarket_data):
     """Extract geopolitical risks from Polymarket."""
     risks = []
     
+    # Handle None or missing data
+    if not polymarket_data or 'data' not in polymarket_data or polymarket_data.get('data') is None:
+        return risks
+    
     for market in polymarket_data.get('data', [])[:3]:  # Top 3 markets
         title = market.get('title', '')
         volume = market.get('volume', '0')

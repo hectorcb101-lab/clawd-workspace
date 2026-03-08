@@ -44,6 +44,23 @@ const emailProps = {
     volume: risk.volume,
     risk_level: risk.risk_level
   })),
+  geopoliticalAlphaChains: (insights.geopolitical_alpha?.chains || []).map((chain: any) => ({
+    headline: chain.headline,
+    date: chain.date ? new Date(chain.date).toLocaleDateString('en-GB', { 
+      day: 'numeric', 
+      month: 'short', 
+      year: 'numeric' 
+    }) : '',
+    sourceUrl: chain.source_url,
+    sourceDomain: chain.source_url ? new URL(chain.source_url).hostname.replace('www.', '') : '',
+    chainSummary: chain.chain_summary,
+    topAssets: chain.top_assets || [],
+    historicalParallel: chain.historical_parallel,
+    teachingNote: chain.teaching_note,
+    convictionScore: chain.conviction_score,
+    convictionEmoji: chain.conviction_emoji,
+    convictionLabel: chain.conviction_label
+  })),
   atlasAnalysis: {
     thesis: insights.atlas_opinion?.main_thesis || '',
     deepTake: insights.atlas_opinion?.deep_take || '',
