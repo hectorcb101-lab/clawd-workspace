@@ -1,38 +1,47 @@
 # ATLAS DASHBOARD
 
-**Last Updated:** 2026-03-08 07:01 GMT (Sunday)
+**Last Updated:** 2026-03-10 07:05 GMT (Tuesday)
 
 ## System Health
 
-✅ **Atlas Memory Daemon:** Running (PID 762, 16,854 events captured)
+✅ **Atlas Memory Daemon:** Running (PID 351798, 18,327 events captured)
 ✅ **Email Monitoring:** Active (using direct API via check_emails.py)
-✅ **Morning Briefing:** Delivered successfully at 07:01 GMT (Telegram only - email send failed)
+⚠️ **Google Workspace OAuth:** Expired (6th occurrence) - using fallback scripts
+✅ **Daily Log:** Created (2026-03-10.md)
 ✅ **Context Usage:** 0% (fresh session) - healthy
+✅ **Morning Briefing:** Sent (07:05 UTC)
 
 ## Active Tasks
 
-**URGENT — Quiz Prep Reminders Sent:**
-- ML Lab Quizzes (20%): Friday 13 March (5 days away)
-- Stats Quiz (30%): Week 8 (w/c 16 March)
-- Action: Reminded Finn of both, flagged ML as urgent priority
-- Offer: Create ML revision plan to match Stats plan structure
+**Quiz Week Countdown: 6 days**
+- Stats Quiz (30%) + ML Quiz: Week 8 (w/c 16 March)
+- Current: Week 7 (final prep week before quizzes)
+- Study focus: Stats probability distributions, ML classification
+
+**Week 7 (Current):**
+- Week 7 materials expected this week
+- Final prep week before quiz week
+- Finn currently through Week 6 materials for both Stats and ML
 
 ## Unread Emails (6 total)
 
-None from Finn. Others:
+✅ None from Finn (priority filter checked)
+
+Others:
 - Fulcrank welcome email (Feb 21)
 - Mail delivery failures (3 bounced emails from Feb)
 - Google account notifications (2)
 
-## Today's Briefing Highlights (March 8)
+## Today's Focus (March 10)
 
-- **Markets:** VIX up 24.2% to $29.49 (major fear spike), oil up 12.2%
-- **Geopolitical Alpha:** Fed maintains rates at 3.5-3.75%, OPEC+ extends production cuts, ECB signals potential rate cuts
-- **Atlas Take:** Quiet tape with rising fear. VIX spike shows uncertainty building. Calm before storm or grinding consolidation - volume will tell.
+📅 **Calendar:** No events scheduled
+🎯 **Priority:** Quiz preparation (6 days until Week 8)
+📧 **Inbox:** Clear from Finn
 
 ## Notes
 
-- Google Workspace MCP auth expired again (recurring issue) - using fallback check_emails.py successfully
-- Briefing script delivery still failing (clawdbot command + MCP deprecation), delivered manually via message tool + atlas_email.py
+- **CRITICAL:** Google Workspace OAuth expired (6th time since Jan 26) - needs permanent fix this week
+- Fallback email scripts working reliably (check_emails.py)
+- Daily intelligence briefing cron no longer configured (crontab empty)
 - No active builds
-- Next weekly review: Monday March 10th
+- Next weekly review: Monday March 16th (same as quiz week start)
