@@ -1,54 +1,125 @@
 # 🏛️ ATLAS DASHBOARD
 
-**Last Updated:** 2026-03-14 07:01 UTC (Morning Heartbeat)
+**Last updated:** 2026-03-15 10:05 UTC (Weekly Review)
 
 ---
 
-## 🚨 Critical Alerts
+## 📊 Weekly Review — Mar 9-15, 2026
 
-**Google OAuth Expired AGAIN (6th occurrence)**
-- mcporter auth broken, fallback script working
-- Recurring every ~2 weeks since Jan 26
-- **CRITICAL:** This is unacceptable - permanent fix overdue
-- See `skills/google-workspace-auth/SKILL.md` or switch to direct API completely
+### ✅ Major Wins
+- **Daily logging: 7/7 days complete** (100% vs last week's 3/7)
+- **Git commits: 6 this week** (improvement from 0)
+- **Health score: 85.0/100** (up from 65.0 — highest ever)
+- **Proactive quiz reminders** working without prompting
+- **Daily briefings** delivered consistently
+
+### ❌ Critical Issues
+- **Google OAuth expired AGAIN** (6th time in 7 weeks)
+  - Must fix permanently — service account or auto-refresh
+- **Judgment layer underused** (4 uses, target 5+/week)
+
+### 🎯 Key Insight
+**Systematic enforcement > good intentions.** Making daily logs a hard requirement in HEARTBEAT.md worked where self-reminders didn't.
+
+### 📋 Next Week Priorities (Mar 16-22)
+1. **FIX GOOGLE OAUTH** — 6th expiry is inexcusable
+2. Increase judgment layer usage (aim for 7+)
+3. Maintain 7/7 daily logging
+4. Support Finn through quiz week (Stats 30%, ML quizzes)
+
+---
+
+## 🔧 System Health
+
+**Atlas Memory Daemon:**
+- Status: ✅ Running
+- Events captured: 22,000+
+- Knowledge base: 5,294 facts, 22 entities
+
+**Email Notification Daemon:**
+- Status: ✅ Running
+- Check frequency: Every 2 minutes
+- Last check: Working reliably
+
+**Daily Intelligence Briefing:**
+- Status: ✅ Active (cron 09:00 UTC daily)
+- Delivery: Telegram + Email
+- Last sent: 2026-03-15 09:05 UTC
+
+**Context Health:**
+- Current session: 0% (fresh)
+- Model: Claude Opus 4.6
+
+---
+
+## 🎓 Finn's MSc — Week 8 Starting Monday
+
+**Quiz Week:** Stats (30%) + ML Lab Quizzes (20%)
+
+**This Week's Focus:**
+- Monday-Friday: Quiz week begins
+- Stats Quiz: 30% of module grade
+- ML quizzes pending
+- Revision materials prepared
+
+**Atlas Support:**
+- Quiz reminders sent proactively
+- Revision plans in Obsidian
+- Cheatsheets created (Stats + ML)
 
 ---
 
 ## 📧 Email Status
-- **From Finn:** 0 unread
-- **Total unread:** 7 (all spam/automated)
-- **Email daemon:** Running reliably
+
+**Unread:** 8 emails (none from Finn)
+- All spam/automated (Vercel, Google, delivery failures)
+
+**Last check:** 2026-03-15 10:00 UTC
+**Auth status:** ⚠️ Google Workspace OAuth expired (6th time)
+**Fallback:** ✅ Direct API script working
 
 ---
 
-## 🧠 System Health
+## 🚨 Alerts & Action Items
 
-**Memory Daemon**
-- Status: ✅ Running (PID 351798)
-- Events: 21,238 captured
-- Last extraction: 2026-03-14 06:55 UTC
+### URGENT (This Week)
+1. **Google OAuth permanent fix** — 6 failures in 7 weeks unacceptable
+2. **Quiz week support** — Stats + ML quizzes start Monday
 
-**Session**
-- Context: 0% (fresh session)
-- Model: Opus 4.6
-- Compactions: 0
+### Important (Next 2 Weeks)
+- Increase judgment layer usage
+- Maintain daily logging discipline
+- Monitor quiz performance
 
----
-
-## 📝 Today's Status
-
-**Daily Log:** Created (2026-03-14.md)
-
-**Task Tracking:** ⚠️ Outdated
-- Last update: Feb 5
-- Files show Week 2 content (we're in March)
-- Need refresh from Finn
+### Nice to Have
+- Review and update `.learnings/` patterns
+- Archive old daily logs (pre-March)
 
 ---
 
-## 🌡️ London Weather
-Partly cloudy, 9°C, 18km/h winds
+## 📈 Self-Awareness Metrics
+
+**Health Score:** 85.0/100 (Excellent)
+
+**Strengths:**
+- Review tasks: 100% success rate
+- Consistent daily logging (7/7 this week)
+- Proactive reminders working
+
+**Weaknesses:**
+- Google OAuth recurring failures (6 times)
+- Judgment layer underutilized (4 uses vs 5+ target)
+
+**Recent Outcomes:** 3 tracked (all successful)
 
 ---
 
-*Dashboard auto-updated during heartbeat cycles*
+## 📝 Notes
+
+**Pattern Breakthrough:** This week proved that making daily logging a hard requirement in HEARTBEAT.md works. Health score jumped 20 points. The discipline actually stuck.
+
+**Critical Blocker:** Google OAuth must be fixed permanently. Research service accounts or implement auto-refresh. No more workarounds.
+
+---
+
+*This dashboard is updated weekly during the scheduled self-review (Sunday 10:00 UTC).*
