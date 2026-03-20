@@ -152,5 +152,12 @@
     "aliases": [],
     "attributes": {},
     "first_seen": "2026-02-08T23:06:42.057851+00:00"
+  },
+  "fi": {
+    "entity_type": "person",
+    "name": "Fi",
+    "aliases": [],
+    "attributes": {},
+    "first_seen": "2026-03-19T15:54:33.852274+00:00"
   }
 }

@@ -1,6 +1,6 @@
 # 🏛️ ATLAS DASHBOARD
 
-**Last updated:** 2026-03-16 09:10 UTC (Heartbeat)
+**Last updated:** 2026-03-19 09:05 UTC (Daily Briefing Delivered)
 
 ---
 
@@ -32,9 +32,10 @@
 ## 🔧 System Health
 
 **Atlas Memory Daemon:**
-- Status: ✅ Running
-- Events captured: 22,695
-- Knowledge base: 5,294 facts, 22 entities
+- Status: ✅ Running (PID 351798)
+- Events captured: 24,951
+- Since last extraction: 5
+- Last extraction: 2026-03-19 08:50 UTC
 
 **Email Notification Daemon:**
 - Status: ✅ Running
@@ -44,11 +45,12 @@
 **Daily Intelligence Briefing:**
 - Status: ✅ Active (cron 09:00 UTC daily)
 - Delivery: Telegram + Email
-- Last sent: 2026-03-16 09:01 UTC (delivered successfully)
+- Last sent: 2026-03-19 09:05 UTC (delivered successfully)
 
 **Context Health:**
-- Current session: 0% (fresh)
+- Current session: 18% (36k/200k tokens)
 - Model: Claude Opus 4.6
+- Active sub-agents: 0
 
 ---
 
@@ -74,8 +76,8 @@
 **Unread:** 8 emails (none from Finn)
 - All spam/automated (Vercel, Google, delivery failures)
 
-**Last check:** 2026-03-16 09:01 UTC
-**Auth status:** 🚨 Google Workspace OAuth expired (6th time — STILL BROKEN)
+**Last check:** 2026-03-19 09:01 UTC
+**Auth status:** 🚨 Google Workspace OAuth expired (6th time since Jan 26)
 **Fallback:** ✅ Direct API script working
 
 ---
