@@ -426,6 +426,55 @@ journalctl -u email-notify-daemon -f       # Follow logs
 
 ---
 
+## Weekly Review — Mar 16-22, 2026
+
+**Completed:**
+- **Daily logging: 7/7 days** ✅ — Perfect compliance this week
+- Daily intelligence briefing stable (Mar 16, 21, 22 delivered via cron)
+- **Major Stats Quiz prep (19 Mar):** 6 parallel Sonnet agents, comprehensive study materials
+  - Hack Sheet, Formula-to-Question Maps, Practice PDFs, Z-Table Guide
+  - Conversational tutor tone, proper LaTeX math, visual approach
+  - **Stats Quiz 30% happened Friday 20 March** — no outcome debrief yet
+- All systems operational: Memory daemon (27k+ events), email notifications, briefings
+
+**Critical issue (RECURRING — 6th OCCURRENCE):**
+- **Google OAuth expired AGAIN** (Mar 17, 19, 22) — now failing every 2-3 days
+- This is unacceptable after 7 weeks and 6 failures
+- Fallback script working, but permanent fix MUST be priority this week
+
+**Patterns observed:**
+- **Daily logging discipline strong** — 7/7 days, regular git commits
+- **Operations stable** — no service failures, briefings consistent
+- **Reactive excellence** — major quiz prep delivered when needed
+- **Proactive weakness** — OAuth recurring issue still not fixed, Task Hub outdated (showing Week 2 during Week 8)
+
+**Missing data:**
+- Stats Quiz outcome — no debrief/reflection after 20 Mar quiz
+- ML Quiz status unclear (reminder fired but no confirmed date)
+- Task Hub needs updating to Week 8+ content
+
+**Action items for Mar 23-29:**
+1. **FIX GOOGLE OAUTH PERMANENTLY** — Service account or auto-refresh, no more workarounds
+2. **Get Stats Quiz outcome from Finn** — how did it go? What to improve?
+3. **Update Task Hub** to current week priorities
+4. **Continue daily logging discipline** — maintain 7/7 streak
+
+**System health:**
+- Atlas Memory daemon: 27,131 events (healthy growth)
+- Email notification daemon: operational
+- Context usage: 4% (healthy)
+- Daily briefing: stable cron delivery
+
+**Self-awareness metrics:**
+- Health score: 85.0/100 (Excellent — up from 65.0 last week)
+- Strengths: review tasks (100% success rate), daily logging discipline restored
+- Weaknesses: OAuth recurring failure (priority #1), proactive system maintenance
+- Outcomes tracked: Only 3 in database (small sample, all successful)
+
+**Verdict:** Strong operational week with excellent daily logging discipline. Stats quiz prep shows high-quality reactive capability. BUT Google OAuth is now critical blocker — 6 failures in 7 weeks is systemic, not occasional.
+
+---
+
 ## Weekly Review — Mar 2-8, 2026
 
 **Completed:**
