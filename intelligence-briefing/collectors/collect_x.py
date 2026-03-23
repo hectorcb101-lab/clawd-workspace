@@ -1,124 +1,88 @@
 #!/usr/bin/env python3
 """
-X/Twitter Data Collection via bird CLI
-Collects news, trending topics, and sentiment from X
+X/Twitter & Social Media Collection via Exa Search
+Replaces bird CLI (cookie-auth, unreliable) with Exa web search.
 """
 
 import subprocess
 import json
-import os
-from datetime import datetime
-
-# Set auth tokens
-os.environ['AUTH_TOKEN'] = 'cd8d2c9353c747711c2bff02a017219bf000add6'
-os.environ['CT0'] = 'f4ac87d75e426d8c928186078d4416530f722917009df49ff29bac2d280d5f993af2c5e9af3440803e23cb006b194041a487ff9e8eb0182e6f82cbf37bb06bce293e997e76fae47fefd24732e91842d1'
+from datetime import datetime, timedelta
 
 
-def run_bird(args):
-    """Run bird command and return output."""
+def exa_search(query, num_results=5, hours_back=24):
+    """Search via Exa through mcporter."""
     try:
-        cmd = ['bird'] + args
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=30,
-            env=os.environ
-        )
-        return result.stdout, result.returncode
-    except subprocess.TimeoutExpired:
-        return None, -1
+        start_date = (datetime.utcnow() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        cmd = [
+            "mcporter", "call", "exa.web_search_exa",
+            f"query={query}",
+            f"numResults={num_results}",
+            f"startPublishedDate={start_date}",
+            "type=auto"
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        if result.returncode == 0:
+            return {"status": "success", "raw": result.stdout}
+        return {"status": "failed", "error": result.stderr[:200]}
     except Exception as e:
-        print(f"Error: {e}")
-        return None, -1
+        return {"status": "failed", "error": str(e)[:200]}
 
 
 def collect_news():
-    """Collect AI-curated news from X."""
-    print("📰 Collecting X news...")
-    output, code = run_bird(['news', '-n', '10', '--plain'])
-    
-    if code != 0:
-        return {"status": "failed", "error": "bird news failed"}
-    
-    return {
-        "status": "success",
-        "type": "news",
-        "raw": output
-    }
+    """Collect trending news and social discourse."""
+    print("📰 Collecting news via Exa...")
+    return exa_search("breaking news today world events", num_results=8, hours_back=24)
 
 
-def collect_home_timeline():
-    """Collect home timeline for sentiment."""
-    print("🏠 Collecting home timeline...")
-    output, code = run_bird(['home', '-n', '15', '--plain'])
-    
-    if code != 0:
-        return {"status": "failed", "error": "bird home failed"}
-    
-    return {
-        "status": "success",
-        "type": "home",
-        "raw": output
-    }
+def collect_social_sentiment():
+    """Collect social media sentiment on markets."""
+    print("📊 Collecting market sentiment...")
+    return exa_search("stock market sentiment analysis today twitter", num_results=5, hours_back=24)
 
 
 def search_topic(query, n=5):
-    """Search X for a specific topic."""
-    print(f"🔍 Searching X: {query}")
-    output, code = run_bird(['search', query, '-n', str(n), '--plain'])
-    
-    if code != 0:
-        return {"status": "failed", "query": query}
-    
-    return {
-        "status": "success",
-        "query": query,
-        "raw": output
-    }
+    """Search for a specific topic."""
+    print(f"🔍 Searching: {query}")
+    return exa_search(query, num_results=n, hours_back=48)
 
 
 def collect_all_x_data():
-    """Collect all X data for briefing."""
-    print("🐦 Starting X data collection...")
-    
+    """Collect all social/news data for briefing."""
+    print("🌐 Starting Exa-powered news collection...")
+
     results = {
         "collection_time": datetime.utcnow().isoformat(),
-        "source": "x_twitter",
+        "source": "exa_search",
         "data": {}
     }
-    
-    # Collect news
-    news = collect_news()
-    results["data"]["news"] = news
-    
-    # Collect home timeline
-    home = collect_home_timeline()
-    results["data"]["home"] = home
-    
-    # Search key topics
+
+    # General news
+    results["data"]["news"] = collect_news()
+
+    # Market sentiment
+    results["data"]["sentiment"] = collect_social_sentiment()
+
+    # Topic searches
     topics = [
-        "AI artificial intelligence",
-        "crypto bitcoin",
-        "stock market",
-        "geopolitics conflict"
+        "AI artificial intelligence breakthrough",
+        "crypto bitcoin ethereum market",
+        "stock market rally crash",
+        "geopolitics conflict sanctions"
     ]
-    
+
     results["data"]["searches"] = {}
     for topic in topics:
-        search_result = search_topic(topic, n=5)
-        results["data"]["searches"][topic] = search_result
-    
-    # Determine overall status
-    success_count = sum(1 for k, v in results["data"].items() 
+        results["data"]["searches"][topic] = search_topic(topic, n=5)
+
+    success_count = sum(1 for k, v in results["data"].items()
                        if isinstance(v, dict) and v.get("status") == "success")
-    
+
     results["status"] = "success" if success_count >= 2 else "partial" if success_count > 0 else "failed"
-    
-    print(f"✅ X collection complete: {results['status']}")
+
+    print(f"✅ Collection complete: {results['status']}")
     return results
 
 
 if __name__ == "__main__":
     data = collect_all_x_data()
-    print(json.dumps(data, indent=2))
+    print(json.dumps(data, indent=2, default=str))

@@ -1,235 +1,97 @@
 #!/usr/bin/env python3
 """
-AI News Collection - Curated Sources
-Pulls from top AI accounts and targeted searches for quality AI news
+AI News Collection via Exa Search
+Pulls from AI-focused sources for quality AI news.
 """
 
 import subprocess
 import json
-import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta
 
-# Auth tokens
-os.environ['AUTH_TOKEN'] = 'cd8d2c9353c747711c2bff02a017219bf000add6'
-os.environ['CT0'] = 'f4ac87d75e426d8c928186078d4416530f722917009df49ff29bac2d280d5f993af2c5e9af3440803e23cb006b194041a487ff9e8eb0182e6f82cbf37bb06bce293e997e76fae47fefd24732e91842d1'
-
-# Curated AI thought leaders and news accounts
-AI_ACCOUNTS = [
-    # AI Labs & Companies
-    "@AnthropicAI",      # Claude
-    "@OpenAI",           # GPT
-    "@GoogleDeepMind",   # Gemini/DeepMind
-    "@xaboratory",       # xAI / Grok
-    "@MetaAI",           # Llama
-    
-    # Key Researchers & Thought Leaders
-    "@AndrewYNg",        # Andrew Ng - DeepLearning.AI
-    "@ylecun",           # Yann LeCun - Meta AI
-    "@kabornik",         # Andrej Karpathy
-    "@sama",             # Sam Altman
-    "@AmandaAskell",     # Anthropic alignment
-    "@DarioAmodei",      # Anthropic CEO
-    
-    # AI News & Analysis
-    "@TheAIGRID",        # AI news aggregator
-    "@ai_breakfast",     # AI morning news
-    "@_akhaliq",         # ML papers/news
-    
-    # Tools & Dev
-    "@LangChainAI",      # LangChain
-    "@llaboratories",    # AI tooling
+# Curated AI domains for higher quality results
+AI_DOMAINS = [
+    "techcrunch.com", "theverge.com", "arstechnica.com",
+    "venturebeat.com", "wired.com", "theneurondaily.com",
+    "artificialintelligence-news.com", "deepmind.google",
+    "openai.com/blog", "anthropic.com", "huggingface.co/blog",
+    "arxiv.org"
 ]
 
-# Targeted search queries for breaking news
-AI_SEARCH_QUERIES = [
-    "Claude Anthropic new",
-    "GPT-5 OR GPT5 OR o3",
-    "Gemini Google new model",
-    "AI breakthrough research",
-    "LLM benchmark SOTA",
+# Key topics to track
+AI_TOPICS = [
+    "large language model breakthrough",
+    "AI regulation policy",
+    "AI startup funding",
+    "foundation model release",
+    "AI safety alignment research"
 ]
 
 
-def run_bird(args):
-    """Run bird command and return output."""
+def exa_search(query, num_results=5, hours_back=24):
+    """Search via Exa through mcporter."""
     try:
-        cmd = ['bird'] + args + ['--plain']
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=30,
-            env=os.environ
-        )
-        return result.stdout, result.returncode
-    except subprocess.TimeoutExpired:
-        return None, -1
+        start_date = (datetime.utcnow() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        cmd = [
+            "mcporter", "call", "exa.web_search_exa",
+            f"query={query}",
+            f"numResults={num_results}",
+            f"startPublishedDate={start_date}",
+            "type=auto"
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        if result.returncode == 0:
+            return {"status": "success", "raw": result.stdout}
+        return {"status": "failed", "error": result.stderr[:200]}
     except Exception as e:
-        print(f"Error: {e}")
-        return None, -1
+        return {"status": "failed", "error": str(e)[:200]}
 
 
-def get_account_tweets(handle, n=3):
-    """Get recent tweets from an account."""
-    output, code = run_bird(['user-tweets', handle, '-n', str(n)])
-    if code != 0:
-        return None
-    return output
+def collect_ai_headlines():
+    """Collect major AI news headlines."""
+    print("🤖 Collecting AI headlines...")
+    return exa_search("artificial intelligence news today major announcement", num_results=8, hours_back=24)
 
 
-def search_ai_news(query, n=5):
-    """Search for AI news on a topic."""
-    output, code = run_bird(['search', query, '-n', str(n)])
-    if code != 0:
-        return None
-    return output
+def collect_ai_research():
+    """Collect notable AI research papers and breakthroughs."""
+    print("📄 Collecting AI research...")
+    return exa_search("new AI research paper breakthrough model", num_results=5, hours_back=72)
 
 
-def parse_tweets(raw_output):
-    """Parse bird output into structured tweets."""
-    if not raw_output:
-        return []
-    
-    tweets = []
-    current = {}
-    
-    for line in raw_output.split('\n'):
-        line = line.strip()
-        
-        if line.startswith('@') and ' (' in line and '):' in line:
-            # New tweet starting
-            if current and 'handle' in current:
-                tweets.append(current)
-            
-            # Parse handle and name
-            parts = line.split(' (')
-            handle = parts[0]
-            name_rest = parts[1] if len(parts) > 1 else ""
-            name = name_rest.split('):')[0] if '):' in name_rest else ""
-            
-            current = {
-                'handle': handle,
-                'name': name,
-                'text': '',
-                'url': '',
-                'date': ''
-            }
-            
-            # Get tweet text (after the ): )
-            if '):' in line:
-                text_start = line.index('):') + 2
-                current['text'] = line[text_start:].strip()
-        
-        elif line.startswith('date:'):
-            current['date'] = line.replace('date:', '').strip()
-        
-        elif line.startswith('url:'):
-            current['url'] = line.replace('url:', '').strip()
-        
-        elif line.startswith('─') or line == '':
-            continue
-        
-        elif current and 'handle' in current and not line.startswith(('PHOTO:', 'VIDEO:', '>')):
-            # Continuation of tweet text
-            if current['text']:
-                current['text'] += ' ' + line
-            else:
-                current['text'] = line
-    
-    # Don't forget last tweet
-    if current and 'handle' in current:
-        tweets.append(current)
-    
-    return tweets
+def collect_ai_industry():
+    """Collect AI industry/business news."""
+    print("💼 Collecting AI industry news...")
+    return exa_search("AI company funding acquisition partnership deal", num_results=5, hours_back=48)
 
 
-def collect_ai_news():
-    """Collect comprehensive AI news from curated sources."""
-    print("🤖 Collecting AI news from curated sources...")
-    
+def collect_all_ai_news():
+    """Collect all AI news for briefing."""
+    print("🧠 Starting AI news collection via Exa...")
+
     results = {
-        'collection_time': datetime.now(timezone.utc).isoformat(),
-        'source': 'ai_news_curated',
-        'accounts': {},
-        'searches': {},
-        'highlights': []
+        "collection_time": datetime.utcnow().isoformat(),
+        "source": "exa_search",
+        "data": {}
     }
-    
-    # Collect from key accounts (top 8 to keep it fast)
-    priority_accounts = AI_ACCOUNTS[:8]
-    
-    for handle in priority_accounts:
-        print(f"  📡 {handle}...")
-        raw = get_account_tweets(handle, n=3)
-        if raw:
-            tweets = parse_tweets(raw)
-            if tweets:
-                results['accounts'][handle] = tweets
-    
-    # Targeted searches
-    for query in AI_SEARCH_QUERIES[:3]:  # Top 3 searches
-        print(f"  🔍 Searching: {query[:30]}...")
-        raw = search_ai_news(query, n=5)
-        if raw:
-            tweets = parse_tweets(raw)
-            if tweets:
-                results['searches'][query] = tweets
-    
-    # Extract highlights (most important items)
-    all_tweets = []
-    for handle, tweets in results['accounts'].items():
-        for t in tweets:
-            t['source'] = handle
-            all_tweets.append(t)
-    
-    # Prioritize tweets from major labs
-    major_labs = ['@AnthropicAI', '@OpenAI', '@GoogleDeepMind', '@AndrewYNg', '@sama']
-    highlights = [t for t in all_tweets if t.get('source') in major_labs][:5]
-    results['highlights'] = highlights
-    
-    # Status
-    account_count = len(results['accounts'])
-    search_count = len(results['searches'])
-    results['status'] = 'success' if account_count >= 3 else 'partial' if account_count > 0 else 'failed'
-    
-    print(f"✅ AI news collected: {account_count} accounts, {search_count} searches")
+
+    results["data"]["headlines"] = collect_ai_headlines()
+    results["data"]["research"] = collect_ai_research()
+    results["data"]["industry"] = collect_ai_industry()
+
+    # Topic-specific deep dives
+    results["data"]["topics"] = {}
+    for topic in AI_TOPICS:
+        results["data"]["topics"][topic] = exa_search(topic, num_results=3, hours_back=48)
+
+    success_count = sum(1 for k, v in results["data"].items()
+                       if isinstance(v, dict) and v.get("status") == "success")
+
+    results["status"] = "success" if success_count >= 2 else "partial" if success_count > 0 else "failed"
+
+    print(f"✅ AI news collection complete: {results['status']}")
     return results
 
 
-def format_ai_news_summary(data):
-    """Format AI news into readable summary for briefing."""
-    lines = ["🤖 **AI NEWS HIGHLIGHTS**", ""]
-    
-    # Highlights from major sources
-    if data.get('highlights'):
-        for tweet in data['highlights'][:5]:
-            handle = tweet.get('source', tweet.get('handle', ''))
-            text = tweet.get('text', '')[:200]
-            url = tweet.get('url', '')
-            
-            if text:
-                lines.append(f"**{handle}**")
-                lines.append(f"{text}")
-                if url:
-                    lines.append(f"🔗 {url}")
-                lines.append("")
-    
-    # Search findings
-    if data.get('searches'):
-        lines.append("📰 **BREAKING**")
-        for query, tweets in list(data['searches'].items())[:2]:
-            if tweets:
-                t = tweets[0]
-                lines.append(f"• {t.get('text', '')[:150]}")
-        lines.append("")
-    
-    return '\n'.join(lines)
-
-
 if __name__ == "__main__":
-    data = collect_ai_news()
-    print("\n" + "="*60)
-    print(format_ai_news_summary(data))
-    print("="*60)
-    print("\nFull data:")
+    data = collect_all_ai_news()
     print(json.dumps(data, indent=2, default=str))
