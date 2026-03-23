@@ -524,3 +524,45 @@
 2026-03-23 13:02:36,396 [INFO] 📍 Hourly activity: {'Strait of Malacca': 2239, 'Turkish Straits (Bosphorus)': 90, 'Panama Canal': 4}
 2026-03-23 13:03:22,480 [INFO] 📊 Stats: 7300 msgs, 5 events | Tracking 0 stationary vessels
 2026-03-23 13:04:15,398 [INFO] 📊 Stats: 7500 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:06:42,916 [INFO] 📊 Stats: 8000 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:07:36,397 [INFO] 📍 Hourly activity: {'Strait of Malacca': 2560, 'Turkish Straits (Bosphorus)': 106, 'Panama Canal': 4}
+2026-03-23 13:07:38,770 [INFO] 📊 Stats: 8200 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:08:11,758 [INFO] 📊 Stats: 8300 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:08:39,281 [INFO] 📊 Stats: 8400 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:10:05,830 [INFO] 📊 Stats: 8700 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:11:36,247 [INFO] 📊 Stats: 9000 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:12:36,400 [INFO] 📍 Hourly activity: {'Strait of Malacca': 2866, 'Turkish Straits (Bosphorus)': 118, 'Panama Canal': 5}
+2026-03-23 13:16:27,850 [INFO] 📊 Stats: 9900 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:17:36,403 [INFO] 📍 Hourly activity: {'Strait of Malacca': 3138, 'Turkish Straits (Bosphorus)': 127, 'Panama Canal': 5}
+2026-03-23 13:21:55,538 [INFO] 📊 Stats: 11000 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:22:36,404 [INFO] 📍 Hourly activity: {'Strait of Malacca': 3443, 'Turkish Straits (Bosphorus)': 139, 'Panama Canal': 5}
+2026-03-23 13:22:59,064 [INFO] 📊 Stats: 11200 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:24:02,767 [INFO] 📊 Stats: 11400 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:24:29,927 [INFO] 📊 Stats: 11500 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:25:55,604 [INFO] 📊 Stats: 11800 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:27:36,405 [INFO] 📍 Hourly activity: {'Strait of Malacca': 3723, 'Turkish Straits (Bosphorus)': 148, 'Panama Canal': 5}
+2026-03-23 13:28:32,727 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 3586 vessels in 60min window (43.03x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 13:28:33,268 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 13:29:14,981 [INFO] 🚨 EVENT: Maritime congestion alert at Panama Canal: 5 vessels in 60min window (3.43x normal rate). Severity: high. Potential supply chain disruption for mixed trade.
+2026-03-23 13:29:15,413 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 13:30:50,191 [INFO] 📊 Stats: 12700 msgs, 7 events | Tracking 0 stationary vessels
+2026-03-23 13:30:53,429 [INFO] 🚨 EVENT: Maritime congestion alert at Turkish Straits (Bosphorus): 140 vessels in 60min window (28.0x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.
+2026-03-23 13:30:53,933 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 13:32:03,238 [INFO] 🏛️ Atlas Intel — Vessel Tracker starting...
+2026-03-23 13:32:03,238 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
+2026-03-23 13:32:03,539 [INFO] ✅ Connected to AISStream WebSocket
+2026-03-23 13:32:36,223 [INFO] 📊 Stats: 100 msgs, 0 events | Tracking 0 stationary vessels
+2026-03-23 13:33:00,097 [INFO] 📊 Stats: 200 msgs, 0 events | Tracking 0 stationary vessels
+2026-03-23 13:33:03,733 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 167 vessels in 60min window (2.0x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 13:33:05,405 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:33:05,407 [INFO] ✅ Event embedded and stored in Supabase
+2026-03-23 13:34:01,849 [INFO] 🚨 EVENT: Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.
+2026-03-23 13:34:02,508 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:34:02,509 [INFO] ✅ Event embedded and stored in Supabase
+2026-03-23 13:35:03,270 [INFO] 📍 Hourly activity: {'Strait of Malacca': 319, 'Turkish Straits (Bosphorus)': 12}
+2026-03-23 13:35:33,274 [INFO] 📍 Hourly activity: {'Strait of Malacca': 340, 'Turkish Straits (Bosphorus)': 12}
+2026-03-23 13:35:36,432 [INFO] 🏛️ Atlas Intel — Vessel Tracker starting...
+2026-03-23 13:35:36,432 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
+2026-03-23 13:35:36,616 [INFO] ✅ Connected to AISStream WebSocket
+2026-03-23 13:36:04,977 [INFO] 📊 Stats: 100 msgs, 0 events | Tracking 0 stationary vessels
+2026-03-23 13:36:28,655 [INFO] 📊 Stats: 200 msgs, 0 events | Tracking 0 stationary vessels

@@ -1,94 +1,179 @@
 {
   "alerts": [
     {
-      "id": "A001",
       "severity": "critical",
-      "time": "12:47 UTC",
-      "message": "CONVERGENCE ALERT: 3 vessels + 2 aircraft detected within 5nm radius of Strait of Hormuz. Elevated transit activity detected."
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.",
+      "time": "13:34 UTC",
+      "source": "vessel"
     },
     {
-      "id": "A002",
-      "severity": "warning",
-      "time": "12:34 UTC",
-      "message": "THERMAL ANOMALY: Unusual heat signature detected near Alexandria, Egypt. Intensity 9.2, classification: Industrial/Unknown."
-    },
-    {
-      "id": "A003",
-      "severity": "info",
-      "time": "12:28 UTC",
-      "message": "GDELT SIGNIFICANT EVENT: EU Summit on Energy Policy showing elevated media coverage (significance: 9.0/10)."
-    },
-    {
-      "id": "A004",
-      "severity": "warning",
-      "time": "12:15 UTC",
-      "message": "FLIGHT ANOMALY: Military aircraft RECON42 deviation from filed flight plan detected. Current altitude: 45,000ft."
-    },
-    {
-      "id": "A005",
-      "severity": "info",
-      "time": "12:03 UTC",
-      "message": "VESSEL UPDATE: EVER GIVEN now transiting Suez Canal. Speed reduced to 8.7kn, nominal transit parameters."
-    },
-    {
-      "id": "A006",
       "severity": "critical",
-      "time": "11:58 UTC",
-      "message": "CONVERGENCE ALERT: 4 vessels converging on Bab-el-Mandeb strait. Naval vessel RED SEA GUARDIAN on intercept course."
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 167 vessels in 60min window (2.0x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.",
+      "time": "13:33 UTC",
+      "source": "vessel"
     },
     {
-      "id": "A007",
-      "severity": "warning",
-      "time": "11:42 UTC",
-      "message": "ECONOMIC INDICATOR: Baltic Dry Index dropped 3.2% in past 24h. Current: 1,247 (down from 1,289)."
-    },
-    {
-      "id": "A008",
-      "severity": "info",
-      "time": "11:31 UTC",
-      "message": "NLP SIGNAL: 42 relevant communications intercepted in past hour. Keywords: 'maritime security', 'supply chain', 'energy'."
-    },
-    {
-      "id": "A009",
-      "severity": "info",
-      "time": "11:18 UTC",
-      "message": "VESSEL POSITIONING: MAERSK TRIPOLI arrived London Gateway, now stationary. 8 other vessels in holding pattern."
-    },
-    {
-      "id": "A010",
-      "severity": "warning",
-      "time": "11:05 UTC",
-      "message": "GDELT CLUSTER: 3 related events detected within 100km of Brussels. Topic: Energy Policy. Tone: Neutral to Negative."
-    },
-    {
-      "id": "A011",
-      "severity": "info",
-      "time": "10:52 UTC",
-      "message": "FLIGHT MONITOR: 7 anomalies detected in past 6 hours. All commercial flights, minor deviations, no immediate concern."
-    },
-    {
-      "id": "A012",
       "severity": "critical",
-      "time": "10:38 UTC",
-      "message": "MULTI-SOURCE CONVERGENCE: Vessel + thermal + GDELT activity detected near Panama Canal. Possible incident investigation underway."
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Liberty Live Holdings, Inc.  (LLYVA, LLYVB, LLYVK)  (CIK 0002078416) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.03', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edga",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
     },
     {
-      "id": "A013",
-      "severity": "warning",
-      "time": "10:21 UTC",
-      "message": "THERMAL WILDFIRE: High-intensity signature detected Amazon Basin. Intensity: 9.2, expanding. Monitoring for maritime smoke impact."
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Tempest Therapeutics, Inc.  (TPST)  (CIK 0001544227) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcomp",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
     },
     {
-      "id": "A014",
-      "severity": "info",
-      "time": "10:07 UTC",
-      "message": "SYSTEM STATUS: All data feeds operational. 847 vessels tracked, 3,421 flights monitored, 89 thermal signatures active."
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: RenovoRx, Inc.  (RNXT)  (CIK 0001574094) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
     },
     {
-      "id": "A015",
-      "severity": "info",
-      "time": "09:54 UTC",
-      "message": "GDELT UPDATE: Maritime Security Exercise in Dubai showing elevated social media activity. Public awareness campaign confirmed."
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Azitra, Inc.  (AZTR)  (CIK 0001701478) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '5.03', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getco",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: ORMAT TECHNOLOGIES, INC.  (ORA)  (CIK 0001296445) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.03', '3.02', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?a",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: ORMAT TECHNOLOGIES, INC.  (ORA)  (CIK 0001296445) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.03', '3.02', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?a",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Tempest Therapeutics, Inc.  (TPST)  (CIK 0001544227) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcomp",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Azitra, Inc.  (AZTR)  (CIK 0001701478) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '5.03', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getco",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Azitra, Inc.  (AZTR)  (CIK 0001701478) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '5.03', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getco",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Azitra, Inc.  (AZTR)  (CIK 0001701478) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '5.03', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getco",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Apogee Therapeutics, Inc.  (APGE)  (CIK 0001974640) (COST)\nFiled: 2026-03-23\nItems: ['7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompa",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Damora Therapeutics, Inc.  (DMRA, GLTO)  (CIK 0001800315) (COST)\nFiled: 2026-03-23\nItems: ['5.02', '7.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=ge",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Damora Therapeutics, Inc.  (DMRA, GLTO)  (CIK 0001800315) (COST)\nFiled: 2026-03-23\nItems: ['5.02', '7.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=ge",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: INFINITY NATURAL RESOURCES, INC.  (INR)  (CIK 0002029118) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.03', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?a",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Coeur Mining, Inc.  (CDE)  (CIK 0000215466) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.01', '3.02', '3.03', '5.02', '5.03', '7.01', '8.01', '9.01']\nURL: https://www.sec.",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: INSMED Inc  (INSM)  (CIK 0001104506) (COST)\nFiled: 2026-03-23\nItems: ['7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST&typ",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Coeur Mining, Inc.  (CDE)  (CIK 0000215466) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.01', '3.02', '3.03', '5.02', '5.03', '7.01', '8.01', '9.01']\nURL: https://www.sec.",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: INSMED Inc  (INSM)  (CIK 0001104506) (COST)\nFiled: 2026-03-23\nItems: ['7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST&typ",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Coeur Mining, Inc.  (CDE)  (CIK 0000215466) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '2.01', '3.02', '3.03', '5.02', '5.03', '7.01', '8.01', '9.01']\nURL: https://www.sec.",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Pyxis Oncology, Inc.  (PYXS)  (CIK 0001782223) (COST)\nFiled: 2026-03-23\nItems: ['2.02', '7.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST&t",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Ondas Inc.  (ONDS)  (CIK 0001646188) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcomp",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: Avalo Therapeutics, Inc.  (AVTX)  (CIK 0001534120) (COST)\nFiled: 2026-03-23\nItems: ['2.02', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CO",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
+    },
+    {
+      "severity": "critical",
+      "title": "Sec Filing Event",
+      "message": "SEC 8-K Filing Alert\nCompany: INSMED Inc  (INSM)  (CIK 0001104506) (COST)\nFiled: 2026-03-23\nItems: ['7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST&typ",
+      "time": "13:32 UTC",
+      "source": "sec_filing"
     }
   ]
 }

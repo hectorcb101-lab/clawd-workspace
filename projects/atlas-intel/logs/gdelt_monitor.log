@@ -39,3 +39,19 @@
 2026-03-23 12:59:51,295 [INFO] Stored SEC filing: V on 2026-03-23
 2026-03-23 12:59:51,868 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
 2026-03-23 12:59:51,869 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:30:11,253 [INFO] Starting GDELT Event Monitor...
+2026-03-23 13:30:11,254 [INFO] Tracking themes: MILITARY, SANCTIONS, TRADE_DISPUTE, OIL, NATURAL_GAS, NUCLEAR, PROTEST, COUP, TERROR, ECON_CRISIS
+2026-03-23 13:30:11,254 [INFO] Goldstein threshold: |5.0|
+2026-03-23 13:30:11,254 [INFO] Poll interval: 15 minutes
+2026-03-23 13:30:11,254 [INFO] Polling GDELT for significant events...
+2026-03-23 13:30:18,504 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=MILITARY&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:30:25,798 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=SANCTIONS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:30:32,068 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=TRADE_DISPUTE&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:30:37,686 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=OIL&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:31:08,656 [INFO] Found 0 significant events for theme: NUCLEAR
+2026-03-23 13:31:29,391 [INFO] Found 0 significant events for theme: PROTEST
+2026-03-23 13:31:41,500 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=COUP&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:31:47,417 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=TERROR&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:31:53,670 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=ECON_CRISIS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 13:31:53,671 [INFO] Polling complete. 0 new events stored.
+2026-03-23 13:31:53,671 [INFO] Next poll in 15 minutes...

@@ -13,3 +13,233 @@
 2026-03-23 12:58:01,087 [ERROR] $^BDI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
 2026-03-23 12:58:01,087 [ERROR] All Baltic Dry Index sources failed
 2026-03-23 12:58:01,088 [INFO] Checking SEC 8-K filings for 24 companies...
+2026-03-23 13:31:04,157 [INFO] Starting Economic Feeds Monitor...
+2026-03-23 13:31:04,157 [INFO] Tracking 24 companies for 8-K filings
+2026-03-23 13:31:04,157 [INFO] Tracking shipping rates: Baltic Dry Index
+2026-03-23 13:31:04,157 [INFO] Poll interval: 24 hours
+2026-03-23 13:31:04,157 [INFO] Polling economic feeds...
+2026-03-23 13:31:04,157 [INFO] Fetching shipping rates...
+2026-03-23 13:31:06,101 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ^BDI"}}}
+2026-03-23 13:31:06,810 [ERROR] $^BDI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-23 13:31:06,810 [ERROR] All Baltic Dry Index sources failed
+2026-03-23 13:31:06,811 [INFO] Checking SEC 8-K filings for 24 companies...
+2026-03-23 13:31:08,141 [INFO] Found 3 new 8-K filings for MSFT
+2026-03-23 13:31:10,030 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:10,033 [INFO] Stored SEC filing: MSFT on 2026-03-23
+2026-03-23 13:31:10,812 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:10,813 [INFO] Stored SEC filing: MSFT on 2026-03-23
+2026-03-23 13:31:11,497 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:11,498 [INFO] Stored SEC filing: MSFT on 2026-03-23
+2026-03-23 13:31:19,903 [INFO] Found 1 new 8-K filings for JPM
+2026-03-23 13:31:20,573 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:20,574 [INFO] Stored SEC filing: JPM on 2026-03-23
+2026-03-23 13:31:22,652 [INFO] Found 47 new 8-K filings for V
+2026-03-23 13:31:23,249 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:23,250 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:23,845 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:23,846 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:24,405 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:24,406 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:24,975 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:24,977 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:25,571 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:25,572 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:26,128 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:26,129 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:26,524 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:26,525 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:27,170 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:27,171 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:27,789 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:27,790 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:28,324 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:28,325 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:28,936 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:28,937 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:29,495 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:29,496 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:30,107 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:30,108 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:30,685 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:30,686 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:31,240 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:31,241 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:31,817 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:31,818 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:32,367 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:32,368 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:32,951 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:32,952 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:33,584 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:33,585 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:34,165 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:34,166 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:34,761 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:34,762 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:35,341 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:35,342 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:35,990 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:35,991 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:36,645 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:36,646 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:37,275 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:37,276 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:38,232 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:38,233 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:38,784 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:38,785 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:39,368 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:39,369 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:39,921 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:39,923 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:40,516 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:40,527 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:41,101 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:41,102 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:41,706 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:41,707 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:42,319 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:42,320 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:42,871 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:42,872 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:43,477 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:43,478 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:44,022 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:44,023 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:44,752 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:44,753 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:45,318 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:45,320 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:45,908 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:45,909 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:46,466 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:46,467 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:47,007 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:47,008 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:47,612 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:47,613 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:48,194 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:48,195 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:48,715 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:48,716 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:49,242 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:49,243 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:49,861 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:49,862 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:50,440 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:50,441 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 13:31:53,653 [INFO] Found 1 new 8-K filings for WMT
+2026-03-23 13:31:54,208 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:54,209 [INFO] Stored SEC filing: WMT on 2026-03-23
+2026-03-23 13:31:55,547 [INFO] Found 10 new 8-K filings for MA
+2026-03-23 13:31:56,081 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:56,082 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:56,752 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:56,753 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:57,325 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:57,326 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:57,845 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:57,846 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:58,419 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:58,420 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:59,062 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:59,063 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:31:59,632 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:31:59,633 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:32:00,194 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:00,196 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:32:00,827 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:00,828 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:32:01,473 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:01,474 [INFO] Stored SEC filing: MA on 2026-03-23
+2026-03-23 13:32:19,066 [INFO] Found 44 new 8-K filings for COST
+2026-03-23 13:32:19,772 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:19,773 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:20,180 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:20,181 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:20,742 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:20,743 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:21,358 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:21,360 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:21,936 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:21,937 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:22,558 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:22,560 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:23,207 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:23,208 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:23,744 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:23,745 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:24,397 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:24,398 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:25,005 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:25,006 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:25,554 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:25,555 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:26,305 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:26,306 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:26,888 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:26,889 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:27,503 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:27,504 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:28,069 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:28,070 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:28,689 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:28,691 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:29,309 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:29,310 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:29,864 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:29,865 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:30,528 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:30,539 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:31,086 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:31,087 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:31,704 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:31,705 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:32,299 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:32,300 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:32,951 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:32,952 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:33,549 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:33,550 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:34,105 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:34,106 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:34,661 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:34,664 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:35,316 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:35,317 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:35,896 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:35,898 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:36,534 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:36,535 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:37,099 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:37,101 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:37,803 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:37,804 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:38,403 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:38,404 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:39,081 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:39,082 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:39,640 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:39,641 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:40,207 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:40,208 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:40,850 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:40,851 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:41,419 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:41,428 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:41,961 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:41,962 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:42,526 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:42,527 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:43,099 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:43,101 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:43,692 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:43,693 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:44,318 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:44,319 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:44,728 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:44,729 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:45,345 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:32:45,346 [INFO] Stored SEC filing: COST on 2026-03-23
+2026-03-23 13:32:45,496 [INFO] Economic feeds polling complete. 106 new events stored.
+2026-03-23 13:32:45,497 [INFO] Next poll in 24 hours...

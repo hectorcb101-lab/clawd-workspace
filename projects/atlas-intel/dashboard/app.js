@@ -68,8 +68,14 @@ function updateClock() {
 function initGlobe() {
     const container = document.getElementById('globeContainer');
     
+    // Get container dimensions
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    
     state.globe = Globe()
         (container)
+        .width(width)
+        .height(height)
         .globeImageUrl('https://unpkg.com/three-globe@2.27.2/example/img/earth-dark.jpg')
         .bumpImageUrl('https://unpkg.com/three-globe@2.27.2/example/img/earth-topology.png')
         .backgroundImageUrl('https://unpkg.com/three-globe@2.27.2/example/img/night-sky.png')

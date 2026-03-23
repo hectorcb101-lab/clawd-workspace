@@ -114,6 +114,9 @@ stationary_vessels = {}
 # Seen vessels (dedup within window): {mmsi: last_report_ts}
 seen_recently = {}
 
+# All vessel positions: {mmsi: {name, lat, lon, speed, ship_type, chokepoint}}
+vessel_positions = {}
+
 # Congestion alert cooldown: {chokepoint: last_alert_timestamp}
 congestion_cooldown = {}
 CONGESTION_COOLDOWN_SEC = 1800  # 30 min between alerts per chokepoint
@@ -248,7 +251,7 @@ async def handle_event(event: dict):
     # Embed and store
     try:
         embedding = embed_text(text)
-        if embedding:
+        if embedding is not None:
             store_embedding(
                 content=text,
                 embedding=embedding,
@@ -353,6 +356,16 @@ async def process_message(msg: dict):
         return
     seen_recently[mmsi] = now
 
+    # Store position for snapshot
+    vessel_positions[mmsi] = {
+        "name": ship_name,
+        "lat": lat,
+        "lon": lon,
+        "speed": speed if speed != 99 else None,
+        "ship_type": ship_type,
+        "chokepoint": chokepoint,
+    }
+
     # Record transit
     transit_log[chokepoint].append(now)
 
@@ -395,22 +408,67 @@ def prune_stale():
         del stationary_vessels[k]
 
 
+def write_vessel_snapshot():
+    """Write a JSON snapshot of currently tracked vessels for the dashboard."""
+    snapshot_path = Path(__file__).parent.parent / "dashboard" / "data" / "vessel_live.json"
+    snapshot_path.parent.mkdir(parents=True, exist_ok=True)
+
+    now = time.time()
+    vessels = []
+    for mmsi, last_seen in seen_recently.items():
+        if now - last_seen > 600:
+            continue
+        pos = vessel_positions.get(mmsi, {})
+        vtype = "tanker" if pos.get("ship_type", 0) in TANKER_TYPES else \
+                "cargo" if pos.get("ship_type", 0) in CARGO_TYPES else "other"
+        vessels.append({
+            "mmsi": mmsi,
+            "name": pos.get("name", "UNKNOWN"),
+            "lat": pos.get("lat", 0),
+            "lon": pos.get("lon", 0),
+            "speed": pos.get("speed"),
+            "type": vtype,
+            "chokepoint": pos.get("chokepoint", ""),
+            "heading": None,
+            "last_seen": last_seen,
+        })
+    snapshot = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "active_vessels": len(seen_recently),
+        "vessels": vessels,
+        "stats": stats,
+        "chokepoint_activity": {},
+    }
+
+    for cp_key, timestamps in transit_log.items():
+        recent = [t for t in timestamps if now - t < 3600]
+        if recent:
+            snapshot["chokepoint_activity"][CHOKEPOINTS[cp_key]["label"]] = len(recent)
+
+    try:
+        snapshot_path.write_text(json.dumps(snapshot, indent=2))
+    except Exception as e:
+        log.error(f"Failed to write vessel snapshot: {e}")
+
+
 async def periodic_maintenance():
     """Run periodic cleanup and stats logging."""
     while True:
-        await asyncio.sleep(300)  # every 5 minutes
+        await asyncio.sleep(30)  # every 30 seconds
         prune_stale()
+        write_vessel_snapshot()
 
-        # Log chokepoint activity summary
-        summary = {}
-        now = time.time()
-        for cp_key, timestamps in transit_log.items():
-            recent = [t for t in timestamps if now - t < 3600]  # last hour
-            if recent:
-                summary[CHOKEPOINTS[cp_key]["label"]] = len(recent)
+        # Log chokepoint activity summary every 5 min
+        if int(time.time()) % 300 < 35:
+            summary = {}
+            now = time.time()
+            for cp_key, timestamps in transit_log.items():
+                recent = [t for t in timestamps if now - t < 3600]
+                if recent:
+                    summary[CHOKEPOINTS[cp_key]["label"]] = len(recent)
 
-        if summary:
-            log.info(f"📍 Hourly activity: {summary}")
+            if summary:
+                log.info(f"📍 Hourly activity: {summary}")
 
 
 # ---------------------------------------------------------------------------
