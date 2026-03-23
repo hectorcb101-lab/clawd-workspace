@@ -1,6 +1,6 @@
 # 🏛️ ATLAS DASHBOARD
 
-**Last updated:** 2026-03-19 09:05 UTC (Daily Briefing Delivered)
+**Last updated:** 2026-03-23 10:02 UTC (Daily Briefing Delivered + Weekly Health Check)
 
 ---
 
@@ -33,9 +33,10 @@
 
 **Atlas Memory Daemon:**
 - Status: ✅ Running (PID 351798)
-- Events captured: 24,951
-- Since last extraction: 5
-- Last extraction: 2026-03-19 08:50 UTC
+- Events captured: 27,798
+- Facts in database: 5,327
+- Events processed: 40,567
+- Last extraction: 2026-03-23 06:57 UTC
 
 **Email Notification Daemon:**
 - Status: ✅ Running
@@ -44,30 +45,36 @@
 
 **Daily Intelligence Briefing:**
 - Status: ✅ Active (cron 09:00 UTC daily)
-- Delivery: Telegram + Email
-- Last sent: 2026-03-19 09:05 UTC (delivered successfully)
+- Delivery: Telegram (3 messages) + Email (HTML newsletter)
+- Last sent: 2026-03-23 09:08 UTC (delivered successfully)
 
 **Context Health:**
-- Current session: 18% (36k/200k tokens)
+- Current session: 14% (27k/200k tokens)
 - Model: Claude Opus 4.6
 - Active sub-agents: 0
 
+**Weekly Health Check:**
+- Last run: 2026-03-23 10:00 UTC
+- Score: 85.0/100 (Excellent)
+- Self-modification: 12 requests, 3 active mods
+- Judgment usage: 4/week (slightly below 5+ target)
+
 ---
 
-## 🎓 Finn's MSc — Week 8 Starting Monday
+## 🎓 Finn's MSc — Week 2 (23-29 March)
 
-**Quiz Week:** Stats (30%) + ML Lab Quizzes (20%)
+**Critical Deadline:** Ethics Quiz FRIDAY (30%)
 
 **This Week's Focus:**
-- Monday-Friday: Quiz week begins
-- Stats Quiz: 30% of module grade
-- ML quizzes pending
-- Revision materials prepared
+- 🔥 URGENT: Ethics Quiz Friday (AI environmental impact)
+- ML Week 2: Regression mastery (6-phase plan)
+- Stats: Week 3 homework completion
+- Python: Lists & Tuples (lecture + lab)
 
 **Atlas Support:**
-- Quiz reminders sent proactively
-- Revision plans in Obsidian
-- Cheatsheets created (Stats + ML)
+- Daily briefing delivered (Telegram + Email)
+- Task Hub synced from Obsidian
+- Ethics revision notes available
 
 ---
 
@@ -76,9 +83,10 @@
 **Unread:** 8 emails (none from Finn)
 - All spam/automated (Vercel, Google, delivery failures)
 
-**Last check:** 2026-03-19 09:01 UTC
+**Last check:** 2026-03-23 09:01 UTC
 **Auth status:** 🚨 Google Workspace OAuth expired (6th time since Jan 26)
 **Fallback:** ✅ Direct API script working
+**Action:** Permanent fix still pending
 
 ---
 
