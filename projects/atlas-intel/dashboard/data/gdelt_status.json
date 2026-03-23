@@ -1,7 +1,16 @@
 {
-  "status": "standby",
-  "eventsPerHour": 50,
-  "significant": 0,
-  "events": [],
-  "updated": "13:34 UTC"
+  "status": "online",
+  "eventsPerHour": 0,
+  "significant": 1,
+  "events": [
+    {
+      "title": "\nGDELT Event Alert\nTitle: Major Military Exercise in Indo-Pacific Region\nSource: reuters.com\nURL: https://example.com/article\nDate: 2026-03-23\nThemes: MILITARY\nTone: -7.5 (negative = conflict/crisis)\n",
+      "url": "",
+      "theme": "UNKNOWN",
+      "tone": 0,
+      "significance": 45.2,
+      "timestamp": "2026-03-23T12:58:19.513624+00:00"
+    }
+  ],
+  "updated": "13:43 UTC"
 }

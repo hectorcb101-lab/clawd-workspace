@@ -566,3 +566,11 @@
 2026-03-23 13:35:36,616 [INFO] ✅ Connected to AISStream WebSocket
 2026-03-23 13:36:04,977 [INFO] 📊 Stats: 100 msgs, 0 events | Tracking 0 stationary vessels
 2026-03-23 13:36:28,655 [INFO] 📊 Stats: 200 msgs, 0 events | Tracking 0 stationary vessels
+2026-03-23 13:36:33,656 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 167 vessels in 60min window (2.0x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 13:36:35,301 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:36:35,303 [INFO] ✅ Event embedded and stored in Supabase
+2026-03-23 13:37:02,464 [INFO] 📊 Stats: 300 msgs, 1 events | Tracking 0 stationary vessels
+2026-03-23 13:37:46,531 [INFO] 🚨 EVENT: Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.
+2026-03-23 13:37:47,301 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 13:37:47,302 [INFO] ✅ Event embedded and stored in Supabase
+2026-03-23 13:40:06,476 [INFO] 📍 Hourly activity: {'Strait of Malacca': 371, 'Turkish Straits (Bosphorus)': 16}

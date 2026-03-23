@@ -214,13 +214,53 @@ LOGIN_HTML = """<!DOCTYPE html>
         .login-container {
             position: relative;
             z-index: 10;
-            width: 420px;
+            width: 90%;
+            max-width: 420px;
             padding: 40px;
             background: rgba(10, 10, 15, 0.95);
             border: 1px solid rgba(0, 255, 204, 0.3);
             box-shadow: 
                 0 0 30px rgba(0, 255, 204, 0.1),
                 inset 0 0 30px rgba(0, 255, 204, 0.02);
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .login-container {
+                width: 95%;
+                padding: 30px 20px;
+            }
+            
+            .login-header h1 {
+                font-size: 20px;
+                letter-spacing: 6px;
+            }
+            
+            .login-header .subtitle {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+            
+            .classification {
+                font-size: 9px;
+                letter-spacing: 2px;
+                padding: 5px 10px;
+            }
+            
+            .form-group input {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+            
+            .submit-btn {
+                padding: 12px;
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            
+            .status-line {
+                font-size: 9px;
+            }
         }
         
         .login-header {

@@ -36,3 +36,125 @@
 2026-03-23 13:36:06,018 [data_bridge] GDELT SANCTIONS: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=10)
 2026-03-23 13:36:17,216 [data_bridge] GDELT OIL: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=10)
 2026-03-23 13:36:27,368 [data_bridge] GDELT PROTEST: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=10)
+2026-03-23 13:36:33,592 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:36:33,725 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A36%3A33.592723%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:36:33,726 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:36:33,809 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A36%3A33.726983%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:36:33,810 [data_bridge] Wrote alerts.json
+2026-03-23 13:36:33,812 [data_bridge] ── Update complete in 57.4s ──
+2026-03-23 13:37:03,812 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:37:03,900 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A37%3A03.813471%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:37:03,901 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:37:03,902 [data_bridge] Wrote flight_status.json
+2026-03-23 13:37:03,902 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:37:10,385 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:37:10,455 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A37%3A10.385453%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:37:10,457 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:37:10,526 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A37%3A10.457712%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:37:10,527 [data_bridge] Wrote alerts.json
+2026-03-23 13:37:10,527 [data_bridge] ── Update complete in 6.7s ──
+2026-03-23 13:37:40,528 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:37:40,691 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A37%3A40.528875%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:37:40,692 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:37:40,693 [data_bridge] Wrote flight_status.json
+2026-03-23 13:37:40,693 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:37:50,845 [data_bridge] GDELT MILITARY: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=10)
+2026-03-23 13:38:18,623 [data_bridge] GDELT OIL: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=10)
+2026-03-23 13:38:39,529 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A38%3A39.320912%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:38:39,531 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:38:39,606 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A38%3A39.531388%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:38:39,608 [data_bridge] Wrote alerts.json
+2026-03-23 13:38:39,608 [data_bridge] ── Update complete in 59.1s ──
+2026-03-23 13:39:09,608 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:39:09,719 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A39%3A09.611683%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:39:09,720 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:39:09,721 [data_bridge] Wrote flight_status.json
+2026-03-23 13:39:09,721 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:39:11,131 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:39:11,193 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A39%3A11.131977%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:39:11,194 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:39:11,253 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A39%3A11.194782%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:39:11,254 [data_bridge] Wrote alerts.json
+2026-03-23 13:39:11,254 [data_bridge] ── Update complete in 1.6s ──
+2026-03-23 13:39:41,255 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:39:41,419 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A39%3A41.256106%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:39:41,420 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:39:41,420 [data_bridge] Wrote flight_status.json
+2026-03-23 13:39:41,421 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:39:43,224 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:39:43,286 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A39%3A43.225043%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:39:43,288 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:39:43,348 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A39%3A43.288077%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:39:43,349 [data_bridge] Wrote alerts.json
+2026-03-23 13:39:43,349 [data_bridge] ── Update complete in 2.1s ──
+2026-03-23 13:40:13,350 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:40:13,486 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A40%3A13.351028%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:40:13,487 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:40:13,487 [data_bridge] Wrote flight_status.json
+2026-03-23 13:40:13,488 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:40:16,425 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:40:16,531 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A40%3A16.425715%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:40:16,533 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:40:16,594 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A40%3A16.533061%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:40:16,596 [data_bridge] Wrote alerts.json
+2026-03-23 13:40:16,596 [data_bridge] ── Update complete in 3.2s ──
+2026-03-23 13:40:46,596 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:40:46,720 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A40%3A46.597395%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:40:46,721 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:40:46,721 [data_bridge] Wrote flight_status.json
+2026-03-23 13:40:46,722 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:40:50,227 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:40:50,322 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A40%3A50.228037%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:40:50,324 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:40:50,385 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A40%3A50.324865%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:40:50,386 [data_bridge] Wrote alerts.json
+2026-03-23 13:40:50,386 [data_bridge] ── Update complete in 3.8s ──
+2026-03-23 13:41:20,386 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:41:20,484 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A41%3A20.387705%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:41:20,486 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:41:20,486 [data_bridge] Wrote flight_status.json
+2026-03-23 13:41:20,486 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:41:25,920 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:41:26,055 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A41%3A25.921045%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:41:26,056 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:41:26,121 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A41%3A26.056880%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:41:26,122 [data_bridge] Wrote alerts.json
+2026-03-23 13:41:26,122 [data_bridge] ── Update complete in 5.7s ──
+2026-03-23 13:41:56,122 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:41:56,236 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A41%3A56.123926%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:41:56,237 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:41:56,238 [data_bridge] Wrote flight_status.json
+2026-03-23 13:41:56,238 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:41:57,640 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:41:57,710 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A41%3A57.640930%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:41:57,712 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:41:57,779 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A41%3A57.712106%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:41:57,780 [data_bridge] Wrote alerts.json
+2026-03-23 13:41:57,780 [data_bridge] ── Update complete in 1.7s ──
+2026-03-23 13:42:27,781 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:42:27,912 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A42%3A27.782077%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:42:27,913 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:42:27,913 [data_bridge] Wrote flight_status.json
+2026-03-23 13:42:27,914 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:42:29,119 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:42:29,183 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A42%3A29.119444%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:42:29,184 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:42:29,253 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A42%3A29.184791%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:42:29,254 [data_bridge] Wrote alerts.json
+2026-03-23 13:42:29,254 [data_bridge] ── Update complete in 1.5s ──
+2026-03-23 13:42:59,254 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:42:59,387 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A42%3A59.256115%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:42:59,388 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:42:59,388 [data_bridge] Wrote flight_status.json
+2026-03-23 13:42:59,389 [data_bridge] Wrote thermal_status.json
+2026-03-23 13:43:00,376 [data_bridge] GDELT rate limited, using cached/partial data
+2026-03-23 13:43:00,446 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.gdelt_event&created_at=gte.2026-03-23T07%3A43%3A00.377041%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:43:00,447 [data_bridge] Wrote gdelt_status.json
+2026-03-23 13:43:00,523 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=source_type%2Ccontent_text%2Cmetadata%2Ccreated_at&created_at=gte.2026-03-23T07%3A43%3A00.447974%2B00%3A00&order=created_at.desc&limit=30 "HTTP/2 200 OK"
+2026-03-23 13:43:00,524 [data_bridge] Wrote alerts.json
+2026-03-23 13:43:00,524 [data_bridge] ── Update complete in 1.3s ──
+2026-03-23 13:43:30,524 [data_bridge] ── Data bridge update starting ──
+2026-03-23 13:43:30,836 [data_bridge] HTTP Request: GET https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings?select=content_text%2Cmetadata%2Ccreated_at&source_type=eq.ais_vessel&created_at=gte.2026-03-23T12%3A43%3A30.525900%2B00%3A00&order=created_at.desc&limit=10 "HTTP/2 200 OK"
+2026-03-23 13:43:30,837 [data_bridge] Wrote vessel_status.json
+2026-03-23 13:43:30,837 [data_bridge] Wrote flight_status.json
+2026-03-23 13:43:30,838 [data_bridge] Wrote thermal_status.json

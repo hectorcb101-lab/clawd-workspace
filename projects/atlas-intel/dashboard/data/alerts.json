@@ -4,6 +4,20 @@
       "severity": "critical",
       "title": "Ais Vessel Event",
       "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.",
+      "time": "13:37 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 167 vessels in 60min window (2.0x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.",
+      "time": "13:36 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.",
       "time": "13:34 UTC",
       "source": "vessel"
     },
@@ -158,20 +172,6 @@
       "severity": "critical",
       "title": "Sec Filing Event",
       "message": "SEC 8-K Filing Alert\nCompany: Ondas Inc.  (ONDS)  (CIK 0001646188) (COST)\nFiled: 2026-03-23\nItems: ['1.01', '3.02', '7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcomp",
-      "time": "13:32 UTC",
-      "source": "sec_filing"
-    },
-    {
-      "severity": "critical",
-      "title": "Sec Filing Event",
-      "message": "SEC 8-K Filing Alert\nCompany: Avalo Therapeutics, Inc.  (AVTX)  (CIK 0001534120) (COST)\nFiled: 2026-03-23\nItems: ['2.02', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CO",
-      "time": "13:32 UTC",
-      "source": "sec_filing"
-    },
-    {
-      "severity": "critical",
-      "title": "Sec Filing Event",
-      "message": "SEC 8-K Filing Alert\nCompany: INSMED Inc  (INSM)  (CIK 0001104506) (COST)\nFiled: 2026-03-23\nItems: ['7.01', '8.01', '9.01']\nURL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST&typ",
       "time": "13:32 UTC",
       "source": "sec_filing"
     }

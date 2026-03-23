@@ -18,6 +18,7 @@
     --glow-cyan: 0 0 10px rgba(0, 255, 204, 0.6);
     --glow-amber: 0 0 10px rgba(255, 215, 0, 0.6);
     --glow-red: 0 0 10px rgba(255, 51, 51, 0.6);
+    --vh: 1vh; /* Will be updated by JS for mobile */
 }
 
 body {
@@ -28,6 +29,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Smooth scrolling on iOS */
+* {
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ===== CRT SCANLINE EFFECT ===== */
@@ -166,6 +174,11 @@ body {
     padding: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.left-panel {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .left-panel::-webkit-scrollbar {
@@ -327,6 +340,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+}
+
+.alert-feed {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .alert-feed::-webkit-scrollbar {
@@ -569,19 +587,323 @@ body.mode-thermal .center-panel {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1400px) {
+
+/* Tablet (768px - 1024px): 2-column layout */
+@media (max-width: 1024px) and (min-width: 768px) {
     .main-container {
-        grid-template-columns: 240px 1fr 280px;
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    /* Hide right panel on tablet */
+    .right-panel {
+        display: none;
+    }
+    
+    .left-panel {
+        overflow-y: auto;
+        max-height: none;
+    }
+    
+    .bottom-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+    
+    .city-controls, .view-controls {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
-@media (max-width: 1024px) {
-    .main-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
+/* Mobile (< 768px): Single column layout */
+@media (max-width: 767px) {
+    body {
+        overflow-y: auto;
+        height: auto;
     }
     
-    .left-panel, .right-panel {
-        max-height: 200px;
+    /* Top bar adjustments */
+    .top-bar {
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .top-bar h1 {
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .classification {
+        display: none; /* Hide on very small screens */
+    }
+    
+    .title-section {
+        gap: 0.75rem;
+    }
+    
+    .status-section {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .utc-clock {
+        font-size: 1rem;
+    }
+    
+    .status-indicator {
+        font-size: 0.65rem;
+    }
+    
+    /* Main container: single column, stacked */
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    /* Globe at top, full width, 50vh */
+    .center-panel {
+        order: 1;
+        width: 100%;
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    #globeContainer {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .globe-overlay {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .coordinates {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.75rem;
+    }
+    
+    /* Left panel: feed cards below globe */
+    .left-panel {
+        order: 2;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--grid-color);
+        padding: 1rem;
+        max-height: none;
+        overflow-y: visible;
+    }
+    
+    /* Make feed cards touch-friendly */
+    .feed-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        min-height: 48px; /* Touch target size */
+    }
+    
+    .feed-card:active {
+        background: var(--bg-primary);
+    }
+    
+    .feed-header {
+        margin-bottom: 0.75rem;
+    }
+    
+    .feed-icon {
+        font-size: 1.5rem;
+    }
+    
+    .feed-name {
+        font-size: 0.8rem;
+    }
+    
+    .layer-controls {
+        margin-top: 1rem;
+    }
+    
+    .layer-toggle {
+        padding: 0.75rem 0;
+        font-size: 0.8rem;
+        min-height: 44px; /* Touch target */
+    }
+    
+    .layer-toggle input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Right panel: alerts below feed cards */
+    .right-panel {
+        order: 3;
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--grid-color);
+        padding: 1rem;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    .alert-item {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Bottom bar: scrollable city buttons, wrapped view controls */
+    .bottom-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+    }
+    
+    .city-controls {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        padding-bottom: 0.25rem;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        scroll-behavior: smooth;
+    }
+    
+    /* Scroll indicator gradient */
+    .city-controls::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        background: linear-gradient(to left, var(--bg-secondary), transparent);
+        pointer-events: none;
+    }
+    
+    .city-controls::-webkit-scrollbar {
+        height: 3px;
+    }
+    
+    .city-controls::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+    
+    .city-controls::-webkit-scrollbar-thumb {
+        background: var(--accent-cyan);
+        border-radius: 2px;
+    }
+    
+    .city-btn {
+        flex-shrink: 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.65rem;
+        white-space: nowrap;
+        min-height: 44px; /* Touch target */
+    }
+    
+    .view-controls {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .view-label {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.25rem;
+    }
+    
+    .view-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.65rem;
+        min-width: 80px;
+        min-height: 44px; /* Touch target */
+    }
+    
+    /* Info popup adjustments */
+    .info-popup {
+        width: 95%;
+        max-width: 95vw;
+        max-height: 90vh;
+    }
+    
+    .popup-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .popup-content {
+        padding: 1rem;
+        font-size: 0.8rem;
+        max-height: calc(90vh - 60px);
+    }
+    
+    .popup-close {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .feed-card:hover {
+        border-color: var(--grid-color);
+        box-shadow: none;
+    }
+    
+    .city-btn:hover, .view-btn:hover {
+        background: var(--bg-tertiary);
+        color: var(--text-primary);
+        border-color: var(--grid-color);
+        box-shadow: none;
+    }
+    
+    /* Active states for touch */
+    .city-btn:active {
+        background: var(--accent-cyan);
+        color: var(--bg-primary);
+        border-color: var(--accent-cyan);
+    }
+    
+    .view-btn:active:not(.active) {
+        background: var(--accent-cyan);
+        color: var(--bg-primary);
+    }
+}
+
+/* Very small screens (< 400px): Further adjustments */
+@media (max-width: 399px) {
+    .top-bar h1 {
+        font-size: 0.85rem;
+    }
+    
+    .utc-clock {
+        font-size: 0.85rem;
+    }
+    
+    .system-status {
+        display: none;
+    }
+    
+    .center-panel {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .view-btn {
+        min-width: 70px;
+        font-size: 0.6rem;
+    }
+    
+    .city-btn {
+        font-size: 0.6rem;
+        padding: 0.65rem 0.85rem;
     }
 }

@@ -42,6 +42,7 @@ const chokepoints = [
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
+    initViewportHeight();
     initClock();
     initGlobe();
     initEventListeners();
@@ -49,6 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
     loadAllData();
     startAutoRefresh();
 });
+
+// ===== VIEWPORT HEIGHT (for mobile browsers) =====
+function initViewportHeight() {
+    const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setVH, 100);
+    });
+}
 
 // ===== UTC CLOCK =====
 function initClock() {
@@ -93,12 +108,23 @@ function initGlobe() {
     
     // Responsive resize with debounce
     let resizeTimeout;
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            state.globe.width(container.clientWidth);
-            state.globe.height(container.clientHeight);
+            const newWidth = container.clientWidth;
+            const newHeight = container.clientHeight;
+            if (newWidth > 0 && newHeight > 0) {
+                state.globe.width(newWidth);
+                state.globe.height(newHeight);
+            }
         }, 250);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Handle orientation change on mobile
+    window.addEventListener('orientationchange', () => {
+        setTimeout(handleResize, 100);
     });
 }
 
@@ -229,13 +255,18 @@ function displayAlerts() {
         feed.appendChild(alertEl);
     });
     
-    // Pause auto-scroll on hover
-    feed.addEventListener('mouseenter', () => {
-        feed.style.overflowY = 'hidden';
-    });
-    feed.addEventListener('mouseleave', () => {
-        feed.style.overflowY = 'auto';
-    });
+    // Pause auto-scroll on hover (desktop only)
+    if (window.matchMedia('(hover: hover)').matches) {
+        feed.addEventListener('mouseenter', () => {
+            feed.style.overflowY = 'hidden';
+        });
+        feed.addEventListener('mouseleave', () => {
+            feed.style.overflowY = 'auto';
+        });
+    }
+    
+    // Smooth scrolling on mobile
+    feed.style.webkitOverflowScrolling = 'touch';
 }
 
 // ===== GLOBE DATA UPDATE =====
@@ -245,7 +276,7 @@ function updateGlobeData() {
         state.globe
             .pointsData(state.data.vessels)
             .pointLat('lat')
-            .pointLng('lng')
+            .pointLng(d => d.lng || d.lon)
             .pointColor(() => '#00ffcc')
             .pointAltitude(0.01)
             .pointRadius(0.15)
@@ -280,7 +311,7 @@ function updateGlobeData() {
         state.globe
             .ringsData(state.data.thermal)
             .ringLat('lat')
-            .ringLng('lng')
+            .ringLng(d => d.lng || d.lon)
             .ringColor(() => '#ff3333')
             .ringMaxRadius(2)
             .ringPropagationSpeed(2)
@@ -294,7 +325,7 @@ function updateGlobeData() {
         state.globe
             .htmlElementsData(state.data.gdelt)
             .htmlLat('lat')
-            .htmlLng('lng')
+            .htmlLng(d => d.lng || d.lon)
             .htmlAltitude(0.01)
             .htmlElement(d => {
                 const el = document.createElement('div');
@@ -405,7 +436,17 @@ function initEventListeners() {
     // Stop auto-rotate on user interaction
     const container = document.getElementById('globeContainer');
     container.addEventListener('mousedown', stopAutoRotate);
-    container.addEventListener('touchstart', stopAutoRotate);
+    container.addEventListener('touchstart', stopAutoRotate, { passive: true });
+    
+    // Prevent accidental zoom on double-tap (mobile)
+    let lastTouchEnd = 0;
+    container.addEventListener('touchend', (e) => {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            e.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
 }
 
 // ===== KEYBOARD SHORTCUTS =====
