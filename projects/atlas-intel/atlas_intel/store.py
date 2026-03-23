@@ -46,6 +46,7 @@ def store_embedding(
     content: str,
     metadata: dict[str, Any] | None = None,
     embedding: np.ndarray | list[float] | None = None,
+    source_id: str | None = None,
 ) -> dict[str, Any]:
     """Store an embedding in the vector store.
 
@@ -62,10 +63,12 @@ def store_embedding(
     row = {
         "id": str(uuid4()),
         "source_type": source_type,
-        "content": content,
+        "content_text": content,
         "metadata": json.dumps(metadata or {}),
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
+    if source_id:
+        row["source_id"] = source_id
     if embedding is not None:
         row["embedding"] = _vec_to_list(embedding)
 

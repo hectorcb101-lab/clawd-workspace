@@ -1,0 +1,488 @@
+2026-03-23 12:25:28,306 [INFO] 🏛️ Atlas Intel — Vessel Tracker starting...
+2026-03-23 12:25:28,307 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
+2026-03-23 12:25:28,468 [INFO] ✅ Connected to AISStream WebSocket
+2026-03-23 12:25:36,327 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 26 vessels in 60min window (2.08x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:37,166 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:37,167 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 27 vessels in 60min window (2.16x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:37,660 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:37,660 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 28 vessels in 60min window (2.24x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:38,155 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:38,156 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 29 vessels in 60min window (2.32x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:38,567 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:38,567 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 30 vessels in 60min window (2.4x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:39,085 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:39,085 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 31 vessels in 60min window (2.48x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:39,510 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:39,510 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 32 vessels in 60min window (2.56x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:39,951 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:39,952 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 33 vessels in 60min window (2.64x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:40,566 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:40,567 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 34 vessels in 60min window (2.72x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:41,038 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:41,038 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 35 vessels in 60min window (2.8x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:41,481 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:41,481 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 36 vessels in 60min window (2.88x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:41,884 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:41,885 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 37 vessels in 60min window (2.96x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:42,319 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:42,319 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 38 vessels in 60min window (3.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:42,801 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:42,801 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 39 vessels in 60min window (3.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:43,256 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:43,257 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 40 vessels in 60min window (3.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:43,750 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:43,750 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 41 vessels in 60min window (3.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:44,177 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:44,177 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 42 vessels in 60min window (3.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:44,675 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:44,675 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 43 vessels in 60min window (3.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:45,205 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:45,206 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 44 vessels in 60min window (3.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:45,685 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:45,685 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 45 vessels in 60min window (3.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:46,092 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:46,092 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 46 vessels in 60min window (3.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:46,513 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:46,513 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 47 vessels in 60min window (3.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:47,097 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:47,097 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 48 vessels in 60min window (3.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:47,638 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:47,639 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 49 vessels in 60min window (3.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:48,034 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:48,035 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 50 vessels in 60min window (4.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:48,548 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:48,549 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 51 vessels in 60min window (4.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:49,049 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:49,049 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 52 vessels in 60min window (4.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:49,512 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:49,513 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 53 vessels in 60min window (4.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:49,763 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:49,763 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 54 vessels in 60min window (4.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:50,153 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:50,153 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 55 vessels in 60min window (4.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:50,551 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:50,552 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 56 vessels in 60min window (4.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:50,982 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:50,982 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 57 vessels in 60min window (4.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:51,404 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:51,404 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 58 vessels in 60min window (4.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:51,884 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:51,885 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 59 vessels in 60min window (4.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:52,300 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:52,301 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 60 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:52,700 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:52,700 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 61 vessels in 60min window (4.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:53,177 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:53,177 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 62 vessels in 60min window (4.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:53,705 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:53,705 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 63 vessels in 60min window (5.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:54,111 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:54,111 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 64 vessels in 60min window (5.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:54,646 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:54,646 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 65 vessels in 60min window (5.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:55,150 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:55,151 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 66 vessels in 60min window (5.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:55,597 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:55,597 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 67 vessels in 60min window (5.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:56,009 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:56,009 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 68 vessels in 60min window (5.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:56,490 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:56,490 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 69 vessels in 60min window (5.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:56,917 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:56,918 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 70 vessels in 60min window (5.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:57,361 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:57,361 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 71 vessels in 60min window (5.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:57,851 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:57,852 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 72 vessels in 60min window (5.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:58,275 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:58,275 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 73 vessels in 60min window (5.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:58,546 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:58,546 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 74 vessels in 60min window (5.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:59,045 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:59,046 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 75 vessels in 60min window (6.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:59,442 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:59,443 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 76 vessels in 60min window (6.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:25:59,904 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:25:59,905 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 77 vessels in 60min window (6.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:00,467 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:00,468 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 78 vessels in 60min window (6.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:00,954 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:00,954 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 79 vessels in 60min window (6.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:01,457 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:01,458 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 80 vessels in 60min window (6.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:02,013 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:02,013 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 81 vessels in 60min window (6.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:02,276 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:02,276 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 82 vessels in 60min window (6.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:02,758 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:02,758 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 83 vessels in 60min window (6.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:03,160 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:03,161 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 84 vessels in 60min window (6.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:03,785 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:03,785 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 85 vessels in 60min window (6.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:04,199 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:04,199 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 86 vessels in 60min window (6.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:04,634 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:04,634 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 87 vessels in 60min window (6.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:05,041 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:05,041 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 88 vessels in 60min window (7.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:05,661 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:05,661 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 89 vessels in 60min window (7.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:06,065 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:06,066 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 90 vessels in 60min window (7.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:06,544 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:06,544 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 91 vessels in 60min window (7.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:07,030 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:07,030 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 92 vessels in 60min window (7.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:07,504 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:07,504 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 93 vessels in 60min window (7.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:08,004 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:08,004 [INFO] 📊 Stats: 100 msgs, 68 events | Tracking 0 stationary vessels
+2026-03-23 12:26:08,004 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 94 vessels in 60min window (7.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:08,492 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:08,492 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 95 vessels in 60min window (7.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:08,915 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:08,915 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 96 vessels in 60min window (7.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:09,396 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:09,397 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 97 vessels in 60min window (7.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:09,819 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:09,820 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 98 vessels in 60min window (7.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:10,283 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:10,283 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 99 vessels in 60min window (7.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:10,752 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:10,752 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 100 vessels in 60min window (8.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:11,246 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:11,248 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 101 vessels in 60min window (8.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:11,801 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:11,801 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 102 vessels in 60min window (8.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:12,308 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:12,308 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 103 vessels in 60min window (8.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:12,655 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:12,656 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 104 vessels in 60min window (8.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:13,140 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:13,140 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 105 vessels in 60min window (8.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:13,616 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:13,616 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 106 vessels in 60min window (8.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:14,064 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:14,064 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 107 vessels in 60min window (8.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:14,475 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:14,475 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 108 vessels in 60min window (8.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:14,923 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:14,924 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 109 vessels in 60min window (8.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:15,342 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:15,342 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 110 vessels in 60min window (8.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:15,607 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:15,608 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 111 vessels in 60min window (8.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:16,061 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:16,062 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 112 vessels in 60min window (8.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:16,533 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:16,533 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 113 vessels in 60min window (9.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:17,097 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:17,098 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 114 vessels in 60min window (9.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:17,483 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:17,484 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 115 vessels in 60min window (9.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:17,899 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:17,899 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 116 vessels in 60min window (9.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:18,312 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:18,312 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 117 vessels in 60min window (9.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:18,774 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:18,774 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 118 vessels in 60min window (9.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:19,023 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:19,024 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 119 vessels in 60min window (9.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:19,526 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:19,526 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 120 vessels in 60min window (9.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:20,009 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:20,009 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 121 vessels in 60min window (9.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:20,486 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:20,487 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 122 vessels in 60min window (9.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:20,914 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:20,915 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 123 vessels in 60min window (9.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:21,539 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:21,540 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 124 vessels in 60min window (9.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:21,945 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:21,945 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 125 vessels in 60min window (10.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:22,407 [INFO] 🏛️ Atlas Intel — Vessel Tracker starting...
+2026-03-23 12:26:22,408 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
+2026-03-23 12:26:22,548 [INFO] ✅ Connected to AISStream WebSocket
+2026-03-23 12:26:31,813 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 26 vessels in 60min window (2.08x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:32,623 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:32,623 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 27 vessels in 60min window (2.16x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:33,058 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:33,059 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 28 vessels in 60min window (2.24x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:33,479 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:33,480 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 29 vessels in 60min window (2.32x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:33,958 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:33,958 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 30 vessels in 60min window (2.4x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:34,406 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:34,406 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 31 vessels in 60min window (2.48x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:34,887 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:34,887 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 32 vessels in 60min window (2.56x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:35,387 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:35,388 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 33 vessels in 60min window (2.64x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:35,834 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:35,834 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 34 vessels in 60min window (2.72x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:36,233 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:36,234 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 35 vessels in 60min window (2.8x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:36,740 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:36,740 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 36 vessels in 60min window (2.88x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:37,177 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:37,177 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 37 vessels in 60min window (2.96x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:37,588 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:37,588 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 38 vessels in 60min window (3.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:38,034 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:38,034 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 39 vessels in 60min window (3.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:38,454 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:38,455 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 40 vessels in 60min window (3.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:38,891 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:38,891 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 41 vessels in 60min window (3.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:39,373 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:39,373 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 42 vessels in 60min window (3.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:39,855 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:39,855 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 43 vessels in 60min window (3.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:40,352 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:40,352 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 44 vessels in 60min window (3.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:40,869 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:40,869 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 45 vessels in 60min window (3.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:41,419 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:41,419 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 46 vessels in 60min window (3.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:42,231 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:42,232 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 47 vessels in 60min window (3.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:42,601 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:42,602 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 48 vessels in 60min window (3.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:43,099 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:43,099 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 49 vessels in 60min window (3.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:43,534 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:43,535 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 50 vessels in 60min window (4.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:44,037 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:44,037 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 51 vessels in 60min window (4.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:44,625 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:44,625 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 52 vessels in 60min window (4.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:45,215 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:45,215 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 53 vessels in 60min window (4.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:45,721 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:45,721 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 54 vessels in 60min window (4.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:45,991 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:45,992 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 55 vessels in 60min window (4.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:46,462 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:46,463 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 56 vessels in 60min window (4.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:46,943 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:46,944 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 57 vessels in 60min window (4.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:47,335 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:47,335 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 58 vessels in 60min window (4.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:47,843 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:47,843 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 59 vessels in 60min window (4.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:48,355 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:48,355 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 60 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:48,823 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:48,824 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 61 vessels in 60min window (4.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:49,347 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:49,347 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 62 vessels in 60min window (4.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:49,739 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:49,740 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 63 vessels in 60min window (5.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:50,209 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:50,210 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 64 vessels in 60min window (5.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:50,804 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:50,804 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 65 vessels in 60min window (5.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:51,354 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:51,354 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 66 vessels in 60min window (5.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:51,925 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:51,925 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 67 vessels in 60min window (5.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:52,439 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:52,440 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 68 vessels in 60min window (5.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:52,893 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:52,893 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 69 vessels in 60min window (5.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:53,281 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:53,281 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 70 vessels in 60min window (5.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:53,786 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:53,786 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 71 vessels in 60min window (5.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:54,197 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:54,198 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 72 vessels in 60min window (5.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:54,612 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:54,612 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 73 vessels in 60min window (5.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:55,038 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:55,038 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 74 vessels in 60min window (5.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:55,501 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:55,501 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 75 vessels in 60min window (6.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:55,914 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:55,914 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 76 vessels in 60min window (6.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:56,341 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:56,342 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 77 vessels in 60min window (6.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:56,735 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:56,735 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 78 vessels in 60min window (6.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:57,248 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:57,248 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 79 vessels in 60min window (6.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:57,804 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:57,804 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 80 vessels in 60min window (6.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:58,228 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:58,229 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 81 vessels in 60min window (6.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:58,700 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:58,700 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 82 vessels in 60min window (6.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:59,219 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:59,219 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 83 vessels in 60min window (6.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:26:59,716 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:26:59,717 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 84 vessels in 60min window (6.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:00,182 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:00,182 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 85 vessels in 60min window (6.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:00,628 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:00,628 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 86 vessels in 60min window (6.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:01,114 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:01,114 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 87 vessels in 60min window (6.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:01,615 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:01,615 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 88 vessels in 60min window (7.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:02,073 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:02,074 [INFO] 📊 Stats: 100 msgs, 63 events | Tracking 0 stationary vessels
+2026-03-23 12:27:02,074 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 89 vessels in 60min window (7.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:02,546 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:02,546 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 90 vessels in 60min window (7.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:02,998 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:02,999 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 91 vessels in 60min window (7.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:03,483 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:03,483 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 92 vessels in 60min window (7.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:03,733 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:03,733 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 93 vessels in 60min window (7.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:04,211 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:04,212 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 94 vessels in 60min window (7.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:04,708 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:04,708 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 95 vessels in 60min window (7.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:05,133 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:05,133 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 96 vessels in 60min window (7.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:05,599 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:05,600 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 97 vessels in 60min window (7.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:05,878 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:05,878 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 98 vessels in 60min window (7.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:06,371 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:06,371 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 99 vessels in 60min window (7.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:06,796 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:06,797 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 100 vessels in 60min window (8.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:07,188 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:07,188 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 101 vessels in 60min window (8.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:07,680 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:07,680 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 102 vessels in 60min window (8.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:08,177 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:08,178 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 103 vessels in 60min window (8.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:08,684 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:08,685 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 104 vessels in 60min window (8.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:09,100 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:09,101 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 105 vessels in 60min window (8.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:09,502 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:09,503 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 106 vessels in 60min window (8.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:09,939 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:09,940 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 107 vessels in 60min window (8.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:10,375 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:10,375 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 108 vessels in 60min window (8.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:11,058 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:11,058 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 109 vessels in 60min window (8.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:11,695 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:11,695 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 110 vessels in 60min window (8.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:12,179 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:12,179 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 111 vessels in 60min window (8.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:12,608 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:12,609 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 112 vessels in 60min window (8.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:13,022 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:13,022 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 113 vessels in 60min window (9.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:13,620 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:13,621 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 114 vessels in 60min window (9.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:14,125 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:14,125 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 115 vessels in 60min window (9.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:14,413 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:14,413 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 116 vessels in 60min window (9.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:14,912 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:14,912 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 117 vessels in 60min window (9.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:15,362 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:15,363 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 118 vessels in 60min window (9.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:15,945 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:15,945 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 119 vessels in 60min window (9.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:16,389 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:16,389 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 120 vessels in 60min window (9.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:16,821 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:16,822 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 121 vessels in 60min window (9.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:17,240 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:17,241 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 122 vessels in 60min window (9.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:17,661 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:17,661 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 123 vessels in 60min window (9.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:18,098 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:18,099 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 124 vessels in 60min window (9.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:18,519 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:18,519 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 125 vessels in 60min window (10.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:18,788 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:18,789 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 126 vessels in 60min window (10.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:19,226 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:19,226 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 127 vessels in 60min window (10.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:19,697 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:19,698 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 128 vessels in 60min window (10.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:20,127 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:20,128 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 129 vessels in 60min window (10.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:20,540 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:20,540 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 130 vessels in 60min window (10.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:21,132 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:21,132 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 131 vessels in 60min window (10.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:21,568 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:21,569 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 132 vessels in 60min window (10.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:21,990 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:21,990 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 133 vessels in 60min window (10.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:22,382 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:22,382 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 134 vessels in 60min window (10.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:22,840 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:22,840 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 135 vessels in 60min window (10.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:23,260 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:23,260 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 136 vessels in 60min window (10.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:23,727 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:23,727 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 137 vessels in 60min window (10.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:24,221 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:24,222 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 138 vessels in 60min window (11.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:24,733 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:24,733 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 139 vessels in 60min window (11.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:25,149 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:25,149 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 140 vessels in 60min window (11.2x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:25,714 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:25,714 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 141 vessels in 60min window (11.28x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:26,159 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:26,159 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 142 vessels in 60min window (11.36x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:26,635 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:26,636 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 143 vessels in 60min window (11.44x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:26,875 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:26,876 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 144 vessels in 60min window (11.52x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:27,413 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:27,414 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 145 vessels in 60min window (11.6x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:27,835 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:27,835 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 146 vessels in 60min window (11.68x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:28,290 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:28,291 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 147 vessels in 60min window (11.76x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:28,765 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:28,766 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 148 vessels in 60min window (11.84x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:29,215 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:29,215 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 149 vessels in 60min window (11.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:29,639 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:29,639 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 150 vessels in 60min window (12.0x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:30,078 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:30,078 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 151 vessels in 60min window (12.08x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:30,472 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:30,473 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 152 vessels in 60min window (12.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:31,067 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:31,068 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 153 vessels in 60min window (12.24x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:31,629 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:31,629 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 154 vessels in 60min window (12.32x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:32,128 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:32,128 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 155 vessels in 60min window (12.4x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:32,549 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:32,550 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 156 vessels in 60min window (12.48x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:32,976 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:32,976 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 157 vessels in 60min window (12.56x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:33,389 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:33,389 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 158 vessels in 60min window (12.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:33,897 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:33,897 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 159 vessels in 60min window (12.72x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:34,402 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:34,403 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 160 vessels in 60min window (12.8x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:34,659 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:34,659 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 161 vessels in 60min window (12.88x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:35,087 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:35,087 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 162 vessels in 60min window (12.96x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:35,566 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:35,566 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 163 vessels in 60min window (13.04x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:35,999 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:27:35,999 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 164 vessels in 60min window (13.12x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:27:36,355 [INFO] 🏛️ Atlas Intel — Vessel Tracker starting...
+2026-03-23 12:27:36,355 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
+2026-03-23 12:27:36,520 [INFO] ✅ Connected to AISStream WebSocket
+2026-03-23 12:28:01,346 [INFO] 📊 Stats: 100 msgs, 0 events | Tracking 0 stationary vessels

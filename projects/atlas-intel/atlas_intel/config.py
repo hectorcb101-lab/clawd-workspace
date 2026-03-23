@@ -64,7 +64,7 @@ def load_supabase_config(path: Path | None = None) -> SupabaseConfig | None:
         return None
     vals = dotenv_values(str(p))
     url = vals.get("SUPABASE_URL", "")
-    key = vals.get("SUPABASE_KEY") or vals.get("SUPABASE_SERVICE_KEY", "")
+    key = vals.get("SUPABASE_KEY") or vals.get("SUPABASE_SERVICE_KEY") or vals.get("SUPABASE_SERVICE_ROLE_KEY", "")
     if not url or not key:
         return None
     return SupabaseConfig(
@@ -74,6 +74,22 @@ def load_supabase_config(path: Path | None = None) -> SupabaseConfig | None:
         signals_table=vals.get("SIGNALS_TABLE", "signals"),
         reactions_table=vals.get("REACTIONS_TABLE", "reactions"),
     )
+
+
+# ---------------------------------------------------------------------------
+# Convenience accessors (used by feed scripts)
+# ---------------------------------------------------------------------------
+
+def _supabase_env() -> dict:
+    """Load supabase env file once."""
+    if _SUPABASE_ENV_PATH.exists():
+        return dotenv_values(str(_SUPABASE_ENV_PATH))
+    return {}
+
+_sb = _supabase_env()
+SUPABASE_URL = _sb.get("SUPABASE_URL", "")
+SUPABASE_KEY = _sb.get("SUPABASE_KEY") or _sb.get("SUPABASE_SERVICE_KEY") or _sb.get("SUPABASE_SERVICE_ROLE_KEY", "")
+AISSTREAM_API_KEY = _sb.get("AISSTREAM_API_KEY", "")
 
 
 def load_config() -> AtlasIntelConfig:
