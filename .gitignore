@@ -1,7 +1,9 @@
 .venv/
 .venv/
 config/mcporter.json
+config/supabase-atlas-intel.env
 __pycache__/
 *.pyc
 projects/research-protocol
 projects/atlas-voice-interface/.env
+supabase-atlas-intel.env
