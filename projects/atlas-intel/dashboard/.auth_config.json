@@ -1,0 +1,10 @@
+{
+  "users": {
+    "finn": {
+      "hash": "93d0ab610bfb393290ef38e89556b55ffd7e7cc7b7de265267d6df55a8fc2d21",
+      "salt": "de01d0281fa243dc0f7a89eb38332d63",
+      "created": "2026-03-23T13:13:27.966437+00:00"
+    }
+  },
+  "jwt_secret": "3a7ad125e101303e1c03fa7593faf2009fcb14ba4b9b4fa969b1033e6d846c33"
+}
