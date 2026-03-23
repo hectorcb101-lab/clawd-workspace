@@ -1,0 +1,109 @@
+{
+  "status": "ONLINE",
+  "tracked": 3421,
+  "anomalies": 7,
+  "flights": [
+    {
+      "id": "F001",
+      "callsign": "BAW117",
+      "origin": {
+        "lat": 51.4700,
+        "lng": -0.4543,
+        "airport": "LHR"
+      },
+      "destination": {
+        "lat": 40.6413,
+        "lng": -73.7781,
+        "airport": "JFK"
+      },
+      "altitude": 37000,
+      "speed": 485,
+      "type": "Commercial"
+    },
+    {
+      "id": "F002",
+      "callsign": "UAE231",
+      "origin": {
+        "lat": 25.2532,
+        "lng": 55.3657,
+        "airport": "DXB"
+      },
+      "destination": {
+        "lat": 1.3644,
+        "lng": 103.9915,
+        "airport": "SIN"
+      },
+      "altitude": 39000,
+      "speed": 512,
+      "type": "Commercial"
+    },
+    {
+      "id": "F003",
+      "callsign": "ANA005",
+      "origin": {
+        "lat": 35.5494,
+        "lng": 139.7798,
+        "airport": "HND"
+      },
+      "destination": {
+        "lat": 37.6213,
+        "lng": -122.3790,
+        "airport": "SFO"
+      },
+      "altitude": 41000,
+      "speed": 523,
+      "type": "Commercial"
+    },
+    {
+      "id": "F004",
+      "callsign": "ATLAS01",
+      "origin": {
+        "lat": 38.8521,
+        "lng": -77.0377,
+        "airport": "DCA"
+      },
+      "destination": {
+        "lat": 51.4700,
+        "lng": -0.4543,
+        "airport": "LHR"
+      },
+      "altitude": 43000,
+      "speed": 498,
+      "type": "Military"
+    },
+    {
+      "id": "F005",
+      "callsign": "QTR921",
+      "origin": {
+        "lat": 25.2731,
+        "lng": 51.6080,
+        "airport": "DOH"
+      },
+      "destination": {
+        "lat": 48.1103,
+        "lng": 11.5553,
+        "airport": "MUC"
+      },
+      "altitude": 38000,
+      "speed": 476,
+      "type": "Commercial"
+    },
+    {
+      "id": "F006",
+      "callsign": "RECON42",
+      "origin": {
+        "lat": 33.9425,
+        "lng": -118.4081,
+        "airport": "LAX"
+      },
+      "destination": {
+        "lat": 35.5494,
+        "lng": 139.7798,
+        "airport": "HND"
+      },
+      "altitude": 45000,
+      "speed": 534,
+      "type": "Military"
+    }
+  ]
+}

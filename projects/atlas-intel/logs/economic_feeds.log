@@ -1,0 +1,15 @@
+2026-03-23 12:57:25,073 [WARNING] Failed to fetch Baltic Dry Index from Yahoo Finance: No module named 'yfinance'
+2026-03-23 12:57:25,073 [ERROR] All Baltic Dry Index sources failed
+2026-03-23 12:57:42,134 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ^BDI"}}}
+2026-03-23 12:57:42,768 [ERROR] $^BDI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-23 12:57:42,769 [ERROR] All Baltic Dry Index sources failed
+2026-03-23 12:57:58,459 [INFO] Starting Economic Feeds Monitor...
+2026-03-23 12:57:58,459 [INFO] Tracking 24 companies for 8-K filings
+2026-03-23 12:57:58,459 [INFO] Tracking shipping rates: Baltic Dry Index
+2026-03-23 12:57:58,459 [INFO] Poll interval: 24 hours
+2026-03-23 12:57:58,460 [INFO] Polling economic feeds...
+2026-03-23 12:57:58,460 [INFO] Fetching shipping rates...
+2026-03-23 12:58:00,366 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ^BDI"}}}
+2026-03-23 12:58:01,087 [ERROR] $^BDI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-23 12:58:01,087 [ERROR] All Baltic Dry Index sources failed
+2026-03-23 12:58:01,088 [INFO] Checking SEC 8-K filings for 24 companies...

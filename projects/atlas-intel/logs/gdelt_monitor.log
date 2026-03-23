@@ -1,0 +1,41 @@
+2026-03-23 12:57:17,115 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=MILITARY&mode=ArtList&format=json&maxrecords=5&timespan=24h
+2026-03-23 12:57:55,408 [INFO] Starting GDELT Event Monitor...
+2026-03-23 12:57:55,408 [INFO] Tracking themes: MILITARY, SANCTIONS, TRADE_DISPUTE, OIL, NATURAL_GAS, NUCLEAR, PROTEST, COUP, TERROR, ECON_CRISIS
+2026-03-23 12:57:55,408 [INFO] Goldstein threshold: |5.0|
+2026-03-23 12:57:55,408 [INFO] Poll interval: 15 minutes
+2026-03-23 12:57:55,408 [INFO] Polling GDELT for significant events...
+2026-03-23 12:57:56,249 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=MILITARY&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:57:57,029 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=SANCTIONS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:57:57,784 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=TRADE_DISPUTE&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:17,456 [INFO] Polling GDELT for significant events...
+2026-03-23 12:59:18,119 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=MILITARY&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:18,806 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=SANCTIONS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:23,978 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=OIL&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:24,691 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=NATURAL_GAS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:25,385 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=NUCLEAR&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:25,871 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=PROTEST&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:26,364 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=COUP&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:32,717 [INFO] Found 0 significant events for theme: TERROR
+2026-03-23 12:59:35,308 [ERROR] GDELT DOC API request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=ECON_CRISIS&mode=ArtList&format=json&maxrecords=50&timespan=15m
+2026-03-23 12:59:35,309 [INFO] Polling complete. 0 new events stored.
+2026-03-23 12:59:35,310 [INFO] Polling economic feeds...
+2026-03-23 12:59:35,310 [INFO] Fetching shipping rates...
+2026-03-23 12:59:37,170 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ^BDI"}}}
+2026-03-23 12:59:37,763 [ERROR] $^BDI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-23 12:59:37,763 [ERROR] All Baltic Dry Index sources failed
+2026-03-23 12:59:37,764 [INFO] Checking SEC 8-K filings for 24 companies...
+2026-03-23 12:59:38,667 [ERROR] SEC EDGAR request failed for MSFT: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=MSFT&dateRange=custom&startdt=2026-03-22&enddt=2026-03-23&forms=8-K
+2026-03-23 12:59:39,012 [ERROR] SEC EDGAR request failed for GOOGL: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=GOOGL&dateRange=custom&startdt=2026-03-22&enddt=2026-03-23&forms=8-K
+2026-03-23 12:59:39,374 [ERROR] SEC EDGAR request failed for AMZN: 500 Server Error: Internal Server Error for url: https://efts.sec.gov/LATEST/search-index?q=AMZN&dateRange=custom&startdt=2026-03-22&enddt=2026-03-23&forms=8-K
+2026-03-23 12:59:46,212 [INFO] Found 1 new 8-K filings for JPM
+2026-03-23 12:59:47,623 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:59:47,625 [INFO] Stored SEC filing: JPM on 2026-03-23
+2026-03-23 12:59:49,439 [INFO] Found 33 new 8-K filings for V
+2026-03-23 12:59:50,090 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:59:50,092 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 12:59:50,742 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:59:50,743 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 12:59:51,293 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:59:51,295 [INFO] Stored SEC filing: V on 2026-03-23
+2026-03-23 12:59:51,868 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:59:51,869 [INFO] Stored SEC filing: V on 2026-03-23

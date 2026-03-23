@@ -1,0 +1,4 @@
+2026-03-23 12:56:20,333 [INFO] TEST MODE: Single API call to verify connectivity
+2026-03-23 12:56:20,335 [INFO] Testing Middle East region: (12, 42, 30, 65)
+2026-03-23 12:56:50,384 [ERROR] Failed to fetch Middle East flights: HTTPSConnectionPool(host='opensky-network.org', port=443): Max retries exceeded with url: /api/states/all?lamin=12&lamax=42&lomin=30&lomax=65 (Caused by ConnectTimeoutError(<HTTPSConnection(host='opensky-network.org', port=443) at 0x7fcf7850d1c0>, 'Connection to opensky-network.org timed out. (connect timeout=30)'))
+2026-03-23 12:56:50,385 [WARNING] No flights received (may be normal if region is quiet)

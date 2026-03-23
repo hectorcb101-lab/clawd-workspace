@@ -1,0 +1,75 @@
+╔════════════════════════════════════════════════════════════════╗
+║                    ATLAS INTEL DASHBOARD                       ║
+║              Tactical Intelligence Visualization               ║
+╚════════════════════════════════════════════════════════════════╝
+
+🚀 QUICK START
+──────────────────────────────────────────────────────────────────
+
+Launch the dashboard (recommended):
+  
+  cd /home/ubuntu/clawd/projects/atlas-intel/dashboard
+  ./launch.sh
+
+Then open your browser to: http://localhost:8080
+
+
+⌨️  KEYBOARD SHORTCUTS
+──────────────────────────────────────────────────────────────────
+
+  F     Toggle fullscreen
+  R     Reset globe view
+  1-5   Toggle data layers
+  
+
+🎯 FEATURES AT A GLANCE
+──────────────────────────────────────────────────────────────────
+
+✓ 3D interactive globe with real-time data visualization
+✓ 6 intelligence feed monitors (vessels, flights, thermal, etc.)
+✓ Live alert system with severity coding
+✓ Strategic chokepoint highlighting
+✓ CRT scanline effects + military aesthetic
+✓ 4 view modes: Normal, CRT, Night Vision, Thermal
+✓ Auto-refresh every 30 seconds
+✓ City quick-jump navigation
+
+
+📊 MOCK DATA POPULATED
+──────────────────────────────────────────────────────────────────
+
+✓ 12 vessels across strategic locations
+✓ 6 flight paths (commercial + military)
+✓ 12 thermal hotspots worldwide
+✓ 12 GDELT intelligence events
+✓ 15 live alerts (critical/warning/info)
+
+
+🎨 AESTHETIC
+──────────────────────────────────────────────────────────────────
+
+Dark military theme with:
+  • CRT scanlines (animated)
+  • Cyan glow effects (#00ffcc)
+  • Amber warnings (#ffd700)
+  • Red critical alerts (#ff3333)
+  • Monospace tactical font
+  • Professional operations centre vibe
+
+
+📁 LOCATION
+──────────────────────────────────────────────────────────────────
+
+  /home/ubuntu/clawd/projects/atlas-intel/dashboard/
+
+
+📖 FULL DOCUMENTATION
+──────────────────────────────────────────────────────────────────
+
+  See README.md for complete documentation
+  See VALIDATION.md for build verification details
+
+
+═══════════════════════════════════════════════════════════════════
+BUILD COMPLETE • FULLY OPERATIONAL • READY FOR DEPLOYMENT
+═══════════════════════════════════════════════════════════════════

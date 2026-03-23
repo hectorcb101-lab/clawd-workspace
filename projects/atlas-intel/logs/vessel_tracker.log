@@ -486,3 +486,41 @@
 2026-03-23 12:27:36,355 [INFO] 🚢 Connecting to AISStream — monitoring 6 chokepoints...
 2026-03-23 12:27:36,520 [INFO] ✅ Connected to AISStream WebSocket
 2026-03-23 12:28:01,346 [INFO] 📊 Stats: 100 msgs, 0 events | Tracking 0 stationary vessels
+2026-03-23 12:28:31,394 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 167 vessels in 60min window (2.0x normal rate). Severity: medium. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:28:32,227 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:30:21,771 [INFO] 🚨 EVENT: Maritime congestion alert at Turkish Straits (Bosphorus): 11 vessels in 60min window (2.2x normal rate). Severity: medium. Potential supply chain disruption for grain_oil trade.
+2026-03-23 12:30:22,189 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:30:25,649 [INFO] 📊 Stats: 600 msgs, 2 events | Tracking 0 stationary vessels
+2026-03-23 12:30:50,105 [INFO] 📊 Stats: 700 msgs, 2 events | Tracking 0 stationary vessels
+2026-03-23 12:32:36,372 [INFO] 📍 Hourly activity: {'Strait of Malacca': 400, 'Turkish Straits (Bosphorus)': 16, 'Panama Canal': 1}
+2026-03-23 12:33:13,500 [INFO] 📊 Stats: 1200 msgs, 2 events | Tracking 0 stationary vessels
+2026-03-23 12:33:42,175 [INFO] 📊 Stats: 1300 msgs, 2 events | Tracking 0 stationary vessels
+2026-03-23 12:34:11,321 [INFO] 📊 Stats: 1400 msgs, 2 events | Tracking 0 stationary vessels
+2026-03-23 12:37:36,373 [INFO] 📍 Hourly activity: {'Strait of Malacca': 752, 'Turkish Straits (Bosphorus)': 30, 'Panama Canal': 2}
+2026-03-23 12:39:02,287 [INFO] 🚨 EVENT: Maritime congestion alert at Panama Canal: 3 vessels in 60min window (2.06x normal rate). Severity: medium. Potential supply chain disruption for mixed trade.
+2026-03-23 12:39:02,745 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:39:11,389 [INFO] 📊 Stats: 2500 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:40:33,267 [INFO] 📊 Stats: 2700 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:42:23,420 [INFO] 📊 Stats: 3100 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:42:36,374 [INFO] 📍 Hourly activity: {'Strait of Malacca': 1047, 'Turkish Straits (Bosphorus)': 40, 'Panama Canal': 3}
+2026-03-23 12:43:16,337 [INFO] 📊 Stats: 3300 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:44:51,895 [INFO] 📊 Stats: 3600 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:45:19,858 [INFO] 📊 Stats: 3700 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:46:14,558 [INFO] 📊 Stats: 3900 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:47:36,376 [INFO] 📍 Hourly activity: {'Strait of Malacca': 1361, 'Turkish Straits (Bosphorus)': 51, 'Panama Canal': 3}
+2026-03-23 12:49:14,662 [INFO] 📊 Stats: 4500 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:49:47,480 [INFO] 📊 Stats: 4600 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:50:54,228 [INFO] 📊 Stats: 4800 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:51:23,004 [INFO] 📊 Stats: 4900 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:51:46,950 [INFO] 📊 Stats: 5000 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:52:36,379 [INFO] 📍 Hourly activity: {'Strait of Malacca': 1671, 'Turkish Straits (Bosphorus)': 63, 'Panama Canal': 3}
+2026-03-23 12:56:38,453 [INFO] 📊 Stats: 6000 msgs, 3 events | Tracking 0 stationary vessels
+2026-03-23 12:57:36,394 [INFO] 📍 Hourly activity: {'Strait of Malacca': 1946, 'Turkish Straits (Bosphorus)': 75, 'Panama Canal': 4}
+2026-03-23 12:58:31,994 [INFO] 🚨 EVENT: Maritime congestion alert at Strait of Malacca: 1998 vessels in 60min window (23.98x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.
+2026-03-23 12:58:32,533 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 12:59:21,571 [INFO] 📊 Stats: 6500 msgs, 4 events | Tracking 0 stationary vessels
+2026-03-23 13:00:46,794 [INFO] 🚨 EVENT: Maritime congestion alert at Turkish Straits (Bosphorus): 85 vessels in 60min window (17.0x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.
+2026-03-23 13:00:47,229 [ERROR] Failed to embed/store event: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-03-23 13:02:36,396 [INFO] 📍 Hourly activity: {'Strait of Malacca': 2239, 'Turkish Straits (Bosphorus)': 90, 'Panama Canal': 4}
+2026-03-23 13:03:22,480 [INFO] 📊 Stats: 7300 msgs, 5 events | Tracking 0 stationary vessels
+2026-03-23 13:04:15,398 [INFO] 📊 Stats: 7500 msgs, 5 events | Tracking 0 stationary vessels

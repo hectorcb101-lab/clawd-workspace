@@ -1,0 +1,127 @@
+{
+  "status": "ONLINE",
+  "tracked": 847,
+  "lastEvent": "23m ago",
+  "vessels": [
+    {
+      "id": "V001",
+      "name": "MSC GULSUN",
+      "type": "Container Ship",
+      "lat": 1.2521,
+      "lng": 103.8198,
+      "speed": 18.5,
+      "heading": 287,
+      "destination": "Rotterdam"
+    },
+    {
+      "id": "V002",
+      "name": "SEAWISE GIANT",
+      "type": "Oil Tanker",
+      "lat": 26.5647,
+      "lng": 56.2492,
+      "speed": 12.3,
+      "heading": 115,
+      "destination": "Fujairah"
+    },
+    {
+      "id": "V003",
+      "name": "EVER GIVEN",
+      "type": "Container Ship",
+      "lat": 30.4236,
+      "lng": 32.3437,
+      "speed": 8.7,
+      "heading": 180,
+      "destination": "Suez Transit"
+    },
+    {
+      "id": "V004",
+      "name": "MAERSK TRIPOLI",
+      "type": "Container Ship",
+      "lat": 51.4545,
+      "lng": -0.1278,
+      "speed": 0.0,
+      "heading": 0,
+      "destination": "London Gateway"
+    },
+    {
+      "id": "V005",
+      "name": "PIONEER",
+      "type": "LNG Carrier",
+      "lat": 13.4443,
+      "lng": 43.2464,
+      "speed": 16.8,
+      "heading": 345,
+      "destination": "Alexandria"
+    },
+    {
+      "id": "V006",
+      "name": "ATLAS VOYAGER",
+      "type": "Bulk Carrier",
+      "lat": 9.0820,
+      "lng": -79.5199,
+      "speed": 10.2,
+      "heading": 90,
+      "destination": "Panama Canal"
+    },
+    {
+      "id": "V007",
+      "name": "TOKYO EXPRESS",
+      "type": "Container Ship",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "speed": 0.0,
+      "heading": 0,
+      "destination": "Tokyo Port"
+    },
+    {
+      "id": "V008",
+      "name": "DUBAI STAR",
+      "type": "Container Ship",
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "speed": 14.5,
+      "heading": 45,
+      "destination": "Mumbai"
+    },
+    {
+      "id": "V009",
+      "name": "ATLANTIC RUNNER",
+      "type": "Cargo",
+      "lat": 40.7128,
+      "lng": -74.0060,
+      "speed": 0.0,
+      "heading": 0,
+      "destination": "New York"
+    },
+    {
+      "id": "V010",
+      "name": "NORDIC PRINCESS",
+      "type": "Oil Tanker",
+      "lat": 55.6761,
+      "lng": 12.5683,
+      "speed": 11.4,
+      "heading": 270,
+      "destination": "Copenhagen"
+    },
+    {
+      "id": "V011",
+      "name": "BLACK SEA TRADER",
+      "type": "Bulk Carrier",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "speed": 9.8,
+      "heading": 180,
+      "destination": "Istanbul"
+    },
+    {
+      "id": "V012",
+      "name": "RED SEA GUARDIAN",
+      "type": "Naval Vessel",
+      "lat": 15.3694,
+      "lng": 38.9410,
+      "speed": 15.0,
+      "heading": 225,
+      "destination": "Patrol Route"
+    }
+  ]
+}

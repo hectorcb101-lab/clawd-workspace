@@ -1,0 +1,71 @@
+2026-03-23 12:56:37,670 [INFO] ================================================================================
+2026-03-23 12:56:37,672 [INFO] NASA FIRMS Thermal Anomaly Monitor - Starting
+2026-03-23 12:56:37,672 [INFO] ================================================================================
+2026-03-23 12:56:37,672 [INFO] Fetching FIRMS data: SAU (last 1 days)
+2026-03-23 12:56:38,476 [ERROR] HTTP error fetching SAU: HTTP Error 400: Bad Request
+2026-03-23 12:56:38,476 [ERROR] Failed to fetch data for SAU: HTTP Error 400: Bad Request
+2026-03-23 12:56:38,477 [INFO] Fetching FIRMS data: IRN (last 1 days)
+2026-03-23 12:56:39,067 [ERROR] HTTP error fetching IRN: HTTP Error 400: Bad Request
+2026-03-23 12:56:39,067 [ERROR] Failed to fetch data for IRN: HTTP Error 400: Bad Request
+2026-03-23 12:56:39,067 [INFO] Fetching FIRMS data: UKR (last 1 days)
+2026-03-23 12:56:39,673 [ERROR] HTTP error fetching UKR: HTTP Error 400: Bad Request
+2026-03-23 12:56:39,673 [ERROR] Failed to fetch data for UKR: HTTP Error 400: Bad Request
+2026-03-23 12:56:39,673 [INFO] Fetching FIRMS data: RUS (last 1 days)
+2026-03-23 12:56:40,267 [ERROR] HTTP error fetching RUS: HTTP Error 400: Bad Request
+2026-03-23 12:56:40,267 [ERROR] Failed to fetch data for RUS: HTTP Error 400: Bad Request
+2026-03-23 12:56:40,267 [INFO] Fetching FIRMS data: ARE (last 1 days)
+2026-03-23 12:56:40,860 [ERROR] HTTP error fetching ARE: HTTP Error 400: Bad Request
+2026-03-23 12:56:40,860 [ERROR] Failed to fetch data for ARE: HTTP Error 400: Bad Request
+2026-03-23 12:56:40,860 [INFO] Fetching FIRMS data: KWT (last 1 days)
+2026-03-23 12:56:41,471 [ERROR] HTTP error fetching KWT: HTTP Error 400: Bad Request
+2026-03-23 12:56:41,471 [ERROR] Failed to fetch data for KWT: HTTP Error 400: Bad Request
+2026-03-23 12:56:41,471 [INFO] Fetching FIRMS data: SGP (last 1 days)
+2026-03-23 12:56:42,061 [ERROR] HTTP error fetching SGP: HTTP Error 400: Bad Request
+2026-03-23 12:56:42,061 [ERROR] Failed to fetch data for SGP: HTTP Error 400: Bad Request
+2026-03-23 12:56:42,061 [INFO] No hotspots detected in monitored regions
+2026-03-23 12:57:10,498 [INFO] ================================================================================
+2026-03-23 12:57:10,500 [INFO] NASA FIRMS Thermal Anomaly Monitor - Starting
+2026-03-23 12:57:10,500 [INFO] ================================================================================
+2026-03-23 12:57:10,500 [INFO] Fetching FIRMS data: persian_gulf (bbox: 46.0,23.0,56.0,31.0, last 1 days)
+2026-03-23 12:57:11,231 [ERROR] HTTP error fetching persian_gulf: HTTP Error 400: Bad Request
+2026-03-23 12:57:11,231 [ERROR] Failed to fetch data for persian_gulf: HTTP Error 400: Bad Request
+2026-03-23 12:57:11,231 [INFO] Fetching FIRMS data: russia_west (bbox: 38.0,45.0,55.0,53.0, last 1 days)
+2026-03-23 12:57:11,814 [ERROR] HTTP error fetching russia_west: HTTP Error 400: Bad Request
+2026-03-23 12:57:11,814 [ERROR] Failed to fetch data for russia_west: HTTP Error 400: Bad Request
+2026-03-23 12:57:11,814 [INFO] Fetching FIRMS data: ukraine (bbox: 22.0,44.0,40.0,52.0, last 1 days)
+2026-03-23 12:57:12,401 [ERROR] HTTP error fetching ukraine: HTTP Error 400: Bad Request
+2026-03-23 12:57:12,401 [ERROR] Failed to fetch data for ukraine: HTTP Error 400: Bad Request
+2026-03-23 12:57:12,402 [INFO] Fetching FIRMS data: singapore (bbox: 103.0,1.0,104.5,1.5, last 1 days)
+2026-03-23 12:57:12,986 [ERROR] HTTP error fetching singapore: HTTP Error 400: Bad Request
+2026-03-23 12:57:12,986 [ERROR] Failed to fetch data for singapore: HTTP Error 400: Bad Request
+2026-03-23 12:57:12,986 [INFO] No hotspots detected in monitored regions
+2026-03-23 12:58:16,767 [INFO] ================================================================================
+2026-03-23 12:58:16,769 [INFO] NASA FIRMS Thermal Anomaly Monitor - Starting (TEST MODE)
+2026-03-23 12:58:16,769 [INFO] ================================================================================
+2026-03-23 12:58:16,769 [INFO] Running in test mode with mock data
+2026-03-23 12:58:16,769 [INFO] Generated 5 mock hotspots for persian_gulf
+2026-03-23 12:58:16,769 [INFO] Generated 0 mock hotspots for russia_west
+2026-03-23 12:58:16,769 [INFO] Generated 0 mock hotspots for ukraine
+2026-03-23 12:58:16,769 [INFO] Generated 1 mock hotspots for singapore
+2026-03-23 12:58:16,769 [INFO] Total hotspots retrieved: 6
+2026-03-23 12:58:16,769 [INFO] Running anomaly detection...
+2026-03-23 12:58:16,769 [INFO] Proximity anomalies: 5
+2026-03-23 12:58:16,769 [INFO] High FRP events: 2
+2026-03-23 12:58:16,770 [INFO] Cluster events: 1
+2026-03-23 12:58:16,770 [INFO] New area events: 6
+2026-03-23 12:58:16,770 [INFO] Total unique anomalies: 6
+2026-03-23 12:58:18,873 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:18,875 [INFO] Stored anomaly: new_area - high
+2026-03-23 12:58:19,482 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:19,483 [INFO] Stored anomaly: new_area - medium
+2026-03-23 12:58:20,117 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:20,118 [INFO] Stored anomaly: new_area - medium
+2026-03-23 12:58:20,846 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:20,847 [INFO] Stored anomaly: new_area - medium
+2026-03-23 12:58:21,226 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:21,227 [INFO] Stored anomaly: new_area - medium
+2026-03-23 12:58:21,780 [INFO] HTTP Request: POST https://kuffwieswzwrjfpznlar.supabase.co/rest/v1/embeddings "HTTP/2 201 Created"
+2026-03-23 12:58:21,781 [INFO] Stored anomaly: new_area - medium
+2026-03-23 12:58:21,781 [INFO] ================================================================================
+2026-03-23 12:58:21,781 [INFO] Monitoring complete. Detected 6 anomalies.
+2026-03-23 12:58:21,781 [INFO] ================================================================================

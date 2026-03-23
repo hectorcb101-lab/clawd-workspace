@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS INTEL - Tactical Intelligence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CRT Scanline Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="title-section">
+            <h1 class="glow">⬢ ATLAS INTEL</h1>
+            <span class="classification">UNCLASSIFIED // FOUO</span>
+        </div>
+        <div class="status-section">
+            <div class="utc-clock" id="utcClock">--:--:-- UTC</div>
+            <div class="system-status">
+                <span class="status-indicator" id="feedStatus">
+                    <span class="status-dot online"></span>
+                    <span class="status-text">FEEDS ONLINE</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Panel: Data Feeds -->
+        <aside class="left-panel">
+            <div class="panel-title">DATA FEEDS</div>
+            
+            <div class="feed-card" id="vesselCard">
+                <div class="feed-header">
+                    <span class="feed-icon">🚢</span>
+                    <span class="feed-name">VESSEL TRACKER</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot" id="vesselStatus"></span>
+                    <span id="vesselStatusText">STANDBY</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Tracked:</span>
+                        <span class="stat-value" id="vesselCount">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Last Event:</span>
+                        <span class="stat-value" id="vesselLast">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-card" id="flightCard">
+                <div class="feed-header">
+                    <span class="feed-icon">✈️</span>
+                    <span class="feed-name">FLIGHT MONITOR</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot" id="flightStatus"></span>
+                    <span id="flightStatusText">STANDBY</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Tracked:</span>
+                        <span class="stat-value" id="flightCount">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Anomalies:</span>
+                        <span class="stat-value" id="flightAnomalies">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-card" id="thermalCard">
+                <div class="feed-header">
+                    <span class="feed-icon">🔥</span>
+                    <span class="feed-name">THERMAL/FIRMS</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot" id="thermalStatus"></span>
+                    <span id="thermalStatusText">STANDBY</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Hotspots:</span>
+                        <span class="stat-value" id="thermalCount">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Last Scan:</span>
+                        <span class="stat-value" id="thermalLast">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-card" id="gdeltCard">
+                <div class="feed-header">
+                    <span class="feed-icon">📡</span>
+                    <span class="feed-name">GDELT</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot" id="gdeltStatus"></span>
+                    <span id="gdeltStatusText">STANDBY</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Events/Hour:</span>
+                        <span class="stat-value" id="gdeltRate">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Significant:</span>
+                        <span class="stat-value" id="gdeltSignificant">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-card" id="economicCard">
+                <div class="feed-header">
+                    <span class="feed-icon">📊</span>
+                    <span class="feed-name">ECONOMIC</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot online"></span>
+                    <span>ONLINE</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Baltic Dry:</span>
+                        <span class="stat-value" id="balticDry">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Updated:</span>
+                        <span class="stat-value" id="economicLast">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-card" id="nlpCard">
+                <div class="feed-header">
+                    <span class="feed-icon">💬</span>
+                    <span class="feed-name">NLP/SPEECH</span>
+                </div>
+                <div class="feed-status">
+                    <span class="status-dot" id="nlpStatus"></span>
+                    <span id="nlpStatusText">STANDBY</span>
+                </div>
+                <div class="feed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Signals:</span>
+                        <span class="stat-value" id="nlpSignals">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layer-controls">
+                <div class="panel-title">LAYERS</div>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-vessels" checked>
+                    <span>Vessels</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-flights" checked>
+                    <span>Flights</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-thermal" checked>
+                    <span>Thermal</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-gdelt" checked>
+                    <span>GDELT</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="layer-chokepoints" checked>
+                    <span>Chokepoints</span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Center: Globe -->
+        <main class="center-panel">
+            <div id="globeContainer"></div>
+            <div class="globe-overlay">
+                <div class="coordinates" id="coordinates">LAT: -- / LON: --</div>
+            </div>
+        </main>
+
+        <!-- Right Panel: Alerts -->
+        <aside class="right-panel">
+            <div class="panel-title">LIVE ALERTS</div>
+            <div class="alert-feed" id="alertFeed">
+                <!-- Alerts populated by JS -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Bottom Bar -->
+    <footer class="bottom-bar">
+        <div class="city-controls">
+            <button class="city-btn" data-city="london">LONDON</button>
+            <button class="city-btn" data-city="newyork">NEW YORK</button>
+            <button class="city-btn" data-city="dubai">DUBAI</button>
+            <button class="city-btn" data-city="singapore">SINGAPORE</button>
+            <button class="city-btn" data-city="tokyo">TOKYO</button>
+            <button class="city-btn" data-city="washington">WASHINGTON DC</button>
+        </div>
+        <div class="view-controls">
+            <span class="view-label">VIEW MODE:</span>
+            <button class="view-btn active" data-mode="normal">NORMAL</button>
+            <button class="view-btn" data-mode="crt">CRT</button>
+            <button class="view-btn" data-mode="nvg">NVG</button>
+            <button class="view-btn" data-mode="thermal">THERMAL</button>
+        </div>
+    </footer>
+
+    <!-- Info Popup -->
+    <div class="info-popup" id="infoPopup">
+        <div class="popup-header">
+            <span id="popupTitle">DETAILS</span>
+            <button class="popup-close" id="popupClose">✕</button>
+        </div>
+        <div class="popup-content" id="popupContent"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
