@@ -1,0 +1,180 @@
+{
+  "commodities": [
+    {
+      "symbol": "^VIX",
+      "name": "VIX",
+      "display": "VIX"
+    },
+    {
+      "symbol": "GC=F",
+      "name": "Gold",
+      "display": "GOLD"
+    },
+    {
+      "symbol": "SI=F",
+      "name": "Silver",
+      "display": "SILVER"
+    },
+    {
+      "symbol": "HG=F",
+      "name": "Copper",
+      "display": "COPPER"
+    },
+    {
+      "symbol": "CL=F",
+      "name": "Crude Oil WTI",
+      "display": "OIL"
+    },
+    {
+      "symbol": "BZ=F",
+      "name": "Brent Crude",
+      "display": "BRENT"
+    },
+    {
+      "symbol": "NG=F",
+      "name": "Natural Gas",
+      "display": "NATGAS"
+    },
+    {
+      "symbol": "URA",
+      "name": "Uranium (Global X)",
+      "display": "URANIUM"
+    },
+    {
+      "symbol": "LIT",
+      "name": "Lithium & Battery",
+      "display": "LITHIUM"
+    },
+    {
+      "symbol": "ZW=F",
+      "name": "Wheat",
+      "display": "WHEAT"
+    },
+    {
+      "symbol": "ZC=F",
+      "name": "Corn",
+      "display": "CORN"
+    },
+    {
+      "symbol": "KC=F",
+      "name": "Coffee",
+      "display": "COFFEE"
+    }
+  ],
+  "stocks": [
+    {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "display": "SPX"
+    },
+    {
+      "symbol": "^DJI",
+      "name": "Dow Jones",
+      "display": "DOW"
+    },
+    {
+      "symbol": "^IXIC",
+      "name": "NASDAQ",
+      "display": "NDX"
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "display": "AAPL"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "display": "MSFT"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "display": "NVDA"
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet",
+      "display": "GOOGL"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "display": "AMZN"
+    },
+    {
+      "symbol": "META",
+      "name": "Meta",
+      "display": "META"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla",
+      "display": "TSLA"
+    },
+    {
+      "symbol": "JPM",
+      "name": "JPMorgan",
+      "display": "JPM"
+    },
+    {
+      "symbol": "XOM",
+      "name": "Exxon",
+      "display": "XOM"
+    },
+    {
+      "symbol": "^NSEI",
+      "name": "Nifty 50",
+      "display": "NIFTY"
+    },
+    {
+      "symbol": "^BSESN",
+      "name": "BSE Sensex",
+      "display": "SENSEX"
+    },
+    {
+      "symbol": "RELIANCE.NS",
+      "name": "Reliance Industries",
+      "display": "RELIANCE"
+    },
+    {
+      "symbol": "TCS.NS",
+      "name": "TCS",
+      "display": "TCS"
+    }
+  ],
+  "etfs": [
+    {
+      "ticker": "IBIT",
+      "issuer": "BlackRock",
+      "type": "BTC Spot"
+    },
+    {
+      "ticker": "FBTC",
+      "issuer": "Fidelity",
+      "type": "BTC Spot"
+    },
+    {
+      "ticker": "ARKB",
+      "issuer": "ARK/21Shares",
+      "type": "BTC Spot"
+    },
+    {
+      "ticker": "GBTC",
+      "issuer": "Grayscale",
+      "type": "BTC Spot"
+    }
+  ],
+  "crypto": [
+    {
+      "symbol": "BTC-USD",
+      "name": "Bitcoin",
+      "display": "BTC"
+    },
+    {
+      "symbol": "ETH-USD",
+      "name": "Ethereum",
+      "display": "ETH"
+    }
+  ]
+}

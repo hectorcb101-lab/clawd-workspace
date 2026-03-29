@@ -1,0 +1,46 @@
+# Environment & secrets
+.env
+*.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Vite / Node
+node_modules/
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Data caches
+data/*.json
+!data/.gitkeep
+
+# Build artifacts
+*.tsbuildinfo
+
+# Large binary assets — download via setup script (npm run setup / curl commands in README)
+public/textures/*.jpg
+public/textures/*.png
+!public/textures/.gitkeep
+public/countries.geojson

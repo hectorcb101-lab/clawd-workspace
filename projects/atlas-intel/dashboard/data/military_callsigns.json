@@ -1,0 +1,219 @@
+{
+  "us_military": [
+    {
+      "pattern": "^RCH",
+      "operator": "usaf",
+      "aircraft_type": "transport",
+      "description": "REACH - AMC transport"
+    },
+    {
+      "pattern": "^REACH",
+      "operator": "usaf",
+      "aircraft_type": "transport",
+      "description": "REACH - AMC transport"
+    },
+    {
+      "pattern": "^DUKE",
+      "operator": "usaf",
+      "aircraft_type": "transport",
+      "description": "DUKE - VIP transport"
+    },
+    {
+      "pattern": "^SAM",
+      "operator": "usaf",
+      "aircraft_type": "vip",
+      "description": "Special Air Mission"
+    },
+    {
+      "pattern": "^AF[12]",
+      "operator": "usaf",
+      "aircraft_type": "vip",
+      "description": "Air Force One/Two"
+    },
+    {
+      "pattern": "^KING",
+      "operator": "usaf",
+      "aircraft_type": "tanker",
+      "description": "KC-135/KC-46 tanker"
+    },
+    {
+      "pattern": "^BOLT",
+      "operator": "usaf",
+      "aircraft_type": "fighter",
+      "description": "Fighter ops"
+    },
+    {
+      "pattern": "^RAPTOR",
+      "operator": "usaf",
+      "aircraft_type": "fighter",
+      "description": "F-22 operations"
+    },
+    {
+      "pattern": "^BONE",
+      "operator": "usaf",
+      "aircraft_type": "bomber",
+      "description": "B-1B operations"
+    },
+    {
+      "pattern": "^SNTRY",
+      "operator": "usaf",
+      "aircraft_type": "awacs",
+      "description": "E-3 AWACS"
+    },
+    {
+      "pattern": "^FORTE",
+      "operator": "usaf",
+      "aircraft_type": "drone",
+      "description": "RQ-4 Global Hawk"
+    }
+  ],
+  "nato_allied": [
+    {
+      "pattern": "^RRR",
+      "operator": "raf",
+      "description": "RAF aircraft"
+    },
+    {
+      "pattern": "^ASCOT",
+      "operator": "raf",
+      "aircraft_type": "transport",
+      "description": "RAF transport"
+    },
+    {
+      "pattern": "^NATO",
+      "operator": "nato",
+      "aircraft_type": "awacs",
+      "description": "NATO AWACS"
+    },
+    {
+      "pattern": "^FAF",
+      "operator": "faf",
+      "description": "French Air Force"
+    },
+    {
+      "pattern": "^GAF",
+      "operator": "gaf",
+      "description": "German Air Force"
+    },
+    {
+      "pattern": "^IAF",
+      "operator": "iaf",
+      "description": "Israeli Air Force"
+    }
+  ],
+  "russian": [
+    {
+      "pattern": "^RF",
+      "operator": "vks",
+      "description": "Russian Federation aircraft"
+    },
+    {
+      "pattern": "^RUSSIAN",
+      "operator": "vks",
+      "description": "Russian military"
+    }
+  ],
+  "chinese": [
+    {
+      "pattern": "^CCA",
+      "operator": "plaaf",
+      "description": "PLA Air Force"
+    },
+    {
+      "pattern": "^CHH",
+      "operator": "plan",
+      "description": "PLA Navy Air"
+    }
+  ],
+  "other": [],
+  "icao_hex_ranges": [
+    {
+      "range_start": "ADF7C8",
+      "range_end": "AFFFFF",
+      "country": "United States",
+      "operator": "usaf"
+    },
+    {
+      "range_start": "400000",
+      "range_end": "40003F",
+      "country": "UK",
+      "operator": "raf"
+    },
+    {
+      "range_start": "43C000",
+      "range_end": "43CFFF",
+      "country": "UK",
+      "operator": "raf"
+    },
+    {
+      "range_start": "3AA000",
+      "range_end": "3AFFFF",
+      "country": "France",
+      "operator": "faf"
+    },
+    {
+      "range_start": "3EA000",
+      "range_end": "3EBFFF",
+      "country": "Germany",
+      "operator": "gaf"
+    },
+    {
+      "range_start": "738A00",
+      "range_end": "738BFF",
+      "country": "Israel",
+      "operator": "iaf"
+    },
+    {
+      "range_start": "4D0000",
+      "range_end": "4D03FF",
+      "country": "NATO",
+      "operator": "nato"
+    }
+  ],
+  "hotspots": [
+    {
+      "name": "INDO-PACIFIC",
+      "lat": 28.0,
+      "lon": 125.0,
+      "radius_km": 18,
+      "priority": "high"
+    },
+    {
+      "name": "CENTCOM",
+      "lat": 28.0,
+      "lon": 42.0,
+      "radius_km": 15,
+      "priority": "high"
+    },
+    {
+      "name": "EUCOM",
+      "lat": 52.0,
+      "lon": 28.0,
+      "radius_km": 15,
+      "priority": "medium"
+    },
+    {
+      "name": "ARCTIC",
+      "lat": 75.0,
+      "lon": 0.0,
+      "radius_km": 10,
+      "priority": "low"
+    }
+  ],
+  "query_regions": [
+    {
+      "name": "PACIFIC",
+      "lamin": 10,
+      "lamax": 46,
+      "lomin": 107,
+      "lomax": 143
+    },
+    {
+      "name": "WESTERN",
+      "lamin": 13,
+      "lamax": 85,
+      "lomin": -10,
+      "lomax": 57
+    }
+  ]
+}

@@ -1,0 +1,3768 @@
+{
+  "threats": [
+    {
+      "lat": 30.6509,
+      "lon": 104.076,
+      "lng": 104.076,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "110.186.229.129",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-24 00:05:16 UTC",
+      "last_seen": "2026-03-24 00:05:16 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 41.8048,
+      "lon": 123.433,
+      "lng": 123.433,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "113.237.228.50",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-24 00:02:07 UTC",
+      "last_seen": "2026-03-24 00:02:07 UTC",
+      "tags": [
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-24 00:00:14 UTC",
+      "last_seen": "2026-03-24 00:00:14 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:55:08 UTC",
+      "last_seen": "2026-03-23 23:55:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "42.225.200.140",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:54:18 UTC",
+      "last_seen": "2026-03-23 23:54:18 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:50:07 UTC",
+      "last_seen": "2026-03-23 23:50:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:44:08 UTC",
+      "last_seen": "2026-03-23 23:44:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:38:06 UTC",
+      "last_seen": "2026-03-23 23:38:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 30.6509,
+      "lon": 104.076,
+      "lng": 104.076,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "110.186.229.129",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:35:15 UTC",
+      "last_seen": "2026-03-23 23:35:15 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 31.5826,
+      "lon": 74.3276,
+      "lng": 74.3276,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "110.39.235.163",
+      "country": "Pakistan",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:35:14 UTC",
+      "last_seen": "2026-03-23 23:35:14 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:32:07 UTC",
+      "last_seen": "2026-03-23 23:32:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "lng": 77.5946,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "59.90.191.141",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:27:07 UTC",
+      "last_seen": "2026-03-23 23:27:07 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 9.0245,
+      "lon": 38.7485,
+      "lng": 38.7485,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "196.189.96.59",
+      "country": "Ethiopia",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:26:08 UTC",
+      "last_seen": "2026-03-23 23:26:08 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "219.155.26.235",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:26:08 UTC",
+      "last_seen": "2026-03-23 23:26:08 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:22:07 UTC",
+      "last_seen": "2026-03-23 23:22:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:16:06 UTC",
+      "last_seen": "2026-03-23 23:16:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 10.7739,
+      "lon": 76.6487,
+      "lng": 76.6487,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "61.1.29.85",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:13:16 UTC",
+      "last_seen": "2026-03-23 23:13:16 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "mirai",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 36.6518,
+      "lon": 117.12,
+      "lng": 117.12,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "60.211.89.23",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:13:15 UTC",
+      "last_seen": "2026-03-23 23:13:15 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 31.5826,
+      "lon": 74.3276,
+      "lng": 74.3276,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "110.39.235.163",
+      "country": "Pakistan",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:11:17 UTC",
+      "last_seen": "2026-03-23 23:11:17 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:10:08 UTC",
+      "last_seen": "2026-03-23 23:10:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 23:05:08 UTC",
+      "last_seen": "2026-03-23 23:05:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:59:08 UTC",
+      "last_seen": "2026-03-23 22:59:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "lng": 77.5946,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "59.90.191.141",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:57:08 UTC",
+      "last_seen": "2026-03-23 22:57:08 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:55:08 UTC",
+      "last_seen": "2026-03-23 22:55:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 35.1874,
+      "lon": 113.8025,
+      "lng": 113.8025,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "42.229.218.119",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:52:07 UTC",
+      "last_seen": "2026-03-23 22:52:07 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": -29.8026,
+      "lon": 30.7969,
+      "lng": 30.7969,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "105.186.202.128",
+      "country": "South Africa",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:47:17 UTC",
+      "last_seen": "2026-03-23 22:47:17 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:47:07 UTC",
+      "last_seen": "2026-03-23 22:47:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 9.9406,
+      "lon": 76.2653,
+      "lng": 76.2653,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "61.1.221.39",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:46:16 UTC",
+      "last_seen": "2026-03-23 22:46:16 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 10.7739,
+      "lon": 76.6487,
+      "lng": 76.6487,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "61.1.29.85",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:45:18 UTC",
+      "last_seen": "2026-03-23 22:45:18 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "mirai",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:42:07 UTC",
+      "last_seen": "2026-03-23 22:42:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:37:08 UTC",
+      "last_seen": "2026-03-23 22:37:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 36.6518,
+      "lon": 117.12,
+      "lng": 117.12,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "60.211.89.23",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:35:20 UTC",
+      "last_seen": "2026-03-23 22:35:20 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.50.43.34",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:33:18 UTC",
+      "last_seen": "2026-03-23 22:33:18 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:30:08 UTC",
+      "last_seen": "2026-03-23 22:30:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 29.9192,
+      "lon": 73.8741,
+      "lng": 73.8741,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "117.207.118.36",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:28:09 UTC",
+      "last_seen": "2026-03-23 22:28:09 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 35.1874,
+      "lon": 113.8025,
+      "lng": 113.8025,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "42.229.218.119",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:27:06 UTC",
+      "last_seen": "2026-03-23 22:27:06 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 9.9406,
+      "lon": 76.2653,
+      "lng": 76.2653,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "61.1.221.39",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:25:22 UTC",
+      "last_seen": "2026-03-23 22:25:22 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:25:07 UTC",
+      "last_seen": "2026-03-23 22:25:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.49.241.61",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:24:09 UTC",
+      "last_seen": "2026-03-23 22:24:09 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": -29.8026,
+      "lon": 30.7969,
+      "lng": 30.7969,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "105.186.202.128",
+      "country": "South Africa",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:23:07 UTC",
+      "last_seen": "2026-03-23 22:23:07 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:19:06 UTC",
+      "last_seen": "2026-03-23 22:19:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:13:07 UTC",
+      "last_seen": "2026-03-23 22:13:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:08:09 UTC",
+      "last_seen": "2026-03-23 22:08:09 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:20 UTC",
+      "last_seen": "2026-03-23 22:07:19 UTC",
+      "tags": [
+        "sh",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 50.1517,
+      "lon": 8.7523,
+      "lng": 8.7523,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "158.94.208.168",
+      "country": "Germany",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:05:09 UTC",
+      "last_seen": "2026-03-23 22:05:09 UTC",
+      "tags": [
+        "c2-monitor-auto",
+        "dropped-by-amadey",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 22:03:08 UTC",
+      "last_seen": "2026-03-23 22:03:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 36.6518,
+      "lon": 117.12,
+      "lng": 117.12,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "27.217.33.239",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:06:16 UTC",
+      "last_seen": "2026-03-23 22:01:52 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "123.14.33.100",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:59:09 UTC",
+      "last_seen": "2026-03-23 21:59:09 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7599,
+      "lon": 113.6459,
+      "lng": 113.6459,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "221.15.186.110",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:57:07 UTC",
+      "last_seen": "2026-03-23 21:57:07 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:57:07 UTC",
+      "last_seen": "2026-03-23 21:57:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 25.0453,
+      "lon": 102.71,
+      "lng": 102.71,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "220.164.229.253",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:57:07 UTC",
+      "last_seen": "2026-03-23 21:57:07 UTC",
+      "tags": [
+        "mirai",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 29.9192,
+      "lon": 73.8741,
+      "lng": 73.8741,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "117.207.118.36",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:56:19 UTC",
+      "last_seen": "2026-03-23 21:56:19 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "125.44.51.33",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:55:22 UTC",
+      "last_seen": "2026-03-23 21:55:22 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 9.0245,
+      "lon": 38.7485,
+      "lng": 38.7485,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "196.189.98.77",
+      "country": "Ethiopia",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:25:17 UTC",
+      "last_seen": "2026-03-23 21:54:10 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.50.43.34",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:52:29 UTC",
+      "last_seen": "2026-03-23 21:52:29 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:52:08 UTC",
+      "last_seen": "2026-03-23 21:52:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 14.4309,
+      "lon": 120.9025,
+      "lng": 120.9025,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "112.198.140.250",
+      "country": "Philippines",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:48:14 UTC",
+      "last_seen": "2026-03-23 21:48:14 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 10.3099,
+      "lon": 123.893,
+      "lng": 123.893,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "124.6.169.46",
+      "country": "Philippines",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:21:17 UTC",
+      "last_seen": "2026-03-23 21:47:57 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 23.7285,
+      "lon": 92.7188,
+      "lng": 92.7188,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "117.209.89.209",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:46:23 UTC",
+      "last_seen": "2026-03-23 21:46:23 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:45:10 UTC",
+      "last_seen": "2026-03-23 21:45:10 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:20 UTC",
+      "last_seen": "2026-03-23 21:43:22 UTC",
+      "tags": [
+        "elf",
+        "gafgyt",
+        "mips",
+        "mirai",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:41:06 UTC",
+      "last_seen": "2026-03-23 21:41:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 31.5826,
+      "lon": 74.3276,
+      "lng": 74.3276,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "110.37.91.29",
+      "country": "Pakistan",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:22:14 UTC",
+      "last_seen": "2026-03-23 21:40:46 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "123.14.33.100",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:37:11 UTC",
+      "last_seen": "2026-03-23 21:37:11 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:36:12 UTC",
+      "last_seen": "2026-03-23 21:36:12 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7599,
+      "lon": 113.6459,
+      "lng": 113.6459,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "221.15.186.110",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:32:12 UTC",
+      "last_seen": "2026-03-23 21:32:12 UTC",
+      "tags": [
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "125.44.51.33",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:30:24 UTC",
+      "last_seen": "2026-03-23 21:30:24 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.49.87.133",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:30:23 UTC",
+      "last_seen": "2026-03-23 21:30:23 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:21 UTC",
+      "last_seen": "2026-03-23 21:29:35 UTC",
+      "tags": [
+        "elf",
+        "mips",
+        "mirai",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 23.1291,
+      "lon": 113.264,
+      "lng": 113.264,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "58.255.42.57",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:18:26 UTC",
+      "last_seen": "2026-03-23 21:28:15 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:24:08 UTC",
+      "last_seen": "2026-03-23 21:24:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 25.0453,
+      "lon": 102.71,
+      "lng": 102.71,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "220.164.229.253",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:22:24 UTC",
+      "last_seen": "2026-03-23 21:22:24 UTC",
+      "tags": [
+        "mirai",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 8.7272,
+      "lon": 77.687,
+      "lng": 77.687,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "59.92.89.58",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:22:22 UTC",
+      "last_seen": "2026-03-23 21:22:22 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.0354,
+      "lon": 113.8608,
+      "lng": 113.8608,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.53.200.190",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:22:21 UTC",
+      "last_seen": "2026-03-23 21:22:21 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:16 UTC",
+      "last_seen": "2026-03-23 21:21:06 UTC",
+      "tags": [
+        "arm",
+        "elf",
+        "mirai",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 23.7285,
+      "lon": 92.7188,
+      "lng": 92.7188,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "117.209.89.209",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:19:29 UTC",
+      "last_seen": "2026-03-23 21:19:29 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:14:07 UTC",
+      "last_seen": "2026-03-23 21:14:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:08:07 UTC",
+      "last_seen": "2026-03-23 21:08:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 32.0607,
+      "lon": 118.763,
+      "lng": 118.763,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "180.120.0.93",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:07:08 UTC",
+      "last_seen": "2026-03-23 21:07:08 UTC",
+      "tags": [
+        "32-bit",
+        "arm",
+        "elf",
+        "mirai",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "182.113.198.68",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:05:23 UTC",
+      "last_seen": "2026-03-23 21:05:23 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 21:03:05 UTC",
+      "last_seen": "2026-03-23 21:03:05 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:20 UTC",
+      "last_seen": "2026-03-23 21:01:27 UTC",
+      "tags": [
+        "arm",
+        "elf",
+        "mirai",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.0354,
+      "lon": 113.8608,
+      "lng": 113.8608,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "115.53.200.190",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:59:18 UTC",
+      "last_seen": "2026-03-23 20:59:18 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 23.7285,
+      "lon": 92.7188,
+      "lng": 92.7188,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "117.209.83.83",
+      "country": "India",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:59:17 UTC",
+      "last_seen": "2026-03-23 20:59:17 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 40.6599,
+      "lon": 122.2208,
+      "lng": 122.2208,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "116.139.26.230",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:17:05 UTC",
+      "last_seen": "2026-03-23 20:57:40 UTC",
+      "tags": [
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:57:06 UTC",
+      "last_seen": "2026-03-23 20:57:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 14.6438,
+      "lon": 120.9632,
+      "lng": 120.9632,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "120.28.81.136",
+      "country": "Philippines",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:27:06 UTC",
+      "last_seen": "2026-03-23 20:52:11 UTC",
+      "tags": [
+        "mirai",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "91.92.241.94",
+      "country": "Netherlands",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:24:21 UTC",
+      "last_seen": "2026-03-23 20:51:09 UTC",
+      "tags": [
+        "arm",
+        "elf",
+        "mirai",
+        "ua-wget",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:51:06 UTC",
+      "last_seen": "2026-03-23 20:51:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:49:07 UTC",
+      "last_seen": "2026-03-23 20:49:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 34.7472,
+      "lon": 113.625,
+      "lng": 113.625,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "182.113.198.68",
+      "country": "China",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:45:28 UTC",
+      "last_seen": "2026-03-23 20:45:28 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "online malware: malware_download",
+      "first_seen": "2026-03-23 20:45:09 UTC",
+      "last_seen": "2026-03-23 20:45:09 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 36.6518,
+      "lon": 117.12,
+      "lng": 117.12,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "27.217.33.239",
+      "country": "China",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:36:13 UTC",
+      "last_seen": "2026-03-23 20:36:13 UTC",
+      "tags": [
+        "32-bit",
+        "elf",
+        "mips",
+        "Mozi",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 41.8048,
+      "lon": 123.433,
+      "lng": 123.433,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "175.148.158.32",
+      "country": "China",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:32:11 UTC",
+      "last_seen": "2026-03-23 20:32:11 UTC",
+      "tags": [
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:29:07 UTC",
+      "last_seen": "2026-03-23 20:29:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:24:08 UTC",
+      "last_seen": "2026-03-23 20:24:08 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:18:12 UTC",
+      "last_seen": "2026-03-23 20:18:12 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:12:06 UTC",
+      "last_seen": "2026-03-23 20:12:06 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 40.6599,
+      "lon": 122.2208,
+      "lng": 122.2208,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": "116.139.26.230",
+      "country": "China",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:12:06 UTC",
+      "last_seen": "2026-03-23 20:12:06 UTC",
+      "tags": [
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "URLhaus",
+      "ip": null,
+      "country": "Unknown",
+      "description": "offline malware: malware_download",
+      "first_seen": "2026-03-23 20:06:07 UTC",
+      "last_seen": "2026-03-23 20:06:07 UTC",
+      "tags": [
+        "ClearFake",
+        "malware-url"
+      ]
+    },
+    {
+      "lat": 40.7876,
+      "lon": -74.06,
+      "lng": -74.06,
+      "type": "botnet",
+      "severity": "low",
+      "source": "Feodo Tracker",
+      "ip": "162.243.103.246",
+      "country": "United States",
+      "description": "Emotet C2 server on port 8080 (offline)",
+      "first_seen": "2022-06-04 21:24:53",
+      "last_seen": "2026-03-07",
+      "tags": [
+        "emotet",
+        "c2",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 34.706,
+      "lon": 135.493,
+      "lng": 135.493,
+      "type": "botnet",
+      "severity": "low",
+      "source": "Feodo Tracker",
+      "ip": "27.133.154.218",
+      "country": "Japan",
+      "description": "QakBot C2 server on port 443 (offline)",
+      "first_seen": "2026-03-04 14:28:39",
+      "last_seen": "2026-03-05",
+      "tags": [
+        "qakbot",
+        "c2",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "type": "botnet",
+      "severity": "low",
+      "source": "Feodo Tracker",
+      "ip": "34.204.119.63",
+      "country": "United States",
+      "description": "QakBot C2 server on port 443 (offline)",
+      "first_seen": "2026-01-13 21:41:15",
+      "last_seen": "2026-03-01",
+      "tags": [
+        "qakbot",
+        "c2",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 51.5177,
+      "lon": -0.6215,
+      "lng": -0.6215,
+      "type": "botnet",
+      "severity": "low",
+      "source": "Feodo Tracker",
+      "ip": "178.62.3.223",
+      "country": "United Kingdom",
+      "description": "QakBot C2 server on port 443 (offline)",
+      "first_seen": "2026-02-17 05:41:23",
+      "last_seen": "2026-02-18",
+      "tags": [
+        "qakbot",
+        "c2",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "168.245.203.142",
+      "country": "United States",
+      "description": "Meterpreter botnet_cc",
+      "first_seen": "2026-03-24 00:01:48",
+      "last_seen": null,
+      "tags": [
+        "as58580",
+        "c2",
+        "censys",
+        "fastrack",
+        "hacktool"
+      ]
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "168.245.203.90",
+      "country": "United States",
+      "description": "Meterpreter botnet_cc",
+      "first_seen": "2026-03-24 00:01:46",
+      "last_seen": null,
+      "tags": [
+        "as58580",
+        "c2",
+        "censys",
+        "fastrack",
+        "hacktool"
+      ]
+    },
+    {
+      "lat": 30.4189,
+      "lon": -9.5929,
+      "lng": -9.5929,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "102.98.94.132",
+      "country": "Morocco",
+      "description": "NetSupportManager RAT botnet_cc",
+      "first_seen": "2026-03-24 00:01:19",
+      "last_seen": null,
+      "tags": [
+        "as36925",
+        "asmedi",
+        "c2",
+        "censys",
+        "netsupport"
+      ]
+    },
+    {
+      "lat": 42.8864,
+      "lon": -78.8784,
+      "lng": -78.8784,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "192.210.186.224",
+      "country": "United States",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-24 00:00:55",
+      "last_seen": null,
+      "tags": [
+        "as-colocrossing",
+        "as36352",
+        "c2",
+        "censys",
+        "rat"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "XWorm botnet_cc",
+      "first_seen": "2026-03-23 23:01:57",
+      "last_seen": null,
+      "tags": [
+        "xworm",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "XWorm botnet_cc",
+      "first_seen": "2026-03-23 23:01:53",
+      "last_seen": null,
+      "tags": [
+        "xworm",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "XWorm botnet_cc",
+      "first_seen": "2026-03-23 23:01:50",
+      "last_seen": null,
+      "tags": [
+        "xworm",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 42.8864,
+      "lon": -78.8784,
+      "lng": -78.8784,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "172.245.195.216",
+      "country": "United States",
+      "description": "XWorm botnet_cc",
+      "first_seen": "2026-03-23 23:01:49",
+      "last_seen": null,
+      "tags": [
+        "xworm",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Quasar RAT botnet_cc",
+      "first_seen": "2026-03-23 23:00:35",
+      "last_seen": null,
+      "tags": [
+        "quasar",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Quasar RAT botnet_cc",
+      "first_seen": "2026-03-23 23:00:35",
+      "last_seen": null,
+      "tags": [
+        "quasar",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 52.3398,
+      "lon": 4.86996,
+      "lng": 4.86996,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "77.83.39.219",
+      "country": "The Netherlands",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 23:00:24",
+      "last_seen": null,
+      "tags": [
+        "remcos",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 42.8864,
+      "lon": -78.8784,
+      "lng": -78.8784,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "104.168.7.225",
+      "country": "United States",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 23:00:18",
+      "last_seen": null,
+      "tags": [
+        "remcos",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:31:03",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "lumma",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:31:03",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "lumma",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:31:03",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "lumma",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:31:03",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "lumma",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:31:03",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "lumma",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:26:58",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "macsync",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown Stealer botnet_cc",
+      "first_seen": "2026-03-23 22:26:20",
+      "last_seen": null,
+      "tags": [
+        "c2",
+        "domain",
+        "macsync",
+        "stealer",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:16:41",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:16:10",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:15:15",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:07:47",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:06:12",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:05:13",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:04:10",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 22:01:42",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:56:49",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:56:21",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:40:04",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:35:47",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:32:44",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:02:53",
+      "last_seen": null,
+      "tags": [
+        "clickfix",
+        "malware"
+      ]
+    },
+    {
+      "lat": 42.8864,
+      "lon": -78.8784,
+      "lng": -78.8784,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "107.175.246.30",
+      "country": "United States",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 20:06:43",
+      "last_seen": null,
+      "tags": [
+        "remcos",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 42.8864,
+      "lon": -78.8784,
+      "lng": -78.8784,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "107.175.246.30",
+      "country": "United States",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 20:06:40",
+      "last_seen": null,
+      "tags": [
+        "remcos",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 48.9742,
+      "lon": 8.1851,
+      "lng": 8.1851,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "173.249.12.196",
+      "country": "France",
+      "description": "AdaptixC2 botnet_cc",
+      "first_seen": "2026-03-23 20:01:44",
+      "last_seen": null,
+      "tags": [
+        "adaptixc2",
+        "as51167",
+        "c2",
+        "censys",
+        "contabo"
+      ]
+    },
+    {
+      "lat": 50.4504,
+      "lon": 30.5245,
+      "lng": 30.5245,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "83.142.209.11",
+      "country": "Ukraine",
+      "description": "AdaptixC2 botnet_cc",
+      "first_seen": "2026-03-23 20:01:43",
+      "last_seen": null,
+      "tags": [
+        "adaptixc2",
+        "as205759",
+        "c2",
+        "censys",
+        "ghostynetworks"
+      ]
+    },
+    {
+      "lat": 55.7332,
+      "lon": 37.5833,
+      "lng": 37.5833,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "51.250.114.26",
+      "country": "Russia",
+      "description": "Unknown malware botnet_cc",
+      "first_seen": "2026-03-23 20:01:34",
+      "last_seen": null,
+      "tags": [
+        "as200350",
+        "censys",
+        "evilgophish",
+        "panel",
+        "phishing"
+      ]
+    },
+    {
+      "lat": 50.8933,
+      "lon": 6.05805,
+      "lng": 6.05805,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "176.65.139.62",
+      "country": "The Netherlands",
+      "description": "MooBot botnet_cc",
+      "first_seen": "2026-03-23 20:01:29",
+      "last_seen": null,
+      "tags": [
+        "as51396",
+        "c2",
+        "censys",
+        "moobot",
+        "pfcloud"
+      ]
+    },
+    {
+      "lat": 52.352,
+      "lon": 4.9392,
+      "lng": 4.9392,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "45.90.13.77",
+      "country": "Netherlands",
+      "description": "PoshC2 botnet_cc",
+      "first_seen": "2026-03-23 20:01:21",
+      "last_seen": null,
+      "tags": [
+        "as212477",
+        "c2",
+        "censys",
+        "posh",
+        "royale-as"
+      ]
+    },
+    {
+      "lat": 37.353,
+      "lon": -121.9544,
+      "lng": -121.9544,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "107.172.86.25",
+      "country": "United States",
+      "description": "Havoc botnet_cc",
+      "first_seen": "2026-03-23 20:01:16",
+      "last_seen": null,
+      "tags": [
+        "as-colocrossing",
+        "as36352",
+        "c2",
+        "censys",
+        "havoc"
+      ]
+    },
+    {
+      "lat": 52.3759,
+      "lon": 4.8975,
+      "lng": 4.8975,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "89.124.83.139",
+      "country": "Netherlands",
+      "description": "Unknown malware botnet_cc",
+      "first_seen": "2026-03-23 20:01:10",
+      "last_seen": null,
+      "tags": [
+        "as216071",
+        "c2",
+        "censys",
+        "mythic",
+        "vdsina"
+      ]
+    },
+    {
+      "lat": 10.4653,
+      "lon": -73.2498,
+      "lng": -73.2498,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "191.107.90.235",
+      "country": "Colombia",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 20:00:51",
+      "last_seen": null,
+      "tags": [
+        "as3816",
+        "c2",
+        "censys",
+        "colombia",
+        "rat"
+      ]
+    },
+    {
+      "lat": 40.5237,
+      "lon": -74.4151,
+      "lng": -74.4151,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "80.76.49.106",
+      "country": "United States",
+      "description": "Remcos botnet_cc",
+      "first_seen": "2026-03-23 20:00:50",
+      "last_seen": null,
+      "tags": [
+        "as399486",
+        "c2",
+        "censys",
+        "rat",
+        "remcos"
+      ]
+    },
+    {
+      "lat": 22.5455,
+      "lon": 114.0683,
+      "lng": 114.0683,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "47.121.27.21",
+      "country": "China",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:34",
+      "last_seen": null,
+      "tags": [
+        "alibaba-cn-net",
+        "as37963",
+        "c2",
+        "censys",
+        "cobaltstrike"
+      ]
+    },
+    {
+      "lat": 22.3193,
+      "lon": 114.169,
+      "lng": 114.169,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "64.81.30.175",
+      "country": "Hong Kong",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:33",
+      "last_seen": null,
+      "tags": [
+        "as979",
+        "c2",
+        "censys",
+        "cobaltstrike",
+        "cs-watermark-305419896"
+      ]
+    },
+    {
+      "lat": 31.2222,
+      "lon": 121.4581,
+      "lng": 121.4581,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "106.14.126.40",
+      "country": "China",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:31",
+      "last_seen": null,
+      "tags": [
+        "alibaba-cn-net",
+        "as37963",
+        "c2",
+        "censys",
+        "cobaltstrike"
+      ]
+    },
+    {
+      "lat": 50.6375,
+      "lon": 3.0542,
+      "lng": 3.0542,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "45.137.150.67",
+      "country": "France",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:28",
+      "last_seen": null,
+      "tags": [
+        "as202448",
+        "c2",
+        "censys",
+        "cobaltstrike",
+        "cs-watermark-987654321"
+      ]
+    },
+    {
+      "lat": 22.3193,
+      "lon": 114.169,
+      "lng": 114.169,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "156.234.208.80",
+      "country": "Hong Kong",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:25",
+      "last_seen": null,
+      "tags": [
+        "as138415",
+        "c2",
+        "censys",
+        "cobaltstrike",
+        "cs-watermark-987654321"
+      ]
+    },
+    {
+      "lat": -33.4521,
+      "lon": -70.6536,
+      "lng": -70.6536,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "64.176.21.30",
+      "country": "Chile",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:24",
+      "last_seen": null,
+      "tags": [
+        "as-vultr",
+        "as20473",
+        "c2",
+        "censys",
+        "cobaltstrike"
+      ]
+    },
+    {
+      "lat": 34.0544,
+      "lon": -118.244,
+      "lng": -118.244,
+      "type": "botnet",
+      "severity": "low",
+      "source": "ThreatFox",
+      "ip": "38.55.99.173",
+      "country": "United States",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 20:00:22",
+      "last_seen": null,
+      "tags": [
+        "as42960",
+        "c2",
+        "censys",
+        "cobaltstrike",
+        "cs-watermark-987654321"
+      ]
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "type": "botnet",
+      "severity": "medium",
+      "source": "Feodo Tracker",
+      "ip": "50.16.16.211",
+      "country": "United States",
+      "description": "QakBot C2 server on port 443 (online)",
+      "first_seen": "2025-12-30 13:56:31",
+      "last_seen": "2026-03-12",
+      "tags": [
+        "qakbot",
+        "c2",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-24 00:05:12",
+      "last_seen": "2026-03-24 00:06:04",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:59:45",
+      "last_seen": "2026-03-24 00:00:19",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:54:12",
+      "last_seen": "2026-03-23 23:54:41",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:48:13",
+      "last_seen": "2026-03-23 23:49:35",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:42:48",
+      "last_seen": "2026-03-23 23:44:18",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:37:18",
+      "last_seen": "2026-03-23 23:38:46",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:31:28",
+      "last_seen": "2026-03-23 23:31:42",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "Unknown malware payload_delivery",
+      "first_seen": "2026-03-23 21:34:07",
+      "last_seen": "2026-03-23 23:30:48",
+      "tags": [
+        "clickfix",
+        "errtraffic",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:25:50",
+      "last_seen": "2026-03-23 23:27:17",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:20:24",
+      "last_seen": "2026-03-23 23:21:26",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:14:36",
+      "last_seen": "2026-03-23 23:15:45",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:09:12",
+      "last_seen": "2026-03-23 23:09:21",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 23:03:35",
+      "last_seen": "2026-03-23 23:04:38",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:58:09",
+      "last_seen": "2026-03-23 22:58:46",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:52:22",
+      "last_seen": "2026-03-23 22:54:11",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:46:50",
+      "last_seen": "2026-03-23 22:47:43",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:41:13",
+      "last_seen": "2026-03-23 22:41:33",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:34:47",
+      "last_seen": "2026-03-23 22:36:26",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:29:30",
+      "last_seen": "2026-03-23 22:30:17",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:23:52",
+      "last_seen": "2026-03-23 22:24:46",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:18:07",
+      "last_seen": "2026-03-23 22:18:47",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:12:41",
+      "last_seen": "2026-03-23 22:14:09",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:07:06",
+      "last_seen": "2026-03-23 22:08:34",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 22:01:36",
+      "last_seen": "2026-03-23 22:02:50",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:55:55",
+      "last_seen": "2026-03-23 21:57:12",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:51:02",
+      "last_seen": "2026-03-23 21:51:08",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:44:48",
+      "last_seen": "2026-03-23 21:45:30",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:39:02",
+      "last_seen": "2026-03-23 21:40:29",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:33:47",
+      "last_seen": "2026-03-23 21:35:54",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:31:21",
+      "last_seen": "2026-03-23 21:32:05",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:23:34",
+      "last_seen": "2026-03-23 21:24:26",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:12:45",
+      "last_seen": "2026-03-23 21:14:16",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:07:41",
+      "last_seen": "2026-03-23 21:08:32",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 21:01:56",
+      "last_seen": "2026-03-23 21:02:49",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:55:59",
+      "last_seen": "2026-03-23 20:57:12",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:50:19",
+      "last_seen": "2026-03-23 20:51:31",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:45:19",
+      "last_seen": "2026-03-23 20:48:16",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:39:26",
+      "last_seen": "2026-03-23 20:44:39",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:33:46",
+      "last_seen": "2026-03-23 20:35:06",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:28:02",
+      "last_seen": "2026-03-23 20:28:13",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:22:36",
+      "last_seen": "2026-03-23 20:23:43",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:16:51",
+      "last_seen": "2026-03-23 20:18:04",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:11:12",
+      "last_seen": "2026-03-23 20:12:11",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:05:35",
+      "last_seen": "2026-03-23 20:05:45",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 20:00:05",
+      "last_seen": "2026-03-23 20:00:54",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 0.0,
+      "lon": 0.0,
+      "lng": 0.0,
+      "type": "malware",
+      "severity": "high",
+      "source": "ThreatFox",
+      "ip": null,
+      "country": "Unknown",
+      "description": "ClearFake payload_delivery",
+      "first_seen": "2026-03-23 19:54:23",
+      "last_seen": "2026-03-23 19:55:35",
+      "tags": [
+        "clearfake",
+        "malware"
+      ]
+    },
+    {
+      "lat": 22.3193,
+      "lon": 114.169,
+      "lng": 114.169,
+      "type": "botnet",
+      "severity": "critical",
+      "source": "ThreatFox",
+      "ip": "154.83.12.132",
+      "country": "Hong Kong",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 21:06:09",
+      "last_seen": "2026-03-23 23:04:47",
+      "tags": [
+        "cobaltstrike",
+        "drb-ra",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 54.6912,
+      "lon": 25.2816,
+      "lng": 25.2816,
+      "type": "botnet",
+      "severity": "critical",
+      "source": "ThreatFox",
+      "ip": "141.98.11.205",
+      "country": "Lithuania",
+      "description": "Cobalt Strike botnet_cc",
+      "first_seen": "2026-03-23 21:05:46",
+      "last_seen": "2026-03-23 23:04:19",
+      "tags": [
+        "cobaltstrike",
+        "drb-ra",
+        "botnet"
+      ]
+    },
+    {
+      "lat": 37.9842,
+      "lon": 23.7353,
+      "lng": 23.7353,
+      "type": "botnet",
+      "severity": "critical",
+      "source": "ThreatFox",
+      "ip": "85.75.97.215",
+      "country": "Greece",
+      "description": "Quasar RAT botnet_cc",
+      "first_seen": "2026-03-23 20:45:17",
+      "last_seen": "2026-03-23 23:00:28",
+      "tags": [
+        "quasarrat",
+        "rat",
+        "botnet"
+      ]
+    }
+  ],
+  "active": 205,
+  "critical": 3,
+  "by_type": {
+    "malware": 160,
+    "botnet": 45
+  },
+  "by_country": {
+    "China": 34,
+    "Unknown": 111,
+    "Pakistan": 3,
+    "India": 12,
+    "Ethiopia": 2,
+    "South Africa": 2,
+    "Netherlands": 8,
+    "Germany": 1,
+    "Philippines": 3,
+    "United States": 13,
+    "Japan": 1,
+    "United Kingdom": 1,
+    "Morocco": 1,
+    "The Netherlands": 2,
+    "France": 2,
+    "Ukraine": 1,
+    "Russia": 1,
+    "Colombia": 1,
+    "Hong Kong": 3,
+    "Chile": 1,
+    "Lithuania": 1,
+    "Greece": 1
+  },
+  "generated_at": "2026-03-24T00:10:30.507596Z"
+}

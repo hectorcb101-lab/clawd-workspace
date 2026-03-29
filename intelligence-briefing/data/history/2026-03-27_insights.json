@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-03-27T07:52:43.142088",
+  "executive_summary": [
+    "Market fear level: elevated (VIX up 0.6%)"
+  ],
+  "market_explanations": [
+    {
+      "asset": "Cryptocurrency",
+      "movement": "Major selling (BTC/ETH down 2.1%)",
+      "possible_causes": [
+        "Crypto-specific weakness (no clear catalyst)"
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "atlas_opinion": {
+    "main_thesis": "Broad risk-off move driven by Crypto-specific weakness (no clear catalyst).",
+    "deep_take": "When multiple asset classes move in sync, it's macro - not sector-specific. This is either geopolitical fear or liquidity tightening.",
+    "reasoning": [],
+    "contrarian_view": "",
+    "what_to_watch": [
+      "VIX breaking above 20 (from current 16) would confirm fear is spreading \u2192 stocks typically pull back when VIX crosses this level",
+      "BTC support at $85k (price floor where buyers step in) - breaking below this level often triggers more selling as stop-losses hit"
+    ],
+    "prediction": "",
+    "confidence": "moderate"
+  },
+  "educational": {
+    "concept": "Market Divergence",
+    "explanation": "When different asset classes move in opposite directions, it often signals a shift in investor psychology or changing risk preferences.",
+    "example": "Stocks up + Crypto down = possible rotation from speculative to traditional assets"
+  },
+  "geopolitical_alpha": {
+    "chains": [
+      {
+        "headline": "Federal Reserve maintains interest rates at 3.5-3.75% amid economic uncertainty",
+        "date": "2026-01-28T00:00:00.000Z",
+        "chain_summary": "Central Bank Hawkish \u2192 Interest rates up",
+        "transmission_path": [
+          "Event: Federal Reserve maintains interest rates at 3.5-3.75% amid economic uncertainty",
+          "Category: Central Bank Hawkish",
+          "Transmission: Hawkish = central bank fighting inflation by raising rates or reducing money supply. Higher rates ma..."
+        ],
+        "top_assets": [
+          {
+            "asset": "Interest rates",
+            "direction": "up",
+            "magnitude": "high",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Growth stocks",
+            "direction": "down",
+            "magnitude": "high",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Bank stocks",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "medium",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Currency",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          }
+        ],
+        "watch": [
+          "Interest rates breaking upward",
+          "Growth stocks support levels",
+          "Bank stocks breaking upward"
+        ],
+        "historical_parallel": {
+          "event": "Escalating tariffs between US and China",
+          "date": "2018-07-06",
+          "what_happened": {
+            "S&P 500": "-20% peak to trough (Q4 2018)",
+            "Chinese Yuan": "-10%",
+            "Soybeans": "-20% (China stopped buying US)",
+            "US Tech stocks": "-25% (supply chain fears)",
+            "Vietnam stocks": "+15% (supply chain diversion)"
+          },
+          "lesson": "Trade wars hurt both sides but create winners elsewhere. Supply chains shifted to Vietnam/Mexico. Currency depreciation partially offset tariff pain. Markets fell on escalation, rallied on d\u00e9tente signals."
+        },
+        "teaching_note": "Hawkish = central bank fighting inflation by raising rates or reducing money supply. Higher rates make borrowing expensive, slowing growth. Growth stocks (tech, startups) fall because their future profits are worth less when discounted at higher rates. Banks benefit from higher interest margins. The currency strengthens as foreign money flows in for higher yields.",
+        "conviction_score": 100,
+        "conviction_emoji": "\ud83d\udfe2",
+        "conviction_label": "HIGH",
+        "countries": [
+          "US",
+          "USA",
+          "United States"
+        ],
+        "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm"
+      },
+      {
+        "headline": "OPEC+ extends production cuts through Q2 2026",
+        "date": "2026-02-12T00:00:00.000Z",
+        "chain_summary": "Energy Supply Disruption \u2192 Oil/Gas prices up",
+        "transmission_path": [
+          "Event: OPEC+ extends production cuts through Q2 2026",
+          "Category: Energy Supply Disruption",
+          "Transmission: Energy is the foundation of everything. When supply is disrupted (war, OPEC cuts, pipeline damage), ..."
+        ],
+        "top_assets": [
+          {
+            "asset": "Oil/Gas prices",
+            "direction": "up",
+            "magnitude": "high",
+            "conviction": "high",
+            "rationale": "Historical precedent: energy supply disruption typically affects this asset class"
+          },
+          {
+            "asset": "Transport costs",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "high",
+            "rationale": "Historical precedent: energy supply disruption typically affects this asset class"
+          },
+          {
+            "asset": "Renewable energy stocks",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "medium",
+            "rationale": "Historical precedent: energy supply disruption typically affects this asset class"
+          },
+          {
+            "asset": "Energy-intensive sectors",
+            "direction": "down",
+            "magnitude": "medium",
+            "conviction": "high",
+            "rationale": "Historical precedent: energy supply disruption typically affects this asset class"
+          }
+        ],
+        "watch": [
+          "Oil/Gas prices breaking upward",
+          "Transport costs breaking upward",
+          "Renewable energy stocks breaking upward"
+        ],
+        "historical_parallel": {
+          "event": "Full-scale invasion of Ukraine",
+          "date": "2022-02-24",
+          "what_happened": {
+            "European natural gas": "+300%",
+            "Wheat": "+50%",
+            "Russian Ruble": "Crashed to 120/$, recovered to 60/$ (capital controls)",
+            "Defence stocks (US/EU)": "+40%",
+            "European stocks": "-20%",
+            "Gold": "+15%"
+          },
+          "lesson": "Energy dependence = strategic vulnerability. Sanctions can be circumvented (Russia selling oil via India/China). Commodity exporters (wheat, fertiliser) have immense leverage. War accelerates structural shifts (EU energy transition)."
+        },
+        "teaching_note": "Energy is the foundation of everything. When supply is disrupted (war, OPEC cuts, pipeline damage), prices spike. This flows through the entire economy: transport (airlines, shipping), manufacturing (chemicals, steel), consumers (petrol, heating). Energy-intensive industries get squeezed first. Renewable/alternative energy becomes more attractive.",
+        "conviction_score": 100,
+        "conviction_emoji": "\ud83d\udfe2",
+        "conviction_label": "HIGH",
+        "countries": [
+          "OPEC",
+          "Saudi Arabia",
+          "Russia"
+        ],
+        "source_url": "https://www.opec.org/opec_web/en/press_room/"
+      },
+      {
+        "headline": "European Central Bank signals potential rate cuts if inflation continues to moderate",
+        "date": "2026-02-14T00:00:00.000Z",
+        "chain_summary": "Central Bank Hawkish \u2192 Interest rates up",
+        "transmission_path": [
+          "Event: European Central Bank signals potential rate cuts if inflation continues to mode",
+          "Category: Central Bank Hawkish",
+          "Transmission: Hawkish = central bank fighting inflation by raising rates or reducing money supply. Higher rates ma..."
+        ],
+        "top_assets": [
+          {
+            "asset": "Interest rates",
+            "direction": "up",
+            "magnitude": "high",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Growth stocks",
+            "direction": "down",
+            "magnitude": "high",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Bank stocks",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "medium",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          },
+          {
+            "asset": "Currency",
+            "direction": "up",
+            "magnitude": "medium",
+            "conviction": "high",
+            "rationale": "Historical precedent: central bank hawkish typically affects this asset class"
+          }
+        ],
+        "watch": [
+          "Interest rates breaking upward",
+          "Growth stocks support levels",
+          "Bank stocks breaking upward"
+        ],
+        "historical_parallel": {
+          "event": "Escalating tariffs between US and China",
+          "date": "2018-07-06",
+          "what_happened": {
+            "S&P 500": "-20% peak to trough (Q4 2018)",
+            "Chinese Yuan": "-10%",
+            "Soybeans": "-20% (China stopped buying US)",
+            "US Tech stocks": "-25% (supply chain fears)",
+            "Vietnam stocks": "+15% (supply chain diversion)"
+          },
+          "lesson": "Trade wars hurt both sides but create winners elsewhere. Supply chains shifted to Vietnam/Mexico. Currency depreciation partially offset tariff pain. Markets fell on escalation, rallied on d\u00e9tente signals."
+        },
+        "teaching_note": "Hawkish = central bank fighting inflation by raising rates or reducing money supply. Higher rates make borrowing expensive, slowing growth. Growth stocks (tech, startups) fall because their future profits are worth less when discounted at higher rates. Banks benefit from higher interest margins. The currency strengthens as foreign money flows in for higher yields.",
+        "conviction_score": 100,
+        "conviction_emoji": "\ud83d\udfe2",
+        "conviction_label": "HIGH",
+        "countries": [
+          "EU",
+          "Europe",
+          "ECB"
+        ],
+        "source_url": "https://www.ecb.europa.eu/press/"
+      }
+    ],
+    "summary": "Analyzed 8 geopolitical events, identified 3 high-impact transmission chains"
+  },
+  "patterns_raw": {
+    "significant_moves": [
+      {
+        "symbol": "^IXIC",
+        "price": 21408.08,
+        "change": -2.38,
+        "direction": "down",
+        "magnitude": "notable"
+      },
+      {
+        "symbol": "BTC-USD",
+        "price": 68542.77,
+        "change": -2.15,
+        "direction": "down",
+        "magnitude": "notable"
+      },
+      {
+        "symbol": "ETH-USD",
+        "price": 2068.17,
+        "change": -2.47,
+        "direction": "down",
+        "magnitude": "notable"
+      }
+    ],
+    "geopolitical_risks": [],
+    "sentiment": {
+      "status": "success",
+      "timestamp": "2026-03-27T07:52:43.136154",
+      "source": "sentiment",
+      "data": []
+    },
+    "market_sentiment": {
+      "vix": {
+        "symbol": "^VIX",
+        "price": 27.6,
+        "change_percent": 0.58
+      },
+      "sp500": {
+        "symbol": "^GSPC",
+        "price": 6477.16,
+        "change_percent": -1.74
+      },
+      "btc": {
+        "symbol": "BTC-USD",
+        "price": 68542.77,
+        "change_percent": -2.15
+      },
+      "assessment": "cautious",
+      "fear_level": "elevated"
+    }
+  }
+}

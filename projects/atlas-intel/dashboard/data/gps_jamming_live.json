@@ -1,0 +1,62 @@
+{
+  "zones": [
+    {
+      "lat": 35.5,
+      "lon": 35.8,
+      "lng": 35.8,
+      "region": "Eastern Mediterranean",
+      "description": "Russian/Syrian EW operations affecting civilian aviation",
+      "intensity": "high",
+      "radius_km": 300,
+      "source": "OSINT-derived estimate",
+      "last_detected": "2026-03-24T00:06:25.783210+00:00"
+    },
+    {
+      "lat": 50.4,
+      "lon": 30.5,
+      "lng": 30.5,
+      "region": "Ukraine/Russia Border",
+      "description": "Widespread GPS denial in active conflict zone",
+      "intensity": "critical",
+      "radius_km": 500,
+      "source": "OSINT-derived estimate",
+      "last_detected": "2026-03-24T00:06:25.783210+00:00"
+    },
+    {
+      "lat": 56.9,
+      "lon": 24.1,
+      "lng": 24.1,
+      "region": "Baltic States",
+      "description": "Russian jamming affecting Latvia/Estonia airspace",
+      "intensity": "medium",
+      "radius_km": 200,
+      "source": "OSINT-derived estimate",
+      "last_detected": "2026-03-24T00:06:25.783210+00:00"
+    },
+    {
+      "lat": 37.0,
+      "lon": 43.0,
+      "lng": 43.0,
+      "region": "Northern Iraq/Turkey Border",
+      "description": "Regional GPS interference near conflict zones",
+      "intensity": "medium",
+      "radius_km": 150,
+      "source": "OSINT-derived estimate",
+      "last_detected": "2026-03-24T00:06:25.783210+00:00"
+    },
+    {
+      "lat": 18.0,
+      "lon": 115.0,
+      "lng": 115.0,
+      "region": "South China Sea",
+      "description": "Disputed territory GPS interference",
+      "intensity": "low",
+      "radius_km": 250,
+      "source": "OSINT-derived estimate",
+      "last_detected": "2026-03-24T00:06:25.783210+00:00"
+    }
+  ],
+  "count": 5,
+  "high_intensity": 2,
+  "generated_at": "2026-03-24T00:06:25.783210+00:00"
+}

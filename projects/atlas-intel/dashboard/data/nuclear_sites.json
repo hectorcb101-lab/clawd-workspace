@@ -1,0 +1,172 @@
+{
+  "nuclear_sites": [
+    {
+      "name": "Natanz Enrichment",
+      "country": "Iran",
+      "lat": 33.72,
+      "lon": 51.72,
+      "type": "enrichment",
+      "status": "active"
+    },
+    {
+      "name": "Fordow",
+      "country": "Iran",
+      "lat": 34.69,
+      "lon": 50.99,
+      "type": "enrichment",
+      "status": "active"
+    },
+    {
+      "name": "Bushehr Nuclear Power Plant",
+      "country": "Iran",
+      "lat": 28.84,
+      "lon": 50.88,
+      "type": "power_plant",
+      "status": "active"
+    },
+    {
+      "name": "Dimona Nuclear Research Center",
+      "country": "Israel",
+      "lat": 31.0,
+      "lon": 35.14,
+      "type": "research",
+      "status": "active"
+    },
+    {
+      "name": "Yongbyon Nuclear Scientific Research Center",
+      "country": "North Korea",
+      "lat": 39.79,
+      "lon": 125.76,
+      "type": "research",
+      "status": "active"
+    }
+  ],
+  "irradiators": [
+    {
+      "id": "gi-001",
+      "city": "Vega Alta",
+      "country": "Puerto Rico",
+      "lat": 18.420295,
+      "lon": -66.334995
+    },
+    {
+      "id": "gi-002",
+      "city": "Northborough, MA",
+      "country": "USA",
+      "lat": 42.311091,
+      "lon": -71.649221
+    },
+    {
+      "id": "gi-003",
+      "city": "Chester, NY",
+      "country": "USA",
+      "lat": 41.323774,
+      "lon": -74.289753
+    },
+    {
+      "id": "gi-010",
+      "city": "Mississauga, ON",
+      "country": "Canada",
+      "lat": 43.579934,
+      "lon": -79.628163
+    },
+    {
+      "id": "gi-036",
+      "city": "Sao Paulo",
+      "country": "Brazil",
+      "lat": -23.542047,
+      "lon": -46.58432
+    },
+    {
+      "id": "gi-039",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "lat": -34.636145,
+      "lon": -58.472782
+    },
+    {
+      "id": "gi-045",
+      "city": "Moscow",
+      "country": "Russia",
+      "lat": 55.717376,
+      "lon": 37.689322
+    },
+    {
+      "id": "gi-046",
+      "city": "Obninsk",
+      "country": "Russia",
+      "lat": 55.113284,
+      "lon": 36.593435
+    },
+    {
+      "id": "gi-058",
+      "city": "Radeberg",
+      "country": "Germany",
+      "lat": 51.109509,
+      "lon": 13.917448
+    },
+    {
+      "id": "gi-075",
+      "city": "Tilehurst",
+      "country": "UK",
+      "lat": 51.453028,
+      "lon": -1.013584
+    },
+    {
+      "id": "gi-081",
+      "city": "Jeollabuk-do",
+      "country": "South Korea",
+      "lat": 35.82,
+      "lon": 127.15
+    },
+    {
+      "id": "gi-083",
+      "city": "Jiangsu Province",
+      "country": "China",
+      "lat": 32.06,
+      "lon": 118.78
+    },
+    {
+      "id": "gi-091",
+      "city": "Kolkata",
+      "country": "India",
+      "lat": 22.57,
+      "lon": 88.36
+    },
+    {
+      "id": "gi-097",
+      "city": "Delhi",
+      "country": "India",
+      "lat": 28.61,
+      "lon": 77.21
+    },
+    {
+      "id": "gi-110",
+      "city": "Tehran",
+      "country": "Iran",
+      "lat": 35.69,
+      "lon": 51.39
+    },
+    {
+      "id": "gi-111",
+      "city": "Isfahan",
+      "country": "Iran",
+      "lat": 32.65,
+      "lon": 51.67
+    },
+    {
+      "id": "gi-114",
+      "city": "Yavne",
+      "country": "Israel",
+      "lat": 31.88,
+      "lon": 34.74
+    },
+    {
+      "id": "gi-122",
+      "city": "Ibaraki",
+      "country": "Japan",
+      "lat": 36.34,
+      "lon": 140.45
+    }
+  ]
+}

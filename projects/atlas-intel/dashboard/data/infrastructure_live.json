@@ -1,0 +1,216 @@
+{
+  "sites": [
+    {
+      "lat": 50.1109,
+      "lon": 8.6821,
+      "lng": 8.6821,
+      "name": "DE-CIX Frankfurt",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Germany",
+      "description": "Internet Exchange in Germany",
+      "last_check": "2026-03-24T00:08:58.484517"
+    },
+    {
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "lng": 4.9041,
+      "name": "AMS-IX Amsterdam",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Netherlands",
+      "description": "Internet Exchange in Netherlands",
+      "last_check": "2026-03-24T00:08:58.484526"
+    },
+    {
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "lng": -0.1278,
+      "name": "LINX London",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "UK",
+      "description": "Internet Exchange in UK",
+      "last_check": "2026-03-24T00:08:58.484529"
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "name": "Equinix Ashburn",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "USA",
+      "description": "Internet Exchange in USA",
+      "last_check": "2026-03-24T00:08:58.484530"
+    },
+    {
+      "lat": 22.3193,
+      "lon": 114.1694,
+      "lng": 114.1694,
+      "name": "HKIX Hong Kong",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Hong Kong",
+      "description": "Internet Exchange in Hong Kong",
+      "last_check": "2026-03-24T00:08:58.484532"
+    },
+    {
+      "lat": 35.6762,
+      "lon": 139.6503,
+      "lng": 139.6503,
+      "name": "JPIX Tokyo",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Japan",
+      "description": "Internet Exchange in Japan",
+      "last_check": "2026-03-24T00:08:58.484535"
+    },
+    {
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "lng": 103.8198,
+      "name": "Equinix Singapore",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Singapore",
+      "description": "Internet Exchange in Singapore",
+      "last_check": "2026-03-24T00:08:58.484537"
+    },
+    {
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "lng": -46.6333,
+      "name": "Equinix S\u00e3o Paulo",
+      "type": "internet_exchange",
+      "status": "operational",
+      "country": "Brazil",
+      "description": "Internet Exchange in Brazil",
+      "last_check": "2026-03-24T00:08:58.484539"
+    },
+    {
+      "lat": 50.8277,
+      "lon": -4.5436,
+      "lng": -4.5436,
+      "name": "Bude (UK)",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "UK",
+      "description": "Transatlantic cable landing",
+      "last_check": "2026-03-24T00:08:58.484540"
+    },
+    {
+      "lat": 43.2965,
+      "lon": 5.3698,
+      "lng": 5.3698,
+      "name": "Marseille",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "France",
+      "description": "Mediterranean hub",
+      "last_check": "2026-03-24T00:08:58.484542"
+    },
+    {
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "lng": 103.8198,
+      "name": "Singapore Hub",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "Singapore",
+      "description": "Asia-Pacific gateway",
+      "last_check": "2026-03-24T00:08:58.484544"
+    },
+    {
+      "lat": 19.076,
+      "lon": 72.8777,
+      "lng": 72.8777,
+      "name": "Mumbai",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "India",
+      "description": "South Asia gateway",
+      "last_check": "2026-03-24T00:08:58.484545"
+    },
+    {
+      "lat": 40.7128,
+      "lon": -74.006,
+      "lng": -74.006,
+      "name": "New York (USA)",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "USA",
+      "description": "US East Coast hub",
+      "last_check": "2026-03-24T00:08:58.484547"
+    },
+    {
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "lng": -118.2437,
+      "name": "Los Angeles (USA)",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "USA",
+      "description": "Trans-Pacific cables",
+      "last_check": "2026-03-24T00:08:58.484548"
+    },
+    {
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "lng": 151.2093,
+      "name": "Sydney",
+      "type": "cable_landing",
+      "status": "operational",
+      "country": "Australia",
+      "description": "Oceania hub",
+      "last_check": "2026-03-24T00:08:58.484549"
+    },
+    {
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "lng": -0.1278,
+      "name": "Cloudflare London",
+      "type": "cdn_node",
+      "status": "operational",
+      "country": "UK",
+      "description": "Cdn Node in UK",
+      "last_check": "2026-03-24T00:08:58.484551"
+    },
+    {
+      "lat": 39.0438,
+      "lon": -77.4874,
+      "lng": -77.4874,
+      "name": "AWS us-east-1",
+      "type": "data_center",
+      "status": "operational",
+      "country": "USA",
+      "description": "Data Center in USA",
+      "last_check": "2026-03-24T00:08:58.484552"
+    },
+    {
+      "lat": 50.1109,
+      "lon": 8.6821,
+      "lng": 8.6821,
+      "name": "Google Frankfurt",
+      "type": "cdn_node",
+      "status": "operational",
+      "country": "Germany",
+      "description": "Cdn Node in Germany",
+      "last_check": "2026-03-24T00:08:58.484554"
+    },
+    {
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "lng": 103.8198,
+      "name": "Azure Singapore",
+      "type": "data_center",
+      "status": "operational",
+      "country": "Singapore",
+      "description": "Data Center in Singapore",
+      "last_check": "2026-03-24T00:08:58.484555"
+    }
+  ],
+  "monitored": 19,
+  "disruptions": 0,
+  "generated_at": "2026-03-24T00:08:58.529384"
+}

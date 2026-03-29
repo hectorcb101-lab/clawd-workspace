@@ -1,0 +1,535 @@
+{
+  "status": "ONLINE",
+  "lastUpdate": "2026-03-23T23:15:31.893687+00:00",
+  "total_cables": 22,
+  "cables": [
+    {
+      "id": "sea-me-we-3",
+      "name": "SEA-ME-WE 3",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        }
+      ],
+      "length_km": 39000,
+      "owners": [
+        "Singtel",
+        "Telstra",
+        "Telecom Italia"
+      ],
+      "rfs_year": 2000
+    },
+    {
+      "id": "sea-me-we-4",
+      "name": "SEA-ME-WE 4",
+      "status": "watch",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 43.3,
+          "lon": 5.4,
+          "location": "France"
+        }
+      ],
+      "length_km": 18800,
+      "owners": [
+        "France Telecom",
+        "Singtel"
+      ],
+      "rfs_year": 2005
+    },
+    {
+      "id": "sea-me-we-5",
+      "name": "SEA-ME-WE 5",
+      "status": "watch",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 43.3,
+          "lon": 5.4,
+          "location": "France"
+        }
+      ],
+      "length_km": 20000,
+      "owners": [
+        "Orange",
+        "Singtel",
+        "Etisalat"
+      ],
+      "rfs_year": 2016
+    },
+    {
+      "id": "sea-me-we-6",
+      "name": "SEA-ME-WE 6",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 43.3,
+          "lon": 5.4,
+          "location": "France"
+        }
+      ],
+      "length_km": 19200,
+      "owners": [
+        "Singtel",
+        "Telia"
+      ],
+      "rfs_year": 2025
+    },
+    {
+      "id": "tata-tgn-pacific",
+      "name": "Tata TGN-Pacific",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 37.77,
+          "lon": -122.42,
+          "location": "San Francisco"
+        }
+      ],
+      "length_km": 30000,
+      "owners": [
+        "Tata Communications"
+      ],
+      "rfs_year": 2016
+    },
+    {
+      "id": "asia-america-gateway",
+      "name": "Asia America Gateway (AAG)",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 33.74,
+          "lon": -118.27,
+          "location": "Los Angeles"
+        }
+      ],
+      "length_km": 20000,
+      "owners": [
+        "AT&T",
+        "Telstra",
+        "Singtel"
+      ],
+      "rfs_year": 2009
+    },
+    {
+      "id": "flag-europe-asia",
+      "name": "FLAG Europe-Asia",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        },
+        {
+          "lat": 35.68,
+          "lon": 139.77,
+          "location": "Japan"
+        }
+      ],
+      "length_km": 28000,
+      "owners": [
+        "Reliance"
+      ],
+      "rfs_year": 2001
+    },
+    {
+      "id": "tat-14",
+      "name": "TAT-14",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        },
+        {
+          "lat": 40.71,
+          "lon": -74.01,
+          "location": "New York"
+        }
+      ],
+      "length_km": 15428,
+      "owners": [
+        "Orange",
+        "AT&T",
+        "Deutsche Telekom"
+      ],
+      "rfs_year": 2001
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        },
+        {
+          "lat": 40.71,
+          "lon": -74.01,
+          "location": "New York"
+        }
+      ],
+      "length_km": 14000,
+      "owners": [
+        "Meta"
+      ],
+      "rfs_year": 2022
+    },
+    {
+      "id": "2africa",
+      "name": "2Africa",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        },
+        {
+          "lat": -26.2,
+          "lon": 28.05,
+          "location": "South Africa"
+        }
+      ],
+      "length_km": 45000,
+      "owners": [
+        "Meta",
+        "Vodafone",
+        "Orange"
+      ],
+      "rfs_year": 2024
+    },
+    {
+      "id": "asia-pacific-gateway",
+      "name": "Asia Pacific Gateway",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 1.29,
+          "lon": 103.86,
+          "location": "Singapore"
+        },
+        {
+          "lat": 35.68,
+          "lon": 139.77,
+          "location": "Japan"
+        }
+      ],
+      "length_km": 10400,
+      "owners": [
+        "KDDI",
+        "Singtel"
+      ],
+      "rfs_year": 2016
+    },
+    {
+      "id": "brasil-usa",
+      "name": "BRASIL USA",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": -22.91,
+          "lon": -43.17,
+          "location": "Rio de Janeiro"
+        },
+        {
+          "lat": 25.76,
+          "lon": -80.19,
+          "location": "Miami"
+        }
+      ],
+      "length_km": 11000,
+      "owners": [
+        "Telebras",
+        "Telxius"
+      ],
+      "rfs_year": 2018
+    },
+    {
+      "id": "pacific-light",
+      "name": "Pacific Light Cable Network",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 22.28,
+          "lon": 114.16,
+          "location": "Hong Kong"
+        },
+        {
+          "lat": 34.05,
+          "lon": -118.24,
+          "location": "Los Angeles"
+        }
+      ],
+      "length_km": 12800,
+      "owners": [
+        "Meta",
+        "Google"
+      ],
+      "rfs_year": 2020
+    },
+    {
+      "id": "curie",
+      "name": "Curie",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 34.05,
+          "lon": -118.24,
+          "location": "Los Angeles"
+        },
+        {
+          "lat": -18.47,
+          "lon": -70.33,
+          "location": "Chile"
+        }
+      ],
+      "length_km": 10000,
+      "owners": [
+        "Google"
+      ],
+      "rfs_year": 2020
+    },
+    {
+      "id": "faster",
+      "name": "FASTER",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 35.68,
+          "lon": 139.77,
+          "location": "Japan"
+        },
+        {
+          "lat": 37.77,
+          "lon": -122.42,
+          "location": "San Francisco"
+        }
+      ],
+      "length_km": 11629,
+      "owners": [
+        "Google",
+        "KDDI",
+        "Singtel"
+      ],
+      "rfs_year": 2016
+    },
+    {
+      "id": "grace-hopper",
+      "name": "Grace Hopper",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 40.71,
+          "lon": -74.01,
+          "location": "New York"
+        },
+        {
+          "lat": 51.5,
+          "lon": -0.1,
+          "location": "UK"
+        }
+      ],
+      "length_km": 6800,
+      "owners": [
+        "Google"
+      ],
+      "rfs_year": 2022
+    },
+    {
+      "id": "dunant",
+      "name": "Dunant",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 40.71,
+          "lon": -74.01,
+          "location": "New York"
+        },
+        {
+          "lat": 43.3,
+          "lon": 5.4,
+          "location": "France"
+        }
+      ],
+      "length_km": 6600,
+      "owners": [
+        "Google"
+      ],
+      "rfs_year": 2021
+    },
+    {
+      "id": "equiano",
+      "name": "Equiano",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 38.71,
+          "lon": -9.14,
+          "location": "Portugal"
+        },
+        {
+          "lat": -33.93,
+          "lon": 18.42,
+          "location": "South Africa"
+        }
+      ],
+      "length_km": 15000,
+      "owners": [
+        "Google"
+      ],
+      "rfs_year": 2022
+    },
+    {
+      "id": "marea",
+      "name": "Marea",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 39.47,
+          "lon": -0.38,
+          "location": "Spain"
+        },
+        {
+          "lat": 39.15,
+          "lon": -75.52,
+          "location": "Virginia"
+        }
+      ],
+      "length_km": 6600,
+      "owners": [
+        "Microsoft",
+        "Meta"
+      ],
+      "rfs_year": 2018
+    },
+    {
+      "id": "havfrue",
+      "name": "Havfrue",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 40.71,
+          "lon": -74.01,
+          "location": "New York"
+        },
+        {
+          "lat": 59.33,
+          "lon": 18.07,
+          "location": "Stockholm"
+        }
+      ],
+      "length_km": 8000,
+      "owners": [
+        "Google",
+        "Aqua Comms"
+      ],
+      "rfs_year": 2019
+    },
+    {
+      "id": "imewe",
+      "name": "IMEWE",
+      "status": "watch",
+      "landing_points": [
+        {
+          "lat": 13.1,
+          "lon": 80.28,
+          "location": "Chennai"
+        },
+        {
+          "lat": 43.3,
+          "lon": 5.4,
+          "location": "France"
+        }
+      ],
+      "length_km": 13000,
+      "owners": [
+        "Orange",
+        "Etisalat",
+        "Saudi Telecom"
+      ],
+      "rfs_year": 2010
+    },
+    {
+      "id": "japan-us",
+      "name": "Japan-US Cable Network",
+      "status": "ok",
+      "landing_points": [
+        {
+          "lat": 35.68,
+          "lon": 139.77,
+          "location": "Japan"
+        },
+        {
+          "lat": 37.77,
+          "lon": -122.42,
+          "location": "San Francisco"
+        }
+      ],
+      "length_km": 21000,
+      "owners": [
+        "KDDI",
+        "SoftBank",
+        "Google",
+        "Meta"
+      ],
+      "rfs_year": 2020
+    }
+  ],
+  "alerts": [
+    {
+      "cable_id": "sea-me-we-5",
+      "type": "watch",
+      "description": "Increased regional risks",
+      "region": "Red Sea"
+    },
+    {
+      "cable_id": "sea-me-we-4",
+      "type": "watch",
+      "description": "Increased regional risks",
+      "region": "Red Sea"
+    },
+    {
+      "cable_id": "imewe",
+      "type": "watch",
+      "description": "Increased regional risks",
+      "region": "Red Sea"
+    }
+  ]
+}

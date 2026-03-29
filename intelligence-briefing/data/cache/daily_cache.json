@@ -1,5 +1,5 @@
 {
-  "collection_time": "2026-03-16T09:01:34.765136",
+  "collection_time": "2026-03-27T07:52:28.867410",
   "sources": {
     "polymarket": {
       "status": "failed",
@@ -7,94 +7,127 @@
     },
     "finance": {
       "status": "success",
-      "timestamp": "2026-03-16T09:01:42.876813",
+      "timestamp": "2026-03-27T07:52:37.454168",
       "source": "yahoo_finance",
       "data": [
         {
           "symbol": "^GSPC",
-          "price": 6632.19,
-          "change_percent": -0.61
+          "price": 6477.16,
+          "change_percent": -1.74
         },
         {
           "symbol": "^DJI",
-          "price": 46558.47,
-          "change_percent": -0.26
+          "price": 45960.11,
+          "change_percent": -1.01
         },
         {
           "symbol": "^IXIC",
-          "price": 22105.36,
-          "change_percent": -0.93
+          "price": 21408.08,
+          "change_percent": -2.38
         },
         {
           "symbol": "^VIX",
-          "price": 26.1,
-          "change_percent": -4.01
+          "price": 27.6,
+          "change_percent": 0.58
         },
         {
           "symbol": "BTC-USD",
-          "price": 73142.99,
-          "change_percent": 2.09
+          "price": 68542.77,
+          "change_percent": -2.15
         },
         {
           "symbol": "ETH-USD",
-          "price": 2244.49,
-          "change_percent": 6.28
+          "price": 2068.17,
+          "change_percent": -2.47
         },
         {
           "symbol": "GC=F",
-          "price": 4995.6,
-          "change_percent": -1.31
+          "price": 4476.0,
+          "change_percent": 1.52
         },
         {
           "symbol": "CL=F",
-          "price": 100.18,
-          "change_percent": 1.49
+          "price": 95.4,
+          "change_percent": 0.97
         }
       ]
     },
     "x_twitter": {
-      "collection_time": "2026-03-16T09:01:42.898021",
-      "source": "x_twitter",
+      "collection_time": "2026-03-27T07:52:37.475173",
+      "source": "exa_search",
       "data": {
         "news": {
           "status": "failed",
-          "error": "bird news failed"
+          "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
         },
-        "home": {
+        "sentiment": {
           "status": "failed",
-          "error": "bird home failed"
+          "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
         },
         "searches": {
-          "AI artificial intelligence": {
+          "AI artificial intelligence breakthrough": {
             "status": "failed",
-            "query": "AI artificial intelligence"
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
           },
-          "crypto bitcoin": {
+          "crypto bitcoin ethereum market": {
             "status": "failed",
-            "query": "crypto bitcoin"
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
           },
-          "stock market": {
+          "stock market rally crash": {
             "status": "failed",
-            "query": "stock market"
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
           },
-          "geopolitics conflict": {
+          "geopolitics conflict sanctions": {
             "status": "failed",
-            "query": "geopolitics conflict"
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
           }
         }
       },
       "status": "failed"
     },
     "ai_news": {
-      "collection_time": "2026-03-16T09:01:42.923565+00:00",
-      "source": "ai_news_curated",
-      "accounts": {},
-      "searches": {},
-      "highlights": [],
+      "collection_time": "2026-03-27T07:52:38.893331",
+      "source": "exa_search",
+      "data": {
+        "headlines": {
+          "status": "failed",
+          "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+        },
+        "research": {
+          "status": "failed",
+          "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+        },
+        "industry": {
+          "status": "failed",
+          "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+        },
+        "topics": {
+          "large language model breakthrough": {
+            "status": "failed",
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+          },
+          "AI regulation policy": {
+            "status": "failed",
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+          },
+          "AI startup funding": {
+            "status": "failed",
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+          },
+          "foundation model release": {
+            "status": "failed",
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+          },
+          "AI safety alignment research": {
+            "status": "failed",
+            "error": "[mcporter] Unknown MCP server 'exa'.\nError: Unknown MCP server 'exa'.\n    at McpRuntime.connect (file:///home/ubuntu/.npm-global/lib/node_modules/mcporter/dist/runtime.js:175:19)\n    at McpRuntime.cal"
+          }
+        }
+      },
       "status": "failed"
     },
     "ai_articles": {
-      "collection_time": "2026-03-16T09:01:42.948919+00:00",
+      "collection_time": "2026-03-27T07:52:40.992427+00:00",
       "source": "exa_ai_articles",
       "articles": [],
       "by_query": {},
@@ -103,7 +136,7 @@
     },
     "sentiment": {
       "status": "success",
-      "timestamp": "2026-03-16T09:01:44.744405",
+      "timestamp": "2026-03-27T07:52:43.136154",
       "source": "sentiment",
       "data": []
     }

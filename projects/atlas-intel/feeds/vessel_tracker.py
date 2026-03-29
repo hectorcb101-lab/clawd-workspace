@@ -284,8 +284,17 @@ async def listen():
         log.error("AISSTREAM_API_KEY not set. Cannot connect.")
         return
 
-    # Build bounding boxes for all chokepoints
+    # Build bounding boxes: chokepoints + global coverage zones
     bboxes = [cp["bbox"] for cp in CHOKEPOINTS.values()]
+    
+    # Global coverage — broad ocean regions to capture worldwide shipping
+    GLOBAL_ZONES = [
+        [[-60, -180], [60, -90]],   # Americas / East Pacific / West Atlantic
+        [[-60, -90], [60, 0]],      # Atlantic Ocean
+        [[-60, 0], [60, 90]],       # Europe / Africa / Indian Ocean West
+        [[-60, 90], [60, 180]],     # Asia-Pacific / Indian Ocean East
+    ]
+    bboxes.extend(GLOBAL_ZONES)
 
     subscribe_msg = {
         "APIKey": api_key,
@@ -347,8 +356,6 @@ async def process_message(msg: dict):
 
     # Classify chokepoint
     chokepoint = classify_chokepoint(lat, lon)
-    if not chokepoint:
-        return  # outside our zones (shouldn't happen with bbox filter, but safety check)
 
     # Dedup: skip if we saw this MMSI in the last 5 minutes
     now = time.time()
@@ -356,15 +363,38 @@ async def process_message(msg: dict):
         return
     seen_recently[mmsi] = now
 
-    # Store position for snapshot
+    # Classify vessel type for display (AIS ship type codes)
+    if ship_type in TANKER_TYPES:
+        vtype = "tanker"
+    elif ship_type in CARGO_TYPES:
+        vtype = "cargo"
+    elif ship_type in {60, 61, 62, 63, 64, 65, 66, 67, 68, 69}:
+        vtype = "passenger"
+    elif ship_type in {31, 32, 33}:
+        vtype = "tug"
+    elif ship_type in {50, 51, 52, 53, 54, 55, 56, 57, 58, 59}:
+        vtype = "fishing"
+    elif ship_type in {35, 36, 37}:
+        vtype = "military"
+    elif ship_type in {40, 41, 42, 43, 44, 45, 46, 47, 48, 49}:
+        vtype = "hsc"  # high speed craft
+    else:
+        vtype = "other"
+
+    # Store position for snapshot (all vessels, not just chokepoint)
     vessel_positions[mmsi] = {
         "name": ship_name,
         "lat": lat,
         "lon": lon,
         "speed": speed if speed != 99 else None,
         "ship_type": ship_type,
-        "chokepoint": chokepoint,
+        "type": vtype,
+        "chokepoint": chokepoint,  # None if open ocean
     }
+
+    # Only do anomaly detection for chokepoint vessels
+    if not chokepoint:
+        return
 
     # Record transit
     transit_log[chokepoint].append(now)

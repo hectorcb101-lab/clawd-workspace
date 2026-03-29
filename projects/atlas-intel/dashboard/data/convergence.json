@@ -1,0 +1,85 @@
+{
+  "status": "online",
+  "updated": "18:20 UTC",
+  "timestamp": "2026-03-23T18:20:00.940530+00:00",
+  "signal_count": 3,
+  "signals": [
+    {
+      "id": "23fd928d-09d7-4572-be5a-1683a94c0cd3",
+      "signal_type": "CONTANGO",
+      "icon": "\ud83d\udee2\ufe0f",
+      "severity": "high",
+      "confidence": 0.9,
+      "narrative": "Floating storage pattern detected at Malacca Strait: 253/431 vessels stationary (ratio 59%), coinciding with 20 oil-related news event(s). This pattern suggests contango-driven storage or supply buildup.",
+      "contributing_sources": [
+        {
+          "feed": "vessel_tracker",
+          "detail": "59% stationary at malacca_strait"
+        },
+        {
+          "feed": "geopolitical",
+          "detail": "20 oil-related events"
+        }
+      ],
+      "affected_assets": [
+        "crude_oil",
+        "tanker_stocks",
+        "oil_futures",
+        "contango_spread"
+      ],
+      "region": "Malacca Strait",
+      "timestamp": "2026-03-23T18:20:00.940385+00:00"
+    },
+    {
+      "id": "2f59c49b-a0cd-481d-9cde-47e6cbb554cb",
+      "signal_type": "CONTANGO",
+      "icon": "\ud83d\udee2\ufe0f",
+      "severity": "high",
+      "confidence": 0.9,
+      "narrative": "Floating storage pattern detected at Turkish Straits: 12/20 vessels stationary (ratio 60%), coinciding with 20 oil-related news event(s). This pattern suggests contango-driven storage or supply buildup.",
+      "contributing_sources": [
+        {
+          "feed": "vessel_tracker",
+          "detail": "60% stationary at turkish_straits"
+        },
+        {
+          "feed": "geopolitical",
+          "detail": "20 oil-related events"
+        }
+      ],
+      "affected_assets": [
+        "crude_oil",
+        "tanker_stocks",
+        "oil_futures",
+        "contango_spread"
+      ],
+      "region": "Turkish Straits",
+      "timestamp": "2026-03-23T18:20:00.940426+00:00"
+    },
+    {
+      "id": "25513a34-ffb7-460f-baae-174d8e8ff65c",
+      "signal_type": "ANOMALY",
+      "icon": "\u26a0\ufe0f",
+      "severity": "medium",
+      "confidence": 0.45,
+      "narrative": "GDELT detected 1 significant event(s) concurrent with elevated stationary vessel ratios across monitored chokepoints. Lead GDELT event: \nGDELT Event Alert\nTitle: Major Military Exercise in Indo-Pacific Region\nSource: reuters.com\nURL: https://example.com/ar",
+      "contributing_sources": [
+        {
+          "feed": "gdelt",
+          "detail": "1 significant events"
+        },
+        {
+          "feed": "vessel_tracker",
+          "detail": "Elevated stationary ratios"
+        }
+      ],
+      "affected_assets": [
+        "vix",
+        "gold",
+        "treasuries"
+      ],
+      "region": "Global",
+      "timestamp": "2026-03-23T18:20:00.940443+00:00"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "status": "online",
+  "updated": "16:16 UTC",
+  "timestamp": "2026-03-23T16:16:24.875658+00:00",
+  "event_count": 30,
+  "events": [
+    {
+      "id": "6c9e991d6dc6acf1",
+      "title": "Ships attacked in Strait of Hormuz as Iran escalates military ...",
+      "summary": "Ships attacked in Strait of Hormuz as Iran escalates military campaign  ...    Watch # Ships attacked in Strait of Hormuz as Iran escalates military campaign",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [],
+      "severity": "critical",
+      "source_url": "https://katv.com/news/nation-world/ships-attacked-in-strait-of-hormuz-crude-oil-supply-as-iran-escalates-military-campaign-uk-maritime-iranian-mine-laying-vessels-destroyed-banks-financial-institutions-middle-east-hegseth-president-trump",
+      "published": "2026-03-11T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:18.178353+00:00",
+      "score": 0
+    },
+    {
+      "id": "6e078f08c42fd246",
+      "title": "Hormuz: Iran is escalating the war by attacking ships along a key oil route. Here\u2019s what we know. | CNN",
+      "summary": "by attacking ships along a key oil route. Here\u2019s what we know. By Issy Ronald  ...    A satellite view of the Strait of Hormuz, a strategic waterway between Iran and Oman that links the Persian Gulf to the  ...    Iran might be outgunned and outspent by the US and Israel, but it has one major advantage \u2014 its control over the Strait of Hormuz. By attacking ships navigating the narrow waterway, Iran has effectively shut the route through which one-fifth of the world\u2019s oil supply passes. Iran\u2019s new",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.cnn.com/2026/03/11/middleeast/iran-mine-strait-of-hormuz-intl",
+      "published": "2026-03-11T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:18.178516+00:00",
+      "score": 0
+    },
+    {
+      "id": "281967ae8e681bf1",
+      "title": "Strait of Hormuz Traffic Grinds to Near Halt as Security Threat Remains \u2018Critical,\u2019 Advisory Warns",
+      "summary": "# Strait of Hormuz Traffic Grinds to Near Halt as Security Threat Remains \u2018Critical,\u2019 Advisory Warns Commercial shipping through the Strait of Hormuz has slowed to a near standstill as missile attacks, drone threats, and widespread electronic interference continue to rattle the region, according to the latest maritime security advisory from the Joint Maritime Information Center (JMIC). In its latest update, JMIC said the regional maritime threat environment remains highly volatile amid the escal",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://gcaptain.com/strait-of-hormuz-traffic-grinds-to-near-halt-as-security-threat-remains-critical-advisory-warns/",
+      "published": "2026-03-04T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:18.178619+00:00",
+      "score": 0
+    },
+    {
+      "id": "2c5f127bc1f2cf11",
+      "title": "Gulf shipping crisis deepens as tankers stranded for fifth ...",
+      "summary": "Tankers are seen off the coast of the Fujairah, as Iran vows to close the Strait of Hormuz, amid the U.S.-Israel conflict with Iran, in Fujairah, United Arab Emirates, March 3, 2026.... [Purchase Licensing Rights, opens new  ...    - Companies - Summary - Trump's measure will not help amid ongoing attacks, experts say - Traffic still stuck, production cuts widen - Trump pledges to provide insurance and navy escorts - US strike hit an Iranian warship off Sri Lanka, March 4 (Reuters) - The U.S.\u2013Ir",
+      "regions": [
+        "Strait of Hormuz",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.reuters.com/business/energy/hormuz-shutdown-worsens-after-us-hits-iranian-warship-tankers-stranded-fifth-day-2026-03-04/",
+      "published": "2026-03-04T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:18.178710+00:00",
+      "score": 0
+    },
+    {
+      "id": "941e113b7c3619e7",
+      "title": "\u2018Critical\u2019 Threat Persists in Hormuz as Attacks and GPS Jamming Shake Shipping",
+      "summary": "Commercial shipping through the Strait of Hormuz has fallen to near-zero levels as the maritime security crisis gripping the Middle East continues, even as attacks on vessels temporarily paused over the past two days, according to the latest advisory from the Joint Maritime Information Center (JMIC). In Update 009 of its regional advisory, JMIC said the maritime threat environment across the Arabian Gulf, Strait of Hormuz, and Gulf of Oman remains at a \u201cCRITICAL\u201d level, indicating that attacks a",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://gcaptain.com/critical-threat-persists-in-hormuz-as-attacks-and-gps-jamming-shake-shipping/",
+      "published": "2026-03-09T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:18.178812+00:00",
+      "score": 0
+    },
+    {
+      "id": "737b302cb8dbd48c",
+      "title": "The cost of the Suez Canal blockage",
+      "summary": "Canal blockage The 2021 Suez Canal blockage resulted in a loss of nearly $89 million for the shipping company Maersk Line. This is revealed in a new study conducted by a European research team in collaboration with the School of Business, Economics and Law at the University of Gothenburg. The methodology can also be used to analyse the ongoing crisis in the Red Sea. On 23 March 2021, the container ship Ever Given ran aground in the Suez Canal. The blockage lasted six days and caused significant ",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.gu.se/en/news/the-cost-of-the-suez-canal-blockage",
+      "published": "N/A",
+      "timestamp": "2026-03-23T16:14:35.747967+00:00",
+      "score": 0
+    },
+    {
+      "id": "811e7f6b3da58f58",
+      "title": "The costs of maritime supply chain disruptions: The case ...",
+      "summary": "2025, 109464  ...    # The costs of maritime supply chain disruptions: The case of the Suez Canal blockage by the \u2018Ever Given\u2019 megaship  ...    ## Abstract In March 2021, the six-day blockage of the Suez Canal, caused by the grounding of Evergreen's \u2018Ever Given\u2019 containership, created chaos in global trade. The 400-m giant lodged horizontally in a 265-m wide stretch of the canal and the efforts to dislodge and refloat it were unprecedented, involving dredging, towing and lightering. The accident",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0925527324003219",
+      "published": "N/A",
+      "timestamp": "2026-03-23T16:14:35.748091+00:00",
+      "score": 0
+    },
+    {
+      "id": "fc315d7b8f63ae34",
+      "title": "Suez Canal blockage caused Maersk to face $89M loss ...",
+      "summary": "23, 2025, by Naida Hakirevic Prevljak The 2021 Suez Canal blockage resulted in a loss of nearly $89 million for Danish shipping giant Maersk Line, a new study found. Ever Given; Image credit: Boskalis The study, titled \u201cThe costs of maritime supply chain disruptions: The case of the Suez Canal blockage by the \u2018Ever Given\u2019 megaship\u201d, was conducted by a European research team in collaboration with the School of Business, Economics and  ...    Sea. To remind, on March 23, 2021, Ever Given\u2014one of th",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.offshore-energy.biz/suez-canal-blockage-caused-maersk-to-face-89m-loss-increased-co2-emissions/",
+      "published": "N/A",
+      "timestamp": "2026-03-23T16:14:35.748192+00:00",
+      "score": 0
+    },
+    {
+      "id": "c8d87856f28c8c67",
+      "title": "Suez Canal blockage is delaying an estimated $400 ...",
+      "summary": "an estimated $400 million an hour in goods Key Points  ...    - The blockage is further stressing an already strained supply chain. The stranded mega-container vessel, Ever Given in the Suez Canal, is holding up an estimated $400 million an hour in trade, based on the approximate value of goods that are moved through the Suez every day, according to shipping data and news company Lloyd's List. Lloyd's values the canal's westbound traffic at roughly $5.1 billion a day, and eastbound traffic at ar",
+      "regions": [
+        "Suez Canal",
+        "Panama Canal"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "gold",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.cnbc.com/2021/03/25/suez-canal-blockage-is-delaying-an-estimated-400-million-an-hour-in-goods.html",
+      "published": "N/A",
+      "timestamp": "2026-03-23T16:14:35.748256+00:00",
+      "score": 0
+    },
+    {
+      "id": "5906bcfca1f78728",
+      "title": "2021 Suez Canal obstruction",
+      "summary": "six days from 23 to 29 March 2021 by the Ever Given, a  ...    The 400-metre-long (1,300 ft), 224,000-ton, 20,000 TEU vessel was buffeted by strong winds on the morning of 23 March, and ended up wedged across the waterway with its bow and stern stuck on opposite canal banks, blocking all traffic until it could be freed. Egyptian authorities said that \"technical or human errors\" may have also been involved. The obstruction occurred south of the two-channel section of the canal, so other ships cou",
+      "regions": [
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction",
+      "published": "N/A",
+      "timestamp": "2026-03-23T16:14:35.748372+00:00",
+      "score": 0
+    },
+    {
+      "id": "d4e1f61383a41479",
+      "title": "- Cyprus Shipping News",
+      "summary": "Since the escalation of conflict in the Middle East on 28 February, the critical Strait of Hormuz has been effectively closed to major container shipping. For shippers, the result is stranded cargo, congested ports, schedules in disarray and costly surcharges. Whether your responsibility during a black swan event is keeping cargo moving, managing strategic supply chain risk or explaining freight budget variance to the board, this crisis demands attention across an organization. This blog update ",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Hormuz",
+        "Strait of Malacca",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://cyprusshippingnews.com/2026/03/23/strait-of-hormuz-shutdown-how-port-congestion-and-schedule-chaos-are-hitting-shippers-and-what-to-do-about-it/",
+      "published": "2026-03-23T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:47.563281+00:00",
+      "score": 0
+    },
+    {
+      "id": "030ee3a47c62c101",
+      "title": "Hormuz warning ripples across global shipping chokepoints",
+      "summary": "A derivative of Iran\u2019s Shahed drone: Hybrid war is cheap and hard to prevent (source: Fars Media) # Hormuz warning ripples across global shipping chokepoints 18 Mar 2026by Craig Jallal Hybrid attacks, insurer retreat and scarce naval cover turned Hormuz into a commercial closure - with wider lessons for Taiwan, Panama and beyond The closure of the Strait of Hormuz has exposed a harder truth about maritime security. A modern chokepoint does not need to be sealed by mines, blocked by sunken ships ",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Panama Canal"
+      ],
+      "commodities": [
+        "crude_oil",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.rivieramm.com/news-content-hub/news-content-hub/hormuz-warning-ripples-across-global-shipping-chokepoints-88155",
+      "published": "2026-03-19T16:14:37.183Z",
+      "timestamp": "2026-03-23T16:14:47.563400+00:00",
+      "score": 0
+    },
+    {
+      "id": "59f64f83b8af38cd",
+      "title": "Hormuz Closure and Red Sea Attacks Create Dual Chokepoint Crisis for Container Shipping",
+      "summary": "chokepoint crisis: why the Hormuz blockade is qualitatively different from the Red Sea disruption ## The US and Israeli military strikes against Iran that began on 28 February have triggered a simultaneous disruption of both the Strait of Hormuz and the Red Sea, creating a dual chokepoint crisis without precedent in modern container  ...    March 1, 2026 in Breaking News 0 0 Dual Chokepoint Crisis: Hormuz Closure and Red Sea Attacks Leave Container Shipping With No Way Out Share on Facebook Shar",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "containers",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://container-mag.com/2026/03/01/strait-of-hormuz-closure-container-shipping-dual-chokepoint-crisis/",
+      "published": "2026-03-01T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:47.563495+00:00",
+      "score": 0
+    },
+    {
+      "id": "4835e1b3c37fd4ce",
+      "title": "The Double Chokepoint: Navigating the Simultaneous Blockade of the Red Sea and the Strait of Hormuz -",
+      "summary": "disruptions before \u2014 single port shutdowns, isolated canal bottlenecks, regional conflicts that forced rerouting. What it has not faced, until now, is the simultaneous closure of the two most strategically critical waterways in the eastern hemisphere. The Bab el-Mandeb Strait, the gate to the Red Sea, and the Strait of Hormuz, the exit valve of the Persian Gulf, are both effectively off-limits to commercial vessels. The arithmetic of global logistics has changed overnight. This post is not about",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Malacca",
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://simpleforwarding.com/the-double-chokepoint-navigating-the-simultaneous-blockade-of-the-red-sea-and-the-strait-of-hormuz/",
+      "published": "2026-03-01T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:47.563605+00:00",
+      "score": 0
+    },
+    {
+      "id": "efe39633c8adef44",
+      "title": "Middle East Crisis: Hormuz Blockade, Red Sea Attacks Resume, Global Shipping Faces Multi-Chokepoint Collapse | Qingdao Mighty International",
+      "summary": "Forwarding ## Hormuz, Red Sea, and Suez Shut Simultaneously \u2014 The Most Severe Multi-Node Shipping Crisis in Modern History Summary: On February 28, the US and Israel launched joint military strikes on Iran, prompting Iran to blockade the Strait of Hormuz. Meanwhile, Yemen's Houthi rebels resumed missile and drone attacks on Red Sea shipping on March 2. Three critical chokepoints \u2014 the Strait of Hormuz, the Red Sea/Bab el-Mandeb, and the Suez Canal \u2014 have effectively shut down simultaneously, plu",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Hormuz",
+        "Suez Canal"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.mightyshipping.com/en/blog/2026-03-04-middle-east-crisis-shipping-impact",
+      "published": "2026-03-03T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:47.563712+00:00",
+      "score": 0
+    },
+    {
+      "id": "e35dbc1d851b6b17",
+      "title": "World faces largest-ever oil supply disruption on Middle ...",
+      "summary": "- Global supply to drop by 8 million bpd in March due to Strait of Hormuz blockade - Middle East Gulf countries cut oil production by 10 million bpd - IEA says recovery of production could take weeks or months - IEA head says oil reserve release had'strong impact' on markets LONDON, March 12 (Reuters) - The war in \u200bthe Middle East is creating the biggest oil supply disruption in history, the International Energy Agency said on Thursday, a day after it agreed to release a record volume from strat",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.reuters.com/business/energy/world-faces-largest-ever-oil-supply-disruption-middle-east-war-iea-says-2026-03-12/",
+      "published": "2026-03-12T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:59.563884+00:00",
+      "score": 0
+    },
+    {
+      "id": "d6d4ebf7c24637d5",
+      "title": "World faces largest-ever oil supply disruption on Middle East war,\u00a0IEA says | Reuters",
+      "summary": "Global supply to drop by 8 million bpd in March due to Strait of Hormuz blockade - Middle East Gulf countries cut oil production by 10 million bpd - IEA says recovery of production could take weeks or months - IEA head says oil reserve release had'strong impact' on markets LONDON, March 12 (Reuters) - The war in \u200bthe Middle East is creating the biggest oil supply disruption in history, the International Energy Agency said on Thursday, a day after it agreed to release a record volume from strateg",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "http://today.reuters.com/business/energy/world-faces-largest-ever-oil-supply-disruption-middle-east-war-iea-says-2026-03-12/",
+      "published": "2026-03-12T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:59.564002+00:00",
+      "score": 0
+    },
+    {
+      "id": "b066ac1da5baf357",
+      "title": "OPEC+ Compensation Cuts Triple as Key Producers Move ...",
+      "summary": "WTI Crude \u202211 mins | 95.51 | -3.20 | -3.24% | | --- | --- | --- | --- |  ...    10 hours Sinopec Slashes Refining Runs as Hormuz Disruption Squeezes Crude Supply 12 hours Oil Prices Remain Volatile as Hormuz Tensions Rise  ...    3 days China\u2019s Sinopec to Slash Refinery Rates amid Crude Supply Shock 3 days Hormuz Crisis Forces Massive Saudi Oil Shut-In  ...    3 days Middle East Conflict Halts 15% of TotalEnergies Oil and Gas Production  ...    4 days IEA Warns of Largest Oil Supply Disruption i",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil"
+      ],
+      "severity": "critical",
+      "source_url": "https://oilprice.com/Latest-Energy-News/World-News/OPEC-Compensation-Cuts-Triple-as-Key-Producers-Move-to-Rein-in-Oversupply.html",
+      "published": "2026-01-07T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:59.564188+00:00",
+      "score": 0
+    },
+    {
+      "id": "ecc3660c9fcd7bd8",
+      "title": "OPEC+ to begin unwinding voluntary cuts as market risks intensify | Oil & Gas Journal",
+      "summary": "\":[{\"id\":4188591,\"type\":\"Tag\",\"name\":\"geopolitics  ...    (2042291)\"},{\"id\":2028356,\"type\":\"Tag\",\"name\":\"Iran\",\"fullName\":\"Tag: Iran (2028356)\"},{\"id\":2027630,\"type\":\"Tag\",\"name\":\"OPEC+\",\"fullName\":\"Tag: OPEC+ (2027630)\"},{\"id\":2026970,\"type\":\"Tag\",\"name\":\"oil market\",\"fullName\":\"Tag: oil market (2026970)\"},{\"id\":2026892,\"type\":\"Tag\",\"name\":\"news\",\"fullName\":\"Tag: news (2026892)\"}],\"authors\":[{\"id\":17298639,\"name\":\"Conglin Xu\"}]}\" Economics & Markets # OPEC+ to begin unwinding voluntary cuts as ",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.ogj.com/general-interest/economics-markets/news/55360947/opec-to-begin-unwinding-voluntary-cuts-as-market-risks-intensify",
+      "published": "2026-03-02T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:14:59.564284+00:00",
+      "score": 0
+    },
+    {
+      "id": "8140cf711c73887d",
+      "title": "Trump administration temporarily lifts sanctions on Iranian oil at sea ...",
+      "summary": "sea, exempting buyers from the tight sanctions that have restricted the country's oil industry for years \u2014 a move aimed at stemming soaring prices amid the U.S.'s war with Iran. The sanctions license allows oil from Iran to be purchased if it was loaded onto a ship by 12:01 a.m. ET on Friday. The authorization lasts until April 19. They do not cover people located in North Korea, Cuba or the parts of  ...    Treasury Secretary Scott Bessent said Friday the move could free up around 140 million b",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.cbsnews.com/news/trump-administration-temporarily-lifts-sanctions-on-iranian-oil-at-sea/",
+      "published": "2026-03-20T16:15:00.877Z",
+      "timestamp": "2026-03-23T16:15:06.973608+00:00",
+      "score": 0
+    },
+    {
+      "id": "a00b2857e252115c",
+      "title": "US waives sanctions on Russian oil at sea as supply disruptions ...",
+      "summary": "US waives sanctions on Russian oil at sea as supply disruptions continue Energy, Oil & Gas  ...    The United States has temporarily eased sanctions on Russian oil by allowing countries to purchase cargoes already stranded at sea, as Washington seeks to contain a fresh surge in crude prices triggered by Middle East supply disruptions and fears over restricted energy flows through the Gulf. The short-term authorisation, announced by US Treasury Secretary Scott Bessent, applies only to oil already",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.tradearabia.com/News/390259/US-waives-sanctions-on-Russian-oil-at-sea-as-supply-disruptions-continue-",
+      "published": "2026-03-13T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:06.973723+00:00",
+      "score": 0
+    },
+    {
+      "id": "786c075e4fe43b6d",
+      "title": "Sanctions, bad weather drive more ship-to-ship transfers of Russian oil products, data shows | Reuters",
+      "summary": "Fuji, a Russian oil tanker carrying Russian oil, waits to unload near Narara Marine National Park in the Arabian Sea, Gujarat, India, March 11, 2026. REUTERS/Amit Dave [1/2]MT Mount Fuji, a Russian oil tanker carrying Russian oil, waits to unload near Narara Marine National Park in the Arabian Sea, Gujarat, India, March 11, 2026. REUTERS/Amit Dave Purchase Licensing Rights, opens new tab MOSCOW, March 20 (Reuters) - Russia has increased its oil product exports via ship-to-ship transfers after We",
+      "regions": [
+        "Strait of Malacca"
+      ],
+      "commodities": [
+        "crude_oil",
+        "natural_gas",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.reuters.com/business/energy/sanctions-bad-weather-drive-more-ship-to-ship-transfers-russian-oil-products-2026-03-20/",
+      "published": "2026-03-20T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:06.973939+00:00",
+      "score": 0
+    },
+    {
+      "id": "a4ea95163dc289cc",
+      "title": "Iran Shadow Fleet Sanctions: How Enforcement Works | Iran War Updates",
+      "summary": "TL;DR - This article explains the mechanics of shadow fleet enforcement across the full chain -- from vessel identification to financial interdiction -- and assesses where the system is working and where it breaks down. - The enforcement gap between vessel designation and actual operational disruption averages 4-6 weeks, giving networks time to re-flag and rename ships before sanctions bite. - Flag states like Cameroon, Palau, and Tanzania have emerged as key enablers, registering vessels with m",
+      "regions": [],
+      "commodities": [
+        "crude_oil"
+      ],
+      "severity": "critical",
+      "source_url": "https://iranwarupdates.com/articles/iran-shadow-fleet-sanctions-how-enforcement-works",
+      "published": "2026-02-28T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:06.974013+00:00",
+      "score": 0
+    },
+    {
+      "id": "5377d9388a13bbc7",
+      "title": "Iran Hits 6 Ships in Just 14 Hours \u2014 Surprise Attack at Sea",
+      "summary": "#Iran, #StraitOfHormuz, #ShipAttack, #BreakingNews, #MiddleEastCrisis, #MaritimeSecurity, #Geopolitics  ...    #Iran #StraitOfHormuz #ShipAttack #BreakingNews #MiddleEastCrisis Tensions in the Strait of Hormuz have escalated dramatically after reports that Iran launched a series of attacks targeting multiple commercial ships within just 14 hours. The Strait of Hormuz is one of the most critical waterways in the world, connecting the Persian Gulf to global shipping lanes. Nearly 20% of the world\u2019",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.youtube.com/watch?v=XKOimnBarZA",
+      "published": "2026-03-15T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:19.504470+00:00",
+      "score": 0
+    },
+    {
+      "id": "2ae336991e1f985e",
+      "title": "U.S. forces sink 16 Iranian minelayers as reports say Tehran is mining the Strait of Hormuz",
+      "summary": "U.S. President Donald Trump warned of \u201cmilitary consequences \u2026 at a level never seen before\u201d if mines were not removed. - Even limited mining could disrupt global shipping, spike insurance rates, and effectively act as a blockade in the  ...    In this handout photo obtained from the U.S. Defence Department, Nimitz-class aircraft carrier USS Abraham Lincoln (CVN 72) sails alongside Arleigh Burke-class guided-missile destroyer USS Frank E. Petersen Jr. (DDG 121) and Lewis and  ...    American for",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://www.cnbc.com/2026/03/11/us-strikes-iran-mine-ships-strait-of-hormuz-war-oil.html",
+      "published": "2026-03-11T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:19.504605+00:00",
+      "score": 0
+    },
+    {
+      "id": "6c9083329983f926",
+      "title": "Six vessels attacked in Gulf, Strait of Hormuz as war puts merchant ships on front lines | Reuters",
+      "summary": "Six vessels attacked in Gulf, Strait of Hormuz as war puts merchant ships on front lines | Reuters Skip to main content  ...    - Japan-flagged container ship and Greek-owned bulk carrier sustain minor damage - Thailand-flagged bulk carrier damaged off Oman - Iraq oil ports stop operations, official said - Iranian boats attacked two tankers in Iraqi waters, Iraq port security officials said DUBAI/BASRA, Iraq, March 11 (Reuters) - Explosive-laden Iranian boats appear to have attacked two fuel tan",
+      "regions": [
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "containers",
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "http://uk.mobile.reuters.com/world/cargo-ship-hit-by-projectile-strait-hormuz-crew-evacuates-2026-03-11/",
+      "published": "2026-03-11T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:19.504693+00:00",
+      "score": 0
+    },
+    {
+      "id": "49bfcfe5f7aa8ca8",
+      "title": "Iran-U.S. war chokes key shipping lane and threatens global cargo ...",
+      "summary": "Iran-U.S. war chokes key shipping lane and threatens global cargo industry Oops, something went wrong  ...    MAERSK-A.CO The war in Iran is choking off a key shipping route in the global supply chain, potentially leading to massive delays in the flow of goods to American consumers. The Strait of Hormuz, a narrow waterway that sits along the southern coast of Iran, gives passage to one-fifth of the world\u2019s oil supply and is also a key route for other types of commodities like aluminum, sugar and",
+      "regions": [
+        "Bab-el-Mandeb",
+        "Strait of Hormuz"
+      ],
+      "commodities": [
+        "crude_oil",
+        "shipping"
+      ],
+      "severity": "critical",
+      "source_url": "https://finance.yahoo.com/news/iran-u-war-chokes-key-222739776.html",
+      "published": "2026-03-02T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:19.504802+00:00",
+      "score": 0
+    },
+    {
+      "id": "b7c56491982e53c0",
+      "title": "Global tariffs impacting supply chains - Maersk",
+      "summary": "Global tariffs impacting supply chains | Maersk ... - Advisories - News  ...    LinkedIn Facebook X.com WeChat Email Copy link U.S. Customs and Border Protection (CBP) recently provided an update to the U.S. Court of International Trade (CIT) regarding the implementation of refunds associated with tariffs imposed under the International Emergency Economic Powers Act (IEEPA). In a declaration submitted to the court, Brandon Lord, Executive Director of Trade Programs within CBP\u2019s Office of Trade, ",
+      "regions": [
+        "Strait of Malacca",
+        "Strait of Hormuz"
+      ],
+      "commodities": [],
+      "severity": "critical",
+      "source_url": "https://www.maersk.com/news/articles/2025/03/13/global-tariffs-impacting-supply-chains",
+      "published": "2026-03-12T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:31.553792+00:00",
+      "score": 0
+    },
+    {
+      "id": "637294e2d5a6ac4a",
+      "title": "Tariff Shock 2026: How the New Trade War Is Reshaping Global Supply Chains | CXTMS",
+      "summary": "Tariff Shock 2026: How the New Trade War Is Reshaping Global Supply Chains | CXTMS The numbers tell a stark story. In January 2025, the average effective U.S. tariff rate stood at 2.3%. By November, it had surged to 10.5% \u2014 a nearly fivefold increase that has sent shockwaves through every link of the global supply chain. For logistics professionals, 2026 isn't just another year of trade uncertainty. It's a structural inflection  ...    ## The Scale of the Tariff Shock\u200b According to the Penn Whar",
+      "regions": [],
+      "commodities": [
+        "containers"
+      ],
+      "severity": "critical",
+      "source_url": "https://cxtms.com/blog/tariff-shock-2026-trade-war-reshaping-global-supply-chains",
+      "published": "2026-02-12T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:31.553928+00:00",
+      "score": 0
+    },
+    {
+      "id": "2cace6d1f8eb3a87",
+      "title": "Tariff Tracker: 2026 Trump Tariffs & Trade War by the Numbers",
+      "summary": "Tariff Tracker: 2026 Trump Tariffs & Trade War by the Numbers ...    ### Property Taxes by State and County, 2026 9 min read ...    1. We added a distribution table for Section 122 tariff, revenue for de minimis, and timelines on new Section 301  ...    2. The Section 122 tariffs took effect at 10 percent, not the threatened 15 percent. 3. Includes estimates of the new Section 122 tariff of 10 percent that applies to all countries and the increase of the  ...    4. The Supreme Court ruled the Pr",
+      "regions": [],
+      "commodities": [],
+      "severity": "critical",
+      "source_url": "https://taxfoundation.org/research/all/federal/tariffs-trump-trade-war",
+      "published": "2026-03-13T00:00:00.000Z",
+      "timestamp": "2026-03-23T16:15:31.554179+00:00",
+      "score": 0
+    }
+  ]
+}

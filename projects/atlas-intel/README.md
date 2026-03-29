@@ -217,6 +217,86 @@ for phrase_data in detected_phrases:
 
 ---
 
+## New Frontend (v2.0)
+
+A modular **Vite + TypeScript** frontend replaces the previous Streamlit/Gradio dashboard with a full interactive intelligence UI featuring a 3D globe, live maps, and real-time data panels.
+
+### Prerequisites
+
+| Requirement | Version |
+|-------------|---------|
+| Node.js     | 18+     |
+| npm          | 9+      |
+| Python       | 3.11+   |
+
+### Quick Start
+
+```bash
+# Install frontend dependencies
+npm install
+
+# Download globe textures and GeoJSON data
+mkdir -p public/textures
+curl -L -o public/textures/earth-topo.jpg https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg
+curl -L -o public/textures/earth-water.png https://unpkg.com/three-globe/example/img/earth-water.png
+curl -L -o public/textures/night-sky.png https://unpkg.com/three-globe/example/img/night-sky.png
+curl -L -o public/countries.geojson https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson
+
+# Start both servers (recommended)
+bash scripts/dev.sh
+
+# OR start separately:
+python dashboard/server.py &     # Backend on :8000
+npm run dev                      # Frontend on :5173
+```
+
+### Frontend Architecture
+
+```
+src/
+├── components/    # 26 UI components (panels, maps, globe, indicators)
+├── services/      # 14 data & intelligence services
+├── config/        # Static configuration (countries, entities, feeds, geo data)
+├── utils/         # DOM helpers, circuit breaker, sanitization
+└── main.ts        # Entry point
+```
+
+- **`src/components/`** — Modular UI: 3D globe, deck.gl map overlays, intelligence panels, threat indicators, timeline, and chat interface.
+- **`src/services/`** — Data layer: WebSocket bridges, AIS vessel tracking, signal detection, market analysis, feed health monitoring, and AI provider integrations (Ollama, Groq, OpenRouter).
+- **`src/config/`** — Static data: country definitions, entity databases, intelligence feeds, and geo-coordinates.
+- **`src/utils/`** — Shared utilities: DOM manipulation, circuit breaker pattern for resilient API calls, and HTML sanitization via DOMPurify.
+
+### Environment Variables
+
+Copy `.env.example` and fill in your keys:
+
+```bash
+cp .env.example .env
+```
+
+Key variables:
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_OLLAMA_URL` | Local Ollama endpoint (default: `http://localhost:11434`) |
+| `VITE_GROQ_API_KEY` | Groq API key for fast inference |
+| `VITE_OPENROUTER_API_KEY` | OpenRouter API key |
+| `VITE_DATA_BRIDGE_URL` | Python backend URL (default: `http://localhost:8000`) |
+| `VITE_MAPLIBRE_STYLE` | MapLibre tile style URL |
+| `VITE_SUPABASE_URL` | Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Supabase anonymous key |
+
+### Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server with HMR on `:5173` |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run typecheck` | Run TypeScript type checking (`tsc --noEmit`) |
+
+---
+
 ## Security
 
 - ✅ Service role key stored securely (`600` permissions)

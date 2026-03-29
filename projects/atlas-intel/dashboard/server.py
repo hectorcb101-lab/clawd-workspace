@@ -15,6 +15,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request, Response, HTTPException, Form
 from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from jose import jwt
 
@@ -125,6 +126,14 @@ def verify_token(token: str) -> str | None:
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
+# CORS for Vite dev server
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Auth middleware
 @app.middleware("http")
 async def auth_middleware(request: Request, call_next):
@@ -137,6 +146,22 @@ async def auth_middleware(request: Request, call_next):
     # Allow static assets for login page
     if path.startswith("/static/login"):
         return await call_next(request)
+    
+    # Data endpoints: read-only OSINT feeds, allow without auth
+    # These are consumed by the Vite frontend (via proxy or direct)
+    if path.startswith("/data/") or path.startswith("/api/data/"):
+        return await call_next(request)
+    
+    # Dev mode bypass: only in non-production environments
+    if os.environ.get("ATLAS_DEV_MODE") == "1":
+        if os.environ.get("ATLAS_ENV") == "production":
+            import logging
+            logging.warning("⚠️ ATLAS_DEV_MODE=1 is IGNORED in production. Set ATLAS_ENV != 'production' to use dev mode.")
+        else:
+            import logging
+            logging.warning("⚠️ ATLAS_DEV_MODE active — all auth bypassed. Do NOT use in production.")
+            request.state.user = "dev"
+            return await call_next(request)
     
     # Check JWT cookie
     token = request.cookies.get(COOKIE_NAME)
@@ -535,6 +560,106 @@ async def serve_data(filename: str):
     filepath = DATA_DIR / filename
     if not filepath.exists() or not filepath.suffix == ".json":
         raise HTTPException(404)
+    return FileResponse(filepath, media_type="application/json")
+
+
+# ---------------------------------------------------------------------------
+# New API endpoints for satellite, military, market data
+# ---------------------------------------------------------------------------
+
+@app.get("/api/data/satellite_status.json")
+async def api_satellite_status():
+    filepath = DATA_DIR / "satellite_status.json"
+    if not filepath.exists():
+        return JSONResponse({"status": "NO DATA", "satellites": [], "tracked": 0, "military_count": 0})
+    return FileResponse(filepath, media_type="application/json")
+
+@app.get("/api/data/military_status.json")
+async def api_military_status():
+    filepath = DATA_DIR / "military_status.json"
+    if not filepath.exists():
+        return JSONResponse({"status": "NO DATA", "events": [], "active_events": 0, "hotspot_count": 0})
+    return FileResponse(filepath, media_type="application/json")
+
+@app.get("/api/data/market_status.json")
+async def api_market_status():
+    filepath = DATA_DIR / "market_status.json"
+    if not filepath.exists():
+        return JSONResponse({"status": "NO DATA", "vix": {"value": None, "change": None}, "oil": {"value": None, "change": None}})
+    return FileResponse(filepath, media_type="application/json")
+
+
+# ---------------------------------------------------------------------------
+# New worldmonitor integration endpoints
+# ---------------------------------------------------------------------------
+
+_WORLDMONITOR_FILES = {
+    # Live high-frequency feeds
+    "vessel_live": {"status": "NO DATA", "vessels": [], "active_vessels": 0},
+    "flight_live": {"status": "NO DATA", "aircraft": [], "tracked": 0, "lastUpdate": 0},
+    "military_live": {"status": "NO DATA", "military_vessels": [], "military_aircraft": [], "naval_groups": [], "lastUpdate": 0},
+    "satellite_live": {"status": "NO DATA", "satellites": [], "tracked": 0, "lastUpdate": 0},
+    "radiation_live": {"status": "NO DATA", "stations": [], "count": 0, "anomalies": 0},
+    "earthquake_live": {"status": "NO DATA", "earthquakes": [], "count": 0, "max_magnitude": 0},
+    "gps_jamming_live": {"status": "NO DATA", "zones": [], "count": 0, "high_intensity": 0},
+    "webcam_live": {"status": "NO DATA", "webcams": [], "total_webcams": 0},
+    "cable_health_live": {"status": "NO DATA", "cables": [], "monitored": 0, "alerts": 0},
+    "wildfire_live": {"status": "NO DATA", "fires": [], "count": 0, "clusters": 0},
+    "cyber_threats_live": {"status": "NO DATA", "threats": [], "active": 0, "critical": 0},
+    "unrest_live": {"status": "NO DATA", "events": [], "total": 0, "hotspots": 0},
+    "infrastructure_live": {"status": "NO DATA", "sites": [], "monitored": 0, "disruptions": 0},
+    "news_live": {"status": "NO DATA", "geolocated_articles": [], "count": 0},
+    
+    # Alerts and analytical
+    "alerts": {"status": "NO DATA", "alerts": []},
+    "geopolitical": {"status": "NO DATA", "events": []},
+    
+    # Reference / static data
+    "military_bases": {"status": "NO DATA", "bases": []},
+    "pipelines": {"status": "NO DATA", "pipelines": []},
+    "trade_routes": {"status": "NO DATA", "routes": []},
+    "nuclear_sites": {"status": "NO DATA", "sites": []},
+    "commodities_data": {"status": "NO DATA", "commodities": []},
+    "airports": {"status": "NO DATA", "airports": []},
+    "military_callsigns": {"status": "NO DATA", "callsigns": []},
+    "convergence": {"status": "NO DATA", "zones": []},
+}
+
+@app.get("/api/webcam/{webcam_id}/refresh")
+async def api_webcam_refresh(webcam_id: int):
+    """Refresh webcam image URLs (tokens expire after 10 min on free tier)."""
+    import httpx
+    env_file = Path(__file__).parent.parent / ".env"
+    api_key = os.environ.get("WINDY_WEBCAM_API_KEY", "")
+    if not api_key and env_file.exists():
+        with open(env_file) as f:
+            for line in f:
+                if line.strip().startswith("WINDY_WEBCAM_API_KEY="):
+                    api_key = line.strip().split("=", 1)[1].strip().strip('"')
+                    break
+    if not api_key:
+        return JSONResponse({"error": "no api key"}, status_code=500)
+    
+    url = f"https://api.windy.com/webcams/api/v3/webcams/{webcam_id}"
+    headers = {"X-WINDY-API-KEY": api_key}
+    params = {"include": "images,player", "lang": "en"}
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            resp = await client.get(url, headers=headers, params=params)
+            if resp.status_code == 200:
+                return JSONResponse(resp.json())
+            return JSONResponse({"error": f"upstream {resp.status_code}"}, status_code=resp.status_code)
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+@app.get("/api/data/{feed_name}.json")
+async def api_worldmonitor_data(feed_name: str):
+    if feed_name not in _WORLDMONITOR_FILES:
+        raise HTTPException(404)
+    filepath = DATA_DIR / f"{feed_name}.json"
+    if not filepath.exists():
+        return JSONResponse(_WORLDMONITOR_FILES[feed_name])
     return FileResponse(filepath, media_type="application/json")
 
 
