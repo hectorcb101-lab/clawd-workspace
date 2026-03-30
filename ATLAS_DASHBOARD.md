@@ -1,6 +1,6 @@
 # 🏛️ ATLAS DASHBOARD
 
-**Last updated:** 2026-03-23 10:02 UTC (Daily Briefing Delivered + Weekly Health Check)
+**Last updated:** 2026-03-30 06:00 UTC (Heartbeat Check)
 
 ---
 
@@ -33,10 +33,10 @@
 
 **Atlas Memory Daemon:**
 - Status: ✅ Running (PID 351798)
-- Events captured: 27,798
+- Events captured: 32,898
 - Facts in database: 5,327
 - Events processed: 40,567
-- Last extraction: 2026-03-23 06:57 UTC
+- Last extraction: 2026-03-30 05:40 UTC
 
 **Email Notification Daemon:**
 - Status: ✅ Running
@@ -49,7 +49,7 @@
 - Last sent: 2026-03-23 09:08 UTC (delivered successfully)
 
 **Context Health:**
-- Current session: 14% (27k/200k tokens)
+- Current session: 14% (28k/200k tokens)
 - Model: Claude Opus 4.6
 - Active sub-agents: 0
 
@@ -61,15 +61,10 @@
 
 ---
 
-## 🎓 Finn's MSc — Week 2 (23-29 March)
-
-**Critical Deadline:** Ethics Quiz FRIDAY (30%)
+## 🎓 Finn's MSc — Week 3 (30 March - 5 April)
 
 **This Week's Focus:**
-- 🔥 URGENT: Ethics Quiz Friday (AI environmental impact)
-- ML Week 2: Regression mastery (6-phase plan)
-- Stats: Week 3 homework completion
-- Python: Lists & Tuples (lecture + lab)
+- TBD (check Task Hub for updated schedule)
 
 **Atlas Support:**
 - Daily briefing delivered (Telegram + Email)
@@ -80,10 +75,10 @@
 
 ## 📧 Email Status
 
-**Unread:** 8 emails (none from Finn)
-- All spam/automated (Vercel, Google, delivery failures)
+**Unread:** 10 emails (none from Finn)
+- GitHub invites, Supabase security notices, Vercel/Windy welcome emails
 
-**Last check:** 2026-03-23 09:01 UTC
+**Last check:** 2026-03-30 06:00 UTC
 **Auth status:** 🚨 Google Workspace OAuth expired (6th time since Jan 26)
 **Fallback:** ✅ Direct API script working
 **Action:** Permanent fix still pending
