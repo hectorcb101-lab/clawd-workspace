@@ -88,8 +88,9 @@
 ## 🚨 Alerts & Action Items
 
 ### URGENT (This Week)
-1. **Google OAuth permanent fix** — 6 failures in 7 weeks unacceptable
-2. **Quiz week support** — Stats + ML quizzes start Monday
+1. **Disable outdated quiz reminder** — firing at 07:00 daily for "Week 8 (w/c 16 March)" which has passed
+2. **Update Task Hub** — still shows "Week 2" tasks (outdated)
+3. **Google OAuth permanent fix** — 6 failures in 7 weeks unacceptable
 
 ### Important (Next 2 Weeks)
 - Increase judgment layer usage
