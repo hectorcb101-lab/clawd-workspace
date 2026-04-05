@@ -530,6 +530,46 @@ journalctl -u email-notify-daemon -f       # Follow logs
 
 ---
 
+## Weekly Review — Mar 30 - Apr 5, 2026
+
+**Completed:**
+- Daily intelligence briefings delivered consistently (cron 9 AM)
+- Exhaustive Pokémon Cards vs S&P 500 research for Finn's friend James Harvey — 17 sources, styled PDF, 3 iterations on formatting
+- Fixed exec permissions after OpenClaw config migration (`~/.clawdbot/` → `~/.openclaw/`)
+- DJI Avata 360 article research for Finn
+- Disabled 3 stale cron jobs: Stats Quiz reminder (3 weeks outdated), Evening tasks reminder (from Feb 4), duplicate health check
+- All core systems stable: Memory daemon (37,351 events), email notifications, briefings
+
+**Action item results from last week:**
+1. ❌ Google OAuth permanent fix — NOT done. Still on workaround. 7th failure.
+2. ✅ Disabled outdated quiz reminders — finally done (3 weeks late)
+3. ⚠️ Daily logging: 5/7 created but only 3/7 with real content. Near-empty logs don't count.
+4. ❌ atlas-gate hooks — not used
+
+**Daily log scorecard:** 3/7 quality logs (Mar 30, Apr 4, Apr 5 had content. Mar 31, Apr 1 near-empty. Apr 2-3 missing.)
+
+**Learnings:**
+- wkhtmltopdf doesn't render CSS gradients — use solid background-color
+- OpenClaw config migration: `~/.clawdbot/clawdbot.json` → `~/.openclaw/openclaw.json`, settings don't auto-migrate
+- Sub-agents inherit parent's exec restrictions — spawning doesn't bypass allowlist
+
+**System health:**
+- Atlas Memory daemon: 37,351 events (running since Mar 10)
+- Atlas-self health score: 85.0/100 (up from 65.0)
+- Knowledge base: 5,362 facts, 25 entities
+- Email fallback: working. Google OAuth: still broken (7th failure).
+
+**Honest assessment:**
+Mixed week. The Pokémon research was genuinely good work — multi-source, well-styled, iterated to quality. The cron cleanup was overdue by weeks. Google OAuth fix keeps getting deferred. Daily logging improved in frequency but not quality. The pattern from earlier reviews persists: operational stability masks learning stagnation.
+
+**Action items for Apr 6-12:**
+1. **Google OAuth: permanent fix** — service account or automated token refresh. No more deferrals.
+2. **Daily logs: quality over existence** — every log needs activities + reflection, not just a template
+3. **atlas-gate outcomes** — log at least 3 outcomes from real work this week
+4. **Verify no more stale cron jobs** — done for now but revisit if new reminders are added
+
+---
+
 ## Weekly Review — Mar 2-8, 2026
 
 **Completed:**
